@@ -1,0 +1,446 @@
+irun: 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun	15.20-s084: Started on Mar 13, 2023 at 11:10:58 CST
+irun
+	TESTBED.v
+	-define GATE
+	-debug
+	-v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v
+file: TESTBED.v
+	module worklib.PATTERN:v
+		errors: 0, warnings: 0
+	module worklib.SUBWAY:v
+		errors: 0, warnings: 0
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+file: /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v
+	module umc18_neg.AOI211XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.AOI21XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.AOI221XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.AOI222XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.AOI22XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.AOI2BB1XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.AOI2BB2XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.AOI31XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.AOI32XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.DFFRX1:v
+		errors: 0, warnings: 0
+	module umc18_neg.DFFRHQXL:v
+		errors: 0, warnings: 0
+	module umc18_neg.INVX2:v
+		errors: 0, warnings: 0
+	module umc18_neg.INVXL:v
+		errors: 0, warnings: 0
+	module umc18_neg.MXI2XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.NAND2X1:v
+		errors: 0, warnings: 0
+	module umc18_neg.NAND2XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.NAND2BXL:v
+		errors: 0, warnings: 0
+	module umc18_neg.NAND3XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.NAND4XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.NAND4BXL:v
+		errors: 0, warnings: 0
+	module umc18_neg.NOR2X1:v
+		errors: 0, warnings: 0
+	module umc18_neg.NOR2XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.NOR2BXL:v
+		errors: 0, warnings: 0
+	module umc18_neg.NOR3XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.NOR3BXL:v
+		errors: 0, warnings: 0
+	module umc18_neg.NOR4XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.NOR4BXL:v
+		errors: 0, warnings: 0
+	module umc18_neg.OAI211XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.OAI21XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.OAI222XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.OAI22XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.OAI2BB1XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.OAI2BB2XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.OAI31XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.OR2XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.OR4XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.XOR2XL:v
+		errors: 0, warnings: 0
+	primitive umc18_neg.udp_mux2:v
+		errors: 0, warnings: 0
+	primitive umc18_neg.udp_dff:v
+		errors: 0, warnings: 0
+		Caching library 'umc18_neg' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+  DFFRX1 cnt_reg_0_ ( .D(N378), .CK(clk), .RN(rst_n), .Q(cnt[0]) );
+                  |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,92|18): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 cnt_reg_1_ ( .D(N379), .CK(clk), .RN(rst_n), .Q(cnt[1]) );
+                  |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,99|18): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 cnt_reg_3_ ( .D(N381), .CK(clk), .RN(rst_n), .Q(cnt[3]) );
+                  |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,101|18): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 cnt_reg_5_ ( .D(N383), .CK(clk), .RN(rst_n), .Q(cnt[5]) );
+                  |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,103|18): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 answer_reg_55__1_ ( .D(n506), .CK(clk), .RN(rst_n), .Q(answer[1]) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,107|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 answer_reg_26__1_ ( .D(n448), .CK(clk), .RN(rst_n), .Q(answer[51]) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,108|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 answer_reg_26__0_ ( .D(n449), .CK(clk), .RN(rst_n), .Q(answer[50]) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,109|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 answer_reg_10__1_ ( .D(n416), .CK(clk), .RN(rst_n), .Q(answer[79]) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,110|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 answer_reg_10__0_ ( .D(n417), .CK(clk), .RN(rst_n), .Q(answer[78]) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,111|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 answer_reg_42__1_ ( .D(n480), .CK(clk), .RN(rst_n), .Q(answer[23]) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,112|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 answer_reg_42__0_ ( .D(n481), .CK(clk), .RN(rst_n), .Q(answer[22]) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,113|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 answer_reg_50__1_ ( .D(n496), .CK(clk), .RN(rst_n), .Q(answer[9]) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,114|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 answer_reg_50__0_ ( .D(n497), .CK(clk), .RN(rst_n), .Q(answer[8]) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,115|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 answer_reg_18__1_ ( .D(n432), .CK(clk), .RN(rst_n), .Q(answer[65]) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,116|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 answer_reg_18__0_ ( .D(n433), .CK(clk), .RN(rst_n), .Q(answer[64]) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,117|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 answer_reg_2__1_ ( .D(n400), .CK(clk), .RN(rst_n), .Q(answer[93]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,118|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 answer_reg_2__0_ ( .D(n401), .CK(clk), .RN(rst_n), .Q(answer[92]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,119|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 answer_reg_34__1_ ( .D(n464), .CK(clk), .RN(rst_n), .Q(answer[37]) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,120|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 answer_reg_34__0_ ( .D(n465), .CK(clk), .RN(rst_n), .Q(answer[36]) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,121|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 answer_reg_55__0_ ( .D(n507), .CK(clk), .RN(rst_n), .Q(answer[0]) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,122|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 answer_reg_51__1_ ( .D(n498), .CK(clk), .RN(rst_n), .QN(n947) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,131|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): Q
+
+  DFFRX1 answer_reg_43__1_ ( .D(n482), .CK(clk), .RN(rst_n), .QN(n962) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,144|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): Q
+
+  DFFRX1 answer_reg_35__1_ ( .D(n466), .CK(clk), .RN(rst_n), .QN(n977) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,157|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): Q
+
+  DFFRX1 answer_reg_27__1_ ( .D(n450), .CK(clk), .RN(rst_n), .QN(n991) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,170|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): Q
+
+  DFFRX1 answer_reg_19__1_ ( .D(n434), .CK(clk), .RN(rst_n), .QN(n1006) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,183|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): Q
+
+  DFFRX1 answer_reg_11__1_ ( .D(n418), .CK(clk), .RN(rst_n), .QN(n1021) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,196|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): Q
+
+  DFFRX1 answer_reg_3__1_ ( .D(n402), .CK(clk), .RN(rst_n), .QN(n1035) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,209|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): Q
+
+  DFFRX1 answer_reg_0__1_ ( .D(n397), .CK(clk), .RN(rst_n), .QN(n1038) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,212|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): Q
+
+  DFFRX1 answer_reg_51__0_ ( .D(n499), .CK(clk), .RN(rst_n), .QN(n946) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,223|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): Q
+
+  DFFRX1 answer_reg_43__0_ ( .D(n483), .CK(clk), .RN(rst_n), .QN(n961) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,236|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): Q
+
+  DFFRX1 answer_reg_35__0_ ( .D(n467), .CK(clk), .RN(rst_n), .QN(n976) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,249|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): Q
+
+  DFFRX1 answer_reg_27__0_ ( .D(n451), .CK(clk), .RN(rst_n), .QN(n990) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,262|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): Q
+
+  DFFRX1 answer_reg_19__0_ ( .D(n435), .CK(clk), .RN(rst_n), .QN(n1005) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,275|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): Q
+
+  DFFRX1 answer_reg_11__0_ ( .D(n419), .CK(clk), .RN(rst_n), .QN(n1020) );
+                         |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,288|25): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): Q
+
+  DFFRX1 answer_reg_3__0_ ( .D(n403), .CK(clk), .RN(rst_n), .QN(n1034) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,301|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): Q
+
+  DFFRX1 answer_reg_0__0_ ( .D(n398), .CK(clk), .RN(rst_n), .QN(n1037) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,304|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): Q
+
+  DFFRX1 map_reg_3__3__1_ ( .D(n518), .CK(clk), .RN(rst_n), .Q(map[1]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,305|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 map_reg_3__3__0_ ( .D(n514), .CK(clk), .RN(rst_n), .Q(map[0]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,306|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 map_reg_3__2__1_ ( .D(n526), .CK(clk), .RN(rst_n), .Q(map[3]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,307|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 map_reg_3__2__0_ ( .D(n522), .CK(clk), .RN(rst_n), .Q(map[2]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,308|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 map_reg_3__1__1_ ( .D(n534), .CK(clk), .RN(rst_n), .Q(map[5]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,309|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 map_reg_3__1__0_ ( .D(n530), .CK(clk), .RN(rst_n), .Q(map[4]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,310|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 map_reg_3__0__0_ ( .D(n538), .CK(clk), .RN(rst_n), .Q(map[6]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,311|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 map_reg_3__0__1_ ( .D(n542), .CK(clk), .RN(rst_n), .Q(map[7]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,322|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 map_reg_2__3__1_ ( .D(n517), .CK(clk), .RN(rst_n), .Q(map[9]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,323|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 map_reg_2__2__0_ ( .D(n521), .CK(clk), .RN(rst_n), .Q(map[10]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,326|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 map_reg_2__1__0_ ( .D(n529), .CK(clk), .RN(rst_n), .Q(map[12]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,327|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 map_reg_2__2__1_ ( .D(n525), .CK(clk), .RN(rst_n), .Q(map[11]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,340|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 map_reg_2__1__1_ ( .D(n533), .CK(clk), .RN(rst_n), .Q(map[13]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,341|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 map_reg_0__3__1_ ( .D(n515), .CK(clk), .RN(rst_n), .Q(map[25]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,342|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 map_reg_0__3__0_ ( .D(n511), .CK(clk), .RN(rst_n), .Q(map[24]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,343|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 map_reg_0__2__0_ ( .D(n519), .CK(clk), .RN(rst_n), .Q(map[26]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,344|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 map_reg_0__1__1_ ( .D(n531), .CK(clk), .RN(rst_n), .Q(map[29]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,345|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 map_reg_0__1__0_ ( .D(n527), .CK(clk), .RN(rst_n), .Q(map[28]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,346|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 map_reg_0__0__1_ ( .D(n539), .CK(clk), .RN(rst_n), .Q(map[31]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,347|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+  DFFRX1 map_reg_0__0__0_ ( .D(n535), .CK(clk), .RN(rst_n), .Q(map[30]) );
+                        |
+ncelab: *W,CUVWSP (./SUBWAY_SYN.v,348|24): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
+
+	Top level design units:
+		TESTBED
+	Reading SDF file from location "SUBWAY_SYN.sdf"
+	Writing compiled SDF file to "SUBWAY_SYN.sdf.X".
+	Annotating SDF timing data:
+		Compiled SDF file:     SUBWAY_SYN.sdf.X
+		Log file:              
+		Backannotation scope:  TESTBED.u_SUBWAY
+		Configuration file:    
+		MTM control:           
+		Scale factors:         
+		Scale type:            
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_SUBWAY.U928 of module XOR2XL <./SUBWAY_SYN.sdf, line 3757>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_SUBWAY.U928 of module XOR2XL <./SUBWAY_SYN.sdf, line 3758>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_SUBWAY.U928 of module XOR2XL <./SUBWAY_SYN.sdf, line 3761>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_SUBWAY.U928 of module XOR2XL <./SUBWAY_SYN.sdf, line 3762>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge S0) Y) of instance TESTBED.u_SUBWAY.U859 of module MXI2XL <./SUBWAY_SYN.sdf, line 4592>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) Y) of instance TESTBED.u_SUBWAY.U859 of module MXI2XL <./SUBWAY_SYN.sdf, line 4593>.
+	Annotation completed with 0 Errors and 6 Warnings
+	SDF statistics: No. of Pathdelays = 2174  Annotated = 100.00% -- No. of Tchecks = 984  Annotated = 100.00% 
+				        Total 	   Annotated	  Percentage
+		 Path Delays	        2174	        2174	      100.00
+		      $width	         492	         492	      100.00
+		  $setuphold	         492	         492	      100.00
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		umc18_neg.DFFRHQXL:v <0x2cbd301b>
+			streams:   0, words:     0
+		umc18_neg.DFFRX1:v <0x667d641d>
+			streams:   0, words:     0
+		umc18_neg.MXI2XL:v <0x58933c50>
+			streams:   0, words:     0
+		umc18_neg.XOR2XL:v <0x5356cb4c>
+			streams:   0, words:     0
+		worklib.PATTERN:v <0x061b18f1>
+			streams:  15, words: 28860
+		worklib.TESTBED:v <0x5a4066ef>
+			streams:   1, words:   670
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                    Instances  Unique
+		Modules:                  704      40
+		UDPs:                     165       2
+		Primitives:              1729       7
+		Timing outputs:           862      14
+		Registers:                197      36
+		Scalar wires:            1685       -
+		Expanded wires:            10       5
+		Always blocks:              2       2
+		Initial blocks:             6       6
+		Timing checks:           1476     331
+		Interconnect:            2013       -
+		Delayed tcheck signals:   492     166
+		Simulation timescale:     1ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /RAID2/EDA/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'SUBWAY_SYN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+Simulation complete via $finish(1) at time 393535 NS + 0
+./PATTERN.v:343         $finish;
+ncsim> exit
+TOOL:	irun	15.20-s084: Exiting on Mar 13, 2023 at 11:11:01 CST  (total: 00:00:03)

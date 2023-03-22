@@ -1,0 +1,539 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version R-2020.09 for linux64 - Aug 26, 2020 
+
+                    Copyright (c) 1988 - 2020 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+#  Set Libraries
+#======================================================
+set search_path    {./../01_RTL                     ~iclabta01/umc018/Synthesis/                     /usr/synthesis/libraries/syn/ }
+./../01_RTL                     ~iclabta01/umc018/Synthesis/                     /usr/synthesis/libraries/syn/ 
+set synthetic_library {dw_foundation.sldb}
+dw_foundation.sldb
+set link_library {* dw_foundation.sldb standard.sldb slow.db}
+* dw_foundation.sldb standard.sldb slow.db
+set target_library {slow.db}
+slow.db
+#======================================================
+#  Global Parameters
+#======================================================
+set DESIGN "SUBWAY"
+SUBWAY
+set hdlin_ff_always_sync_set_reset true
+true
+set CLK_period 10.0
+10.0
+#======================================================
+#  Read RTL Code
+#======================================================
+read_sverilog { $DESIGN\.v}
+Loading db file '/usr/synthesis/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/synthesis/libraries/syn/standard.sldb'
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+Loading db file '/RAID2/EDA/synopsys/synthesis/2020.09/libraries/syn/gtech.db'
+Loading db file '/RAID2/EDA/synopsys/synthesis/2020.09/libraries/syn/standard.sldb'
+  Loading link library 'slow'
+  Loading link library 'gtech'
+Loading sverilog file '/RAID2/COURSE/iclab/iclab105/Desktop/Lab03/Exercise/01_RTL/SUBWAY.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /RAID2/COURSE/iclab/iclab105/Desktop/Lab03/Exercise/01_RTL/SUBWAY.v
+Warning:  /RAID2/COURSE/iclab/iclab105/Desktop/Lab03/Exercise/01_RTL/SUBWAY.v:77: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 74 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab03/Exercise/01_RTL/SUBWAY.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            75            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 125 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab03/Exercise/01_RTL/SUBWAY.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           133            |     no/auto      |
+|           138            |    auto/auto     |
+|           231            |    auto/auto     |
+|           275            |    auto/auto     |
+|           369            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine SUBWAY line 69 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab03/Exercise/01_RTL/SUBWAY.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SUBWAY line 84 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab03/Exercise/01_RTL/SUBWAY.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       cnt_reg       | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SUBWAY line 91 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab03/Exercise/01_RTL/SUBWAY.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       map_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SUBWAY line 125 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab03/Exercise/01_RTL/SUBWAY.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     answer_reg      | Flip-flop |  112  |  Y  | N  | Y  | N  | N  | N  | N  |
+|      lane_reg       | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SUBWAY line 414 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab03/Exercise/01_RTL/SUBWAY.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     ans_idx_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SUBWAY line 427 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab03/Exercise/01_RTL/SUBWAY.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    out_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SUBWAY line 436 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab03/Exercise/01_RTL/SUBWAY.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       out_reg       | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|    SUBWAY/140    |   4    |    4    |      2       |
+|    SUBWAY/142    |   4    |    2    |      2       |
+|    SUBWAY/142    |   4    |    2    |      2       |
+|    SUBWAY/146    |   4    |    2    |      2       |
+|    SUBWAY/146    |   4    |    2    |      2       |
+|    SUBWAY/169    |   4    |    2    |      2       |
+|    SUBWAY/173    |   4    |    2    |      2       |
+|    SUBWAY/202    |   4    |    2    |      2       |
+|    SUBWAY/206    |   4    |    2    |      2       |
+|    SUBWAY/242    |   4    |    2    |      2       |
+|    SUBWAY/242    |   4    |    2    |      2       |
+|    SUBWAY/242    |   4    |    2    |      2       |
+|    SUBWAY/242    |   4    |    2    |      2       |
+|    SUBWAY/242    |   4    |    2    |      2       |
+|    SUBWAY/247    |   4    |    2    |      2       |
+|    SUBWAY/247    |   4    |    2    |      2       |
+|    SUBWAY/279    |   4    |    2    |      2       |
+|    SUBWAY/279    |   4    |    2    |      2       |
+|    SUBWAY/283    |   4    |    2    |      2       |
+|    SUBWAY/283    |   4    |    2    |      2       |
+|    SUBWAY/307    |   4    |    2    |      2       |
+|    SUBWAY/311    |   4    |    2    |      2       |
+|    SUBWAY/340    |   4    |    2    |      2       |
+|    SUBWAY/344    |   4    |    2    |      2       |
+|    SUBWAY/380    |   4    |    2    |      2       |
+|    SUBWAY/380    |   4    |    2    |      2       |
+|    SUBWAY/380    |   4    |    2    |      2       |
+|    SUBWAY/380    |   4    |    2    |      2       |
+|    SUBWAY/380    |   4    |    2    |      2       |
+|    SUBWAY/385    |   4    |    2    |      2       |
+|    SUBWAY/385    |   4    |    2    |      2       |
+======================================================
+Information:  Complex logic will not be considered for set/reset inference. (ELAB-2008)
+Presto compilation completed successfully.
+Current design is now '/RAID2/COURSE/iclab/iclab105/Desktop/Lab03/Exercise/01_RTL/SUBWAY.db:SUBWAY'
+Loaded 1 design.
+Current design is 'SUBWAY'.
+SUBWAY
+current_design $DESIGN
+Current design is 'SUBWAY'.
+{SUBWAY}
+#======================================================
+#  Global Setting
+#======================================================
+set_wire_load_mode top
+1
+#======================================================
+#  Set Design Constraints
+#======================================================
+create_clock -name "clk" -period $CLK_period clk 
+1
+set_input_delay  [ expr $CLK_period*0.5 ] -clock clk [all_inputs]
+1
+set_output_delay [ expr $CLK_period*0.5 ] -clock clk [all_outputs]
+1
+set_input_delay 0 -clock clk clk
+1
+set_load 0.05 [all_outputs]
+1
+#======================================================
+#  Optimization
+#======================================================
+uniquify
+1
+set_fix_multiple_port_nets -all -buffer_constants
+1
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Analyzing: "/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db"
+Library analysis succeeded.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | Q-2019.12-DWBB_201912.0 |     *     |
+| Licensed DW Building Blocks        | Q-2019.12-DWBB_201912.0 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 30 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'SUBWAY'
+
+Loaded alib file './alib-52/slow.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'SUBWAY'
+Information: Added key list 'DesignWare' to design 'SUBWAY'. (DDB-72)
+ Implement Synthetic for 'SUBWAY'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1' in the library 'slow' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: There is no timing violation in design SUBWAY. Delay-based auto_ungroup will not be performed. (OPT-780)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:04   27645.7      0.00       0.0       0.0                           3263521.0000
+    0:00:04   27635.7      0.00       0.0       0.0                           3262954.0000
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:04   28014.9      0.00       0.0       0.0                           3355274.0000
+    0:00:04   28014.9      0.00       0.0       0.0                           3355274.0000
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:04   20836.6      0.00       0.0       0.0                           1458294.8750
+    0:00:04   20836.6      0.00       0.0       0.0                           1458294.8750
+    0:00:04   20836.6      0.00       0.0       0.0                           1458294.8750
+    0:00:05   20164.6      0.00       0.0       0.0                           1437756.8750
+    0:00:05   20164.6      0.00       0.0       0.0                           1437756.8750
+    0:00:05   20164.6      0.00       0.0       0.0                           1437756.8750
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:05   20108.1      0.00       0.0       0.0                           1423415.6250
+    0:00:05   20108.1      0.00       0.0       0.0                           1423415.6250
+    0:00:05   20108.1      0.00       0.0       0.0                           1423415.6250
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:05   20094.8      0.00       0.0       0.0                           1353797.0000
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+    0:00:05   20304.3      0.00       0.0       0.0                           1232718.7500
+    0:00:05   20304.3      0.00       0.0       0.0                           1232718.7500
+    0:00:05   20304.3      0.00       0.0       0.0                           1232718.7500
+    0:00:05   20287.7      0.00       0.0       0.0                           1233771.8750
+    0:00:05   20287.7      0.00       0.0       0.0                           1233771.8750
+    0:00:05   20287.7      0.00       0.0       0.0                           1233771.8750
+    0:00:05   20287.7      0.00       0.0       0.0                           1233771.8750
+    0:00:05   20287.7      0.00       0.0       0.0                           1233771.8750
+    0:00:05   20287.7      0.00       0.0       0.0                           1233771.8750
+    0:00:05   20287.7      0.00       0.0       0.0                           1233771.8750
+    0:00:05   20287.7      0.00       0.0       0.0                           1233771.8750
+    0:00:05   20287.7      0.00       0.0       0.0                           1233771.8750
+    0:00:05   20287.7      0.00       0.0       0.0                           1233771.8750
+    0:00:05   20287.7      0.00       0.0       0.0                           1233771.8750
+    0:00:05   20287.7      0.00       0.0       0.0                           1233771.8750
+    0:00:05   20287.7      0.00       0.0       0.0                           1233771.8750
+    0:00:05   20287.7      0.00       0.0       0.0                           1233771.8750
+    0:00:05   20287.7      0.00       0.0       0.0                           1233771.8750
+    0:00:05   20287.7      0.00       0.0       0.0                           1233771.8750
+    0:00:05   20287.7      0.00       0.0       0.0                           1233771.8750
+    0:00:05   20287.7      0.00       0.0       0.0                           1233771.8750
+    0:00:05   20287.7      0.00       0.0       0.0                           1233771.8750
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:05   20287.7      0.00       0.0       0.0                           1233771.8750
+    0:00:05   20014.9      0.00       0.0       0.0                           1249166.7500
+    0:00:05   20014.9      0.00       0.0       0.0                           1249166.7500
+    0:00:05   20014.9      0.00       0.0       0.0                           1249166.7500
+    0:00:05   20014.9      0.00       0.0       0.0                           1249166.7500
+    0:00:06   20084.8      0.00       0.0       0.0                           1244002.6250
+    0:00:06   20084.8      0.00       0.0       0.0                           1244002.6250
+    0:00:06   20084.8      0.00       0.0       0.0                           1244002.6250
+    0:00:06   20084.8      0.00       0.0       0.0                           1244002.6250
+    0:00:06   20084.8      0.00       0.0       0.0                           1244002.6250
+    0:00:06   20084.8      0.00       0.0       0.0                           1244002.6250
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#======================================================
+#  Output Reports 
+#======================================================
+check_design > Report/$DESIGN\.check
+report_timing >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_resource >  Report/$DESIGN\.resource
+#======================================================
+#  Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/RAID2/COURSE/iclab/iclab105/Desktop/Lab03/Exercise/02_SYN/Netlist/SUBWAY_SYN.v'.
+1
+write_sdf -version 2.1 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf
+Information: Writing timing information to file '/RAID2/COURSE/iclab/iclab105/Desktop/Lab03/Exercise/02_SYN/Netlist/SUBWAY_SYN.sdf'. (WT-3)
+1
+report_area
+ 
+****************************************
+Report : area
+Design : SUBWAY
+Version: R-2020.09
+Date   : Mon Mar 13 11:09:51 2023
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
+
+Number of ports:                           16
+Number of nets:                           819
+Number of cells:                          701
+Number of combinational cells:            537
+Number of sequential cells:               164
+Number of macros/black boxes:               0
+Number of buf/inv:                         67
+Number of references:                      37
+
+Combinational area:               8093.131281
+Buf/Inv area:                      668.606424
+Noncombinational area:           11991.672226
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 20084.803507
+Total area:                 undefined
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : SUBWAY
+Version: R-2020.09
+Date   : Mon Mar 13 11:09:51 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: in_valid (input port clocked by clk)
+  Endpoint: map_reg_0__0__0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     5.00       5.00 f
+  in_valid (in)                            0.00       5.00 f
+  U639/Y (NAND2XL)                         0.13       5.13 r
+  U579/Y (OAI31XL)                         0.30       5.43 f
+  U564/Y (NOR2XL)                          1.21       6.64 r
+  U912/Y (INVXL)                           0.87       7.52 f
+  U759/Y (AOI2BB2XL)                       0.48       8.00 f
+  map_reg_0__0__0_/D (DFFRX1)              0.00       8.00 f
+  data arrival time                                   8.00
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  map_reg_0__0__0_/CK (DFFRX1)             0.00      10.00 r
+  library setup time                      -0.33       9.67
+  data required time                                  9.67
+  -----------------------------------------------------------
+  data required time                                  9.67
+  data arrival time                                  -8.00
+  -----------------------------------------------------------
+  slack (MET)                                         1.67
+
+
+1
+#======================================================
+#  Finish and Quit
+#======================================================
+exit
+
+Memory usage for this session 185 Mbytes.
+Memory usage for this session including child processes 196 Mbytes.
+CPU usage for this session 60 seconds ( 0.02 hours ).
+Elapsed time for this session 64 seconds ( 0.02 hours ).
+
+Thank you...

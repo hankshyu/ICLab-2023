@@ -1,0 +1,51 @@
+irun: 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun	15.20-s084: Started on Mar 13, 2023 at 11:08:25 CST
+irun
+	TESTBED.v
+	-define RTL
+	-debug
+file: TESTBED.v
+	module worklib.PATTERN:v
+		errors: 0, warnings: 0
+	module worklib.SUBWAY:v
+		errors: 0, warnings: 0
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		TESTBED
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.PATTERN:v <0x3023b2db>
+			streams:  15, words: 27243
+		worklib.SUBWAY:v <0x490d7fc9>
+			streams:  78, words: 47597
+		worklib.TESTBED:v <0x25d51962>
+			streams:   1, words:   588
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  3       3
+		Registers:               44      44
+		Scalar wires:             4       -
+		Vectored wires:           6       -
+		Always blocks:           10      10
+		Initial blocks:           6       6
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /RAID2/EDA/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'SUBWAY.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+Simulation complete via $finish(1) at time 393535 NS + 0
+./PATTERN.v:343         $finish;
+ncsim> exit
+TOOL:	irun	15.20-s084: Exiting on Mar 13, 2023 at 11:08:26 CST  (total: 00:00:01)
