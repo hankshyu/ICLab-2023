@@ -1,0 +1,856 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version R-2020.09 for linux64 - Aug 26, 2020 
+
+                    Copyright (c) 1988 - 2020 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+#  Set Libraries
+#======================================================
+set search_path {	./../01_RTL 					~iclabta01/umc018/Synthesis/ 					/usr/synthesis/libraries/syn/ 					/usr/synthesis/dw/ }
+ ./../01_RTL      ~iclabta01/umc018/Synthesis/      /usr/synthesis/libraries/syn/      /usr/synthesis/dw/ 
+set synthetic_library {dw_foundation.sldb}
+dw_foundation.sldb
+set link_library {* dw_foundation.sldb standard.sldb slow.db}
+* dw_foundation.sldb standard.sldb slow.db
+set target_library {slow.db}
+slow.db
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#report_lib slow
+#======================================================
+#  Global Parameters
+#======================================================
+set DESIGN "NN"
+NN
+set CLK_period 14.6
+14.6
+#======================================================
+#  Read RTL Code
+#======================================================
+analyze -f verilog $DESIGN\.v
+Running PRESTO HDLC
+Compiling source file ./../01_RTL/NN.v
+Presto compilation completed successfully.
+Loading db file '/usr/synthesis/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/synthesis/libraries/syn/standard.sldb'
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+1
+analyze -f verilog NN.v
+Running PRESTO HDLC
+Compiling source file ./../01_RTL/NN.v
+Presto compilation completed successfully.
+1
+elaborate $DESIGN
+Loading db file '/RAID2/EDA/synopsys/synthesis/2020.09/libraries/syn/gtech.db'
+Loading db file '/RAID2/EDA/synopsys/synthesis/2020.09/libraries/syn/standard.sldb'
+  Loading link library 'slow'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ./../01_RTL/NN.v:189: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./../01_RTL/NN.v:203: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./../01_RTL/NN.v:219: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 169 in file
+	'./../01_RTL/NN.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           170            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 186 in file
+	'./../01_RTL/NN.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           189            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 202 in file
+	'./../01_RTL/NN.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           203            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 216 in file
+	'./../01_RTL/NN.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           219            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 271 in file
+	'./../01_RTL/NN.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           274            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 282 in file
+	'./../01_RTL/NN.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           283            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine NN line 157 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     macu_cs_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     macw_cs_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  current_state_reg  | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 179 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       cnt_reg       | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 186 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    macu_cnt_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 216 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     MACU_A_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 239 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     MACU_B_reg      | Flip-flop |  96   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 261 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     MACU_C_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 271 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    macw_cnt_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 298 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     MACW_A_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 305 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     MACW_B_reg      | Flip-flop |  96   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 324 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     MACW_C_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 335 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     Ux_tmp_reg      | Flip-flop |  96   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 350 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     Wh_tmp_reg      | Flip-flop |  96   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 366 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      h_tmp_reg      | Flip-flop |  96   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 390 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     Vh_tmp_reg      | Flip-flop |  96   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 407 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     w_store_reg     | Flip-flop |  288  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 424 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     u_store_reg     | Flip-flop |  288  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 441 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     v_store_reg     | Flip-flop |  288  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 458 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     x_store_reg     | Flip-flop |  192  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 476 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     h_store_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 486 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     EXP0_in_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 491 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     REC0_in_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 500 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     answer_reg      | Flip-flop |  288  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 530 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    out_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 536 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       out_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (NN)
+Elaborated 1 design.
+Current design is now 'NN'.
+1
+current_design $DESIGN
+Current design is 'NN'.
+{NN}
+#======================================================
+#  Global Setting
+#======================================================
+#set_wire_load_mode top
+#======================================================
+#  Set Design Constraints
+#======================================================
+create_clock -name "clk" -period $CLK_period clk 
+1
+set_input_delay  [ expr $CLK_period*0.5 ] -clock clk [all_inputs]
+1
+set_output_delay [ expr $CLK_period*0.5 ] -clock clk [all_outputs]
+1
+set_input_delay 0 -clock clk clk
+1
+set_input_delay 0 -clock clk rst_n
+1
+set_load 0.05 [all_outputs]
+1
+#======================================================
+#  Optimization
+#======================================================
+uniquify
+1
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants
+1
+#set_fix_hold [all_clocks]
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | Q-2019.12-DWBB_201912.0 |     *     |
+| Licensed DW Building Blocks        | Q-2019.12-DWBB_201912.0 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 16 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'NN'
+
+Loaded alib file './alib-52/slow.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'NN'
+Information: Added key list 'DesignWare' to design 'NN'. (DDB-72)
+Information: The register 'current_state_reg[2]' is a constant and will be removed. (OPT-1206)
+ Implement Synthetic for 'NN'.
+  Processing 'NN_DW_fp_recip_J1_0'
+  Processing 'NN_DW_fp_exp_J1_0'
+  Processing 'NN_DW_exp2_J1_0'
+  Processing 'NN_DW_fp_mac_J1_0'
+  Processing 'NN_DW_lzd_J1_0_DW_lzd_J1_1'
+  Processing 'NN_DW_fp_mac_J1_1'
+  Processing 'NN_DW_lzd_J1_1_DW_lzd_J1_2'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1' in the library 'slow' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Building model 'DW_fp_ifp_conv_sig_widthi23_exp_widthi8_sig_widtho25_exp_widtho8_use_denormal0_use_1scmpl0' (rtl)
+  Building model 'DW_fp_ifp_conv_sig_widthi23_exp_widthi8_sig_widtho25_exp_widtho8_use_denormal0_use_1scmpl0' (rtl)
+  Building model 'DW_fp_ifp_conv_sig_widthi23_exp_widthi8_sig_widtho25_exp_widtho8_use_denormal0_use_1scmpl0' (rtl)
+  Building model 'DW_fp_ifp_conv_sig_widthi23_exp_widthi8_sig_widtho25_exp_widtho8_use_denormal0_use_1scmpl0' (rtl)
+  Building model 'DW_ifp_mult_sig_widthi25_exp_widthi8_sig_widtho31_exp_widtho9' (rtl)
+  Building model 'DW_ifp_mult_sig_widthi25_exp_widthi8_sig_widtho31_exp_widtho9' (rtl)
+  Building model 'DW_ifp_addsub_sig_widthi31_exp_widthi9_sig_widtho32_exp_widtho10_use_denormal0_use_1scmpl0' (rtl)
+  Building model 'DW_ifp_fp_conv_sig_widthi32_exp_widthi10_sig_width23_exp_width8_use_denormal0' (rtl)
+  Structuring 'NN_DW_fp_mac_0'
+  Mapping 'NN_DW_fp_mac_0'
+  Building model 'DW_lsd_a_width53'
+  Structuring 'NN_DW_fp_mac_1'
+  Mapping 'NN_DW_fp_mac_1'
+  Building model 'DW_lzod_a_width53_detect_10' (rtl)
+  Building model 'DW_lsd_a_width53'
+  Structuring 'NN_DW_fp_mac_2'
+  Mapping 'NN_DW_fp_mac_2'
+  Mapping 'DW_cmp'
+  Mapping 'NN_DW01_sub_0'
+  Mapping 'DW_cmp'
+  Mapping 'DW_rightsh'
+  Mapping 'DW_cmp'
+  Mapping 'DW_leftsh'
+  Mapping 'NN_DW01_add_0'
+  Mapping 'DW_cmp'
+  Mapping 'NN_DW01_inc_0'
+  Mapping 'DW_cmp'
+  Mapping 'NN_DW02_multp_0'
+  Structuring 'NN_DW_lsd_0'
+  Mapping 'NN_DW_lsd_0'
+  Structuring 'NN_DW_lzod_0'
+  Mapping 'NN_DW_lzod_0'
+  Mapping 'NN_DP_OP_207_149_9016_0'
+  Mapping 'NN_DP_OP_208_150_5508_0'
+  Mapping 'NN_DP_OP_209_151_153_0'
+  Mapping 'NN_DP_OP_210_152_6827_0'
+  Mapping 'NN_DW_fp_mac_2'
+  Building model 'DW_fp_ifp_conv_sig_widthi23_exp_widthi8_sig_widtho25_exp_widtho8_use_denormal0_use_1scmpl0' (rtl)
+  Building model 'DW_fp_ifp_conv_sig_widthi23_exp_widthi8_sig_widtho25_exp_widtho8_use_denormal0_use_1scmpl0' (rtl)
+  Building model 'DW_fp_ifp_conv_sig_widthi23_exp_widthi8_sig_widtho25_exp_widtho8_use_denormal0_use_1scmpl0' (rtl)
+  Building model 'DW_fp_ifp_conv_sig_widthi23_exp_widthi8_sig_widtho25_exp_widtho8_use_denormal0_use_1scmpl0' (rtl)
+  Building model 'DW_ifp_mult_sig_widthi25_exp_widthi8_sig_widtho31_exp_widtho9' (rtl)
+  Building model 'DW_ifp_mult_sig_widthi25_exp_widthi8_sig_widtho31_exp_widtho9' (rtl)
+  Building model 'DW_ifp_addsub_sig_widthi31_exp_widthi9_sig_widtho32_exp_widtho10_use_denormal0_use_1scmpl0' (rtl)
+  Building model 'DW_ifp_fp_conv_sig_widthi32_exp_widthi10_sig_width23_exp_width8_use_denormal0' (rtl)
+  Structuring 'NN_DW_fp_mac_3'
+  Mapping 'NN_DW_fp_mac_3'
+  Building model 'DW_lsd_a_width53'
+  Structuring 'NN_DW_fp_mac_4'
+  Mapping 'NN_DW_fp_mac_4'
+  Building model 'DW_lsd_a_width53'
+  Structuring 'NN_DW_fp_mac_5'
+  Mapping 'NN_DW_fp_mac_5'
+  Mapping 'DW_cmp'
+  Mapping 'NN_DW01_sub_1'
+  Mapping 'DW_cmp'
+  Mapping 'DW_rightsh'
+  Mapping 'DW_cmp'
+  Mapping 'DW_leftsh'
+  Mapping 'NN_DW01_add_1'
+  Mapping 'DW_cmp'
+  Mapping 'NN_DW01_inc_1'
+  Mapping 'DW_cmp'
+  Mapping 'NN_DW02_multp_1'
+  Structuring 'NN_DW_lsd_1'
+  Mapping 'NN_DW_lsd_1'
+  Structuring 'NN_DW_lzod_1'
+  Mapping 'NN_DW_lzod_1'
+  Mapping 'NN_DP_OP_207_163_9016_0'
+  Mapping 'NN_DP_OP_208_164_5508_0'
+  Mapping 'NN_DP_OP_209_165_153_0'
+  Mapping 'NN_DP_OP_210_166_6827_0'
+  Mapping 'NN_DW_fp_mac_5'
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
+  Mapping Optimization (Phase 5)
+  Mapping Optimization (Phase 6)
+  Mapping Optimization (Phase 7)
+  Mapping Optimization (Phase 8)
+  Mapping Optimization (Phase 9)
+  Mapping Optimization (Phase 10)
+  Mapping Optimization (Phase 11)
+  Mapping Optimization (Phase 12)
+  Mapping Optimization (Phase 13)
+  Mapping Optimization (Phase 14)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:04:02 1264264.8      2.54     766.8       0.0                           189370000.0000
+    0:04:03 1261800.0      2.80     822.5       0.0                           189036256.0000
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:04:04 1266174.2      2.80     822.3       0.0                           190083088.0000
+    0:04:05 1266117.7      2.80     824.6       0.0                           190074432.0000
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Mapping 'NN_DP_OP_44J1_122_8319_3'
+  Mapping 'NN_DW_mult_uns_19'
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:04:16  719137.8      8.23     620.6       0.0                           71994088.0000
+    0:04:40  736694.5      1.24     286.7       0.0                           75628312.0000
+    0:04:40  736694.5      1.24     286.7       0.0                           75628312.0000
+    0:04:41  736830.9      1.24     288.2       0.0                           75657224.0000
+    0:05:14  733880.4      1.26     180.2       0.0                           75349248.0000
+    0:05:16  733145.2      3.05     230.5       0.3                           75267408.0000
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:05:51  727613.4      2.92     192.2       0.3                           73921648.0000
+    0:05:53  719284.1      2.75     186.4       0.3                           72481184.0000
+    0:05:53  718432.6      2.75     185.3       0.3                           72299928.0000
+    0:05:55  718272.9      1.26     148.3       0.0                           72352264.0000
+    0:05:55  718272.9      1.26     148.3       0.0                           72352264.0000
+    0:05:59  713486.2      1.25      97.0       0.0                           69721160.0000
+    0:05:59  713486.2      1.25      97.0       0.0                           69721160.0000
+    0:06:54  749251.6      1.19      93.5       0.0                           76159576.0000
+    0:06:54  749251.6      1.19      93.5       0.0                           76159576.0000
+    0:06:56  750855.0      1.08      87.4       0.0                           76507520.0000
+    0:06:56  750855.0      1.08      87.4       0.0                           76507520.0000
+    0:07:55  782069.9      1.02      83.7       0.5                           81923592.0000
+    0:07:55  782069.9      1.02      83.7       0.5                           81923592.0000
+    0:09:06  801180.1      0.21      11.2       0.0                           85716016.0000
+    0:09:06  801180.1      0.21      11.2       0.0                           85716016.0000
+    0:10:16  820426.6      0.17       7.9       0.0                           88849496.0000
+    0:10:16  820426.6      0.17       7.9       0.0                           88849496.0000
+    0:11:06  825742.2      0.03       0.6       0.0                           89883296.0000
+    0:11:06  825742.2      0.03       0.6       0.0                           89883296.0000
+    0:11:26  826733.5      0.02       0.3       0.0                           90039064.0000
+    0:11:26  826733.5      0.02       0.3       0.0                           90039064.0000
+    0:11:36  827997.5      0.01       0.1       0.0                           90279336.0000
+    0:11:36  827997.5      0.01       0.1       0.0                           90279336.0000
+    0:11:39  827997.5      0.01       0.1       0.0                           90279336.0000
+    0:11:39  828040.8      0.00       0.0       0.0                           90276600.0000
+    0:11:39  828040.8      0.00       0.0       0.0                           90276600.0000
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:11:39  828040.8      0.00       0.0       0.0                           90276600.0000
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+    0:11:53  774914.8      0.41      64.6       0.0                           78721736.0000
+    0:13:27  802846.6      0.23      50.3       0.0                           83345584.0000
+    0:13:27  802846.6      0.23      50.3       0.0                           83345584.0000
+    0:13:31  781121.9      0.23      41.0       0.0                           79034440.0000
+    0:13:31  781121.9      0.23      41.0       0.0                           79034440.0000
+    0:14:37  805311.5      0.15       6.7       0.1                           83167712.0000
+    0:14:37  805311.5      0.15       6.7       0.1                           83167712.0000
+    0:14:38  805567.6      0.16       7.7       0.1                           83219288.0000
+    0:14:38  805567.6      0.16       7.7       0.1                           83219288.0000
+    0:14:43  806116.5      0.14       6.5       0.1                           83317144.0000
+    0:14:43  806116.5      0.14       6.5       0.1                           83317144.0000
+    0:14:48  806961.4      0.00       0.0       0.1                           83533848.0000
+    0:14:48  806961.4      0.00       0.0       0.1                           83533848.0000
+    0:14:48  806961.4      0.00       0.0       0.1                           83533848.0000
+    0:14:48  806961.4      0.00       0.0       0.1                           83533848.0000
+    0:14:48  806961.4      0.00       0.0       0.1                           83533848.0000
+    0:14:48  806961.4      0.00       0.0       0.1                           83533848.0000
+    0:14:48  806961.4      0.00       0.0       0.1                           83533848.0000
+    0:14:48  806961.4      0.00       0.0       0.1                           83533848.0000
+    0:14:48  806961.4      0.00       0.0       0.1                           83533848.0000
+    0:14:48  806961.4      0.00       0.0       0.1                           83533848.0000
+    0:14:48  806961.4      0.00       0.0       0.1                           83533848.0000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:14:49  806961.4      0.00       0.0       0.1                           83533848.0000
+    0:14:54  756922.3      0.00       0.0       0.0                           74326904.0000
+    0:14:54  756922.3      0.00       0.0       0.0                           74326904.0000
+    0:14:54  756922.3      0.00       0.0       0.0                           74326904.0000
+    0:14:58  745788.9      0.00       0.0       0.0                           72031432.0000
+    0:15:00  743047.9      0.00       0.0       0.0                           71643008.0000
+    0:15:02  742053.3      0.00       0.0       0.0                           71089016.0000
+    0:15:02  742096.6      0.00       0.0       0.0                           71082824.0000
+    0:15:02  742096.6      0.00       0.0       0.0                           71082824.0000
+    0:15:02  742096.6      0.00       0.0       0.0                           71082824.0000
+    0:15:02  742096.6      0.00       0.0       0.0                           71082824.0000
+    0:15:03  742096.6      0.00       0.0       0.0                           71082824.0000
+    0:15:03  742096.6      0.00       0.0       0.0                           71082824.0000
+    0:15:12  728601.4      0.00       0.0       0.0                           68871792.0000
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'NN' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'clk': 2201 load(s), 1 driver(s)
+     Net 'rst_n': 2201 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#======================================================
+#  Output Reports 
+#======================================================
+report_timing >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_resource >  Report/$DESIGN\.resource
+#======================================================
+#  Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/RAID2/COURSE/iclab/iclab105/Desktop/Lab04/Exercise/02_SYN/Netlist/NN_SYN.v'.
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/RAID2/COURSE/iclab/iclab105/Desktop/Lab04/Exercise/02_SYN/Netlist/NN_SYN.sdf'. (WT-3)
+1
+#======================================================
+#  Finish and Quit
+#======================================================
+report_area
+ 
+****************************************
+Report : area
+Design : NN
+Version: R-2020.09
+Date   : Mon Mar 20 18:57:52 2023
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
+
+Number of ports:                          196
+Number of nets:                         32773
+Number of cells:                        30921
+Number of combinational cells:          28720
+Number of sequential cells:              2201
+Number of macros/black boxes:               0
+Number of buf/inv:                       4632
+Number of references:                     163
+
+Combinational area:             573986.958694
+Buf/Inv area:                    50990.387163
+Noncombinational area:          154614.399719
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                728601.358414
+Total area:                 undefined
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : NN
+Version: R-2020.09
+Date   : Mon Mar 20 18:57:52 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: REC0_in_reg_16_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: answer_reg_8__9_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  REC0_in_reg_16_/CK (DFFRHQX2)            0.00 #     0.00 r
+  REC0_in_reg_16_/Q (DFFRHQX2)             0.34       0.34 r
+  U28701/Y (BUFX8)                         0.23       0.57 r
+  U28735/Y (INVX2)                         0.15       0.71 f
+  U21683/Y (NOR2X2)                        0.23       0.94 r
+  U28764/Y (INVX1)                         0.19       1.13 f
+  U28765/Y (NOR2X1)                        0.24       1.36 r
+  U20051/Y (INVXL)                         0.06       1.42 f
+  U20050/Y (OAI2BB1XL)                     0.22       1.65 f
+  U28768/Y (NAND4XL)                       0.17       1.82 r
+  U28780/Y (MXI2X1)                        0.15       1.97 f
+  U28845/Y (NAND4X2)                       0.17       2.14 r
+  U8914/Y (INVX2)                          0.09       2.23 f
+  U8873/Y (INVX4)                          0.17       2.40 r
+  U29041/Y (XNOR2XL)                       0.42       2.82 f
+  U19393/Y (OAI22XL)                       0.38       3.20 r
+  U23824/CO (ADDFHX1)                      0.41       3.61 r
+  U8729/S (ADDFX2)                         0.41       4.02 r
+  U29066/S (ADDFHX1)                       0.40       4.43 f
+  U29054/Y (NOR2X1)                        0.19       4.62 r
+  U29058/Y (OAI21X1)                       0.13       4.75 f
+  U29075/Y (AOI21X1)                       0.22       4.97 r
+  U15617/Y (OAI21X2)                       0.14       5.11 f
+  U9698/Y (INVX2)                          0.17       5.29 r
+  U29221/Y (OAI21X1)                       0.11       5.39 f
+  U15532/Y (XNOR2X1)                       0.27       5.66 f
+  U18700/Y (INVX2)                         0.18       5.84 r
+  U29324/Y (INVX2)                         0.18       6.02 f
+  U19740/Y (NOR2X1)                        0.15       6.17 r
+  U8279/CO (ADDFHXL)                       0.72       6.88 r
+  U9691/CO (ADDFX2)                        0.62       7.50 r
+  U15317/CO (ADDFX1)                       0.62       8.13 r
+  U29396/Y (XOR2X1)                        0.34       8.47 r
+  U15260/Y (XNOR2X1)                       0.34       8.81 r
+  U13186/Y (XOR2X2)                        0.44       9.25 r
+  U9779/Y (NAND2X1)                        0.38       9.63 f
+  U21840/Y (NAND2XL)                       0.19       9.82 r
+  U21839/Y (NAND2XL)                       0.11       9.93 f
+  U9781/CO (ADDFXL)                        0.51      10.44 f
+  U29698/S (ADDFHX1)                       0.44      10.88 f
+  U29696/CO (ADDFHX1)                      0.53      11.41 f
+  U29714/S (ADDFHX1)                       0.43      11.84 f
+  U29706/S (ADDHXL)                        0.33      12.17 r
+  U29704/Y (NOR2X1)                        0.11      12.28 f
+  U29705/Y (INVX1)                         0.13      12.41 r
+  U29716/Y (NAND2XL)                       0.11      12.52 f
+  U29722/Y (OAI21XL)                       0.30      12.82 r
+  U19296/Y (AOI21X2)                       0.14      12.96 f
+  U29932/Y (OAI21XL)                       0.30      13.26 r
+  U20475/Y (AOI21X1)                       0.19      13.45 f
+  U29935/Y (OAI21X1)                       0.20      13.65 r
+  U29937/Y (XNOR2X1)                       0.26      13.91 f
+  U29943/Y (AOI21X1)                       0.17      14.08 r
+  U29946/Y (NOR2BX2)                       0.16      14.24 r
+  U12267/Y (OAI2BB1XL)                     0.08      14.32 f
+  answer_reg_8__9_/D (DFFRHQXL)            0.00      14.32 f
+  data arrival time                                  14.32
+
+  clock clk (rise edge)                   14.60      14.60
+  clock network delay (ideal)              0.00      14.60
+  answer_reg_8__9_/CK (DFFRHQXL)           0.00      14.60 r
+  library setup time                      -0.28      14.32
+  data required time                                 14.32
+  -----------------------------------------------------------
+  data required time                                 14.32
+  data arrival time                                 -14.32
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
+exit
+
+Memory usage for this session 469 Mbytes.
+Memory usage for this session including child processes 754 Mbytes.
+CPU usage for this session 915 seconds ( 0.25 hours ).
+Elapsed time for this session 922 seconds ( 0.26 hours ).
+
+Thank you...

@@ -1,0 +1,30 @@
+ 
+****************************************
+check_design summary:
+Version:     R-2020.09
+Date:        Mon Mar 20 18:42:35 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                              16
+    Cells do not drive (LINT-1)                                    16
+--------------------------------------------------------------------------------
+
+Warning: In design 'NN', cell 'C24661' does not drive any nets. (LINT-1)
+Warning: In design 'NN', cell 'C24692' does not drive any nets. (LINT-1)
+Warning: In design 'NN', cell 'C24696' does not drive any nets. (LINT-1)
+Warning: In design 'NN', cell 'C24700' does not drive any nets. (LINT-1)
+Warning: In design 'NN', cell 'C24704' does not drive any nets. (LINT-1)
+Warning: In design 'NN', cell 'C24708' does not drive any nets. (LINT-1)
+Warning: In design 'NN', cell 'C24712' does not drive any nets. (LINT-1)
+Warning: In design 'NN', cell 'C24716' does not drive any nets. (LINT-1)
+Warning: In design 'NN', cell 'C24778' does not drive any nets. (LINT-1)
+Warning: In design 'NN', cell 'C24785' does not drive any nets. (LINT-1)
+Warning: In design 'NN', cell 'C24888' does not drive any nets. (LINT-1)
+Warning: In design 'NN', cell 'C24892' does not drive any nets. (LINT-1)
+Warning: In design 'NN', cell 'C24896' does not drive any nets. (LINT-1)
+Warning: In design 'NN', cell 'C24974' does not drive any nets. (LINT-1)
+Warning: In design 'NN', cell 'C24977' does not drive any nets. (LINT-1)
+Warning: In design 'NN', cell 'B_93' does not drive any nets. (LINT-1)
+1

@@ -1,0 +1,100 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'NN' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : NN
+Version: R-2020.09
+Date   : Mon Mar 20 18:57:51 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: REC0_in_reg[16]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: answer_reg[8][9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  REC0_in_reg[16]/CK (DFFRHQX2)            0.00 #     0.00 r
+  REC0_in_reg[16]/Q (DFFRHQX2)             0.34       0.34 r
+  U28701/Y (BUFX8)                         0.23       0.57 r
+  U28735/Y (INVX2)                         0.15       0.71 f
+  U21683/Y (NOR2X2)                        0.23       0.94 r
+  U28764/Y (INVX1)                         0.19       1.13 f
+  U28765/Y (NOR2X1)                        0.24       1.36 r
+  U20051/Y (INVXL)                         0.06       1.42 f
+  U20050/Y (OAI2BB1XL)                     0.22       1.65 f
+  U28768/Y (NAND4XL)                       0.17       1.82 r
+  U28780/Y (MXI2X1)                        0.15       1.97 f
+  U28845/Y (NAND4X2)                       0.17       2.14 r
+  U8914/Y (INVX2)                          0.09       2.23 f
+  U8873/Y (INVX4)                          0.17       2.40 r
+  U29041/Y (XNOR2XL)                       0.42       2.82 f
+  U19393/Y (OAI22XL)                       0.38       3.20 r
+  U23824/CO (ADDFHX1)                      0.41       3.61 r
+  U8729/S (ADDFX2)                         0.41       4.02 r
+  U29066/S (ADDFHX1)                       0.40       4.43 f
+  U29054/Y (NOR2X1)                        0.19       4.62 r
+  U29058/Y (OAI21X1)                       0.13       4.75 f
+  U29075/Y (AOI21X1)                       0.22       4.97 r
+  U15617/Y (OAI21X2)                       0.14       5.11 f
+  U9698/Y (INVX2)                          0.17       5.29 r
+  U29221/Y (OAI21X1)                       0.11       5.39 f
+  U15532/Y (XNOR2X1)                       0.27       5.66 f
+  U18700/Y (INVX2)                         0.18       5.84 r
+  U29324/Y (INVX2)                         0.18       6.02 f
+  U19740/Y (NOR2X1)                        0.15       6.17 r
+  U8279/CO (ADDFHXL)                       0.72       6.88 r
+  U9691/CO (ADDFX2)                        0.62       7.50 r
+  U15317/CO (ADDFX1)                       0.62       8.13 r
+  U29396/Y (XOR2X1)                        0.34       8.47 r
+  U15260/Y (XNOR2X1)                       0.34       8.81 r
+  U13186/Y (XOR2X2)                        0.44       9.25 r
+  U9779/Y (NAND2X1)                        0.38       9.63 f
+  U21840/Y (NAND2XL)                       0.19       9.82 r
+  U21839/Y (NAND2XL)                       0.11       9.93 f
+  U9781/CO (ADDFXL)                        0.51      10.44 f
+  U29698/S (ADDFHX1)                       0.44      10.88 f
+  U29696/CO (ADDFHX1)                      0.53      11.41 f
+  U29714/S (ADDFHX1)                       0.43      11.84 f
+  U29706/S (ADDHXL)                        0.33      12.17 r
+  U29704/Y (NOR2X1)                        0.11      12.28 f
+  U29705/Y (INVX1)                         0.13      12.41 r
+  U29716/Y (NAND2XL)                       0.11      12.52 f
+  U29722/Y (OAI21XL)                       0.30      12.82 r
+  U19296/Y (AOI21X2)                       0.14      12.96 f
+  U29932/Y (OAI21XL)                       0.30      13.26 r
+  U20475/Y (AOI21X1)                       0.19      13.45 f
+  U29935/Y (OAI21X1)                       0.20      13.65 r
+  U29937/Y (XNOR2X1)                       0.26      13.91 f
+  U29943/Y (AOI21X1)                       0.17      14.08 r
+  U29946/Y (NOR2BX2)                       0.16      14.24 r
+  U12267/Y (OAI2BB1XL)                     0.08      14.32 f
+  answer_reg[8][9]/D (DFFRHQXL)            0.00      14.32 f
+  data arrival time                                  14.32
+
+  clock clk (rise edge)                   14.60      14.60
+  clock network delay (ideal)              0.00      14.60
+  answer_reg[8][9]/CK (DFFRHQXL)           0.00      14.60 r
+  library setup time                      -0.28      14.32
+  data required time                                 14.32
+  -----------------------------------------------------------
+  data required time                                 14.32
+  data arrival time                                 -14.32
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
