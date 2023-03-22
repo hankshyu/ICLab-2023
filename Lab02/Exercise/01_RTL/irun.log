@@ -1,0 +1,92 @@
+irun: 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun	15.20-s084: Started on Mar 06, 2023 at 18:28:22 CST
+irun
+	TESTBED.v
+	-define RTL
+	-debug
+file: TESTBED.v
+integer [3:0] x [11:0];
+            |
+ncvlog: *W,INTRNG (PATTERN.v,36|12): Range specification on integer declaration ignored.
+(`include file: PATTERN.v line 36, file: TESTBED.v line 3)
+integer [3:0] y [11:0];
+            |
+ncvlog: *W,INTRNG (PATTERN.v,37|12): Range specification on integer declaration ignored.
+(`include file: PATTERN.v line 37, file: TESTBED.v line 3)
+integer [11:0] array_use;
+             |
+ncvlog: *W,INTRNG (PATTERN.v,42|13): Range specification on integer declaration ignored.
+(`include file: PATTERN.v line 42, file: TESTBED.v line 3)
+integer [11:0] array [11:0];
+             |
+ncvlog: *W,INTRNG (PATTERN.v,43|13): Range specification on integer declaration ignored.
+(`include file: PATTERN.v line 43, file: TESTBED.v line 3)
+integer [11:0] array_look_back [11:0];
+             |
+ncvlog: *W,INTRNG (PATTERN.v,44|13): Range specification on integer declaration ignored.
+(`include file: PATTERN.v line 44, file: TESTBED.v line 3)
+	$fscanf(fp_w, "%d\n",random_number);
+	      |
+ncvlog: *W,NOSYST (PATTERN.v,133|7): System function '$fscanf' invoked as a task. Return value will be ignored.
+(`include file: PATTERN.v line 133, file: TESTBED.v line 3)
+		$fscanf(fp_w, "%d %d\n",x[i],y[i]);
+		      |
+ncvlog: *W,NOSYST (PATTERN.v,144|8): System function '$fscanf' invoked as a task. Return value will be ignored.
+(`include file: PATTERN.v line 144, file: TESTBED.v line 3)
+	$fscanf(fp_w1, "%d\n", golden_out);
+	      |
+ncvlog: *W,NOSYST (PATTERN.v,186|7): System function '$fscanf' invoked as a task. Return value will be ignored.
+(`include file: PATTERN.v line 186, file: TESTBED.v line 3)
+	module worklib.PATTERN:v
+		errors: 0, warnings: 8
+	module worklib.QUEEN:v
+		errors: 0, warnings: 0
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		TESTBED
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.PATTERN:v <0x4865864e>
+			streams:  11, words: 32769
+		worklib.QUEEN:v <0x2a525bf6>
+			streams:  68, words: 54792
+		worklib.TESTBED:v <0x296ab98a>
+			streams:   1, words:   719
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 3       3
+		Registers:              54      54
+		Scalar wires:           28       -
+		Vectored wires:          6       -
+		Always blocks:          12      12
+		Initial blocks:          4       4
+		Cont. assignments:      24       4
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+SVSEED default: 1
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /RAID2/EDA/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'QUEEN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+--------------------------------------------------------------------
+                         Congratulations!                           
+                  You have passed all patterns!                     
+--------------------------------------------------------------------
+Simulation complete via $finish(1) at time 415719 NS + 0
+./PATTERN.v:207     $finish;
+ncsim> exit
+TOOL:	irun	15.20-s084: Exiting on Mar 06, 2023 at 18:28:37 CST  (total: 00:00:15)
