@@ -1,0 +1,528 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version R-2020.09 for linux64 - Aug 26, 2020 
+
+                    Copyright (c) 1988 - 2020 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+#  Set Libraries
+#======================================================
+set search_path {	./../01_RTL 					~iclabta01/umc018/Synthesis/ 					/usr/synthesis/libraries/syn/ 					/usr/synthesis/dw/ }
+ ./../01_RTL      ~iclabta01/umc018/Synthesis/      /usr/synthesis/libraries/syn/      /usr/synthesis/dw/ 
+set synthetic_library {dw_foundation.sldb}
+dw_foundation.sldb
+set link_library {* dw_foundation.sldb standard.sldb slow.db}
+* dw_foundation.sldb standard.sldb slow.db
+set target_library {slow.db}
+slow.db
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#report_lib slow
+#======================================================
+#  Global Parameters
+#======================================================
+set DESIGN "VIP"
+VIP
+set CLK_period 10
+10
+#======================================================
+#  Read RTL Code
+#======================================================
+read_sverilog { $DESIGN\.v}
+Loading db file '/usr/synthesis/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/synthesis/libraries/syn/standard.sldb'
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+Loading db file '/RAID2/EDA/synopsys/synthesis/2020.09/libraries/syn/gtech.db'
+Loading db file '/RAID2/EDA/synopsys/synthesis/2020.09/libraries/syn/standard.sldb'
+  Loading link library 'slow'
+  Loading link library 'gtech'
+Loading sverilog file '/RAID2/COURSE/iclab/iclab105/Desktop/Lab04/Practice/01_RTL/VIP.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /RAID2/COURSE/iclab/iclab105/Desktop/Lab04/Practice/01_RTL/VIP.v
+
+Inferred memory devices in process
+	in routine VIP line 36 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab04/Practice/01_RTL/VIP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine VIP line 59 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab04/Practice/01_RTL/VIP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       cnt_reg       | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine VIP line 64 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab04/Practice/01_RTL/VIP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     mult_b_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     mult_a_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine VIP line 74 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab04/Practice/01_RTL/VIP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      add_b_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      add_a_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine VIP line 85 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab04/Practice/01_RTL/VIP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       out_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    out_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/RAID2/COURSE/iclab/iclab105/Desktop/Lab04/Practice/01_RTL/VIP.db:VIP'
+Loaded 1 design.
+Current design is 'VIP'.
+VIP
+current_design $DESIGN
+Current design is 'VIP'.
+{VIP}
+#======================================================
+#  Global Setting
+#======================================================
+#set_wire_load_mode top
+#======================================================
+#  Set Design Constraints
+#======================================================
+create_clock -name "clk" -period $CLK_period clk 
+1
+set_input_delay  [ expr $CLK_period*0.5 ] -clock clk [all_inputs]
+1
+set_output_delay [ expr $CLK_period*0.5 ] -clock clk [all_outputs]
+1
+set_input_delay 0 -clock clk clk
+1
+set_input_delay 0 -clock clk rst_n
+1
+set_load 0.05 [all_outputs]
+1
+#======================================================
+#  Optimization
+#======================================================
+uniquify
+1
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants
+1
+#set_fix_hold [all_clocks]
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Analyzing: "/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db"
+Library analysis succeeded.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | Q-2019.12-DWBB_201912.0 |     *     |
+| Licensed DW Building Blocks        | Q-2019.12-DWBB_201912.0 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'VIP'
+
+Loaded alib file './alib-52/slow.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'VIP'
+Information: Added key list 'DesignWare' to design 'VIP'. (DDB-72)
+ Implement Synthetic for 'VIP'.
+  Processing 'VIP_DW_fp_addsub_J1_0'
+  Processing 'VIP_DW_lzd_J1_0'
+  Processing 'VIP_DW_fp_mult_J1_0'
+  Processing 'VIP_DW_lzd_J1_1'
+  Processing 'VIP_DW_lzd_J1_2'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1' in the library 'slow' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:32  157980.7      0.13       0.3       0.0                           24039984.0000
+    0:00:32  157322.1      0.72       7.6       0.0                           23969740.0000
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:32  157322.1      0.72       7.6       0.0                           23969740.0000
+    0:00:32  157322.1      0.72       7.6       0.0                           23969740.0000
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Mapping 'VIP_DW_mult_uns_1'
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:34   88755.0      1.25      36.8       0.0                           8956005.0000
+    0:00:35   89184.1      0.00       0.0       0.0                           9106591.0000
+    0:00:35   89184.1      0.00       0.0       0.0                           9106591.0000
+    0:00:35   89117.6      0.00       0.0       0.0                           9082999.0000
+    0:00:36   88801.6      0.00       0.0       0.0                           9056973.0000
+    0:00:36   88675.2      0.00       0.0       0.0                           9046882.0000
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:38   87767.1      0.00       0.0       0.0                           8823624.0000
+    0:00:38   87767.1      0.00       0.0       0.0                           8823624.0000
+    0:00:38   87767.1      0.00       0.0       0.0                           8823624.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:39   87700.5      0.00       0.0       0.0                           8665413.0000
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+    0:00:40   86732.6      0.00       0.0       0.0                           7870429.0000
+    0:00:40   86732.6      0.00       0.0       0.0                           7870429.0000
+    0:00:40   86732.6      0.00       0.0       0.0                           7870429.0000
+    0:00:40   86616.1      0.00       0.0       0.0                           7853228.0000
+    0:00:40   86616.1      0.00       0.0       0.0                           7853228.0000
+    0:00:40   86616.1      0.00       0.0       0.0                           7853228.0000
+    0:00:40   86616.1      0.00       0.0       0.0                           7853228.0000
+    0:00:40   86616.1      0.00       0.0       0.0                           7853228.0000
+    0:00:40   86616.1      0.00       0.0       0.0                           7853228.0000
+    0:00:40   86616.1      0.00       0.0       0.0                           7853228.0000
+    0:00:40   86616.1      0.00       0.0       0.0                           7853228.0000
+    0:00:40   86616.1      0.00       0.0       0.0                           7853228.0000
+    0:00:40   86616.1      0.00       0.0       0.0                           7853228.0000
+    0:00:40   86616.1      0.00       0.0       0.0                           7853228.0000
+    0:00:40   86616.1      0.00       0.0       0.0                           7853228.0000
+    0:00:40   86616.1      0.00       0.0       0.0                           7853228.0000
+    0:00:40   86616.1      0.00       0.0       0.0                           7853228.0000
+    0:00:40   86616.1      0.00       0.0       0.0                           7853228.0000
+    0:00:40   86616.1      0.00       0.0       0.0                           7853228.0000
+    0:00:40   86616.1      0.00       0.0       0.0                           7853228.0000
+    0:00:40   86616.1      0.00       0.0       0.0                           7853228.0000
+    0:00:40   86616.1      0.00       0.0       0.0                           7853228.0000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:40   86616.1      0.00       0.0       0.0                           7853228.0000
+    0:00:41   85002.8      0.00       0.0       0.0                           7838453.0000
+    0:00:41   85002.8      0.00       0.0       0.0                           7838453.0000
+    0:00:41   85002.8      0.00       0.0       0.0                           7838453.0000
+    0:00:41   85002.8      0.00       0.0       0.0                           7836773.0000
+    0:00:41   84833.2      0.00       0.0       0.0                           7744933.5000
+    0:00:41   84833.2      0.00       0.0       0.0                           7744933.5000
+    0:00:41   84833.2      0.00       0.0       0.0                           7744933.5000
+    0:00:41   84833.2      0.00       0.0       0.0                           7744933.5000
+    0:00:41   84833.2      0.00       0.0       0.0                           7744933.5000
+    0:00:41   84833.2      0.00       0.0       0.0                           7744933.5000
+    0:00:42   84078.1      0.00       0.0       0.0                           7633905.5000
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#======================================================
+#  Output Reports 
+#======================================================
+report_timing >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_resource >  Report/$DESIGN\.resource
+#======================================================
+#  Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/RAID2/COURSE/iclab/iclab105/Desktop/Lab04/Practice/02_SYN/Netlist/VIP_SYN.v'.
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/RAID2/COURSE/iclab/iclab105/Desktop/Lab04/Practice/02_SYN/Netlist/VIP_SYN.sdf'. (WT-3)
+1
+#======================================================
+#  Finish and Quit
+#======================================================
+report_area
+ 
+****************************************
+Report : area
+Design : VIP
+Version: R-2020.09
+Date   : Wed Mar 15 22:45:25 2023
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
+
+Number of ports:                          100
+Number of nets:                          3856
+Number of cells:                         3484
+Number of combinational cells:           3319
+Number of sequential cells:               165
+Number of macros/black boxes:               0
+Number of buf/inv:                        470
+Number of references:                      90
+
+Combinational area:              72139.637967
+Buf/Inv area:                     4849.891362
+Noncombinational area:           11938.449631
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 84078.087598
+Total area:                 undefined
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : VIP
+Version: R-2020.09
+Date   : Wed Mar 15 22:45:25 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: add_a_reg_17_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: out_reg_30_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  add_a_reg_17_/CK (DFFRHQXL)              0.00       0.00 r
+  add_a_reg_17_/Q (DFFRHQXL)               0.59       0.59 r
+  U1853/Y (INVX1)                          0.11       0.70 f
+  U1894/Y (NOR2X1)                         0.14       0.84 r
+  U1906/Y (OAI21XL)                        0.10       0.94 f
+  U1910/Y (AOI21XL)                        0.19       1.13 r
+  U1914/Y (OAI21XL)                        0.11       1.25 f
+  U1927/Y (AOI21X1)                        0.20       1.44 r
+  U804/Y (OAI21X2)                         0.13       1.58 f
+  U682/Y (INVX4)                           0.13       1.71 r
+  U1845/Y (INVX2)                          0.17       1.89 f
+  U1017/Y (AOI2BB2X1)                      0.32       2.20 r
+  U2110/Y (INVXL)                          0.08       2.28 f
+  U798/Y (OAI22XL)                         0.28       2.56 r
+  U2111/Y (MXI2X1)                         0.15       2.72 f
+  U1020/Y (AOI2BB1X1)                      0.32       3.04 f
+  U1451/Y (OAI2BB1XL)                      0.23       3.27 f
+  U1450/Y (OAI211XL)                       0.19       3.46 r
+  U1471/Y (XOR2XL)                         0.46       3.92 r
+  U2158/Y (NAND2XL)                        0.12       4.04 f
+  U2159/Y (NOR2X2)                         0.12       4.16 r
+  U2186/Y (AOI21X1)                        0.16       4.32 f
+  U2219/Y (OAI21X2)                        0.22       4.54 r
+  U2220/Y (INVX4)                          0.14       4.68 f
+  U1641/Y (OAI21XL)                        0.23       4.90 r
+  U1639/Y (XNOR2XL)                        0.53       5.44 r
+  U330/Y (INVXL)                           0.07       5.51 f
+  U522/Y (AOI2BB2X1)                       0.29       5.80 f
+  U2361/Y (INVXL)                          0.10       5.90 r
+  U1575/Y (AOI2BB2XL)                      0.23       6.13 r
+  U2362/Y (NAND3X1)                        0.16       6.29 f
+  U2369/Y (NAND4X2)                        0.20       6.49 r
+  U2370/Y (NAND2X4)                        0.12       6.61 f
+  U2371/Y (NAND2X4)                        0.11       6.72 r
+  U2372/Y (NOR2X4)                         0.06       6.78 f
+  U2373/Y (NAND2X2)                        0.11       6.89 r
+  U2374/Y (NOR2X2)                         0.08       6.97 f
+  U2381/Y (AOI211X1)                       0.27       7.25 r
+  U2382/Y (INVX1)                          0.10       7.34 f
+  U2401/CO (ADDHX1)                        0.24       7.58 f
+  U481/Y (NOR2X1)                          0.19       7.77 r
+  U914/Y (OAI21X1)                         0.14       7.92 f
+  U2409/Y (AOI21XL)                        0.18       8.09 r
+  U1684/Y (OAI21XL)                        0.13       8.22 f
+  U2413/Y (XNOR2X1)                        0.34       8.56 r
+  U2423/Y (NOR4X1)                         0.09       8.64 f
+  U2426/Y (AOI21X1)                        0.23       8.87 r
+  U2454/Y (INVX2)                          0.07       8.95 f
+  U2455/Y (AOI211X2)                       0.40       9.35 r
+  U2465/Y (AOI222X4)                       0.39       9.74 f
+  U306/Y (NOR2X1)                          0.09       9.83 r
+  out_reg_30_/D (DFFRHQXL)                 0.00       9.83 r
+  data arrival time                                   9.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  out_reg_30_/CK (DFFRHQXL)                0.00      10.00 r
+  library setup time                      -0.17       9.83
+  data required time                                  9.83
+  -----------------------------------------------------------
+  data required time                                  9.83
+  data arrival time                                  -9.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
+exit
+
+Memory usage for this session 225 Mbytes.
+Memory usage for this session including child processes 225 Mbytes.
+CPU usage for this session 95 seconds ( 0.03 hours ).
+Elapsed time for this session 99 seconds ( 0.03 hours ).
+
+Thank you...
