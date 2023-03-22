@@ -1,0 +1,88 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : CC
+Version: R-2020.09
+Date   : Mon Feb 27 01:51:54 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: in_s6[1] (input port)
+  Endpoint: s_id4[0] (output port)
+  Path Group: default
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  in_s6[1] (in)                            0.00       0.00 r
+  U1437/Y (INVXL)                          0.19       0.19 f
+  U964/Y (AOI22XL)                         0.28       0.47 r
+  U963/Y (OAI31XL)                         0.14       0.61 f
+  U1922/Y (INVXL)                          0.10       0.71 r
+  U1110/Y (OAI31XL)                        0.12       0.83 f
+  U1109/Y (INVXL)                          0.14       0.96 r
+  U1108/Y (AOI222XL)                       0.31       1.27 f
+  U748/Y (NOR2XL)                          1.12       2.40 r
+  U974/Y (MXI2XL)                          0.60       3.00 f
+  U971/Y (AOI22XL)                         0.33       3.33 r
+  U969/Y (OAI31XL)                         0.13       3.46 f
+  U1116/Y (OAI2BB1XL)                      0.27       3.73 f
+  U1114/Y (AOI222XL)                       0.72       4.45 r
+  U1258/Y (OAI31XL)                        0.64       5.10 f
+  U960/Y (MXI2XL)                          0.36       5.46 r
+  U1014/Y (INVXL)                          0.14       5.60 f
+  U956/Y (OAI211XL)                        0.25       5.85 r
+  U1091/Y (OAI2BB1XL)                      0.14       5.99 f
+  U1938/Y (AOI222XL)                       0.50       6.50 r
+  U1090/Y (OAI21XL)                        0.19       6.68 f
+  U1940/Y (AOI222XL)                       0.73       7.42 r
+  U1182/Y (OAI31XL)                        0.26       7.68 f
+  U1199/Y (INVXL)                          0.65       8.33 r
+  U1212/Y (MXI2XL)                         0.40       8.72 r
+  U1046/Y (INVXL)                          0.06       8.79 f
+  U1045/Y (OAI2BB1XL)                      0.28       9.06 f
+  U1961/Y (AOI222XL)                       0.56       9.63 r
+  U1047/Y (NAND2XL)                        0.09       9.72 f
+  U1219/Y (OAI211XL)                       0.15       9.87 r
+  U1217/Y (AOI211XL)                       0.13      10.00 f
+  U1216/Y (AOI31XL)                        1.24      11.24 r
+  U1194/Y (MXI2XL)                         0.62      11.86 r
+  U1031/Y (INVXL)                          0.12      11.98 f
+  U1027/Y (OAI211XL)                       0.24      12.22 r
+  U1026/Y (OAI21XL)                        0.12      12.34 f
+  U1025/Y (AOI2BB1XL)                      0.17      12.51 r
+  U1196/Y (OAI22XL)                        0.15      12.66 f
+  U1195/Y (OAI21XL)                        0.18      12.83 r
+  U1973/Y (AOI222XL)                       0.29      13.12 f
+  U1292/Y (AOI31XL)                        1.01      14.13 r
+  U1204/Y (MXI2XL)                         0.57      14.70 f
+  U1988/Y (AOI222XL)                       0.57      15.27 r
+  U1989/Y (AOI222XL)                       0.30      15.57 f
+  U1990/Y (AOI222XL)                       0.58      16.15 r
+  U1304/Y (OAI22XL)                        0.15      16.30 f
+  U1303/Y (OAI2BB1XL)                      0.14      16.44 r
+  U1345/Y (AOI31XL)                        0.17      16.61 f
+  U1342/Y (INVXL)                          0.32      16.93 r
+  U1349/Y (MXI2XL)                         0.27      17.20 f
+  U2019/Y (AOI22XL)                        0.21      17.42 r
+  s_id4[0] (out)                           0.00      17.42 r
+  data arrival time                                  17.42
+
+  max_delay                               20.00      20.00
+  output external delay                    0.00      20.00
+  data required time                                 20.00
+  -----------------------------------------------------------
+  data required time                                 20.00
+  data arrival time                                 -17.42
+  -----------------------------------------------------------
+  slack (MET)                                         2.58
+
+
+1

@@ -1,0 +1,44 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : CORE
+Version: R-2020.09
+Date   : Sat Feb 25 02:32:04 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: in_n1[0] (input port)
+  Endpoint: out_n[3] (output port)
+  Path Group: default
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  in_n1[0] (in)                            0.00       0.00 r
+  U18/Y (INVXL)                            0.05       0.05 f
+  U17/Y (NOR2XL)                           0.18       0.22 r
+  U15/Y (AOI2BB1XL)                        0.09       0.31 f
+  U19/CO (ADDFXL)                          1.27       1.58 f
+  U20/CO (ADDFXL)                          0.47       2.05 f
+  U21/Y (MXI2XL)                           0.20       2.25 f
+  out_n[3] (out)                           0.00       2.25 f
+  data arrival time                                   2.25
+
+  max_delay                               30.00      30.00
+  output external delay                    0.00      30.00
+  data required time                                 30.00
+  -----------------------------------------------------------
+  data required time                                 30.00
+  data arrival time                                  -2.25
+  -----------------------------------------------------------
+  slack (MET)                                        27.75
+
+
+1
