@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : INV_IP_demo
+Version: R-2020.09
+Date   : Mon Apr  3 02:47:09 2023
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
+
+Number of ports:                           21
+Number of nets:                          1949
+Number of cells:                         1759
+Number of combinational cells:           1759
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                        273
+Number of references:                      36
+
+Combinational area:              37365.451990
+Buf/Inv area:                     2724.321699
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 37365.451990
+Total area:                 undefined
+1

@@ -1,0 +1,10 @@
+s1(29Mar2023:22:49:11):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s2(29Mar2023:22:51:50):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s3(29Mar2023:22:52:48):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s4(29Mar2023:22:54:19):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s5(29Mar2023:22:57:00):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s6(29Mar2023:23:00:30):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s7(29Mar2023:23:02:49):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s8(29Mar2023:23:05:25):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s9(29Mar2023:23:09:24):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s10(29Mar2023:23:11:46):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 

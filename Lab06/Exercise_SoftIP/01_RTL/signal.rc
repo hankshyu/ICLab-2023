@@ -1,0 +1,122 @@
+Magic 271485
+Revision Verdi_P-2019.06
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 517 129 1498 937 216 250
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/RAID2/COURSE/iclab/iclab105/Desktop/Lab06/Exercise_SoftIP/01_RTL/INV_IP_demo.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 20540267.271687 20663858.519960
+cursor 20589408.92109272629
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 32
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/RAID2/COURSE/iclab/iclab105/Desktop/Lab06/Exercise_SoftIP/01_RTL/INV_IP_demo.fsdb"
+addSignal -h 15 -UNSIGNED -UDEC /TESTBED/My_IP/I_INV_IP/IN_1[5:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope IN_2[5:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope OUT_INV[5:0]
+addSignal -h 15 -holdScope in_a[5:0]
+addSignal -h 15 -holdScope in_n[5:0]
+addSignal -c ID_RED7 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /TESTBED/My_IP/I_INV_IP/ii/gen_layer[1]/if_1/quotient[4:0]
+addSignal -c ID_RED7 -ls solid -lw 1 -h 15 -2COMP -UDEC -holdScope new_t[5:0]
+addSignal -c ID_RED7 -ls solid -lw 1 -h 15 -holdScope t
+addSignal -c ID_RED7 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope new_r[4:0]
+addSignal -c ID_RED7 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope r[5:0]
+addSignal -c ID_YELLOW6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /TESTBED/My_IP/I_INV_IP/ii/gen_layer[2]/if_2/quotient[4:0]
+addSignal -c ID_YELLOW6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope new_t[4:0]
+addSignal -c ID_YELLOW6 -ls solid -lw 1 -h 15 -2COMP -UDEC -holdScope t[5:0]
+addSignal -c ID_YELLOW6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope new_r[4:0]
+addSignal -c ID_YELLOW6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope r[4:0]
+addSignal -c ID_BLUE7 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /TESTBED/My_IP/I_INV_IP/ii/gen_layer[3]/if_3/quotient[3:0]
+addSignal -c ID_BLUE7 -ls solid -lw 1 -h 15 -2COMP -UDEC -holdScope new_t[5:0]
+addSignal -c ID_BLUE7 -ls solid -lw 1 -h 15 -2COMP -UDEC -holdScope t[5:0]
+addSignal -c ID_BLUE7 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope new_r[3:0]
+addSignal -c ID_BLUE7 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope r[4:0]
+addSignal -c ID_PURPLE7 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /TESTBED/My_IP/I_INV_IP/ii/gen_layer[4]/if_4/quotient[3:0]
+addSignal -c ID_PURPLE7 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope new_t[4:0]
+addSignal -c ID_PURPLE7 -ls solid -lw 1 -h 15 -2COMP -UDEC -holdScope t[5:0]
+addSignal -c ID_PURPLE7 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope new_r[2:0]
+addSignal -c ID_PURPLE7 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope r[3:0]
+addSignal -c ID_GRAY6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /TESTBED/My_IP/I_INV_IP/ii/gen_layer[5]/if_5/quotient[2:0]
+addSignal -c ID_GRAY6 -ls solid -lw 1 -h 15 -2COMP -UDEC -holdScope new_t[5:0]
+addSignal -c ID_GRAY6 -ls solid -lw 1 -h 15 -2COMP -UDEC -holdScope t[5:0]
+addSignal -c ID_GRAY6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope new_r[1:0]
+addSignal -c ID_GRAY6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope r[2:0]
+addSignal -h 15 /TESTBED/My_IP/I_INV_IP/ii/gen_layer[6]/if_6/quotient
+addSignal -h 15 -2COMP -HEX -holdScope t[5:0]
+addSignal -h 15 -holdScope new_t[4:0]
+addSignal -h 15 -holdScope new_r
+addSignal -h 15 -holdScope r[1:0]
+addGroup "G2"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/RAID2/COURSE/iclab/iclab105/Desktop/Lab06/Exercise_SoftIP/01_RTL/INV_IP_demo.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/TESTBED"
+"/TESTBED/My_IP"
+"/TESTBED/My_IP/I_INV_IP"
+"/TESTBED/My_IP/I_INV_IP/ii"
+"/TESTBED/My_IP/I_INV_IP/ii/gen_layer[5]"
+"/TESTBED/My_IP/I_INV_IP/ii/gen_layer[6]"
+
+SCOPE_LIST_BEGIN
+"/TESTBED"
+"/TESTBED/My_IP"
+"/TESTBED/My_PATTERN"
+"/TESTBED/My_IP/I_INV_IP"
+"/TESTBED/My_IP/I_INV_IP/ii/gen_layer[1]"
+"/TESTBED/My_IP/I_INV_IP/ii"
+"/TESTBED/My_IP/I_INV_IP/ii/gen_layer[1]/if_1"
+"/TESTBED/My_IP/I_INV_IP/ii/gen_layer[2]/if_2"
+"/TESTBED/My_IP/I_INV_IP/ii/gen_layer[2]"
+"/TESTBED/My_IP/I_INV_IP/ii/gen_layer[3]/if_3"
+"/TESTBED/My_IP/I_INV_IP/ii/gen_layer[4]/if_4"
+"/TESTBED/My_IP/I_INV_IP/ii/gen_layer[3]"
+"/TESTBED/My_IP/I_INV_IP/ii/gen_layer[4]"
+"/TESTBED/My_IP/I_INV_IP/ii/gen_layer[5]/if_5"
+"/TESTBED/My_IP/I_INV_IP/ii/gen_layer[6]"
+"/TESTBED/My_IP/I_INV_IP/ii/gen_layer[6]/if_6"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+

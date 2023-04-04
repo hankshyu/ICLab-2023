@@ -1,0 +1,24 @@
+ 
+****************************************
+check_design summary:
+Version:     R-2020.09
+Date:        Mon Apr  3 10:31:57 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                              10
+    Cells do not drive (LINT-1)                                    10
+--------------------------------------------------------------------------------
+
+Warning: In design 'EC_TOP', cell 'C682' does not drive any nets. (LINT-1)
+Warning: In design 'EC_TOP', cell 'C683' does not drive any nets. (LINT-1)
+Warning: In design 'EC_TOP', cell 'B_34' does not drive any nets. (LINT-1)
+Warning: In design 'EC_TOP', cell 'B_35' does not drive any nets. (LINT-1)
+Warning: In design 'INV_IP_IP_WIDTH6', cell 'B_22' does not drive any nets. (LINT-1)
+Warning: In design 'INV_IP_IP_WIDTH6', cell 'B_23' does not drive any nets. (LINT-1)
+Warning: In design 'INV_IP_IP_WIDTH6', cell 'B_24' does not drive any nets. (LINT-1)
+Warning: In design 'INV_IP_IP_WIDTH6', cell 'B_25' does not drive any nets. (LINT-1)
+Warning: In design 'INV_IP_IP_WIDTH6', cell 'B_26' does not drive any nets. (LINT-1)
+Warning: In design 'INV_IP_IP_WIDTH6', cell 'C228' does not drive any nets. (LINT-1)
+1

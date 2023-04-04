@@ -1,0 +1,6 @@
+cat /etc/redhat-release  | tee version.log
+if   grep -i -q '8' 'version.log'; then
+    irun TESTBED.v -define GATE_TOP -debug -loadpli1 debpli:novas_pli_boot -v ~iclabta01/umc018/Verilog/umc18_neg.v
+else
+    irun TESTBED.v -define GATE_TOP -debug -v ~iclabta01/umc018/Verilog/umc18_neg.v
+fi

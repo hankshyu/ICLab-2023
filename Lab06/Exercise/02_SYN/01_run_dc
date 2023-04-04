@@ -1,0 +1,1 @@
+/RAID2/EDA/synopsys/synthesis/2020.09/bin/dc_shell-t -f syn.tcl | tee syn.log

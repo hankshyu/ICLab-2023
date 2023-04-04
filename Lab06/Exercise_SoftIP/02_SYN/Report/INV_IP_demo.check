@@ -1,0 +1,22 @@
+ 
+****************************************
+check_design summary:
+Version:     R-2020.09
+Date:        Mon Apr  3 02:47:02 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               8
+    Cells do not drive (LINT-1)                                     8
+--------------------------------------------------------------------------------
+
+Warning: In design 'INV_IP_IP_WIDTH7', cell 'B_30' does not drive any nets. (LINT-1)
+Warning: In design 'INV_IP_IP_WIDTH7', cell 'B_31' does not drive any nets. (LINT-1)
+Warning: In design 'INV_IP_IP_WIDTH7', cell 'B_32' does not drive any nets. (LINT-1)
+Warning: In design 'INV_IP_IP_WIDTH7', cell 'B_33' does not drive any nets. (LINT-1)
+Warning: In design 'INV_IP_IP_WIDTH7', cell 'B_34' does not drive any nets. (LINT-1)
+Warning: In design 'INV_IP_IP_WIDTH7', cell 'B_35' does not drive any nets. (LINT-1)
+Warning: In design 'INV_IP_IP_WIDTH7', cell 'B_36' does not drive any nets. (LINT-1)
+Warning: In design 'INV_IP_IP_WIDTH7', cell 'C354' does not drive any nets. (LINT-1)
+1

@@ -1,0 +1,841 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version R-2020.09 for linux64 - Aug 26, 2020 
+
+                    Copyright (c) 1988 - 2020 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+# Date: 3/31/2023 (Hsu, hank)
+#======================================================
+#======================================================
+#  Global Parameters
+#======================================================
+set DESIGN "INV_IP_demo"
+INV_IP_demo
+set CYCLE 60.0
+60.0
+#======================================================
+#  Specify Libraries
+#======================================================
+set search_path {./../01_RTL                  ~iclabta01/umc018/Synthesis/                  /usr/synthesis/libraries/syn/}
+./../01_RTL                  ~iclabta01/umc018/Synthesis/                  /usr/synthesis/libraries/syn/
+set synthetic_library {dw_foundation.sldb}
+dw_foundation.sldb
+set link_library {* dw_foundation.sldb standard.sldb slow.db}  
+* dw_foundation.sldb standard.sldb slow.db
+set target_library {slow.db}
+slow.db
+#======================================================
+#  Read RTL Code
+#======================================================
+analyze -format verilog {INV_IP_demo.v INV_IP.v}
+Running PRESTO HDLC
+Compiling source file ./../01_RTL/INV_IP_demo.v
+Compiling source file ./../01_RTL/INV_IP.v
+Warning:  ./../01_RTL/INV_IP.v:27: Parameter keyword used in local parameter declaration. (VER-329)
+Warning:  ./../01_RTL/INV_IP.v:223: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ./../01_RTL/INV_IP.v:223: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Presto compilation completed successfully.
+Loading db file '/usr/synthesis/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/synthesis/libraries/syn/standard.sldb'
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+1
+elaborate $DESIGN 
+Loading db file '/RAID2/EDA/synopsys/synthesis/2020.09/libraries/syn/gtech.db'
+Loading db file '/RAID2/EDA/synopsys/synthesis/2020.09/libraries/syn/standard.sldb'
+  Loading link library 'slow'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (INV_IP_demo)
+Elaborated 1 design.
+Current design is now 'INV_IP_demo'.
+Information: Building the design 'INV_IP' instantiated from design 'INV_IP_demo' with
+	the parameters "IP_WIDTH=7". (HDL-193)
+Warning:  ./../01_RTL/INV_IP.v:230: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./../01_RTL/INV_IP.v:246: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./../01_RTL/INV_IP.v:260: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./../01_RTL/INV_IP.v:262: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully. (INV_IP_IP_WIDTH7)
+1
+current_design $DESIGN
+Current design is 'INV_IP_demo'.
+{INV_IP_demo}
+#======================================================
+#  Global Setting
+#======================================================
+#======================================================
+#  Develop desgin environment
+#======================================================
+set_wire_load_mode top
+1
+set_load 0.05 [all_outputs]
+1
+#======================================================
+#  Set Design Constraints
+#======================================================
+# create_clock -name "clk" -period $CYCLE clk
+# set_input_delay  [ expr $CYCLE*0.5 ] -clock clk [all_inputs]
+# set_output_delay [ expr $CYCLE*0.5 ] -clock clk [all_outputs]
+# set_input_delay 0 -clock clk clk
+# set_input_delay 0 -clock clk rst_n
+set_dont_use slow/JKFF*
+1
+#======================================================
+#  Optimization(Compile strategy)
+#======================================================
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants
+1
+#set_fix_hold [all_clocks]
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | Q-2019.12-DWBB_201912.0 |     *     |
+| Licensed DW Building Blocks        | S-2021.06-DWBB_202106.0 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 8 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'INV_IP_demo'
+
+Loaded alib file './alib-52/slow.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy I_INV_IP before Pass 1 (OPT-776)
+Information: Ungrouping 1 of 2 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'INV_IP_demo'
+Information: Added key list 'DesignWare' to design 'INV_IP_demo'. (DDB-72)
+ Implement Synthetic for 'INV_IP_demo'.
+  Processing 'INV_IP_demo_DW_div_uns_J1_0'
+  Processing 'INV_IP_demo_DW_div_uns_J1_1'
+  Processing 'INV_IP_demo_DW_div_uns_J1_2'
+  Processing 'INV_IP_demo_DW_div_uns_J1_3'
+  Processing 'INV_IP_demo_DW_div_uns_J1_4'
+  Processing 'INV_IP_demo_DW_div_uns_J1_5'
+  Processing 'INV_IP_demo_DW_div_uns_J1_6'
+  Processing 'INV_IP_demo_DW_div_uns_J1_7'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1' in the library 'slow' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: There is no timing violation in design INV_IP_demo. Delay-based auto_ungroup will not be performed. (OPT-780)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:02   37748.0      0.00       0.0       0.1                           3876466.5000
+    0:00:02   37741.3      0.00       0.0       0.1                           3876310.5000
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:02   37741.3      0.00       0.0       0.1                           3876310.5000
+    0:00:02   37691.4      0.00       0.0       0.1                           3873502.2500
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:03   37691.4      0.00       0.0       0.1                           3670869.5000
+    0:00:03   37691.4      0.00       0.0       0.1                           3670869.5000
+    0:00:03   37691.4      0.00       0.0       0.1                           3670869.5000
+    0:00:03   37691.4      0.00       0.0       0.1                           3670869.5000
+    0:00:03   37335.5      0.00       0.0       0.1                           3644934.2500
+    0:00:03   37265.7      0.00       0.0       0.1                           3640992.5000
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:03   37328.9      0.00       0.0       0.1                           3610514.2500
+    0:00:03   37328.9      0.00       0.0       0.1                           3610514.2500
+    0:00:03   37328.9      0.00       0.0       0.1                           3610514.2500
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:04   37235.7      0.00       0.0       0.0                           3213469.5000
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+    0:00:04   38546.3      0.00       0.0       0.0                           3130476.7500
+    0:00:04   38546.3      0.00       0.0       0.0                           3130476.7500
+    0:00:04   38546.3      0.00       0.0       0.0                           3130476.7500
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37235.7      0.00       0.0       0.0                           3213469.5000
+    0:00:05   37621.6      0.00       0.0       0.0                           3189035.0000
+    0:00:05   37621.6      0.00       0.0       0.0                           3189035.0000
+    0:00:05   37621.6      0.00       0.0       0.0                           3189035.0000
+    0:00:05   37621.6      0.00       0.0       0.0                           3189035.0000
+    0:00:05   37621.6      0.00       0.0       0.0                           3189035.0000
+    0:00:05   37621.6      0.00       0.0       0.0                           3189035.0000
+    0:00:06   37365.5      0.00       0.0       0.0                           3197590.2500
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+1
+# compile
+#======================================================
+#  Output Reports
+#======================================================
+report_timing >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_resource >  Report/$DESIGN\.resource
+#======================================================
+#  Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/RAID2/COURSE/iclab/iclab105/Desktop/Lab06/Exercise_SoftIP/02_SYN/Netlist/INV_IP_demo_SYN.v'.
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/RAID2/COURSE/iclab/iclab105/Desktop/Lab06/Exercise_SoftIP/02_SYN/Netlist/INV_IP_demo_SYN.sdf'. (WT-3)
+1
+#======================================================
+#  Finish and Quit
+#======================================================
+report_area
+ 
+****************************************
+Report : area
+Design : INV_IP_demo
+Version: R-2020.09
+Date   : Mon Apr  3 02:47:09 2023
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
+
+Number of ports:                           21
+Number of nets:                          1949
+Number of cells:                         1759
+Number of combinational cells:           1759
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                        273
+Number of references:                      36
+
+Combinational area:              37365.451990
+Buf/Inv area:                     2724.321699
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 37365.451990
+Total area:                 undefined
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : INV_IP_demo
+Version: R-2020.09
+Date   : Mon Apr  3 02:47:09 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: IN_2[1] (input port)
+  Endpoint: OUT_INV[5] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  IN_2[1] (in)                             0.00       0.00 f
+  U669/Y (INVXL)                           0.08       0.08 r
+  U670/Y (OAI2BB1XL)                       0.22       0.29 r
+  U671/Y (OAI22XL)                         0.16       0.45 f
+  U672/Y (AOI222XL)                        0.60       1.05 r
+  U673/Y (AOI222XL)                        0.31       1.36 f
+  U675/Y (AOI222XL)                        0.60       1.96 r
+  U676/Y (AOI222XL)                        0.31       2.28 f
+  U677/Y (AOI222XL)                        1.73       4.01 r
+  U691/Y (MXI2XL)                          1.19       5.20 r
+  U692/Y (INVXL)                           0.51       5.71 f
+  U693/Y (OR2XL)                           0.41       6.12 f
+  U694/Y (AOI211XL)                        0.43       6.54 r
+  U695/Y (INVXL)                           0.16       6.70 f
+  U348/Y (NOR2X1)                          0.18       6.89 r
+  U375/Y (NOR2X1)                          0.13       7.01 f
+  U705/Y (OAI2BB1XL)                       0.32       7.33 f
+  U706/Y (AOI222XL)                        0.51       7.84 r
+  U276/Y (NOR2XL)                          0.28       8.12 f
+  U709/Y (AND2XL)                          0.30       8.42 f
+  U710/Y (AOI2BB2XL)                       0.30       8.72 f
+  U714/Y (AOI2BB1XL)                       0.32       9.04 f
+  U715/Y (INVXL)                           0.17       9.21 r
+  U718/Y (AOI222XL)                        0.23       9.45 f
+  U719/Y (OAI2BB1XL)                       0.24       9.69 r
+  U720/Y (OAI211XL)                        0.40      10.09 f
+  U728/Y (NOR3XL)                          0.36      10.46 r
+  U729/Y (XOR2XL)                          0.42      10.87 r
+  U730/Y (INVXL)                           0.11      10.98 f
+  U731/Y (AOI222XL)                        0.58      11.55 r
+  U733/Y (NAND2XL)                         0.13      11.69 f
+  U734/Y (AOI21XL)                         0.33      12.01 r
+  U738/Y (AOI222XL)                        0.21      12.23 f
+  U739/Y (NAND2XL)                         0.40      12.62 r
+  U743/Y (OAI22XL)                         0.23      12.85 f
+  U744/Y (AOI222XL)                        0.57      13.42 r
+  U745/Y (NAND2XL)                         0.12      13.54 f
+  U749/Y (OAI2BB1XL)                       0.28      13.82 f
+  U751/Y (OR2XL)                           0.28      14.10 f
+  U754/Y (AND2XL)                          0.21      14.30 f
+  U370/Y (NOR2X1)                          0.15      14.46 r
+  U249/Y (NOR2XL)                          0.11      14.56 f
+  U758/Y (OAI21XL)                         0.19      14.75 r
+  U759/Y (OAI2BB1XL)                       0.09      14.84 f
+  U760/Y (OAI211XL)                        0.48      15.32 r
+  U360/Y (NOR2X1)                          0.13      15.45 f
+  U772/Y (AOI2BB1XL)                       0.35      15.80 f
+  U773/Y (AOI222XL)                        0.56      16.36 r
+  U774/Y (AOI222XL)                        0.32      16.67 f
+  U775/Y (AOI222XL)                        0.65      17.32 r
+  U776/Y (AOI222XL)                        0.31      17.63 f
+  U780/Y (AOI222XL)                        0.53      18.16 r
+  U781/Y (AOI21XL)                         0.49      18.66 f
+  U782/Y (INVXL)                           0.35      19.01 r
+  U783/Y (NAND2XL)                         0.13      19.14 f
+  U359/Y (NOR2X1)                          0.21      19.35 r
+  U784/Y (AOI21XL)                         0.08      19.43 f
+  U789/CO (ADDFXL)                         1.28      20.72 f
+  U796/CO (ADDFXL)                         0.47      21.18 f
+  U807/CO (ADDFXL)                         0.44      21.62 f
+  U223/CO (CMPR42X1)                       0.29      21.91 f
+  U225/Y (NOR2XL)                          0.16      22.08 r
+  U809/Y (XOR2XL)                          0.38      22.46 r
+  U812/Y (NAND2XL)                         0.08      22.54 f
+  U813/Y (OAI21XL)                         0.10      22.64 r
+  U814/Y (XOR2XL)                          0.46      23.10 r
+  U632/Y (XOR2XL)                          0.31      23.41 r
+  U815/Y (XOR2XL)                          0.38      23.79 r
+  U816/Y (XOR2XL)                          0.49      24.28 f
+  U817/Y (INVXL)                           0.24      24.52 r
+  U818/Y (NAND2XL)                         0.15      24.67 f
+  U361/Y (NOR2X1)                          0.17      24.84 r
+  U819/Y (INVXL)                           0.10      24.94 f
+  U383/Y (NOR2X1)                          0.17      25.11 r
+  U824/Y (OAI211XL)                        0.24      25.35 f
+  U226/Y (NOR2XL)                          0.27      25.62 r
+  U230/Y (NOR2XL)                          0.20      25.82 f
+  U826/Y (AOI222XL)                        0.50      26.31 r
+  U629/Y (INVXL)                           0.14      26.46 f
+  U828/Y (OAI211XL)                        0.31      26.76 r
+  U829/Y (OAI2BB1XL)                       0.24      27.00 f
+  U830/Y (INVXL)                           0.26      27.26 r
+  U831/Y (AOI221XL)                        0.10      27.36 f
+  U832/Y (XOR2XL)                          0.50      27.87 f
+  U836/Y (AOI222XL)                        0.64      28.51 r
+  U838/Y (AOI211XL)                        0.24      28.74 f
+  U839/Y (AOI2BB1XL)                       0.73      29.47 r
+  U363/Y (NOR2X1)                          0.10      29.57 f
+  U845/Y (AOI221XL)                        0.39      29.96 r
+  U849/Y (OAI2BB1XL)                       0.37      30.33 r
+  U850/Y (AOI222XL)                        0.32      30.65 f
+  U851/Y (AOI222XL)                        0.69      31.34 r
+  U855/Y (AOI211XL)                        0.29      31.62 f
+  U856/Y (AOI2BB1XL)                       0.79      32.42 r
+  U346/Y (NOR2X1)                          0.10      32.51 f
+  U857/Y (AOI221XL)                        0.50      33.01 r
+  U859/Y (AOI222XL)                        0.34      33.35 f
+  U231/Y (NOR2XL)                          0.25      33.60 r
+  U863/Y (OR2XL)                           0.18      33.78 r
+  U864/Y (AND2XL)                          0.24      34.02 r
+  U865/Y (NAND2XL)                         0.10      34.12 f
+  U869/Y (NOR2BXL)                         0.23      34.35 f
+  U248/Y (NOR2XL)                          0.28      34.63 r
+  U873/Y (AOI222XL)                        0.26      34.89 f
+  U874/Y (AOI222XL)                        1.54      36.43 r
+  U345/Y (NOR2X1)                          0.05      36.49 f
+  U881/Y (AOI221XL)                        0.42      36.91 r
+  U882/Y (AOI222XL)                        0.33      37.24 f
+  U883/Y (AOI222XL)                        0.64      37.88 r
+  U887/Y (AOI222XL)                        0.30      38.18 f
+  U888/Y (AOI222XL)                        0.53      38.71 r
+  U894/Y (AOI2BB1XL)                       0.69      39.40 r
+  U242/Y (NOR2XL)                          0.12      39.52 f
+  U918/CO (ADDFXL)                         1.31      40.82 f
+  U907/CO (ADDFXL)                         0.47      41.29 f
+  U915/CO (ADDFXL)                         0.41      41.70 f
+  U914/CO (ADDFXL)                         1.01      42.71 f
+  U417/Y (NOR2X1)                          0.17      42.88 r
+  U910/Y (XOR2XL)                          0.36      43.24 r
+  U911/Y (MXI2XL)                          0.16      43.41 r
+  U912/Y (XOR2XL)                          0.47      43.88 f
+  U458/Y (NOR2X1)                          0.14      44.02 r
+  U913/Y (AOI211XL)                        0.18      44.20 f
+  U388/Y (NOR2X1)                          0.21      44.40 r
+  U917/Y (NAND2XL)                         0.11      44.52 f
+  U282/Y (NOR2XL)                          0.21      44.73 r
+  U920/Y (NAND2XL)                         0.15      44.88 f
+  U925/Y (AOI21XL)                         0.28      45.16 r
+  U926/Y (NAND2XL)                         0.09      45.24 f
+  U927/Y (NAND2XL)                         0.15      45.40 r
+  U928/Y (AOI21XL)                         0.11      45.51 f
+  U929/Y (NAND2XL)                         0.28      45.78 r
+  U366/Y (NOR2X1)                          0.12      45.90 f
+  U351/Y (NOR2X1)                          0.19      46.10 r
+  U623/Y (INVXL)                           0.11      46.21 f
+  U930/Y (AOI222XL)                        0.62      46.83 r
+  U932/Y (AOI222XL)                        0.30      47.13 f
+  U255/Y (NOR2XL)                          0.28      47.41 r
+  U933/Y (INVXL)                           0.28      47.69 f
+  U352/Y (NOR2X1)                          0.18      47.87 r
+  U937/Y (OAI22XL)                         0.22      48.09 f
+  U939/Y (AOI222XL)                        0.55      48.64 r
+  U236/Y (NOR2XL)                          0.17      48.81 f
+  U941/Y (AOI21XL)                         0.23      49.04 r
+  U942/Y (INVXL)                           0.13      49.16 f
+  U946/Y (OAI211XL)                        0.68      49.84 r
+  U350/Y (NOR2X1)                          0.17      50.01 f
+  U955/Y (OAI22XL)                         0.36      50.36 r
+  U956/Y (AOI222XL)                        0.37      50.74 f
+  U957/Y (AOI222XL)                        0.79      51.52 r
+  U958/Y (AOI222XL)                        0.40      51.92 f
+  U962/Y (AOI222XL)                        0.53      52.45 r
+  U963/Y (NAND2XL)                         0.42      52.86 f
+  U376/Y (NOR2X1)                          0.24      53.11 r
+  U972/Y (OAI22XL)                         0.18      53.29 f
+  U973/Y (AOI222XL)                        0.62      53.91 r
+  U974/Y (AOI222XL)                        0.31      54.23 f
+  U975/Y (AOI222XL)                        0.64      54.87 r
+  U980/Y (AOI222XL)                        0.36      55.22 f
+  U981/Y (AOI222XL)                        1.48      56.71 r
+  U490/Y (NOR2X1)                          0.05      56.76 f
+  U1021/CO (ADDFXL)                        1.31      58.07 f
+  U1020/CO (ADDFXL)                        1.31      59.38 f
+  U997/CO (ADDFXL)                         0.54      59.92 f
+  U1007/Y (AOI222XL)                       0.47      60.40 r
+  U620/Y (XNOR2XL)                         0.48      60.88 r
+  U1008/Y (XOR2XL)                         0.43      61.31 r
+  U1009/Y (NAND2XL)                        0.08      61.39 f
+  U1010/Y (OAI21XL)                        0.09      61.48 r
+  U1011/Y (XOR2XL)                         0.45      61.93 r
+  U1013/Y (XOR2XL)                         0.31      62.24 r
+  U1014/Y (XOR2XL)                         0.40      62.64 f
+  U1017/Y (NAND2XL)                        0.11      62.75 r
+  U1018/Y (OAI21XL)                        0.22      62.98 f
+  U1019/Y (NAND2XL)                        0.24      63.22 r
+  U433/Y (NOR2X1)                          0.13      63.35 f
+  U1022/Y (NAND2XL)                        0.16      63.51 r
+  U1027/Y (AOI21XL)                        0.11      63.62 f
+  U1028/Y (OAI2BB1XL)                      0.29      63.91 f
+  U1029/Y (AOI21XL)                        0.19      64.11 r
+  U1031/Y (NAND3XL)                        0.27      64.37 f
+  U399/Y (NOR2X1)                          0.20      64.57 r
+  U382/Y (NOR2X1)                          0.13      64.70 f
+  U1033/Y (AOI222XL)                       0.62      65.32 r
+  U1036/Y (AOI222XL)                       0.30      65.62 f
+  U1037/Y (NAND2XL)                        0.49      66.12 r
+  U377/Y (NOR2X1)                          0.13      66.25 f
+  U1041/Y (OAI22XL)                        0.33      66.57 r
+  U1043/Y (AOI222XL)                       0.38      66.95 f
+  U1044/Y (AOI222XL)                       0.72      67.67 r
+  U1053/Y (AOI222XL)                       0.26      67.93 f
+  U283/Y (NOR2XL)                          0.37      68.29 r
+  U1054/Y (INVXL)                          0.30      68.59 f
+  U389/Y (NOR2X1)                          0.19      68.77 r
+  U1060/Y (OAI22XL)                        0.20      68.97 f
+  U1061/Y (AOI222XL)                       0.68      69.65 r
+  U1062/Y (INVXL)                          0.13      69.78 f
+  U1063/Y (OAI222XL)                       0.52      70.30 r
+  U1064/Y (OAI222XL)                       0.32      70.62 f
+  U1065/Y (INVXL)                          0.14      70.76 r
+  U1066/Y (OAI2BB1XL)                      0.08      70.84 f
+  U1067/Y (OAI211XL)                       0.59      71.43 r
+  U1076/Y (OAI22XL)                        0.26      71.69 f
+  U1077/Y (AOI222XL)                       0.64      72.33 r
+  U1078/Y (AOI222XL)                       0.31      72.64 f
+  U1079/Y (AOI222XL)                       0.65      73.29 r
+  U1080/Y (AOI222XL)                       0.33      73.62 f
+  U1081/Y (AOI222XL)                       1.26      74.89 r
+  U1082/Y (INVXL)                          0.15      75.04 f
+  U1083/Y (NAND2XL)                        0.24      75.27 r
+  U421/Y (NOR2X1)                          0.10      75.37 f
+  U1093/S (ADDFXL)                         1.22      76.59 r
+  U1094/CO (ADDFXL)                        0.99      77.58 r
+  U222/CO (CMPR42X1)                       0.27      77.85 r
+  U1099/Y (XOR2XL)                         0.34      78.19 r
+  U1100/Y (MXI2XL)                         0.21      78.40 f
+  U1101/Y (NAND2XL)                        0.14      78.54 r
+  U1102/Y (OAI21XL)                        0.13      78.66 f
+  U1106/Y (NAND2XL)                        0.12      78.78 r
+  U1107/Y (OAI211XL)                       0.29      79.07 f
+  U1108/Y (NAND2XL)                        0.28      79.35 r
+  U475/Y (NOR2X1)                          0.13      79.48 f
+  U1114/Y (NAND2XL)                        0.17      79.65 r
+  U1115/Y (AOI21XL)                        0.13      79.77 f
+  U1116/Y (AOI21XL)                        0.30      80.07 r
+  U1117/Y (INVXL)                          0.10      80.17 f
+  U1118/Y (AOI21XL)                        0.17      80.34 r
+  U1120/Y (NAND3XL)                        0.26      80.60 f
+  U407/Y (NOR2X1)                          0.20      80.80 r
+  U437/Y (NOR2X1)                          0.13      80.93 f
+  U1143/Y (AOI222XL)                       0.65      81.58 r
+  U1145/Y (AOI222XL)                       0.30      81.88 f
+  U1146/Y (NAND2XL)                        0.43      82.31 r
+  U381/Y (NOR2X1)                          0.13      82.43 f
+  U1150/Y (OAI22XL)                        0.33      82.76 r
+  U1152/Y (AOI222XL)                       0.38      83.14 f
+  U1153/Y (AOI222XL)                       0.71      83.85 r
+  U1161/Y (AOI222XL)                       0.26      84.11 f
+  U299/Y (NOR2XL)                          0.37      84.47 r
+  U1162/Y (INVXL)                          0.29      84.77 f
+  U406/Y (NOR2X1)                          0.19      84.95 r
+  U1169/Y (OAI22XL)                        0.20      85.16 f
+  U1170/Y (AOI222XL)                       0.66      85.81 r
+  U1171/Y (INVXL)                          0.13      85.94 f
+  U1172/Y (OAI222XL)                       0.54      86.48 r
+  U1173/Y (OAI222XL)                       0.32      86.80 f
+  U1174/Y (INVXL)                          0.14      86.94 r
+  U1175/Y (OAI2BB1XL)                      0.08      87.02 f
+  U1176/Y (OAI211XL)                       0.54      87.56 r
+  U1186/Y (OAI22XL)                        0.26      87.82 f
+  U1187/Y (AOI222XL)                       0.63      88.45 r
+  U1188/Y (AOI222XL)                       0.31      88.77 f
+  U1189/Y (AOI222XL)                       0.64      89.41 r
+  U1190/Y (AOI222XL)                       0.33      89.75 f
+  U1191/Y (AOI222XL)                       1.20      90.94 r
+  U313/Y (NOR2XL)                          0.11      91.06 f
+  U1222/CO (ADDFXL)                        1.30      92.36 f
+  U1221/CO (ADDFXL)                        1.03      93.39 f
+  U1204/CO (ADDFXL)                        0.44      93.83 f
+  U221/CO (CMPR42X1)                       0.31      94.14 f
+  U1208/Y (XOR2XL)                         0.34      94.48 r
+  U1209/Y (MXI2XL)                         0.21      94.69 f
+  U1210/Y (NAND2XL)                        0.13      94.82 r
+  U1211/Y (OAI21XL)                        0.09      94.91 f
+  U1212/Y (XOR2XL)                         0.41      95.32 f
+  U1215/Y (NAND2XL)                        0.11      95.44 r
+  U1216/Y (OAI211XL)                       0.29      95.72 f
+  U1217/Y (NAND2XL)                        0.29      96.01 r
+  U516/Y (NOR2X1)                          0.13      96.14 f
+  U1223/Y (NAND2XL)                        0.16      96.30 r
+  U1224/Y (AOI21XL)                        0.12      96.42 f
+  U1225/Y (AOI21XL)                        0.30      96.73 r
+  U1226/Y (INVXL)                          0.10      96.82 f
+  U1227/Y (AOI21XL)                        0.17      97.00 r
+  U1229/Y (NAND3XL)                        0.26      97.25 f
+  U439/Y (NOR2X1)                          0.20      97.45 r
+  U448/Y (NOR2X1)                          0.13      97.58 f
+  U1239/Y (AOI222XL)                       0.63      98.21 r
+  U1241/Y (AOI222XL)                       0.30      98.51 f
+  U1242/Y (NAND2XL)                        0.48      98.99 r
+  U420/Y (NOR2X1)                          0.13      99.13 f
+  U1246/Y (OAI22XL)                        0.33      99.45 r
+  U1248/Y (AOI222XL)                       0.38      99.83 f
+  U1249/Y (AOI222XL)                       0.72     100.55 r
+  U1257/Y (AOI222XL)                       0.27     100.81 f
+  U551/Y (NOR2X1)                          0.29     101.11 r
+  U1258/Y (INVXL)                          0.26     101.37 f
+  U462/Y (NOR2X1)                          0.18     101.55 r
+  U1265/Y (OAI22XL)                        0.20     101.75 f
+  U1266/Y (AOI222XL)                       0.66     102.41 r
+  U1267/Y (INVXL)                          0.13     102.54 f
+  U1268/Y (OAI222XL)                       0.52     103.06 r
+  U1269/Y (OAI222XL)                       0.32     103.38 f
+  U1270/Y (INVXL)                          0.14     103.52 r
+  U1271/Y (OAI2BB1XL)                      0.08     103.60 f
+  U1272/Y (OAI211XL)                       0.58     104.18 r
+  U1282/Y (OAI22XL)                        0.26     104.44 f
+  U1283/Y (AOI222XL)                       0.63     105.08 r
+  U1284/Y (AOI222XL)                       0.31     105.39 f
+  U1285/Y (AOI222XL)                       0.65     106.04 r
+  U1286/Y (AOI222XL)                       0.34     106.38 f
+  U1287/Y (AOI222XL)                       1.28     107.66 r
+  U1288/Y (INVXL)                          0.15     107.81 f
+  U1289/Y (NAND2XL)                        0.24     108.05 r
+  U498/Y (NOR2X1)                          0.10     108.15 f
+  U1298/S (ADDFXL)                         1.22     109.37 r
+  U1299/CO (ADDFXL)                        0.99     110.36 r
+  U220/CO (CMPR42X1)                       0.25     110.60 r
+  U1304/Y (XOR2XL)                         0.42     111.02 r
+  U1307/Y (XOR2XL)                         0.35     111.38 r
+  U1308/Y (MXI2XL)                         0.21     111.58 f
+  U1309/Y (NAND2XL)                        0.13     111.72 r
+  U1310/Y (OAI21XL)                        0.09     111.81 f
+  U1311/Y (XOR2XL)                         0.40     112.21 f
+  U1312/Y (NAND2XL)                        0.12     112.33 r
+  U1313/Y (OAI21XL)                        0.12     112.46 f
+  U1315/Y (NAND2XL)                        0.12     112.58 r
+  U1316/Y (OAI211XL)                       0.31     112.89 f
+  U1317/Y (NAND2XL)                        0.28     113.16 r
+  U327/Y (NOR2XL)                          0.15     113.32 f
+  U1323/Y (NAND2XL)                        0.18     113.50 r
+  U1324/Y (AOI21XL)                        0.12     113.61 f
+  U1326/Y (OAI2BB1XL)                      0.36     113.97 f
+  U1327/Y (AOI222XL)                       0.52     114.49 r
+  U1329/Y (NAND3XL)                        0.33     114.82 f
+  U1405/Y (AOI221XL)                       0.48     115.31 r
+  U1406/Y (MXI2XL)                         0.37     115.68 f
+  U1410/Y (OAI2BB1XL)                      0.27     115.95 f
+  U1411/Y (OAI211XL)                       0.39     116.33 r
+  U459/Y (NOR2X1)                          0.14     116.47 f
+  U1412/Y (OAI22XL)                        0.33     116.80 r
+  U1414/Y (AOI222XL)                       0.38     117.18 f
+  U1419/Y (AOI222XL)                       0.71     117.90 r
+  U1423/Y (AOI222XL)                       0.26     118.15 f
+  U318/Y (NOR2XL)                          0.37     118.52 r
+  U1424/Y (INVXL)                          0.28     118.80 f
+  U492/Y (NOR2X1)                          0.18     118.98 r
+  U1431/Y (OAI22XL)                        0.20     119.18 f
+  U1432/Y (AOI222XL)                       0.68     119.86 r
+  U1433/Y (INVXL)                          0.13     119.99 f
+  U1434/Y (OAI222XL)                       0.54     120.53 r
+  U1435/Y (OAI222XL)                       0.32     120.85 f
+  U1436/Y (INVXL)                          0.19     121.04 r
+  U1441/Y (OAI2BB1XL)                      0.09     121.13 f
+  U1442/Y (OAI211XL)                       0.54     121.67 r
+  U1452/Y (OAI22XL)                        0.26     121.93 f
+  U1453/Y (AOI222XL)                       0.63     122.57 r
+  U1454/Y (AOI222XL)                       0.31     122.88 f
+  U1455/Y (AOI222XL)                       0.66     123.54 r
+  U1456/Y (AOI222XL)                       0.35     123.88 f
+  U1457/Y (AOI222XL)                       1.20     125.08 r
+  U1458/Y (INVXL)                          0.19     125.27 f
+  U1469/Y (NAND2XL)                        0.23     125.50 r
+  U301/Y (NOR2XL)                          0.12     125.62 f
+  U1476/S (ADDFXL)                         1.23     126.85 r
+  U1491/CO (ADDFXL)                        0.99     127.84 r
+  U219/CO (CMPR42X1)                       0.25     128.09 r
+  U1482/Y (XOR2XL)                         0.42     128.51 r
+  U638/Y (XOR2XL)                          0.35     128.86 r
+  U1484/Y (MXI2XL)                         0.21     129.07 f
+  U1485/Y (NAND2XL)                        0.14     129.21 r
+  U1486/Y (OAI21XL)                        0.09     129.30 f
+  U1487/Y (XOR2XL)                         0.44     129.74 r
+  U1488/Y (NAND2XL)                        0.08     129.82 f
+  U1489/Y (OAI21XL)                        0.13     129.95 r
+  U314/Y (NOR2XL)                          0.11     130.06 f
+  U1490/Y (AOI211XL)                       0.59     130.65 r
+  U591/Y (NOR2X1)                          0.12     130.78 f
+  U1493/Y (NAND2XL)                        0.17     130.95 r
+  U579/Y (NOR2X1)                          0.10     131.05 f
+  U1494/Y (NAND2XL)                        0.16     131.21 r
+  U1495/Y (AOI21XL)                        0.14     131.35 f
+  U1496/Y (AOI21XL)                        0.33     131.67 r
+  U1497/Y (OAI2BB1XL)                      0.25     131.92 r
+  U1498/Y (OAI211XL)                       0.31     132.23 f
+  U528/Y (NOR2X1)                          0.20     132.43 r
+  U1517/Y (OAI22XL)                        0.19     132.62 f
+  U1519/Y (OAI222XL)                       0.37     133.00 r
+  U653/Y (INVXL)                           0.18     133.17 f
+  U1521/Y (AOI222XL)                       0.51     133.69 r
+  U296/Y (NOR2XL)                          0.16     133.84 f
+  U1522/Y (INVXL)                          0.38     134.22 r
+  U529/Y (NOR2X1)                          0.13     134.35 f
+  U1525/Y (OAI22XL)                        0.32     134.67 r
+  U1527/Y (AOI222XL)                       0.32     134.99 f
+  U1530/Y (NAND2XL)                        0.23     135.23 r
+  U1531/Y (OAI21XL)                        0.15     135.38 f
+  U1532/Y (OAI2BB1XL)                      0.13     135.51 r
+  U1533/Y (OAI211XL)                       0.33     135.84 f
+  U1571/Y (AOI221XL)                       0.31     136.15 r
+  U1572/Y (XOR2XL)                         0.53     136.68 r
+  U1573/Y (INVXL)                          0.11     136.79 f
+  U1577/Y (AOI222XL)                       0.68     137.47 r
+  U1578/Y (AOI222XL)                       0.36     137.82 f
+  U1582/Y (AOI221XL)                       0.69     138.51 r
+  U1583/Y (INVXL)                          0.41     138.92 f
+  U328/Y (NOR2XL)                          0.32     139.24 r
+  U1594/Y (AOI2BB2XL)                      0.28     139.52 r
+  U1595/Y (AOI222XL)                       0.27     139.79 f
+  U1596/Y (AOI222XL)                       0.63     140.42 r
+  U1597/Y (AOI222XL)                       0.31     140.73 f
+  U1598/Y (AOI222XL)                       0.70     141.43 r
+  U1601/Y (AOI222XL)                       0.43     141.86 f
+  U1654/Y (NAND2XL)                        0.27     142.13 r
+  U609/Y (NOR2X1)                          0.10     142.23 f
+  U1681/CO (ADDFXL)                        1.22     143.45 f
+  U1675/CO (ADDFXL)                        1.26     144.71 f
+  U1663/CO (ADDFXL)                        1.26     145.97 f
+  U1660/CO (ADDFXL)                        1.26     147.22 f
+  U1688/CO (ADDFXL)                        1.26     148.48 f
+  U635/Y (XOR2XL)                          0.47     148.95 r
+  U1689/Y (NAND2XL)                        0.08     149.03 f
+  U1690/Y (OAI21XL)                        0.09     149.12 r
+  U1691/Y (XOR2XL)                         0.45     149.57 r
+  U1693/Y (XOR2XL)                         0.31     149.88 r
+  U1694/Y (XOR2XL)                         0.43     150.31 r
+  U1784/Y (NAND2XL)                        0.08     150.39 f
+  U1785/Y (OAI21XL)                        0.10     150.49 r
+  U1786/Y (XOR2XL)                         0.46     150.95 r
+  U1787/Y (XOR2XL)                         0.31     151.26 r
+  U1788/Y (XOR2XL)                         0.42     151.69 r
+  U1810/Y (XOR2XL)                         0.25     151.94 f
+  U1812/Y (OAI222XL)                       0.61     152.55 r
+  U1817/Y (INVXL)                          0.27     152.82 f
+  U1826/Y (AOI221XL)                       1.29     154.11 r
+  OUT_INV[5] (out)                         0.00     154.11 r
+  data arrival time                                 154.11
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+exit
+Memory usage for this session 182 Mbytes.
+Memory usage for this session including child processes 182 Mbytes.
+CPU usage for this session 6 seconds ( 0.00 hours ).
+Elapsed time for this session 9 seconds ( 0.00 hours ).
+
+Thank you...
