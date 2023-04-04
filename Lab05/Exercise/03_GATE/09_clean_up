@@ -1,0 +1,7 @@
+rm -rf *.log
+rm -rf INCA*
+rm -rf *.fsdb nWaveLog
+rm -rf *.sdf.X
+rm -rf waveform.*
+rm -f *~ *.rc
+rm -rf novas.conf

@@ -1,0 +1,735 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version R-2020.09 for linux64 - Aug 26, 2020 
+
+                    Copyright (c) 1988 - 2020 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+#  Set Libraries
+#======================================================
+set search_path {./../01_RTL                  ./../04_MEM                  ~iclabta01/umc018/Synthesis/                  /usr/synthesis/libraries/syn/                  /usr/synthesis/dw/ }
+./../01_RTL                  ./../04_MEM                  ~iclabta01/umc018/Synthesis/                  /usr/synthesis/libraries/syn/                  /usr/synthesis/dw/ 
+set synthetic_library {dw_foundation.sldb}
+dw_foundation.sldb
+set link_library {* dw_foundation.sldb standard.sldb slow.db RA1SH_1.db RA1SH_16.db}  
+* dw_foundation.sldb standard.sldb slow.db RA1SH_1.db RA1SH_16.db
+set target_library {slow.db}
+slow.db
+#report_lib slow
+#======================================================
+#  Global Parameters
+#======================================================
+set DESIGN "MMT"
+MMT
+set CYCLE 6.1
+6.1
+#set IN_DLY [expr 0.5*$CLK_period]
+#set OUT_DLY [expr 0.5*$CLK_period]
+#======================================================
+#  Read RTL Code
+#======================================================
+#set hdlin_auto_save_templates TRUE
+read_sverilog {$DESIGN\.v}
+Loading db file '/usr/synthesis/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/synthesis/libraries/syn/standard.sldb'
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+Loading db file '/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/04_MEM/RA1SH_1.db'
+Loading db file '/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/04_MEM/RA1SH_16.db'
+Loading db file '/RAID2/EDA/synopsys/synthesis/2020.09/libraries/syn/gtech.db'
+Loading db file '/RAID2/EDA/synopsys/synthesis/2020.09/libraries/syn/standard.sldb'
+  Loading link library 'slow'
+  Loading link library 'USERLIB'
+  Loading link library 'USERLIB'
+  Loading link library 'gtech'
+Loading sverilog file '/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v
+
+Statistics for case statements in always block at line 128 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           129            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 176 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           179            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 192 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           195            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 207 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           210            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 220 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           223            |     no/auto      |
+|           227            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 239 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           242            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 262 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           268            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 297 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           300            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 307 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           313            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 403 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           404            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 410 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           411            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 419 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           422            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 431 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           437            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 532 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           533            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 539 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           540            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 554 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           557            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 564 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           570            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 609 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           610            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 631 in file
+	'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           634            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine MMT line 124 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MMT line 176 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       cnt_reg       | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MMT line 192 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   quest_count_reg   | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MMT line 203 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  matrix_buffer_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MMT line 207 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    pool_size_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MMT line 220 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   mode_store_reg    | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MMT line 239 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   mxidx_store_reg   | Flip-flop |  15   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MMT line 262 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     sp_col_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     sp_arr_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     sp_row_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MMT line 297 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    sram0_wen_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MMT line 307 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    sram0_col_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    sram0_arr_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    sram0_row_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MMT line 419 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    sram1_wen_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MMT line 431 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    sram1_col_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    sram1_arr_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    sram1_row_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MMT line 546 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    sp_storeq_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MMT line 554 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    sramt_wen_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MMT line 564 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    sramt_col_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    sramt_row_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MMT line 631 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mac_c_reg      | Flip-flop |  34   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MMT line 642 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     mac_ost_reg     | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MMT line 648 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    out_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MMT line 652 in file
+		'/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    out_value_reg    | Flip-flop |  50   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/01_RTL/MMT.db:MMT'
+Loaded 1 design.
+Current design is 'MMT'.
+MMT
+current_design $DESIGN
+Current design is 'MMT'.
+{MMT}
+#======================================================
+#  Global Setting
+#======================================================
+#======================================================
+#  Set Design Constraints
+#======================================================
+create_clock -name "clk" -period $CYCLE clk
+1
+set_input_delay  [ expr $CYCLE*0.5 ] -clock clk [all_inputs]
+1
+set_output_delay [ expr $CYCLE*0.5 ] -clock clk [all_outputs]
+1
+set_input_delay 0 -clock clk clk
+1
+set_input_delay 0 -clock clk rst_n
+1
+set_load 0.05 [all_outputs]
+1
+set_dont_use slow/JKFF*
+1
+#set hdlin_ff_always_sync_set_reset true
+#report_clock -skew clk
+#======================================================
+#  Optimization
+#======================================================
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants
+1
+#set_fix_hold [all_clocks]
+#compile_ultra
+compile
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | Q-2019.12-DWBB_201912.0 |     *     |
+| Licensed DW Building Blocks        | S-2021.06-DWBB_202106.0 |     *     |
+============================================================================
+
+
+Information: There are 103 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'MMT'
+Information: Added key list 'DesignWare' to design 'MMT'. (DDB-72)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Mapping 'MMT_DW02_prod_sum1_0'
+  Processing 'MMT_DW01_dec_0'
+  Processing 'MMT_DW01_inc_0_DW01_inc_11'
+  Building model 'DW01_NAND2'
+  Processing 'DW01_NAND2'
+  Building model 'DW01_inc_width6' (rpl)
+  Processing 'DW01_inc_width6'
+  Processing 'MMT_DW01_inc_1_DW01_inc_12'
+  Mapping 'MMT_DW_mult_uns_0'
+  Processing 'MMT_DW01_inc_2_DW01_inc_13'
+  Mapping 'MMT_DW_mult_uns_1'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03  808587.3      0.44      29.7       0.0                          
+    0:00:03  808058.4      0.39      25.2       0.0                          
+    0:00:03  808058.4      0.39      25.2       0.0                          
+    0:00:03  808018.5      0.39      25.2       0.0                          
+    0:00:03  808018.5      0.39      25.2       0.0                          
+    0:00:03  785362.4      0.73      42.8       0.0                          
+    0:00:03  785132.9      0.54      31.9       0.0                          
+    0:00:03  784890.0      0.41      22.2       0.0                          
+    0:00:03  784926.6      0.36      20.2       0.0                          
+    0:00:03  784860.1      0.38      18.2       0.0                          
+    0:00:03  784896.7      0.34      19.0       0.0                          
+    0:00:03  784826.8      0.34      19.3       0.0                          
+    0:00:03  784883.4      0.34      17.6       0.0                          
+    0:00:03  784836.8      0.31      17.6       0.0                          
+    0:00:03  784813.5      0.34      17.9       0.0                          
+    0:00:03  784836.8      0.31      17.3       0.0                          
+    0:00:03  784846.8      0.30      17.0       0.0                          
+    0:00:03  784840.1      0.30      16.9       0.0                          
+    0:00:03  784866.8      0.30      16.5       0.0                          
+    0:00:03  784939.9      0.29      15.8       0.0                          
+    0:00:03  784936.6      0.29      15.2       0.0                          
+    0:00:04  784920.0      0.28      15.0       0.0                          
+    0:00:04  784920.0      0.27      14.8       0.0                          
+    0:00:04  784949.9      0.32      17.0       0.0                          
+    0:00:04  784949.9      0.32      17.0       0.0                          
+    0:00:04  784949.9      0.32      17.0       0.0                          
+    0:00:04  784949.9      0.32      17.0       0.0                          
+    0:00:04  784949.9      0.32      17.0       0.0                          
+    0:00:04  784949.9      0.32      17.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04  784949.9      0.32      17.0       0.0                          
+    0:00:04  785043.1      0.20      10.4       0.0 out_value_reg[41]/D      
+    0:00:04  785026.4      0.18       8.6       0.0 mac_c_reg[32]/D          
+    0:00:04  784996.5      0.14       6.3       0.0 mac_c_reg[32]/D          
+    0:00:04  784973.2      0.11       4.6       0.0 out_value_reg[41]/D      
+    0:00:04  784989.8      0.10       4.4       0.0 mac_c_reg[22]/D          
+    0:00:04  784916.6      0.10       4.3       0.0 out_value_reg[41]/D      
+    0:00:04  784939.9      0.09       4.1       0.0 out_value_reg[41]/D      
+    0:00:04  785056.4      0.09       3.9       0.0 out_value_reg[41]/D      
+    0:00:04  785043.1      0.09       3.7       0.0 out_value_reg[41]/D      
+    0:00:04  785069.7      0.08       3.5       0.0 out_value_reg[41]/D      
+    0:00:04  785073.0      0.08       3.3       0.0 out_value_reg[41]/D      
+    0:00:04  785139.5      0.08       3.1       0.0 out_value_reg[41]/D      
+    0:00:04  785196.1      0.07       2.9       0.0 out_value_reg[41]/D      
+    0:00:04  785249.3      0.07       2.6       0.0 out_value_reg[41]/D      
+    0:00:04  785269.2      0.06       2.3       0.0 out_value_reg[41]/D      
+    0:00:04  785309.2      0.05       2.1       0.0 out_value_reg[41]/D      
+    0:00:04  785355.7      0.05       1.8       0.0 out_value_reg[41]/D      
+    0:00:04  785339.1      0.05       1.6       0.0 out_value_reg[41]/D      
+    0:00:04  785319.1      0.04       1.4       0.0 out_value_reg[49]/D      
+    0:00:04  785359.1      0.04       1.4       0.0 out_value_reg[41]/D      
+    0:00:05  785618.5      0.02       0.6       0.0 out_value_reg[41]/D      
+    0:00:05  785725.0      0.01       0.2       0.0 out_value_reg[41]/D      
+    0:00:05  785771.5      0.01       0.2       0.0                          
+    0:00:05  785588.6      0.01       0.1       0.0                          
+    0:00:05  785701.7      0.01       0.2       0.0 mac_c_reg[23]/D          
+    0:00:05  785691.7      0.00       0.0       0.0 out_value_reg[41]/D      
+    0:00:05  785681.7      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:05  785681.7      0.00       0.0       0.0                          
+    0:00:05  785681.7      0.00       0.0       0.0                          
+    0:00:05  785066.3      0.02       0.2       0.0                          
+    0:00:05  784900.0      0.02       0.3       0.0                          
+    0:00:05  784880.1      0.02       0.3       0.0                          
+    0:00:05  784880.1      0.02       0.3       0.0                          
+    0:00:05  784880.1      0.02       0.3       0.0                          
+    0:00:05  784880.1      0.02       0.3       0.0                          
+    0:00:05  784913.3      0.00       0.0       0.0                          
+    0:00:05  783852.2      0.47      29.3       0.0                          
+    0:00:05  783536.2      0.40      24.7       0.0                          
+    0:00:05  783419.8      0.30      16.7       0.0                          
+    0:00:05  783419.8      0.30      16.7       0.0                          
+    0:00:05  783419.8      0.30      16.7       0.0                          
+    0:00:05  783419.8      0.30      16.7       0.0                          
+    0:00:05  783419.8      0.30      16.7       0.0                          
+    0:00:05  783419.8      0.30      16.7       0.0                          
+    0:00:05  783702.5      0.02       0.3       0.0 mac_c_reg[25]/D          
+    0:00:05  783762.4      0.01       0.0       0.0 mac_c_reg[25]/D          
+    0:00:06  783818.9      0.00       0.0       0.0                          
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+Loading db file '/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/04_MEM/RA1SH_1.db'
+Loading db file '/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/04_MEM/RA1SH_16.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+#======================================================
+#  Output Reports 
+#======================================================
+report_timing >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_resource >  Report/$DESIGN\.resource
+#======================================================
+#  Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/02_SYN/Netlist/MMT_SYN.v'.
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/02_SYN/Netlist/MMT_SYN.sdf'. (WT-3)
+1
+#======================================================
+#  Finish and Quit
+#======================================================
+report_area
+ 
+****************************************
+Report : area
+Design : MMT
+Version: R-2020.09
+Date   : Mon Mar 27 03:25:55 2023
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
+    USERLIB (File: /RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/04_MEM/RA1SH_1.db)
+    USERLIB (File: /RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/04_MEM/RA1SH_16.db)
+
+Number of ports:                          169
+Number of nets:                          2179
+Number of cells:                         1911
+Number of combinational cells:           1701
+Number of sequential cells:               204
+Number of macros/black boxes:               3
+Number of buf/inv:                        483
+Number of references:                      95
+
+Combinational area:              38183.745705
+Buf/Inv area:                     5305.608162
+Noncombinational area:           14666.097786
+Macro/Black Box area:           730969.093750
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                783818.937241
+Total area:                 undefined
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : MMT
+Version: R-2020.09
+Date   : Mon Mar 27 03:25:55 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: SRAM1 (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mac_c_reg_25_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  SRAM1/CLK (RA1SH_16)                     0.00       0.00 r
+  SRAM1/Q[2] (RA1SH_16)                    1.99       1.99 f
+  U911/Y (AOI222X1)                        0.51       2.50 r
+  U1723/Y (INVX4)                          0.13       2.63 f
+  MAC0/A[2] (MMT_DW02_prod_sum1_4)         0.00       2.63 f
+  MAC0/U890/Y (XNOR2X4)                    0.35       2.98 r
+  MAC0/U745/Y (NAND2X4)                    0.11       3.09 f
+  MAC0/U818/Y (NOR2X1)                     0.11       3.20 r
+  MAC0/U783/Y (OR2X2)                      0.16       3.36 r
+  MAC0/U1389/S (ADDFHX4)                   0.39       3.75 r
+  MAC0/U1388/CO (ADDFHX2)                  0.35       4.10 r
+  MAC0/U442/S (ADDFHX4)                    0.39       4.49 r
+  MAC0/U1420/Y (NOR2X4)                    0.08       4.57 f
+  MAC0/U1370/Y (NOR2X2)                    0.16       4.73 r
+  MAC0/U906/Y (NAND2X4)                    0.09       4.81 f
+  MAC0/U1418/Y (OAI21X4)                   0.20       5.01 r
+  MAC0/U1454/Y (AOI21X4)                   0.12       5.13 f
+  MAC0/U801/Y (BUFX8)                      0.20       5.33 f
+  MAC0/U1436/Y (OAI21X2)                   0.16       5.50 r
+  MAC0/U1394/Y (XNOR2X2)                   0.32       5.81 r
+  MAC0/SUM[25] (MMT_DW02_prod_sum1_4)      0.00       5.81 r
+  U1648/Y (INVX2)                          0.05       5.86 f
+  U1661/Y (OAI22X1)                        0.11       5.97 r
+  mac_c_reg_25_/D (DFFRXL)                 0.00       5.97 r
+  data arrival time                                   5.97
+
+  clock clk (rise edge)                    6.10       6.10
+  clock network delay (ideal)              0.00       6.10
+  mac_c_reg_25_/CK (DFFRXL)                0.00       6.10 r
+  library setup time                      -0.13       5.97
+  data required time                                  5.97
+  -----------------------------------------------------------
+  data required time                                  5.97
+  data arrival time                                  -5.97
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
+exit
+
+Memory usage for this session 177 Mbytes.
+Memory usage for this session including child processes 177 Mbytes.
+CPU usage for this session 7 seconds ( 0.00 hours ).
+Elapsed time for this session 10 seconds ( 0.00 hours ).
+
+Thank you...

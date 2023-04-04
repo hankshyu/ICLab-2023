@@ -1,0 +1,31 @@
+ 
+****************************************
+check_design summary:
+Version:     R-2020.09
+Date:        Thu Mar 23 01:18:11 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               6
+    Cells do not drive (LINT-1)                                     6
+
+Tristate                                                            8
+    Single tristate driver drives an input pin (LINT-63)            8
+--------------------------------------------------------------------------------
+
+Warning: In design 'QS', cell 'B_18' does not drive any nets. (LINT-1)
+Warning: In design 'QS', cell 'B_19' does not drive any nets. (LINT-1)
+Warning: In design 'QS', cell 'C317' does not drive any nets. (LINT-1)
+Warning: In design 'QS', cell 'C318' does not drive any nets. (LINT-1)
+Warning: In design 'QS', cell 'C326' does not drive any nets. (LINT-1)
+Warning: In design 'QS', cell 'C346' does not drive any nets. (LINT-1)
+Warning: Net 'sram_q[0]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'sram_q[1]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'sram_q[2]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'sram_q[3]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'sram_q[4]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'sram_q[5]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'sram_q[6]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'sram_q[7]' has a single tri-state driver.  (LINT-63)
+1

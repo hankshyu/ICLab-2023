@@ -1,0 +1,6 @@
+cat /etc/redhat-release  | tee version.log
+if   grep -i -q '8' 'version.log'; then
+    irun -timescale 1ns/1fs -override_precision -sdf_precision 1fs TESTBED.v -define GATE -debug -v ~iclabta01/umc018/Verilog/umc18_neg.v -f file_list.f -nontcglitch -loadpli1 debpli:novas_pli_boot
+else
+    irun -timescale 1ns/1fs -override_precision -sdf_precision 1fs TESTBED.v -define GATE -debug -v ~iclabta01/umc018/Verilog/umc18_neg.v -f file_list.f -nontcglitch
+fi
