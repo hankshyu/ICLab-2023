@@ -11,13 +11,23 @@
                                   DFT Compiler
                                Design Compiler(R)
 
-                 Version R-2020.09 for linux64 - Aug 26, 2020 
+                 Version T-2022.03 for linux64 - Feb 22, 2022 
 
-                    Copyright (c) 1988 - 2020 Synopsys, Inc.
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,
  Inc. This software may only be used in accordance with the terms and conditions
  of a written license agreement with Synopsys, Inc. All other use, reproduction,
-            or distribution of this software is strictly prohibited.
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
 Initializing...
 #======================================================
 #
@@ -27,9 +37,11 @@ Initializing...
 #======================================================
 #  Set Libraries
 #======================================================
-set search_path {./../01_RTL                    ~iclabta01/umc018/Synthesis}
-./../01_RTL                    ~iclabta01/umc018/Synthesis
-#/usr/syn/libraries/syn/                    #/usr/syn/dw/ }
+set search_path {./../01_RTL \
+                   ~iclabta01/umc018/Synthesis}
+./../01_RTL  ~iclabta01/umc018/Synthesis
+#/usr/syn/libraries/syn/ \
+                   #/usr/syn/dw/ }
 set synthetic_library {dw_foundation.sldb}
 dw_foundation.sldb
 set link_library {* dw_foundation.sldb standard.sldb slow.db}
@@ -46,20 +58,20 @@ set MAX_Delay 30
 #======================================================
 #  Read RTL Code
 #======================================================
-read_sverilog {$DESIGN\.v}
-Loading db file '/RAID2/EDA/synopsys/synthesis/2020.09/libraries/syn/dw_foundation.sldb'
-Loading db file '/RAID2/EDA/synopsys/synthesis/2020.09/libraries/syn/standard.sldb'
+read_sverilog $DESIGN.v
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/standard.sldb'
 Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
-Loading db file '/RAID2/EDA/synopsys/synthesis/2020.09/libraries/syn/gtech.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/gtech.db'
   Loading link library 'slow'
   Loading link library 'gtech'
-Loading sverilog file '/RAID2/COURSE/iclab/iclab105/Lab01/Practice/01_RTL/CORE.v'
+Loading sverilog file '/RAID2/COURSE/iclab/iclab105/oldarchive/Lab01/Practice/01_RTL/CORE.v'
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
-Compiling source file /RAID2/COURSE/iclab/iclab105/Lab01/Practice/01_RTL/CORE.v
+Compiling source file /RAID2/COURSE/iclab/iclab105/oldarchive/Lab01/Practice/01_RTL/CORE.v
 Presto compilation completed successfully.
-Current design is now '/RAID2/COURSE/iclab/iclab105/Lab01/Practice/01_RTL/CORE.db:CORE'
+Current design is now '/RAID2/COURSE/iclab/iclab105/oldarchive/Lab01/Practice/01_RTL/CORE.db:CORE'
 Loaded 3 designs.
 Current design is 'CORE'.
 CORE HA FA
@@ -93,10 +105,36 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 ============================================================================
 | DesignWare Building Block Library  |         Version         | Available |
 ============================================================================
-| Basic DW Building Blocks           | Q-2019.12-DWBB_201912.0 |     *     |
-| Licensed DW Building Blocks        | Q-2019.12-DWBB_201912.0 |     *     |
+| Basic DW Building Blocks           | S-2021.06-DWBB_202106.0 |     *     |
+| Licensed DW Building Blocks        | S-2021.06-DWBB_202106.0 |     *     |
 ============================================================================
 
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler WLM                                                               |
+| Comand line  | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 19                                     |
+| Number of User Hierarchies                              | 9                                      |
+| Sequential Cell Count                                   | 0                                      |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 1                                      |
+| Number of VT class                                      | 0                                      |
+| Number of Clocks                                        | 0                                      |
+| Number of Dont Touch cells                              | 0                                      |
+| Number of Dont Touch nets                               | 0                                      |
+| Number of size only cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
 Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
   Simplifying Design 'CORE'
 
@@ -131,13 +169,13 @@ Information: There is no timing violation in design CORE. Delay-based auto_ungro
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:01     296.0      0.00       0.0       0.0                           39795.8633
-    0:00:01     296.0      0.00       0.0       0.0                           39795.8633
+    0:00:01     322.7      0.00       0.0       0.0                           44814.6328
+    0:00:01     322.7      0.00       0.0       0.0                           44814.6328
 
   Beginning Constant Register Removal
   -----------------------------------
-    0:00:01     296.0      0.00       0.0       0.0                           39795.8633
-    0:00:01     296.0      0.00       0.0       0.0                           39795.8633
+    0:00:01     322.7      0.00       0.0       0.0                           44814.6328
+    0:00:01     322.7      0.00       0.0       0.0                           44814.6328
 
   Beginning Global Optimizations
   ------------------------------
@@ -177,39 +215,39 @@ Information: There is no timing violation in design CORE. Delay-based auto_ungro
 
   Beginning Delay Optimization
   ----------------------------
-    0:00:01     296.0      0.00       0.0       0.0                           35737.5977
-    0:00:01     296.0      0.00       0.0       0.0                           35737.5977
-    0:00:01     296.0      0.00       0.0       0.0                           35737.5977
-    0:00:01     296.0      0.00       0.0       0.0                           35737.5977
-    0:00:01     296.0      0.00       0.0       0.0                           35737.5977
-    0:00:01     296.0      0.00       0.0       0.0                           35737.5977
+    0:00:02     322.7      0.00       0.0       0.0                           39169.2734
+    0:00:02     322.7      0.00       0.0       0.0                           39169.2734
+    0:00:02     322.7      0.00       0.0       0.0                           39169.2734
+    0:00:02     322.7      0.00       0.0       0.0                           39169.2734
+    0:00:02     322.7      0.00       0.0       0.0                           39169.2734
+    0:00:02     322.7      0.00       0.0       0.0                           39169.2734
 
   Beginning WLM Backend Optimization
   --------------------------------------
-    0:00:01     299.4      0.00       0.0       0.0                           35526.9570
-    0:00:01     299.4      0.00       0.0       0.0                           35526.9570
-    0:00:01     299.4      0.00       0.0       0.0                           35526.9570
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
+    0:00:02     322.7      0.00       0.0       0.0                           38647.0938
+    0:00:02     322.7      0.00       0.0       0.0                           38647.0938
+    0:00:02     322.7      0.00       0.0       0.0                           38647.0938
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
 
 
   Beginning Leakage Power Optimization  (max_leakage_power 0)
@@ -219,7 +257,7 @@ Information: There is no timing violation in design CORE. Delay-based auto_ungro
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:01     299.4      0.00       0.0       0.0                           34879.3984
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
   Global Optimization (Phase 29)
   Global Optimization (Phase 30)
   Global Optimization (Phase 31)
@@ -230,45 +268,44 @@ Information: There is no timing violation in design CORE. Delay-based auto_ungro
   Global Optimization (Phase 36)
   Global Optimization (Phase 37)
   Global Optimization (Phase 38)
-  Global Optimization (Phase 39)
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
 
                                   TOTAL                                                
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
-    0:00:01     299.4      0.00       0.0       0.0                           33431.0586
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
+    0:00:02     322.7      0.00       0.0       0.0                           37193.0820
 Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
 
 
@@ -312,19 +349,19 @@ change_names -hierarchy -rules name_rule
 set verilogout_higher_designs_first true
 true
 write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
-Writing verilog file '/RAID2/COURSE/iclab/iclab105/Lab01/Practice/02_SYN/Netlist/CORE_SYN.v'.
+Writing verilog file '/RAID2/COURSE/iclab/iclab105/oldarchive/Lab01/Practice/02_SYN/Netlist/CORE_SYN.v'.
 1
 write_sdf -version 2.1 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf
-Information: Writing timing information to file '/RAID2/COURSE/iclab/iclab105/Lab01/Practice/02_SYN/Netlist/CORE_SYN.sdf'. (WT-3)
+Information: Writing timing information to file '/RAID2/COURSE/iclab/iclab105/oldarchive/Lab01/Practice/02_SYN/Netlist/CORE_SYN.sdf'. (WT-3)
 1
 #======================================================
 #  Finish and Quit
 #======================================================
 exit
 
-Memory usage for this session 178 Mbytes.
-Memory usage for this session including child processes 178 Mbytes.
-CPU usage for this session 33 seconds ( 0.01 hours ).
-Elapsed time for this session 38 seconds ( 0.01 hours ).
+Memory usage for this session 186 Mbytes.
+Memory usage for this session including child processes 186 Mbytes.
+CPU usage for this session 52 seconds ( 0.01 hours ).
+Elapsed time for this session 57 seconds ( 0.02 hours ).
 
 Thank you...

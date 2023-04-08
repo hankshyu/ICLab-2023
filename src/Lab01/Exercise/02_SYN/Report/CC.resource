@@ -2,13 +2,13 @@
 ****************************************
 Report : resources
 Design : CC
-Version: R-2020.09
-Date   : Mon Feb 27 01:51:54 2023
+Version: T-2022.03
+Date   : Sun Apr  9 01:35:24 2023
 ****************************************
 
 
 Resource Report for this hierarchy in file
-        /RAID2/COURSE/iclab/iclab105/Lab01/Exercise/01_RTL/CC.v
+        /RAID2/COURSE/iclab/iclab105/oldarchive/Lab01/Exercise/01_RTL/CC.v
 =============================================================================
 | Cell           | Module         | Parameters | Contained Operations       |
 =============================================================================

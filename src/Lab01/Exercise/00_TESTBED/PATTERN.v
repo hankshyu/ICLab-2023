@@ -39,12 +39,12 @@ input [2:0] out;
 //================================================================
 // parameters & integer
 //================================================================
-integer PATNUM = 10_0000;
+integer PATNUM = 100;
 integer seed;
 integer total_latency;
 integer patcount;
 integer lat,i,j;
-//==============================ß==================================
+//================================================================
 // wire & registers 
 //================================================================
 reg signed [4:0] n [0:6];
@@ -108,7 +108,6 @@ task gen_data; begin
     opt = $random(seed)%'d8;
     a = $random(seed)%'d4;
     b = $random(seed)%'d8;
-    
     // $display("a = %d b = %d ",a,b);
 end endtask
 

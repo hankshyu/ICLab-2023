@@ -1,0 +1,207 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on Apr 09, 2023 at 01:29:20 CST
+irun
+	-timescale 1ns/1fs
+	-override_precision
+	-sdf_precision 1fs
+	TESTBED.v
+	-define GATE
+	-define FUNC
+	-debug
+	-v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v
+	-nontcglitch
+	-loadpli1 debpli:novas_pli_boot
+file: TESTBED.v
+	module worklib.CORE:v
+		errors: 0, warnings: 0
+file: /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v
+	module umc18_neg.ADDFXL:v
+		errors: 0, warnings: 0
+	module umc18_neg.INVXL:v
+		errors: 0, warnings: 0
+	module umc18_neg.MXI2XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.XOR2XL:v
+		errors: 0, warnings: 0
+	primitive umc18_neg.udp_mux2:v
+		errors: 0, warnings: 0
+		Caching library 'umc18_neg' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		TESTBED
+	Reading SDF file from location "CORE_SYN.sdf"
+	Writing compiled SDF file to "CORE_SYN.sdf.X".
+	Annotating SDF timing data:
+		Compiled SDF file:     CORE_SYN.sdf.X
+		Log file:              
+		Backannotation scope:  TESTBED.My_CORE
+		Configuration file:    
+		MTM control:           
+		Scale factors:         
+		Scale type:            
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge S0) Y) of instance TESTBED.My_CORE.U22 of module MXI2XL <./CORE_SYN.sdf, line 55>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) Y) of instance TESTBED.My_CORE.U22 of module MXI2XL <./CORE_SYN.sdf, line 56>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.My_CORE.U21 of module ADDFXL <./CORE_SYN.sdf, line 76>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.My_CORE.U21 of module ADDFXL <./CORE_SYN.sdf, line 77>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.My_CORE.U21 of module ADDFXL <./CORE_SYN.sdf, line 82>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.My_CORE.U21 of module ADDFXL <./CORE_SYN.sdf, line 83>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.My_CORE.U21 of module ADDFXL <./CORE_SYN.sdf, line 86>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.My_CORE.U21 of module ADDFXL <./CORE_SYN.sdf, line 87>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.My_CORE.U19 of module ADDFXL <./CORE_SYN.sdf, line 116>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.My_CORE.U19 of module ADDFXL <./CORE_SYN.sdf, line 117>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.My_CORE.U19 of module ADDFXL <./CORE_SYN.sdf, line 122>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.My_CORE.U19 of module ADDFXL <./CORE_SYN.sdf, line 123>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.My_CORE.U19 of module ADDFXL <./CORE_SYN.sdf, line 126>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.My_CORE.U19 of module ADDFXL <./CORE_SYN.sdf, line 127>.
+	Annotation completed with 0 Errors and 14 Warnings
+	SDF statistics: No. of Pathdelays = 55  Annotated = 100.00% -- No. of Tchecks = 0  Annotated = 0.00% 
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		umc18_neg.ADDFXL:v <0x70cf96b5>
+			streams:   0, words:     0
+		umc18_neg.MXI2XL:v <0x2b4e4e26>
+			streams:   0, words:     0
+		umc18_neg.MXI2XL:v <0x4c23100a>
+			streams:   0, words:     0
+		umc18_neg.XOR2XL:v <0x03755776>
+			streams:   0, words:     0
+		worklib.PATTERN:v <0x4b50058b>
+			streams:   4, words: 11139
+		worklib.TESTBED:v <0x0f489614>
+			streams:   1, words:   712
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                15       7
+		UDPs:                    4       1
+		Primitives:             20       4
+		Timing outputs:         14       5
+		Registers:              12      12
+		Scalar wires:           15       -
+		Expanded wires:          6       2
+		Always blocks:           1       1
+		Initial blocks:          3       3
+		Interconnect:           25       -
+		Simulation timescale:  1fs
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'CORE_SYN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+PATTERN           1 pass
+PATTERN           2 pass
+PATTERN           3 pass
+PATTERN           4 pass
+PATTERN           5 pass
+PATTERN           6 pass
+PATTERN           7 pass
+PATTERN           8 pass
+PATTERN           9 pass
+PATTERN          10 pass
+PATTERN          11 pass
+PATTERN          12 pass
+PATTERN          13 pass
+PATTERN          14 pass
+PATTERN          15 pass
+PATTERN          16 pass
+PATTERN          17 pass
+PATTERN          18 pass
+PATTERN          19 pass
+PATTERN          20 pass
+PATTERN          21 pass
+PATTERN          22 pass
+PATTERN          23 pass
+PATTERN          24 pass
+PATTERN          25 pass
+PATTERN          26 pass
+PATTERN          27 pass
+PATTERN          28 pass
+PATTERN          29 pass
+PATTERN          30 pass
+PATTERN          31 pass
+PATTERN          32 pass
+PATTERN          33 pass
+PATTERN          34 pass
+PATTERN          35 pass
+PATTERN          36 pass
+PATTERN          37 pass
+PATTERN          38 pass
+PATTERN          39 pass
+PATTERN          40 pass
+PATTERN          41 pass
+PATTERN          42 pass
+PATTERN          43 pass
+PATTERN          44 pass
+PATTERN          45 pass
+PATTERN          46 pass
+PATTERN          47 pass
+PATTERN          48 pass
+PATTERN          49 pass
+PATTERN          50 pass
+PATTERN          51 pass
+PATTERN          52 pass
+PATTERN          53 pass
+PATTERN          54 pass
+PATTERN          55 pass
+PATTERN          56 pass
+PATTERN          57 pass
+PATTERN          58 pass
+PATTERN          59 pass
+PATTERN          60 pass
+PATTERN          61 pass
+PATTERN          62 pass
+PATTERN          63 pass
+PATTERN          64 pass
+PATTERN          65 pass
+PATTERN          66 pass
+PATTERN          67 pass
+PATTERN          68 pass
+PATTERN          69 pass
+PATTERN          70 pass
+PATTERN          71 pass
+PATTERN          72 pass
+PATTERN          73 pass
+PATTERN          74 pass
+PATTERN          75 pass
+PATTERN          76 pass
+PATTERN          77 pass
+PATTERN          78 pass
+PATTERN          79 pass
+PATTERN          80 pass
+PATTERN          81 pass
+PATTERN          82 pass
+PATTERN          83 pass
+PATTERN          84 pass
+PATTERN          85 pass
+PATTERN          86 pass
+PATTERN          87 pass
+PATTERN          88 pass
+PATTERN          89 pass
+PATTERN          90 pass
+PATTERN          91 pass
+PATTERN          92 pass
+PATTERN          93 pass
+PATTERN          94 pass
+PATTERN          95 pass
+PATTERN          96 pass
+PATTERN          97 pass
+PATTERN          98 pass
+PATTERN          99 pass
+PATTERN         100 pass
+[1;35m You have passed this pattern!![m
+[1;31m   ******---------******   [m
+[1;33m   **                 **   [m
+[1;32m   ** congratulation! **   [m
+[1;33m   **                 **   [m
+[1;31m   ******---------******   [m
+Simulation complete via $finish(1) at time 3015 NS + 0
+./PATTERN.v:81 	$finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on Apr 09, 2023 at 01:29:21 CST  (total: 00:00:01)

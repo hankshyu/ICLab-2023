@@ -1,0 +1,6 @@
+LAB=Lab01
+ID=$(whoami)
+ID_direct="$LAB"_"$ID"
+
+rm -rf *.tar
+rm -rf "$ID_direct"

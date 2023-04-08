@@ -1,0 +1,1 @@
+irun TESTBED.v -define RTL -define FUNC -debug -incdir /usr/synthesis/dw/sim_ver/  -notimingchecks -loadpli1 debpli:novas_pli_boot

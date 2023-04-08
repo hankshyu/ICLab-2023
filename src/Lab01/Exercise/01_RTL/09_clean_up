@@ -1,0 +1,9 @@
+rm -rf *.fsdb
+rm -rf *.log
+rm -rf INCA_libs nWaveLog
+rm -rf irun*
+rm -rf *~
+rm -rf nWaveLog
+rm -rf *.rc
+rm -rf nLint* verdi*
+rm -rf novas.conf

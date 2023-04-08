@@ -6,8 +6,8 @@ Report : timing
         -delay max
         -max_paths 1
 Design : CORE
-Version: R-2020.09
-Date   : Sat Feb 25 02:32:04 2023
+Version: T-2022.03
+Date   : Sun Apr  9 01:26:09 2023
 ****************************************
 
 Operating Conditions: slow   Library: slow
@@ -20,25 +20,23 @@ Wire Load Model Mode: top
 
   Point                                    Incr       Path
   -----------------------------------------------------------
-  input external delay                     0.00       0.00 r
-  in_n1[0] (in)                            0.00       0.00 r
-  U18/Y (INVXL)                            0.05       0.05 f
-  U17/Y (NOR2XL)                           0.18       0.22 r
-  U15/Y (AOI2BB1XL)                        0.09       0.31 f
-  U19/CO (ADDFXL)                          1.27       1.58 f
-  U20/CO (ADDFXL)                          0.47       2.05 f
-  U21/Y (MXI2XL)                           0.20       2.25 f
-  out_n[3] (out)                           0.00       2.25 f
-  data arrival time                                   2.25
+  input external delay                     0.00       0.00 f
+  in_n1[0] (in)                            0.00       0.00 f
+  U14/Y (MXI2XL)                           0.13       0.13 f
+  U19/CO (ADDFXL)                          1.29       1.43 f
+  U21/CO (ADDFXL)                          0.47       1.89 f
+  U22/Y (MXI2XL)                           0.20       2.09 f
+  out_n[3] (out)                           0.00       2.09 f
+  data arrival time                                   2.09
 
   max_delay                               30.00      30.00
   output external delay                    0.00      30.00
   data required time                                 30.00
   -----------------------------------------------------------
   data required time                                 30.00
-  data arrival time                                  -2.25
+  data arrival time                                  -2.09
   -----------------------------------------------------------
-  slack (MET)                                        27.75
+  slack (MET)                                        27.91
 
 
 1

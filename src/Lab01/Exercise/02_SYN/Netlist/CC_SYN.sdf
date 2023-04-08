@@ -1,10 +1,10 @@
 (DELAYFILE
 (SDFVERSION "OVI 2.1")
 (DESIGN "CC")
-(DATE "Mon Feb 27 01:51:54 2023")
+(DATE "Sun Apr  9 01:35:24 2023")
 (VENDOR "slow")
 (PROGRAM "Synopsys Design Compiler cmos")
-(VERSION "R-2020.09")
+(VERSION "T-2022.03")
 (DIVIDER /)
 (VOLTAGE 1.62:1.62:1.62)
 (PROCESS "slow")
