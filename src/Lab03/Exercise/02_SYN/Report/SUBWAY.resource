@@ -2,13 +2,13 @@
 ****************************************
 Report : resources
 Design : SUBWAY
-Version: R-2020.09
-Date   : Mon Mar 13 11:09:51 2023
+Version: T-2022.03
+Date   : Sun Apr  9 02:23:57 2023
 ****************************************
 
 
 Resource Report for this hierarchy in file
-        /RAID2/COURSE/iclab/iclab105/Desktop/Lab03/Exercise/01_RTL/SUBWAY.v
+        /RAID2/COURSE/iclab/iclab105/oldarchive/Lab03/Exercise/01_RTL/SUBWAY.v
 =============================================================================
 | Cell           | Module         | Parameters | Contained Operations       |
 =============================================================================
@@ -75,17 +75,17 @@ Resource Report for this hierarchy in file
 |                |                |            | add_385 (SUBWAY.v:385)     |
 | eq_x_103       | DW_cmp         | width=4    | eq_184 (SUBWAY.v:184)      |
 |                |                |            | eq_322 (SUBWAY.v:322)      |
-| DP_OP_298J1_122_9552            |            |                            |
-|                | DP_OP_298J1_122_9552 |      |                            |
-| DP_OP_299J1_123_2228            |            |                            |
-|                | DP_OP_299J1_123_2228 |      |                            |
+| DP_OP_304J1_122_9552            |            |                            |
+|                | DP_OP_304J1_122_9552 |      |                            |
+| DP_OP_305J1_123_2228            |            |                            |
+|                | DP_OP_305J1_123_2228 |      |                            |
 =============================================================================
 
-Datapath Report for DP_OP_298J1_122_9552
+Datapath Report for DP_OP_304J1_122_9552
 ==============================================================================
 | Cell                 | Contained Operations                                |
 ==============================================================================
-| DP_OP_298J1_122_9552 | mult_add_87_aco (SUBWAY.v:87)                       |
+| DP_OP_304J1_122_9552 | mult_add_87_aco (SUBWAY.v:87)                       |
 |                      | add_87_aco (SUBWAY.v:87)                            |
 ==============================================================================
 
@@ -99,11 +99,11 @@ Datapath Report for DP_OP_298J1_122_9552
 | O1    | PO   | Unsigned | 7     | T163 + $unsigned(1'b1) (SUBWAY.v:87)     |
 ==============================================================================
 
-Datapath Report for DP_OP_299J1_123_2228
+Datapath Report for DP_OP_305J1_123_2228
 ==============================================================================
 | Cell                 | Contained Operations                                |
 ==============================================================================
-| DP_OP_299J1_123_2228 | add_184 (SUBWAY.v:184) add_184_2 (SUBWAY.v:184)     |
+| DP_OP_305J1_123_2228 | add_184 (SUBWAY.v:184) add_184_2 (SUBWAY.v:184)     |
 |                      | add_184_3 (SUBWAY.v:184) add_322 (SUBWAY.v:322)     |
 |                      | add_322_2 (SUBWAY.v:322) add_322_3 (SUBWAY.v:322)   |
 ==============================================================================
@@ -131,11 +131,11 @@ Implementation Report
 | sub_x_7            | DW01_dec         | apparch (area)     |                |
 | add_x_6            | DW01_inc         | apparch (area)     |                |
 | eq_x_103           | DW_cmp           | apparch (area)     |                |
-| DP_OP_298J1_122_9552                  |                    |                |
-|                    | DP_OP_298J1_122_9552 | str (area)     |                |
+| DP_OP_304J1_122_9552                  |                    |                |
+|                    | DP_OP_304J1_122_9552 | str (area)     |                |
 |                    |                  | mult_arch: and     |                |
-| DP_OP_299J1_123_2228                  |                    |                |
-|                    | DP_OP_299J1_123_2228 | str (area)     |                |
+| DP_OP_305J1_123_2228                  |                    |                |
+|                    | DP_OP_305J1_123_2228 | str (area)     |                |
 ===============================================================================
 
 1

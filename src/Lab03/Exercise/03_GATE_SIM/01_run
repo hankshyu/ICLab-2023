@@ -1,0 +1,1 @@
+irun -timescale 1ns/1fs -override_precision -sdf_precision 1fs TESTBED.v -define GATE -define FUNC -debug -v ~iclabta01/umc018/Verilog/umc18_neg.v -nontcglitch -loadpli1 debpli:novas_pli_boot

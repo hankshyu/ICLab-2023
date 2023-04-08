@@ -69,7 +69,7 @@ parameter S_LO      = 2'd1;
 parameter S_HO      = 2'd2;
 parameter S_TRAINS  = 2'd3;
 
-parameter PRINT_MSG = 0; //set to 0 to hand in the exercise
+parameter PRINT_MSG = 1; //set to 0 to hand in the exercise
 
 
 //================================================================

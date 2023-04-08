@@ -6,8 +6,8 @@ Report : timing
         -delay max
         -max_paths 1
 Design : SUBWAY
-Version: R-2020.09
-Date   : Mon Mar 13 11:09:51 2023
+Version: T-2022.03
+Date   : Sun Apr  9 02:23:57 2023
 ****************************************
 
 Operating Conditions: slow   Library: slow
@@ -25,24 +25,24 @@ Wire Load Model Mode: top
   clock network delay (ideal)              0.00       0.00
   input external delay                     5.00       5.00 f
   in_valid (in)                            0.00       5.00 f
-  U639/Y (NAND2XL)                         0.13       5.13 r
-  U579/Y (OAI31XL)                         0.30       5.43 f
-  U564/Y (NOR2XL)                          1.21       6.64 r
-  U912/Y (INVXL)                           0.87       7.52 f
-  U759/Y (AOI2BB2XL)                       0.48       8.00 f
-  map_reg[0][0][0]/D (DFFRX1)              0.00       8.00 f
-  data arrival time                                   8.00
+  U679/Y (NAND2XL)                         0.13       5.13 r
+  U645/Y (OAI31XL)                         0.30       5.43 f
+  U614/Y (NOR2XL)                          1.63       7.06 r
+  U739/Y (INVXL)                           0.69       7.74 f
+  U784/Y (AOI2BB2XL)                       0.47       8.21 f
+  map_reg[0][0][0]/D (DFFRX1)              0.00       8.21 f
+  data arrival time                                   8.21
 
   clock clk (rise edge)                   10.00      10.00
   clock network delay (ideal)              0.00      10.00
   map_reg[0][0][0]/CK (DFFRX1)             0.00      10.00 r
-  library setup time                      -0.33       9.67
-  data required time                                  9.67
+  library setup time                      -0.32       9.68
+  data required time                                  9.68
   -----------------------------------------------------------
-  data required time                                  9.67
-  data arrival time                                  -8.00
+  data required time                                  9.68
+  data arrival time                                  -8.21
   -----------------------------------------------------------
-  slack (MET)                                         1.67
+  slack (MET)                                         1.46
 
 
 1

@@ -2,8 +2,8 @@
 ****************************************
 Report : area
 Design : SUBWAY
-Version: R-2020.09
-Date   : Mon Mar 13 11:09:51 2023
+Version: T-2022.03
+Date   : Sun Apr  9 02:23:57 2023
 ****************************************
 
 Library(s) Used:
@@ -11,20 +11,20 @@ Library(s) Used:
     slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
 
 Number of ports:                           16
-Number of nets:                           819
-Number of cells:                          701
-Number of combinational cells:            537
+Number of nets:                           835
+Number of cells:                          718
+Number of combinational cells:            554
 Number of sequential cells:               164
 Number of macros/black boxes:               0
-Number of buf/inv:                         67
-Number of references:                      37
+Number of buf/inv:                         73
+Number of references:                      36
 
-Combinational area:               8093.131281
-Buf/Inv area:                      668.606424
+Combinational area:               8236.166493
+Buf/Inv area:                      728.481627
 Noncombinational area:           11991.672226
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                 20084.803507
+Total cell area:                 20227.838719
 Total area:                 undefined
 1
