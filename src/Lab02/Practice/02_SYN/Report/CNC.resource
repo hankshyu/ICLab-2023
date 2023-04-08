@@ -2,13 +2,13 @@
 ****************************************
 Report : resources
 Design : CNC
-Version: R-2020.09
-Date   : Mon Mar  6 18:38:32 2023
+Version: T-2022.03
+Date   : Sun Apr  9 01:49:01 2023
 ****************************************
 
 
 Resource Report for this hierarchy in file
-        /RAID2/COURSE/iclab/iclab105/Desktop/Lab02/Practice/01_RTL/CNC.v
+        /RAID2/COURSE/iclab/iclab105/oldarchive/Lab02/Practice/01_RTL/CNC.v
 =============================================================================
 | Cell           | Module         | Parameters | Contained Operations       |
 =============================================================================

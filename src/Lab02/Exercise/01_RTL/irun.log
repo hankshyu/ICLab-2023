@@ -1,9 +1,14 @@
-irun: 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	irun	15.20-s084: Started on Mar 06, 2023 at 18:28:22 CST
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on Apr 09, 2023 at 01:59:15 CST
 irun
 	TESTBED.v
 	-define RTL
+	-define FUNC
 	-debug
+	-incdir /usr/synthesis/dw/sim_ver/
+	-notimingchecks
+	-loadpli1 debpli:novas_pli_boot
+ncvlog: *W,NOTIND: unable to access -INCDIR /usr/synthesis/dw/sim_ver/ (No such file or directory).
 file: TESTBED.v
 integer [3:0] x [11:0];
             |
@@ -43,18 +48,20 @@ ncvlog: *W,NOSYST (PATTERN.v,186|7): System function '$fscanf' invoked as a task
 		errors: 0, warnings: 0
 	module worklib.TESTBED:v
 		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
 	Top level design units:
 		TESTBED
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.PATTERN:v <0x4865864e>
-			streams:  11, words: 32769
-		worklib.QUEEN:v <0x2a525bf6>
-			streams:  68, words: 54792
-		worklib.TESTBED:v <0x296ab98a>
-			streams:   1, words:   719
+		worklib.PATTERN:v <0x50956b38>
+			streams:  11, words: 38045
+		worklib.QUEEN:v <0x7cdd2ae6>
+			streams:  68, words: 64996
+		worklib.TESTBED:v <0x6c916378>
+			streams:   1, words:   765
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -71,11 +78,10 @@ ncvlog: *W,NOSYST (PATTERN.v,186|7): System function '$fscanf' invoked as a task
 Loading snapshot worklib.TESTBED:v .................... Done
 SVSEED default: 1
 *Verdi* Loading libsscore_ius152.so
-ncsim> source /RAID2/EDA/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
 ncsim> run
-FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux, 05/26/2019
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
 (C) 1996 - 2019 by Synopsys, Inc.
-*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
 *Verdi* : Create FSDB file 'QUEEN.fsdb'
 *Verdi* : Begin traversing the scopes, layer (0).
 *Verdi* : Enable +mda dumping.
@@ -87,6 +93,6 @@ FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux, 05/26/2019
                   You have passed all patterns!                     
 --------------------------------------------------------------------
 Simulation complete via $finish(1) at time 415719 NS + 0
-./PATTERN.v:207     $finish;
+./PATTERN.v:206     $finish;
 ncsim> exit
-TOOL:	irun	15.20-s084: Exiting on Mar 06, 2023 at 18:28:37 CST  (total: 00:00:15)
+TOOL:	irun(64)	15.20-s084: Exiting on Apr 09, 2023 at 01:59:16 CST  (total: 00:00:01)

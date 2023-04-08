@@ -198,7 +198,6 @@ task check_ans_task; begin
 end endtask
 
 task YOU_PASS_task; begin
-	$system("python3 play.py");
     $display ("--------------------------------------------------------------------");
     $display ("                         Congratulations!                           ");
     $display ("                  You have passed all patterns!                     ");

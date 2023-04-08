@@ -1,16 +1,18 @@
-irun: 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	irun	15.20-s084: Started on Mar 06, 2023 at 18:39:24 CST
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on Apr 09, 2023 at 01:51:07 CST
 irun
+	-timescale 1ns/1fs
+	-override_precision
+	-sdf_precision 1fs
 	TESTBED.v
 	-define GATE
+	-define FUNC
 	-debug
 	-v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v
+	-nontcglitch
+	-loadpli1 debpli:novas_pli_boot
 file: TESTBED.v
-	module worklib.PATTERN:v
-		errors: 0, warnings: 0
 	module worklib.CNC:v
-		errors: 0, warnings: 0
-	module worklib.TESTBED:v
 		errors: 0, warnings: 0
 file: /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v
 	module umc18_neg.CMPR42X1:v
@@ -33,9 +35,9 @@ file: /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v
 		errors: 0, warnings: 0
 	module umc18_neg.BUFX2:v
 		errors: 0, warnings: 0
-	module umc18_neg.DFFTRX1:v
+	module umc18_neg.BUFX4:v
 		errors: 0, warnings: 0
-	module umc18_neg.DFFTRX2:v
+	module umc18_neg.DFFTRX1:v
 		errors: 0, warnings: 0
 	module umc18_neg.DFFTRX4:v
 		errors: 0, warnings: 0
@@ -43,15 +45,11 @@ file: /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v
 		errors: 0, warnings: 0
 	module umc18_neg.INVX2:v
 		errors: 0, warnings: 0
-	module umc18_neg.INVX4:v
-		errors: 0, warnings: 0
 	module umc18_neg.INVXL:v
 		errors: 0, warnings: 0
 	module umc18_neg.MX2X1:v
 		errors: 0, warnings: 0
 	module umc18_neg.MX2X2:v
-		errors: 0, warnings: 0
-	module umc18_neg.MX2XL:v
 		errors: 0, warnings: 0
 	module umc18_neg.MXI2XL:v
 		errors: 0, warnings: 0
@@ -69,21 +67,15 @@ file: /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v
 		errors: 0, warnings: 0
 	module umc18_neg.NOR2XL:v
 		errors: 0, warnings: 0
-	module umc18_neg.NOR2BX1:v
-		errors: 0, warnings: 0
 	module umc18_neg.NOR2BXL:v
 		errors: 0, warnings: 0
 	module umc18_neg.NOR3XL:v
 		errors: 0, warnings: 0
-	module umc18_neg.NOR3BXL:v
+	module umc18_neg.NOR3BX1:v
 		errors: 0, warnings: 0
 	module umc18_neg.OAI211XL:v
 		errors: 0, warnings: 0
-	module umc18_neg.OAI21X1:v
-		errors: 0, warnings: 0
 	module umc18_neg.OAI21XL:v
-		errors: 0, warnings: 0
-	module umc18_neg.OAI22X1:v
 		errors: 0, warnings: 0
 	module umc18_neg.OAI22XL:v
 		errors: 0, warnings: 0
@@ -114,268 +106,268 @@ file: /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v
 	Elaborating the design hierarchy:
   DFFTRX1 MODE_r_reg_1_ ( .D(n226), .RN(rst_n), .CK(clk), .Q(MODE_r[1]) );
                       |
-ncelab: *W,CUVWSP (./CNC_SYN.v,108|22): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,111|22): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 A_reg_7_ ( .D(n225), .RN(rst_n), .CK(clk), .Q(A[7]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,111|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,116|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 A_reg_6_ ( .D(n224), .RN(rst_n), .CK(clk), .Q(A[6]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,112|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,117|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 A_reg_5_ ( .D(n223), .RN(rst_n), .CK(clk), .Q(A[5]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,113|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,118|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 A_reg_4_ ( .D(n222), .RN(rst_n), .CK(clk), .Q(A[4]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,114|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,119|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 A_reg_3_ ( .D(n221), .RN(rst_n), .CK(clk), .Q(A[3]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,115|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,120|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 A_reg_2_ ( .D(n220), .RN(rst_n), .CK(clk), .Q(A[2]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,116|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,121|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 A_reg_1_ ( .D(n219), .RN(rst_n), .CK(clk), .Q(A[1]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,117|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,122|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 A_reg_0_ ( .D(n218), .RN(rst_n), .CK(clk), .Q(A[0]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,118|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,123|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 D_reg_7_ ( .D(n217), .RN(rst_n), .CK(clk), .Q(D[7]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,119|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,124|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 D_reg_6_ ( .D(n216), .RN(rst_n), .CK(clk), .Q(D[6]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,120|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,125|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 D_reg_5_ ( .D(n215), .RN(rst_n), .CK(clk), .Q(D[5]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,121|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,126|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 D_reg_4_ ( .D(n214), .RN(rst_n), .CK(clk), .Q(D[4]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,122|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,127|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 D_reg_3_ ( .D(n213), .RN(rst_n), .CK(clk), .Q(D[3]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,123|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,128|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 D_reg_2_ ( .D(n212), .RN(rst_n), .CK(clk), .Q(D[2]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,124|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,129|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 D_reg_1_ ( .D(n211), .RN(rst_n), .CK(clk), .Q(D[1]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,125|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,130|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 D_reg_0_ ( .D(n210), .RN(rst_n), .CK(clk), .Q(D[0]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,126|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,131|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 B_reg_7_ ( .D(n209), .RN(rst_n), .CK(clk), .Q(B[7]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,127|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,132|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 C_reg_7_ ( .D(n201), .RN(rst_n), .CK(clk), .Q(C[7]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,135|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,140|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 C_reg_6_ ( .D(n200), .RN(rst_n), .CK(clk), .Q(C[6]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,136|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,141|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 C_reg_5_ ( .D(n199), .RN(rst_n), .CK(clk), .Q(C[5]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,137|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,142|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 C_reg_4_ ( .D(n198), .RN(rst_n), .CK(clk), .Q(C[4]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,138|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,143|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 C_reg_3_ ( .D(n197), .RN(rst_n), .CK(clk), .Q(C[3]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,139|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,144|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 C_reg_2_ ( .D(n196), .RN(rst_n), .CK(clk), .Q(C[2]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,140|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,145|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 C_reg_1_ ( .D(n195), .RN(rst_n), .CK(clk), .Q(C[1]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,141|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,146|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 C_reg_0_ ( .D(n194), .RN(rst_n), .CK(clk), .Q(C[0]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,142|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,147|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 E_reg_16_ ( .D(n161), .RN(rst_n), .CK(clk), .Q(E[16]) );
                   |
-ncelab: *W,CUVWSP (./CNC_SYN.v,143|18): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,148|18): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 E_reg_12_ ( .D(n169), .RN(rst_n), .CK(clk), .Q(E[12]) );
                   |
-ncelab: *W,CUVWSP (./CNC_SYN.v,144|18): 1 output port was not connected:
-ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
-
-  DFFTRX1 E_reg_11_ ( .D(n171), .RN(rst_n), .CK(clk), .Q(E[11]) );
-                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,145|18): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,149|18): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 E_reg_10_ ( .D(n173), .RN(rst_n), .CK(clk), .Q(E[10]) );
                   |
-ncelab: *W,CUVWSP (./CNC_SYN.v,146|18): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,150|18): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 E_reg_9_ ( .D(n175), .RN(rst_n), .CK(clk), .Q(E[9]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,147|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,151|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 E_reg_8_ ( .D(n177), .RN(rst_n), .CK(clk), .Q(E[8]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,148|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,152|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 E_reg_7_ ( .D(n179), .RN(rst_n), .CK(clk), .Q(E[7]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,149|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,153|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 F_reg_16_ ( .D(n160), .RN(rst_n), .CK(clk), .Q(F[16]) );
                   |
-ncelab: *W,CUVWSP (./CNC_SYN.v,157|18): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,161|18): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 F_reg_12_ ( .D(n168), .RN(rst_n), .CK(clk), .Q(F[12]) );
                   |
-ncelab: *W,CUVWSP (./CNC_SYN.v,158|18): 1 output port was not connected:
-ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
-
-  DFFTRX1 F_reg_11_ ( .D(n170), .RN(rst_n), .CK(clk), .Q(F[11]) );
-                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,159|18): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,162|18): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 F_reg_10_ ( .D(n172), .RN(rst_n), .CK(clk), .Q(F[10]) );
                   |
-ncelab: *W,CUVWSP (./CNC_SYN.v,160|18): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,163|18): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 F_reg_9_ ( .D(n174), .RN(rst_n), .CK(clk), .Q(F[9]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,161|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,164|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 F_reg_8_ ( .D(n176), .RN(rst_n), .CK(clk), .Q(F[8]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,162|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,165|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 F_reg_7_ ( .D(n178), .RN(rst_n), .CK(clk), .Q(F[7]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,163|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,166|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 F_reg_6_ ( .D(n180), .RN(rst_n), .CK(clk), .Q(F[6]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,164|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,167|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 F_reg_5_ ( .D(n182), .RN(rst_n), .CK(clk), .Q(F[5]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,165|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,168|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 F_reg_4_ ( .D(n184), .RN(rst_n), .CK(clk), .Q(F[4]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,166|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,169|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 F_reg_3_ ( .D(n186), .RN(rst_n), .CK(clk), .Q(F[3]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,167|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,170|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 F_reg_2_ ( .D(n188), .RN(rst_n), .CK(clk), .Q(F[2]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,168|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,171|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 F_reg_1_ ( .D(n190), .RN(rst_n), .CK(clk), .Q(F[1]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,169|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,172|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
   DFFTRX1 F_reg_0_ ( .D(n193), .RN(rst_n), .CK(clk), .Q(F[0]) );
                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,170|17): 1 output port was not connected:
+ncelab: *W,CUVWSP (./CNC_SYN.v,173|17): 1 output port was not connected:
 ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 
-  DFFTRX1 E_reg_14_ ( .D(n165), .RN(rst_n), .CK(clk), .Q(E[14]) );
-                  |
-ncelab: *W,CUVWSP (./CNC_SYN.v,206|18): 1 output port was not connected:
-ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
-
-  DFFTRX1 E_reg_13_ ( .D(n167), .RN(rst_n), .CK(clk), .Q(E[13]) );
+  DFFTRX4 E_reg_14_ ( .D(n165), .RN(rst_n), .CK(clk), .Q(E[14]) );
                   |
 ncelab: *W,CUVWSP (./CNC_SYN.v,207|18): 1 output port was not connected:
-ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9538): QN
 
-  DFFTRX1 F_reg_14_ ( .D(n164), .RN(rst_n), .CK(clk), .Q(F[14]) );
+  DFFTRX4 E_reg_13_ ( .D(n167), .RN(rst_n), .CK(clk), .Q(E[13]) );
                   |
 ncelab: *W,CUVWSP (./CNC_SYN.v,208|18): 1 output port was not connected:
-ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9538): QN
 
-  DFFTRX1 E_reg_15_ ( .D(n163), .RN(rst_n), .CK(clk), .Q(E[15]) );
+  DFFTRX4 F_reg_14_ ( .D(n164), .RN(rst_n), .CK(clk), .Q(F[14]) );
                   |
 ncelab: *W,CUVWSP (./CNC_SYN.v,209|18): 1 output port was not connected:
-ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9538): QN
 
-  DFFTRX1 F_reg_13_ ( .D(n166), .RN(rst_n), .CK(clk), .Q(F[13]) );
+  DFFTRX4 F_reg_13_ ( .D(n166), .RN(rst_n), .CK(clk), .Q(F[13]) );
                   |
 ncelab: *W,CUVWSP (./CNC_SYN.v,210|18): 1 output port was not connected:
-ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9538): QN
 
-  DFFTRX1 F_reg_15_ ( .D(n162), .RN(rst_n), .CK(clk), .Q(F[15]) );
+  DFFTRX4 E_reg_15_ ( .D(n163), .RN(rst_n), .CK(clk), .Q(E[15]) );
                   |
 ncelab: *W,CUVWSP (./CNC_SYN.v,211|18): 1 output port was not connected:
-ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9538): QN
+
+  DFFTRX4 F_reg_15_ ( .D(n162), .RN(rst_n), .CK(clk), .Q(F[15]) );
+                  |
+ncelab: *W,CUVWSP (./CNC_SYN.v,212|18): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9538): QN
+
+  DFFTRX4 E_reg_11_ ( .D(n171), .RN(rst_n), .CK(clk), .Q(E[11]) );
+                  |
+ncelab: *W,CUVWSP (./CNC_SYN.v,213|18): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9538): QN
+
+  DFFTRX4 F_reg_11_ ( .D(n170), .RN(rst_n), .CK(clk), .Q(F[11]) );
+                  |
+ncelab: *W,CUVWSP (./CNC_SYN.v,214|18): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9538): QN
 
 	Top level design units:
 		TESTBED
@@ -389,531 +381,527 @@ ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,9402): QN
 		MTM control:           
 		Scale factors:         
 		Scale type:            
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U821 of module CMPR42X1 <./CNC_SYN.sdf, line 1625>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U821 of module CMPR42X1 <./CNC_SYN.sdf, line 1626>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U821 of module CMPR42X1 <./CNC_SYN.sdf, line 1629>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U821 of module CMPR42X1 <./CNC_SYN.sdf, line 1630>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) S) of instance TESTBED.u_CNC.U821 of module CMPR42X1 <./CNC_SYN.sdf, line 1633>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) S) of instance TESTBED.u_CNC.U821 of module CMPR42X1 <./CNC_SYN.sdf, line 1634>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge D) S) of instance TESTBED.u_CNC.U821 of module CMPR42X1 <./CNC_SYN.sdf, line 1637>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge D) S) of instance TESTBED.u_CNC.U821 of module CMPR42X1 <./CNC_SYN.sdf, line 1638>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge ICI) S) of instance TESTBED.u_CNC.U821 of module CMPR42X1 <./CNC_SYN.sdf, line 1641>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge ICI) S) of instance TESTBED.u_CNC.U821 of module CMPR42X1 <./CNC_SYN.sdf, line 1642>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) CO) of instance TESTBED.u_CNC.U821 of module CMPR42X1 <./CNC_SYN.sdf, line 1652>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) CO) of instance TESTBED.u_CNC.U821 of module CMPR42X1 <./CNC_SYN.sdf, line 1653>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) CO) of instance TESTBED.u_CNC.U821 of module CMPR42X1 <./CNC_SYN.sdf, line 1656>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) CO) of instance TESTBED.u_CNC.U821 of module CMPR42X1 <./CNC_SYN.sdf, line 1657>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) CO) of instance TESTBED.u_CNC.U821 of module CMPR42X1 <./CNC_SYN.sdf, line 1660>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) CO) of instance TESTBED.u_CNC.U821 of module CMPR42X1 <./CNC_SYN.sdf, line 1661>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U820 of module CMPR42X1 <./CNC_SYN.sdf, line 1674>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U820 of module CMPR42X1 <./CNC_SYN.sdf, line 1675>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U820 of module CMPR42X1 <./CNC_SYN.sdf, line 1678>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U820 of module CMPR42X1 <./CNC_SYN.sdf, line 1679>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) S) of instance TESTBED.u_CNC.U820 of module CMPR42X1 <./CNC_SYN.sdf, line 1682>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) S) of instance TESTBED.u_CNC.U820 of module CMPR42X1 <./CNC_SYN.sdf, line 1683>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge D) S) of instance TESTBED.u_CNC.U820 of module CMPR42X1 <./CNC_SYN.sdf, line 1686>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge D) S) of instance TESTBED.u_CNC.U820 of module CMPR42X1 <./CNC_SYN.sdf, line 1687>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge ICI) S) of instance TESTBED.u_CNC.U820 of module CMPR42X1 <./CNC_SYN.sdf, line 1690>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge ICI) S) of instance TESTBED.u_CNC.U820 of module CMPR42X1 <./CNC_SYN.sdf, line 1691>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) CO) of instance TESTBED.u_CNC.U820 of module CMPR42X1 <./CNC_SYN.sdf, line 1701>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) CO) of instance TESTBED.u_CNC.U820 of module CMPR42X1 <./CNC_SYN.sdf, line 1702>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) CO) of instance TESTBED.u_CNC.U820 of module CMPR42X1 <./CNC_SYN.sdf, line 1705>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) CO) of instance TESTBED.u_CNC.U820 of module CMPR42X1 <./CNC_SYN.sdf, line 1706>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) CO) of instance TESTBED.u_CNC.U820 of module CMPR42X1 <./CNC_SYN.sdf, line 1709>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) CO) of instance TESTBED.u_CNC.U820 of module CMPR42X1 <./CNC_SYN.sdf, line 1710>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U817 of module ADDFX1 <./CNC_SYN.sdf, line 1752>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U817 of module ADDFX1 <./CNC_SYN.sdf, line 1753>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U817 of module ADDFX1 <./CNC_SYN.sdf, line 1758>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U817 of module ADDFX1 <./CNC_SYN.sdf, line 1759>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.u_CNC.U817 of module ADDFX1 <./CNC_SYN.sdf, line 1762>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.u_CNC.U817 of module ADDFX1 <./CNC_SYN.sdf, line 1763>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U813 of module XNOR2XL <./CNC_SYN.sdf, line 1803>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U813 of module XNOR2XL <./CNC_SYN.sdf, line 1804>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U813 of module XNOR2XL <./CNC_SYN.sdf, line 1807>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U813 of module XNOR2XL <./CNC_SYN.sdf, line 1808>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U808 of module XNOR2XL <./CNC_SYN.sdf, line 1857>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U808 of module XNOR2XL <./CNC_SYN.sdf, line 1858>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U808 of module XNOR2XL <./CNC_SYN.sdf, line 1861>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U808 of module XNOR2XL <./CNC_SYN.sdf, line 1862>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U799 of module XNOR2X1 <./CNC_SYN.sdf, line 1953>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U799 of module XNOR2X1 <./CNC_SYN.sdf, line 1954>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U799 of module XNOR2X1 <./CNC_SYN.sdf, line 1957>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U799 of module XNOR2X1 <./CNC_SYN.sdf, line 1958>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U795 of module XNOR2X1 <./CNC_SYN.sdf, line 2000>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U795 of module XNOR2X1 <./CNC_SYN.sdf, line 2001>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U795 of module XNOR2X1 <./CNC_SYN.sdf, line 2004>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U795 of module XNOR2X1 <./CNC_SYN.sdf, line 2005>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U782 of module ADDHXL <./CNC_SYN.sdf, line 2141>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U782 of module ADDHXL <./CNC_SYN.sdf, line 2142>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U782 of module ADDHXL <./CNC_SYN.sdf, line 2145>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U782 of module ADDHXL <./CNC_SYN.sdf, line 2146>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U779 of module XNOR2XL <./CNC_SYN.sdf, line 2179>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U779 of module XNOR2XL <./CNC_SYN.sdf, line 2180>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U779 of module XNOR2XL <./CNC_SYN.sdf, line 2183>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U779 of module XNOR2XL <./CNC_SYN.sdf, line 2184>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U776 of module ADDHXL <./CNC_SYN.sdf, line 2216>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U776 of module ADDHXL <./CNC_SYN.sdf, line 2217>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U776 of module ADDHXL <./CNC_SYN.sdf, line 2220>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U776 of module ADDHXL <./CNC_SYN.sdf, line 2221>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U774 of module XNOR2XL <./CNC_SYN.sdf, line 2244>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U774 of module XNOR2XL <./CNC_SYN.sdf, line 2245>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U774 of module XNOR2XL <./CNC_SYN.sdf, line 2248>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U774 of module XNOR2XL <./CNC_SYN.sdf, line 2249>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U772 of module XNOR2XL <./CNC_SYN.sdf, line 2270>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U772 of module XNOR2XL <./CNC_SYN.sdf, line 2271>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U772 of module XNOR2XL <./CNC_SYN.sdf, line 2274>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U772 of module XNOR2XL <./CNC_SYN.sdf, line 2275>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U757 of module ADDFX1 <./CNC_SYN.sdf, line 2447>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U757 of module ADDFX1 <./CNC_SYN.sdf, line 2448>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U757 of module ADDFX1 <./CNC_SYN.sdf, line 2453>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U757 of module ADDFX1 <./CNC_SYN.sdf, line 2454>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.u_CNC.U757 of module ADDFX1 <./CNC_SYN.sdf, line 2457>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.u_CNC.U757 of module ADDFX1 <./CNC_SYN.sdf, line 2458>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U755 of module ADDFX1 <./CNC_SYN.sdf, line 2487>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U755 of module ADDFX1 <./CNC_SYN.sdf, line 2488>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U755 of module ADDFX1 <./CNC_SYN.sdf, line 2493>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U755 of module ADDFX1 <./CNC_SYN.sdf, line 2494>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.u_CNC.U755 of module ADDFX1 <./CNC_SYN.sdf, line 2497>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.u_CNC.U755 of module ADDFX1 <./CNC_SYN.sdf, line 2498>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U753 of module XNOR2XL <./CNC_SYN.sdf, line 2519>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U753 of module XNOR2XL <./CNC_SYN.sdf, line 2520>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U753 of module XNOR2XL <./CNC_SYN.sdf, line 2523>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U753 of module XNOR2XL <./CNC_SYN.sdf, line 2524>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U752 of module XNOR2XL <./CNC_SYN.sdf, line 2535>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U752 of module XNOR2XL <./CNC_SYN.sdf, line 2536>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U752 of module XNOR2XL <./CNC_SYN.sdf, line 2539>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U752 of module XNOR2XL <./CNC_SYN.sdf, line 2540>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U751 of module XNOR2XL <./CNC_SYN.sdf, line 2551>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U751 of module XNOR2XL <./CNC_SYN.sdf, line 2552>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U751 of module XNOR2XL <./CNC_SYN.sdf, line 2555>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U751 of module XNOR2XL <./CNC_SYN.sdf, line 2556>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U750 of module XNOR2XL <./CNC_SYN.sdf, line 2567>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U750 of module XNOR2XL <./CNC_SYN.sdf, line 2568>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U750 of module XNOR2XL <./CNC_SYN.sdf, line 2571>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U750 of module XNOR2XL <./CNC_SYN.sdf, line 2572>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U749 of module XNOR2XL <./CNC_SYN.sdf, line 2583>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U749 of module XNOR2XL <./CNC_SYN.sdf, line 2584>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U749 of module XNOR2XL <./CNC_SYN.sdf, line 2587>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U749 of module XNOR2XL <./CNC_SYN.sdf, line 2588>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U747 of module XOR2X1 <./CNC_SYN.sdf, line 2608>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U747 of module XOR2X1 <./CNC_SYN.sdf, line 2609>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U747 of module XOR2X1 <./CNC_SYN.sdf, line 2612>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U747 of module XOR2X1 <./CNC_SYN.sdf, line 2613>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U746 of module XNOR2X1 <./CNC_SYN.sdf, line 2624>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U746 of module XNOR2X1 <./CNC_SYN.sdf, line 2625>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U746 of module XNOR2X1 <./CNC_SYN.sdf, line 2628>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U746 of module XNOR2X1 <./CNC_SYN.sdf, line 2629>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U741 of module XNOR2XL <./CNC_SYN.sdf, line 2683>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U741 of module XNOR2XL <./CNC_SYN.sdf, line 2684>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U741 of module XNOR2XL <./CNC_SYN.sdf, line 2687>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U741 of module XNOR2XL <./CNC_SYN.sdf, line 2688>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U740 of module ADDHXL <./CNC_SYN.sdf, line 2701>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U740 of module ADDHXL <./CNC_SYN.sdf, line 2702>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U740 of module ADDHXL <./CNC_SYN.sdf, line 2705>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U740 of module ADDHXL <./CNC_SYN.sdf, line 2706>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U738 of module XNOR2XL <./CNC_SYN.sdf, line 2729>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U738 of module XNOR2XL <./CNC_SYN.sdf, line 2730>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U738 of module XNOR2XL <./CNC_SYN.sdf, line 2733>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U738 of module XNOR2XL <./CNC_SYN.sdf, line 2734>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U735 of module XNOR2XL <./CNC_SYN.sdf, line 2769>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U735 of module XNOR2XL <./CNC_SYN.sdf, line 2770>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U735 of module XNOR2XL <./CNC_SYN.sdf, line 2773>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U735 of module XNOR2XL <./CNC_SYN.sdf, line 2774>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U733 of module XNOR2XL <./CNC_SYN.sdf, line 2796>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U733 of module XNOR2XL <./CNC_SYN.sdf, line 2797>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U733 of module XNOR2XL <./CNC_SYN.sdf, line 2800>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U733 of module XNOR2XL <./CNC_SYN.sdf, line 2801>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U729 of module XOR2X1 <./CNC_SYN.sdf, line 2845>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U729 of module XOR2X1 <./CNC_SYN.sdf, line 2846>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U729 of module XOR2X1 <./CNC_SYN.sdf, line 2849>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U729 of module XOR2X1 <./CNC_SYN.sdf, line 2850>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U726 of module XNOR2X2 <./CNC_SYN.sdf, line 2883>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U726 of module XNOR2X2 <./CNC_SYN.sdf, line 2884>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U726 of module XNOR2X2 <./CNC_SYN.sdf, line 2887>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U726 of module XNOR2X2 <./CNC_SYN.sdf, line 2888>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge S0) Y) of instance TESTBED.u_CNC.U725 of module MX2X1 <./CNC_SYN.sdf, line 2901>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) Y) of instance TESTBED.u_CNC.U725 of module MX2X1 <./CNC_SYN.sdf, line 2902>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge S0) Y) of instance TESTBED.u_CNC.U721 of module MX2X2 <./CNC_SYN.sdf, line 2949>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) Y) of instance TESTBED.u_CNC.U721 of module MX2X2 <./CNC_SYN.sdf, line 2950>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge S0) Y) of instance TESTBED.u_CNC.U717 of module MX2X1 <./CNC_SYN.sdf, line 2997>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) Y) of instance TESTBED.u_CNC.U717 of module MX2X1 <./CNC_SYN.sdf, line 2998>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge S0) Y) of instance TESTBED.u_CNC.U706 of module MX2X1 <./CNC_SYN.sdf, line 3121>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) Y) of instance TESTBED.u_CNC.U706 of module MX2X1 <./CNC_SYN.sdf, line 3122>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge S0) Y) of instance TESTBED.u_CNC.U703 of module MX2X1 <./CNC_SYN.sdf, line 3159>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) Y) of instance TESTBED.u_CNC.U703 of module MX2X1 <./CNC_SYN.sdf, line 3160>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U695 of module XOR2XL <./CNC_SYN.sdf, line 3244>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U695 of module XOR2XL <./CNC_SYN.sdf, line 3245>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U695 of module XOR2XL <./CNC_SYN.sdf, line 3248>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U695 of module XOR2XL <./CNC_SYN.sdf, line 3249>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U694 of module ADDFXL <./CNC_SYN.sdf, line 3269>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U694 of module ADDFXL <./CNC_SYN.sdf, line 3270>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U694 of module ADDFXL <./CNC_SYN.sdf, line 3275>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U694 of module ADDFXL <./CNC_SYN.sdf, line 3276>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.u_CNC.U694 of module ADDFXL <./CNC_SYN.sdf, line 3279>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.u_CNC.U694 of module ADDFXL <./CNC_SYN.sdf, line 3280>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U691 of module XNOR2XL <./CNC_SYN.sdf, line 3309>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U691 of module XNOR2XL <./CNC_SYN.sdf, line 3310>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U691 of module XNOR2XL <./CNC_SYN.sdf, line 3313>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U691 of module XNOR2XL <./CNC_SYN.sdf, line 3314>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U690 of module XNOR2XL <./CNC_SYN.sdf, line 3325>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U690 of module XNOR2XL <./CNC_SYN.sdf, line 3326>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U690 of module XNOR2XL <./CNC_SYN.sdf, line 3329>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U690 of module XNOR2XL <./CNC_SYN.sdf, line 3330>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U689 of module XNOR2XL <./CNC_SYN.sdf, line 3341>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U689 of module XNOR2XL <./CNC_SYN.sdf, line 3342>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U689 of module XNOR2XL <./CNC_SYN.sdf, line 3345>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U689 of module XNOR2XL <./CNC_SYN.sdf, line 3346>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U688 of module XOR2XL <./CNC_SYN.sdf, line 3357>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U688 of module XOR2XL <./CNC_SYN.sdf, line 3358>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U688 of module XOR2XL <./CNC_SYN.sdf, line 3361>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U688 of module XOR2XL <./CNC_SYN.sdf, line 3362>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge S0) Y) of instance TESTBED.u_CNC.U682 of module MXI2XL <./CNC_SYN.sdf, line 3427>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) Y) of instance TESTBED.u_CNC.U682 of module MXI2XL <./CNC_SYN.sdf, line 3428>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U527 of module XOR2XL <./CNC_SYN.sdf, line 5066>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U527 of module XOR2XL <./CNC_SYN.sdf, line 5067>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U527 of module XOR2XL <./CNC_SYN.sdf, line 5070>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U527 of module XOR2XL <./CNC_SYN.sdf, line 5071>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U522 of module XNOR2XL <./CNC_SYN.sdf, line 5122>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U522 of module XNOR2XL <./CNC_SYN.sdf, line 5123>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U522 of module XNOR2XL <./CNC_SYN.sdf, line 5126>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U522 of module XNOR2XL <./CNC_SYN.sdf, line 5127>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U518 of module XNOR2XL <./CNC_SYN.sdf, line 5168>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U518 of module XNOR2XL <./CNC_SYN.sdf, line 5169>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U518 of module XNOR2XL <./CNC_SYN.sdf, line 5172>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U518 of module XNOR2XL <./CNC_SYN.sdf, line 5173>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U516 of module XOR2XL <./CNC_SYN.sdf, line 5194>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U516 of module XOR2XL <./CNC_SYN.sdf, line 5195>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U516 of module XOR2XL <./CNC_SYN.sdf, line 5198>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U516 of module XOR2XL <./CNC_SYN.sdf, line 5199>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U514 of module XOR2XL <./CNC_SYN.sdf, line 5220>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U514 of module XOR2XL <./CNC_SYN.sdf, line 5221>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U514 of module XOR2XL <./CNC_SYN.sdf, line 5224>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U514 of module XOR2XL <./CNC_SYN.sdf, line 5225>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U512 of module XNOR2XL <./CNC_SYN.sdf, line 5246>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U512 of module XNOR2XL <./CNC_SYN.sdf, line 5247>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U512 of module XNOR2XL <./CNC_SYN.sdf, line 5250>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U512 of module XNOR2XL <./CNC_SYN.sdf, line 5251>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U509 of module XOR2XL <./CNC_SYN.sdf, line 5281>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U509 of module XOR2XL <./CNC_SYN.sdf, line 5282>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U509 of module XOR2XL <./CNC_SYN.sdf, line 5285>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U509 of module XOR2XL <./CNC_SYN.sdf, line 5286>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U506 of module XOR2XL <./CNC_SYN.sdf, line 5317>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U506 of module XOR2XL <./CNC_SYN.sdf, line 5318>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U506 of module XOR2XL <./CNC_SYN.sdf, line 5321>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U506 of module XOR2XL <./CNC_SYN.sdf, line 5322>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U479 of module ADDFXL <./CNC_SYN.sdf, line 5615>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U479 of module ADDFXL <./CNC_SYN.sdf, line 5616>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U479 of module ADDFXL <./CNC_SYN.sdf, line 5621>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U479 of module ADDFXL <./CNC_SYN.sdf, line 5622>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.u_CNC.U479 of module ADDFXL <./CNC_SYN.sdf, line 5625>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.u_CNC.U479 of module ADDFXL <./CNC_SYN.sdf, line 5626>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U475 of module ADDFXL <./CNC_SYN.sdf, line 5679>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U475 of module ADDFXL <./CNC_SYN.sdf, line 5680>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U475 of module ADDFXL <./CNC_SYN.sdf, line 5685>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U475 of module ADDFXL <./CNC_SYN.sdf, line 5686>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.u_CNC.U475 of module ADDFXL <./CNC_SYN.sdf, line 5689>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.u_CNC.U475 of module ADDFXL <./CNC_SYN.sdf, line 5690>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U474 of module XNOR2XL <./CNC_SYN.sdf, line 5701>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U474 of module XNOR2XL <./CNC_SYN.sdf, line 5702>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U474 of module XNOR2XL <./CNC_SYN.sdf, line 5705>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U474 of module XNOR2XL <./CNC_SYN.sdf, line 5706>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U471 of module XNOR2XL <./CNC_SYN.sdf, line 5739>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U471 of module XNOR2XL <./CNC_SYN.sdf, line 5740>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U471 of module XNOR2XL <./CNC_SYN.sdf, line 5743>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U471 of module XNOR2XL <./CNC_SYN.sdf, line 5744>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U470 of module XOR2XL <./CNC_SYN.sdf, line 5755>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U470 of module XOR2XL <./CNC_SYN.sdf, line 5756>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U470 of module XOR2XL <./CNC_SYN.sdf, line 5759>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U470 of module XOR2XL <./CNC_SYN.sdf, line 5760>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U467 of module XNOR2XL <./CNC_SYN.sdf, line 5793>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U467 of module XNOR2XL <./CNC_SYN.sdf, line 5794>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U467 of module XNOR2XL <./CNC_SYN.sdf, line 5797>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U467 of module XNOR2XL <./CNC_SYN.sdf, line 5798>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U459 of module XNOR2XL <./CNC_SYN.sdf, line 5887>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U459 of module XNOR2XL <./CNC_SYN.sdf, line 5888>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U459 of module XNOR2XL <./CNC_SYN.sdf, line 5891>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U459 of module XNOR2XL <./CNC_SYN.sdf, line 5892>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U455 of module XNOR2XL <./CNC_SYN.sdf, line 5934>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U455 of module XNOR2XL <./CNC_SYN.sdf, line 5935>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U455 of module XNOR2XL <./CNC_SYN.sdf, line 5938>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U455 of module XNOR2XL <./CNC_SYN.sdf, line 5939>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U454 of module XNOR2XL <./CNC_SYN.sdf, line 5950>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U454 of module XNOR2XL <./CNC_SYN.sdf, line 5951>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U454 of module XNOR2XL <./CNC_SYN.sdf, line 5954>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U454 of module XNOR2XL <./CNC_SYN.sdf, line 5955>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U448 of module XNOR2XL <./CNC_SYN.sdf, line 6019>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U448 of module XNOR2XL <./CNC_SYN.sdf, line 6020>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U448 of module XNOR2XL <./CNC_SYN.sdf, line 6023>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U448 of module XNOR2XL <./CNC_SYN.sdf, line 6024>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U399 of module XNOR2XL <./CNC_SYN.sdf, line 6537>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U399 of module XNOR2XL <./CNC_SYN.sdf, line 6538>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U399 of module XNOR2XL <./CNC_SYN.sdf, line 6541>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U399 of module XNOR2XL <./CNC_SYN.sdf, line 6542>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U398 of module XNOR2XL <./CNC_SYN.sdf, line 6553>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U398 of module XNOR2XL <./CNC_SYN.sdf, line 6554>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U398 of module XNOR2XL <./CNC_SYN.sdf, line 6557>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U398 of module XNOR2XL <./CNC_SYN.sdf, line 6558>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U394 of module XNOR2XL <./CNC_SYN.sdf, line 6603>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U394 of module XNOR2XL <./CNC_SYN.sdf, line 6604>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U394 of module XNOR2XL <./CNC_SYN.sdf, line 6607>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U394 of module XNOR2XL <./CNC_SYN.sdf, line 6608>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U391 of module XNOR2XL <./CNC_SYN.sdf, line 6643>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U391 of module XNOR2XL <./CNC_SYN.sdf, line 6644>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U391 of module XNOR2XL <./CNC_SYN.sdf, line 6647>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U391 of module XNOR2XL <./CNC_SYN.sdf, line 6648>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U390 of module XNOR2XL <./CNC_SYN.sdf, line 6659>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U390 of module XNOR2XL <./CNC_SYN.sdf, line 6660>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U390 of module XNOR2XL <./CNC_SYN.sdf, line 6663>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U390 of module XNOR2XL <./CNC_SYN.sdf, line 6664>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U381 of module XNOR2XL <./CNC_SYN.sdf, line 6763>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U381 of module XNOR2XL <./CNC_SYN.sdf, line 6764>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U381 of module XNOR2XL <./CNC_SYN.sdf, line 6767>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U381 of module XNOR2XL <./CNC_SYN.sdf, line 6768>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U380 of module XNOR2XL <./CNC_SYN.sdf, line 6779>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U380 of module XNOR2XL <./CNC_SYN.sdf, line 6780>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U380 of module XNOR2XL <./CNC_SYN.sdf, line 6783>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U380 of module XNOR2XL <./CNC_SYN.sdf, line 6784>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U379 of module XNOR2XL <./CNC_SYN.sdf, line 6795>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U379 of module XNOR2XL <./CNC_SYN.sdf, line 6796>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U379 of module XNOR2XL <./CNC_SYN.sdf, line 6799>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U379 of module XNOR2XL <./CNC_SYN.sdf, line 6800>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge S0) Y) of instance TESTBED.u_CNC.U357 of module MX2XL <./CNC_SYN.sdf, line 7051>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) Y) of instance TESTBED.u_CNC.U357 of module MX2XL <./CNC_SYN.sdf, line 7052>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge S0) Y) of instance TESTBED.u_CNC.U347 of module MX2X2 <./CNC_SYN.sdf, line 7162>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) Y) of instance TESTBED.u_CNC.U347 of module MX2X2 <./CNC_SYN.sdf, line 7163>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U331 of module XNOR2X1 <./CNC_SYN.sdf, line 7321>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U331 of module XNOR2X1 <./CNC_SYN.sdf, line 7322>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U331 of module XNOR2X1 <./CNC_SYN.sdf, line 7325>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U331 of module XNOR2X1 <./CNC_SYN.sdf, line 7326>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U329 of module XNOR2X2 <./CNC_SYN.sdf, line 7346>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U329 of module XNOR2X2 <./CNC_SYN.sdf, line 7347>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U329 of module XNOR2X2 <./CNC_SYN.sdf, line 7350>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U329 of module XNOR2X2 <./CNC_SYN.sdf, line 7351>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U328 of module XNOR2XL <./CNC_SYN.sdf, line 7362>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U328 of module XNOR2XL <./CNC_SYN.sdf, line 7363>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U328 of module XNOR2XL <./CNC_SYN.sdf, line 7366>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U328 of module XNOR2XL <./CNC_SYN.sdf, line 7367>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U326 of module ADDFX1 <./CNC_SYN.sdf, line 7398>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U326 of module ADDFX1 <./CNC_SYN.sdf, line 7399>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U326 of module ADDFX1 <./CNC_SYN.sdf, line 7404>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U326 of module ADDFX1 <./CNC_SYN.sdf, line 7405>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.u_CNC.U326 of module ADDFX1 <./CNC_SYN.sdf, line 7408>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.u_CNC.U326 of module ADDFX1 <./CNC_SYN.sdf, line 7409>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U325 of module ADDHXL <./CNC_SYN.sdf, line 7422>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U325 of module ADDHXL <./CNC_SYN.sdf, line 7423>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U325 of module ADDHXL <./CNC_SYN.sdf, line 7426>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U325 of module ADDHXL <./CNC_SYN.sdf, line 7427>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U324 of module ADDFX1 <./CNC_SYN.sdf, line 7447>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U324 of module ADDFX1 <./CNC_SYN.sdf, line 7448>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U324 of module ADDFX1 <./CNC_SYN.sdf, line 7453>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U324 of module ADDFX1 <./CNC_SYN.sdf, line 7454>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.u_CNC.U324 of module ADDFX1 <./CNC_SYN.sdf, line 7457>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.u_CNC.U324 of module ADDFX1 <./CNC_SYN.sdf, line 7458>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U323 of module ADDFX1 <./CNC_SYN.sdf, line 7478>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U323 of module ADDFX1 <./CNC_SYN.sdf, line 7479>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U323 of module ADDFX1 <./CNC_SYN.sdf, line 7484>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U323 of module ADDFX1 <./CNC_SYN.sdf, line 7485>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.u_CNC.U323 of module ADDFX1 <./CNC_SYN.sdf, line 7488>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.u_CNC.U323 of module ADDFX1 <./CNC_SYN.sdf, line 7489>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U319 of module ADDFX1 <./CNC_SYN.sdf, line 7541>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U319 of module ADDFX1 <./CNC_SYN.sdf, line 7542>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U319 of module ADDFX1 <./CNC_SYN.sdf, line 7547>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U319 of module ADDFX1 <./CNC_SYN.sdf, line 7548>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.u_CNC.U319 of module ADDFX1 <./CNC_SYN.sdf, line 7551>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.u_CNC.U319 of module ADDFX1 <./CNC_SYN.sdf, line 7552>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge S0) Y) of instance TESTBED.u_CNC.U301 of module MX2X1 <./CNC_SYN.sdf, line 7740>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) Y) of instance TESTBED.u_CNC.U301 of module MX2X1 <./CNC_SYN.sdf, line 7741>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U297 of module XOR2XL <./CNC_SYN.sdf, line 7781>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U297 of module XOR2XL <./CNC_SYN.sdf, line 7782>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U297 of module XOR2XL <./CNC_SYN.sdf, line 7785>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U297 of module XOR2XL <./CNC_SYN.sdf, line 7786>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U296 of module XNOR2XL <./CNC_SYN.sdf, line 7797>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U296 of module XNOR2XL <./CNC_SYN.sdf, line 7798>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U296 of module XNOR2XL <./CNC_SYN.sdf, line 7801>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U296 of module XNOR2XL <./CNC_SYN.sdf, line 7802>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U295 of module XNOR2XL <./CNC_SYN.sdf, line 7813>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U295 of module XNOR2XL <./CNC_SYN.sdf, line 7814>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U295 of module XNOR2XL <./CNC_SYN.sdf, line 7817>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U295 of module XNOR2XL <./CNC_SYN.sdf, line 7818>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8085>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8086>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8089>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8090>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8093>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8094>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8097>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8098>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8101>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8102>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8112>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8113>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8116>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8117>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8120>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8121>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U154 of module CMPR42X1 <./CNC_SYN.sdf, line 8134>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U154 of module CMPR42X1 <./CNC_SYN.sdf, line 8135>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U154 of module CMPR42X1 <./CNC_SYN.sdf, line 8138>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U154 of module CMPR42X1 <./CNC_SYN.sdf, line 8139>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U154 of module CMPR42X1 <./CNC_SYN.sdf, line 8142>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U154 of module CMPR42X1 <./CNC_SYN.sdf, line 8143>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U154 of module CMPR42X1 <./CNC_SYN.sdf, line 8146>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U154 of module CMPR42X1 <./CNC_SYN.sdf, line 8147>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U154 of module CMPR42X1 <./CNC_SYN.sdf, line 8150>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U154 of module CMPR42X1 <./CNC_SYN.sdf, line 8151>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U154 of module CMPR42X1 <./CNC_SYN.sdf, line 8161>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U154 of module CMPR42X1 <./CNC_SYN.sdf, line 8162>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U154 of module CMPR42X1 <./CNC_SYN.sdf, line 8165>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U154 of module CMPR42X1 <./CNC_SYN.sdf, line 8166>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U154 of module CMPR42X1 <./CNC_SYN.sdf, line 8169>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U154 of module CMPR42X1 <./CNC_SYN.sdf, line 8170>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8183>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8184>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8187>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8188>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8191>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8192>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8195>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8196>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8199>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8200>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8210>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8211>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8214>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8215>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8218>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8219>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8232>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8233>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8236>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8237>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8240>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8241>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8244>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8245>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8248>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8249>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8259>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8260>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8263>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8264>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8267>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8268>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8281>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8282>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8285>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8286>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8289>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8290>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8293>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8294>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8297>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8298>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8308>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8309>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8312>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8313>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8316>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8317>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8330>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8331>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8334>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8335>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8338>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8339>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8342>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8343>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8346>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8347>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8357>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8358>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8361>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8362>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8365>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8366>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8379>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8380>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8383>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8384>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8387>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8388>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8391>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8392>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8395>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8396>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8406>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8407>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8410>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8411>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8414>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8415>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U826 of module CMPR42X1 <./CNC_SYN.sdf, line 1630>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U826 of module CMPR42X1 <./CNC_SYN.sdf, line 1631>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U826 of module CMPR42X1 <./CNC_SYN.sdf, line 1634>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U826 of module CMPR42X1 <./CNC_SYN.sdf, line 1635>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) S) of instance TESTBED.u_CNC.U826 of module CMPR42X1 <./CNC_SYN.sdf, line 1638>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) S) of instance TESTBED.u_CNC.U826 of module CMPR42X1 <./CNC_SYN.sdf, line 1639>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge D) S) of instance TESTBED.u_CNC.U826 of module CMPR42X1 <./CNC_SYN.sdf, line 1642>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge D) S) of instance TESTBED.u_CNC.U826 of module CMPR42X1 <./CNC_SYN.sdf, line 1643>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge ICI) S) of instance TESTBED.u_CNC.U826 of module CMPR42X1 <./CNC_SYN.sdf, line 1646>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge ICI) S) of instance TESTBED.u_CNC.U826 of module CMPR42X1 <./CNC_SYN.sdf, line 1647>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) CO) of instance TESTBED.u_CNC.U826 of module CMPR42X1 <./CNC_SYN.sdf, line 1657>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) CO) of instance TESTBED.u_CNC.U826 of module CMPR42X1 <./CNC_SYN.sdf, line 1658>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) CO) of instance TESTBED.u_CNC.U826 of module CMPR42X1 <./CNC_SYN.sdf, line 1661>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) CO) of instance TESTBED.u_CNC.U826 of module CMPR42X1 <./CNC_SYN.sdf, line 1662>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) CO) of instance TESTBED.u_CNC.U826 of module CMPR42X1 <./CNC_SYN.sdf, line 1665>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) CO) of instance TESTBED.u_CNC.U826 of module CMPR42X1 <./CNC_SYN.sdf, line 1666>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U822 of module ADDFX1 <./CNC_SYN.sdf, line 1717>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U822 of module ADDFX1 <./CNC_SYN.sdf, line 1718>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U822 of module ADDFX1 <./CNC_SYN.sdf, line 1723>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U822 of module ADDFX1 <./CNC_SYN.sdf, line 1724>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.u_CNC.U822 of module ADDFX1 <./CNC_SYN.sdf, line 1727>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.u_CNC.U822 of module ADDFX1 <./CNC_SYN.sdf, line 1728>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U818 of module XNOR2XL <./CNC_SYN.sdf, line 1768>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U818 of module XNOR2XL <./CNC_SYN.sdf, line 1769>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U818 of module XNOR2XL <./CNC_SYN.sdf, line 1772>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U818 of module XNOR2XL <./CNC_SYN.sdf, line 1773>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U817 of module XOR2XL <./CNC_SYN.sdf, line 1784>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U817 of module XOR2XL <./CNC_SYN.sdf, line 1785>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U817 of module XOR2XL <./CNC_SYN.sdf, line 1788>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U817 of module XOR2XL <./CNC_SYN.sdf, line 1789>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U803 of module XNOR2X1 <./CNC_SYN.sdf, line 1927>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U803 of module XNOR2X1 <./CNC_SYN.sdf, line 1928>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U803 of module XNOR2X1 <./CNC_SYN.sdf, line 1931>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U803 of module XNOR2X1 <./CNC_SYN.sdf, line 1932>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U799 of module XNOR2X1 <./CNC_SYN.sdf, line 1974>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U799 of module XNOR2X1 <./CNC_SYN.sdf, line 1975>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U799 of module XNOR2X1 <./CNC_SYN.sdf, line 1978>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U799 of module XNOR2X1 <./CNC_SYN.sdf, line 1979>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U793 of module ADDFXL <./CNC_SYN.sdf, line 2047>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U793 of module ADDFXL <./CNC_SYN.sdf, line 2048>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U793 of module ADDFXL <./CNC_SYN.sdf, line 2053>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U793 of module ADDFXL <./CNC_SYN.sdf, line 2054>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.u_CNC.U793 of module ADDFXL <./CNC_SYN.sdf, line 2057>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.u_CNC.U793 of module ADDFXL <./CNC_SYN.sdf, line 2058>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U783 of module ADDHXL <./CNC_SYN.sdf, line 2167>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U783 of module ADDHXL <./CNC_SYN.sdf, line 2168>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U783 of module ADDHXL <./CNC_SYN.sdf, line 2171>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U783 of module ADDHXL <./CNC_SYN.sdf, line 2172>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U780 of module XNOR2XL <./CNC_SYN.sdf, line 2202>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U780 of module XNOR2XL <./CNC_SYN.sdf, line 2203>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U780 of module XNOR2XL <./CNC_SYN.sdf, line 2206>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U780 of module XNOR2XL <./CNC_SYN.sdf, line 2207>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U779 of module XNOR2XL <./CNC_SYN.sdf, line 2218>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U779 of module XNOR2XL <./CNC_SYN.sdf, line 2219>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U779 of module XNOR2XL <./CNC_SYN.sdf, line 2222>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U779 of module XNOR2XL <./CNC_SYN.sdf, line 2223>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U777 of module ADDHXL <./CNC_SYN.sdf, line 2246>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U777 of module ADDHXL <./CNC_SYN.sdf, line 2247>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U777 of module ADDHXL <./CNC_SYN.sdf, line 2250>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U777 of module ADDHXL <./CNC_SYN.sdf, line 2251>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U776 of module XNOR2XL <./CNC_SYN.sdf, line 2262>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U776 of module XNOR2XL <./CNC_SYN.sdf, line 2263>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U776 of module XNOR2XL <./CNC_SYN.sdf, line 2266>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U776 of module XNOR2XL <./CNC_SYN.sdf, line 2267>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U775 of module XNOR2XL <./CNC_SYN.sdf, line 2278>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U775 of module XNOR2XL <./CNC_SYN.sdf, line 2279>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U775 of module XNOR2XL <./CNC_SYN.sdf, line 2282>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U775 of module XNOR2XL <./CNC_SYN.sdf, line 2283>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U756 of module ADDHXL <./CNC_SYN.sdf, line 2491>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U756 of module ADDHXL <./CNC_SYN.sdf, line 2492>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U756 of module ADDHXL <./CNC_SYN.sdf, line 2495>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U756 of module ADDHXL <./CNC_SYN.sdf, line 2496>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U755 of module XNOR2XL <./CNC_SYN.sdf, line 2507>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U755 of module XNOR2XL <./CNC_SYN.sdf, line 2508>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U755 of module XNOR2XL <./CNC_SYN.sdf, line 2511>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U755 of module XNOR2XL <./CNC_SYN.sdf, line 2512>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U754 of module XNOR2XL <./CNC_SYN.sdf, line 2523>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U754 of module XNOR2XL <./CNC_SYN.sdf, line 2524>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U754 of module XNOR2XL <./CNC_SYN.sdf, line 2527>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U754 of module XNOR2XL <./CNC_SYN.sdf, line 2528>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U753 of module XNOR2XL <./CNC_SYN.sdf, line 2539>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U753 of module XNOR2XL <./CNC_SYN.sdf, line 2540>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U753 of module XNOR2XL <./CNC_SYN.sdf, line 2543>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U753 of module XNOR2XL <./CNC_SYN.sdf, line 2544>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U752 of module XNOR2XL <./CNC_SYN.sdf, line 2555>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U752 of module XNOR2XL <./CNC_SYN.sdf, line 2556>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U752 of module XNOR2XL <./CNC_SYN.sdf, line 2559>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U752 of module XNOR2XL <./CNC_SYN.sdf, line 2560>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U750 of module XNOR2XL <./CNC_SYN.sdf, line 2583>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U750 of module XNOR2XL <./CNC_SYN.sdf, line 2584>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U750 of module XNOR2XL <./CNC_SYN.sdf, line 2587>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U750 of module XNOR2XL <./CNC_SYN.sdf, line 2588>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U748 of module ADDHXL <./CNC_SYN.sdf, line 2610>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U748 of module ADDHXL <./CNC_SYN.sdf, line 2611>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U748 of module ADDHXL <./CNC_SYN.sdf, line 2614>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U748 of module ADDHXL <./CNC_SYN.sdf, line 2615>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U745 of module XNOR2XL <./CNC_SYN.sdf, line 2647>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U745 of module XNOR2XL <./CNC_SYN.sdf, line 2648>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U745 of module XNOR2XL <./CNC_SYN.sdf, line 2651>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U745 of module XNOR2XL <./CNC_SYN.sdf, line 2652>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U743 of module ADDFX1 <./CNC_SYN.sdf, line 2684>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U743 of module ADDFX1 <./CNC_SYN.sdf, line 2685>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U743 of module ADDFX1 <./CNC_SYN.sdf, line 2690>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U743 of module ADDFX1 <./CNC_SYN.sdf, line 2691>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.u_CNC.U743 of module ADDFX1 <./CNC_SYN.sdf, line 2694>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.u_CNC.U743 of module ADDFX1 <./CNC_SYN.sdf, line 2695>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U740 of module XOR2X1 <./CNC_SYN.sdf, line 2728>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U740 of module XOR2X1 <./CNC_SYN.sdf, line 2729>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U740 of module XOR2X1 <./CNC_SYN.sdf, line 2732>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U740 of module XOR2X1 <./CNC_SYN.sdf, line 2733>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U739 of module XNOR2X2 <./CNC_SYN.sdf, line 2744>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U739 of module XNOR2X2 <./CNC_SYN.sdf, line 2745>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U739 of module XNOR2X2 <./CNC_SYN.sdf, line 2748>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U739 of module XNOR2X2 <./CNC_SYN.sdf, line 2749>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge S0) Y) of instance TESTBED.u_CNC.U738 of module MX2X2 <./CNC_SYN.sdf, line 2762>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) Y) of instance TESTBED.u_CNC.U738 of module MX2X2 <./CNC_SYN.sdf, line 2763>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U735 of module XNOR2XL <./CNC_SYN.sdf, line 2795>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U735 of module XNOR2XL <./CNC_SYN.sdf, line 2796>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U735 of module XNOR2XL <./CNC_SYN.sdf, line 2799>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U735 of module XNOR2XL <./CNC_SYN.sdf, line 2800>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U732 of module XOR2X1 <./CNC_SYN.sdf, line 2833>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U732 of module XOR2X1 <./CNC_SYN.sdf, line 2834>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U732 of module XOR2X1 <./CNC_SYN.sdf, line 2837>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U732 of module XOR2X1 <./CNC_SYN.sdf, line 2838>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U728 of module XNOR2XL <./CNC_SYN.sdf, line 2883>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U728 of module XNOR2XL <./CNC_SYN.sdf, line 2884>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U728 of module XNOR2XL <./CNC_SYN.sdf, line 2887>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U728 of module XNOR2XL <./CNC_SYN.sdf, line 2888>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U727 of module XNOR2XL <./CNC_SYN.sdf, line 2899>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U727 of module XNOR2XL <./CNC_SYN.sdf, line 2900>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U727 of module XNOR2XL <./CNC_SYN.sdf, line 2903>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U727 of module XNOR2XL <./CNC_SYN.sdf, line 2904>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U723 of module XOR2X1 <./CNC_SYN.sdf, line 2947>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U723 of module XOR2X1 <./CNC_SYN.sdf, line 2948>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U723 of module XOR2X1 <./CNC_SYN.sdf, line 2951>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U723 of module XOR2X1 <./CNC_SYN.sdf, line 2952>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U720 of module XNOR2X2 <./CNC_SYN.sdf, line 2985>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U720 of module XNOR2X2 <./CNC_SYN.sdf, line 2986>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U720 of module XNOR2X2 <./CNC_SYN.sdf, line 2989>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U720 of module XNOR2X2 <./CNC_SYN.sdf, line 2990>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge S0) Y) of instance TESTBED.u_CNC.U719 of module MX2X1 <./CNC_SYN.sdf, line 3003>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) Y) of instance TESTBED.u_CNC.U719 of module MX2X1 <./CNC_SYN.sdf, line 3004>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U714 of module XNOR2XL <./CNC_SYN.sdf, line 3061>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U714 of module XNOR2XL <./CNC_SYN.sdf, line 3062>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U714 of module XNOR2XL <./CNC_SYN.sdf, line 3065>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U714 of module XNOR2XL <./CNC_SYN.sdf, line 3066>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge S0) Y) of instance TESTBED.u_CNC.U713 of module MX2X2 <./CNC_SYN.sdf, line 3079>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) Y) of instance TESTBED.u_CNC.U713 of module MX2X2 <./CNC_SYN.sdf, line 3080>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U710 of module XNOR2X2 <./CNC_SYN.sdf, line 3113>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U710 of module XNOR2X2 <./CNC_SYN.sdf, line 3114>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U710 of module XNOR2X2 <./CNC_SYN.sdf, line 3117>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U710 of module XNOR2X2 <./CNC_SYN.sdf, line 3118>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge S0) Y) of instance TESTBED.u_CNC.U709 of module MX2X1 <./CNC_SYN.sdf, line 3131>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) Y) of instance TESTBED.u_CNC.U709 of module MX2X1 <./CNC_SYN.sdf, line 3132>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge S0) Y) of instance TESTBED.u_CNC.U706 of module MX2X1 <./CNC_SYN.sdf, line 3167>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) Y) of instance TESTBED.u_CNC.U706 of module MX2X1 <./CNC_SYN.sdf, line 3168>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U694 of module XNOR2XL <./CNC_SYN.sdf, line 3292>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U694 of module XNOR2XL <./CNC_SYN.sdf, line 3293>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U694 of module XNOR2XL <./CNC_SYN.sdf, line 3296>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U694 of module XNOR2XL <./CNC_SYN.sdf, line 3297>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U693 of module XNOR2XL <./CNC_SYN.sdf, line 3308>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U693 of module XNOR2XL <./CNC_SYN.sdf, line 3309>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U693 of module XNOR2XL <./CNC_SYN.sdf, line 3312>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U693 of module XNOR2XL <./CNC_SYN.sdf, line 3313>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U689 of module XNOR2XL <./CNC_SYN.sdf, line 3351>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U689 of module XNOR2XL <./CNC_SYN.sdf, line 3352>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U689 of module XNOR2XL <./CNC_SYN.sdf, line 3355>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U689 of module XNOR2XL <./CNC_SYN.sdf, line 3356>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U688 of module XNOR2XL <./CNC_SYN.sdf, line 3367>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U688 of module XNOR2XL <./CNC_SYN.sdf, line 3368>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U688 of module XNOR2XL <./CNC_SYN.sdf, line 3371>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U688 of module XNOR2XL <./CNC_SYN.sdf, line 3372>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge S0) Y) of instance TESTBED.u_CNC.U677 of module MXI2XL <./CNC_SYN.sdf, line 3482>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) Y) of instance TESTBED.u_CNC.U677 of module MXI2XL <./CNC_SYN.sdf, line 3483>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U538 of module XOR2XL <./CNC_SYN.sdf, line 4953>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U538 of module XOR2XL <./CNC_SYN.sdf, line 4954>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U538 of module XOR2XL <./CNC_SYN.sdf, line 4957>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U538 of module XOR2XL <./CNC_SYN.sdf, line 4958>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U533 of module XNOR2XL <./CNC_SYN.sdf, line 5009>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U533 of module XNOR2XL <./CNC_SYN.sdf, line 5010>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U533 of module XNOR2XL <./CNC_SYN.sdf, line 5013>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U533 of module XNOR2XL <./CNC_SYN.sdf, line 5014>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U531 of module XOR2XL <./CNC_SYN.sdf, line 5035>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U531 of module XOR2XL <./CNC_SYN.sdf, line 5036>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U531 of module XOR2XL <./CNC_SYN.sdf, line 5039>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U531 of module XOR2XL <./CNC_SYN.sdf, line 5040>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U529 of module XOR2XL <./CNC_SYN.sdf, line 5061>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U529 of module XOR2XL <./CNC_SYN.sdf, line 5062>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U529 of module XOR2XL <./CNC_SYN.sdf, line 5065>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U529 of module XOR2XL <./CNC_SYN.sdf, line 5066>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U527 of module XNOR2XL <./CNC_SYN.sdf, line 5087>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U527 of module XNOR2XL <./CNC_SYN.sdf, line 5088>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U527 of module XNOR2XL <./CNC_SYN.sdf, line 5091>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U527 of module XNOR2XL <./CNC_SYN.sdf, line 5092>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U523 of module XOR2XL <./CNC_SYN.sdf, line 5133>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U523 of module XOR2XL <./CNC_SYN.sdf, line 5134>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U523 of module XOR2XL <./CNC_SYN.sdf, line 5137>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U523 of module XOR2XL <./CNC_SYN.sdf, line 5138>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U508 of module ADDFXL <./CNC_SYN.sdf, line 5311>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U508 of module ADDFXL <./CNC_SYN.sdf, line 5312>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U508 of module ADDFXL <./CNC_SYN.sdf, line 5317>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U508 of module ADDFXL <./CNC_SYN.sdf, line 5318>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.u_CNC.U508 of module ADDFXL <./CNC_SYN.sdf, line 5321>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.u_CNC.U508 of module ADDFXL <./CNC_SYN.sdf, line 5322>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U505 of module XOR2XL <./CNC_SYN.sdf, line 5355>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U505 of module XOR2XL <./CNC_SYN.sdf, line 5356>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U505 of module XOR2XL <./CNC_SYN.sdf, line 5359>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U505 of module XOR2XL <./CNC_SYN.sdf, line 5360>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U500 of module XNOR2XL <./CNC_SYN.sdf, line 5414>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U500 of module XNOR2XL <./CNC_SYN.sdf, line 5415>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U500 of module XNOR2XL <./CNC_SYN.sdf, line 5418>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U500 of module XNOR2XL <./CNC_SYN.sdf, line 5419>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U499 of module XNOR2XL <./CNC_SYN.sdf, line 5430>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U499 of module XNOR2XL <./CNC_SYN.sdf, line 5431>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U499 of module XNOR2XL <./CNC_SYN.sdf, line 5434>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U499 of module XNOR2XL <./CNC_SYN.sdf, line 5435>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U488 of module XNOR2XL <./CNC_SYN.sdf, line 5555>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U488 of module XNOR2XL <./CNC_SYN.sdf, line 5556>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U488 of module XNOR2XL <./CNC_SYN.sdf, line 5559>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U488 of module XNOR2XL <./CNC_SYN.sdf, line 5560>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U469 of module XOR2XL <./CNC_SYN.sdf, line 5762>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U469 of module XOR2XL <./CNC_SYN.sdf, line 5763>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U469 of module XOR2XL <./CNC_SYN.sdf, line 5766>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U469 of module XOR2XL <./CNC_SYN.sdf, line 5767>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U430 of module XNOR2XL <./CNC_SYN.sdf, line 6172>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U430 of module XNOR2XL <./CNC_SYN.sdf, line 6173>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U430 of module XNOR2XL <./CNC_SYN.sdf, line 6176>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U430 of module XNOR2XL <./CNC_SYN.sdf, line 6177>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U406 of module ADDFXL <./CNC_SYN.sdf, line 6445>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U406 of module ADDFXL <./CNC_SYN.sdf, line 6446>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U406 of module ADDFXL <./CNC_SYN.sdf, line 6451>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U406 of module ADDFXL <./CNC_SYN.sdf, line 6452>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.u_CNC.U406 of module ADDFXL <./CNC_SYN.sdf, line 6455>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.u_CNC.U406 of module ADDFXL <./CNC_SYN.sdf, line 6456>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U391 of module ADDFX1 <./CNC_SYN.sdf, line 6634>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U391 of module ADDFX1 <./CNC_SYN.sdf, line 6635>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U391 of module ADDFX1 <./CNC_SYN.sdf, line 6640>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U391 of module ADDFX1 <./CNC_SYN.sdf, line 6641>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.u_CNC.U391 of module ADDFX1 <./CNC_SYN.sdf, line 6644>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.u_CNC.U391 of module ADDFX1 <./CNC_SYN.sdf, line 6645>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U390 of module XNOR2XL <./CNC_SYN.sdf, line 6656>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U390 of module XNOR2XL <./CNC_SYN.sdf, line 6657>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U390 of module XNOR2XL <./CNC_SYN.sdf, line 6660>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U390 of module XNOR2XL <./CNC_SYN.sdf, line 6661>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U387 of module CMPR42X1 <./CNC_SYN.sdf, line 6695>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U387 of module CMPR42X1 <./CNC_SYN.sdf, line 6696>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U387 of module CMPR42X1 <./CNC_SYN.sdf, line 6699>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U387 of module CMPR42X1 <./CNC_SYN.sdf, line 6700>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) S) of instance TESTBED.u_CNC.U387 of module CMPR42X1 <./CNC_SYN.sdf, line 6703>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) S) of instance TESTBED.u_CNC.U387 of module CMPR42X1 <./CNC_SYN.sdf, line 6704>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge D) S) of instance TESTBED.u_CNC.U387 of module CMPR42X1 <./CNC_SYN.sdf, line 6707>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge D) S) of instance TESTBED.u_CNC.U387 of module CMPR42X1 <./CNC_SYN.sdf, line 6708>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge ICI) S) of instance TESTBED.u_CNC.U387 of module CMPR42X1 <./CNC_SYN.sdf, line 6711>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge ICI) S) of instance TESTBED.u_CNC.U387 of module CMPR42X1 <./CNC_SYN.sdf, line 6712>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) CO) of instance TESTBED.u_CNC.U387 of module CMPR42X1 <./CNC_SYN.sdf, line 6722>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) CO) of instance TESTBED.u_CNC.U387 of module CMPR42X1 <./CNC_SYN.sdf, line 6723>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) CO) of instance TESTBED.u_CNC.U387 of module CMPR42X1 <./CNC_SYN.sdf, line 6726>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) CO) of instance TESTBED.u_CNC.U387 of module CMPR42X1 <./CNC_SYN.sdf, line 6727>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) CO) of instance TESTBED.u_CNC.U387 of module CMPR42X1 <./CNC_SYN.sdf, line 6730>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) CO) of instance TESTBED.u_CNC.U387 of module CMPR42X1 <./CNC_SYN.sdf, line 6731>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U383 of module XNOR2XL <./CNC_SYN.sdf, line 6776>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U383 of module XNOR2XL <./CNC_SYN.sdf, line 6777>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U383 of module XNOR2XL <./CNC_SYN.sdf, line 6780>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U383 of module XNOR2XL <./CNC_SYN.sdf, line 6781>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge S0) Y) of instance TESTBED.u_CNC.U362 of module MX2X2 <./CNC_SYN.sdf, line 7018>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) Y) of instance TESTBED.u_CNC.U362 of module MX2X2 <./CNC_SYN.sdf, line 7019>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge S0) Y) of instance TESTBED.u_CNC.U348 of module MX2X1 <./CNC_SYN.sdf, line 7161>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) Y) of instance TESTBED.u_CNC.U348 of module MX2X1 <./CNC_SYN.sdf, line 7162>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U347 of module XNOR2XL <./CNC_SYN.sdf, line 7173>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U347 of module XNOR2XL <./CNC_SYN.sdf, line 7174>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U347 of module XNOR2XL <./CNC_SYN.sdf, line 7177>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U347 of module XNOR2XL <./CNC_SYN.sdf, line 7178>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U346 of module XNOR2XL <./CNC_SYN.sdf, line 7189>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U346 of module XNOR2XL <./CNC_SYN.sdf, line 7190>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U346 of module XNOR2XL <./CNC_SYN.sdf, line 7193>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U346 of module XNOR2XL <./CNC_SYN.sdf, line 7194>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U345 of module XNOR2XL <./CNC_SYN.sdf, line 7205>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U345 of module XNOR2XL <./CNC_SYN.sdf, line 7206>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U345 of module XNOR2XL <./CNC_SYN.sdf, line 7209>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U345 of module XNOR2XL <./CNC_SYN.sdf, line 7210>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U344 of module XNOR2XL <./CNC_SYN.sdf, line 7221>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U344 of module XNOR2XL <./CNC_SYN.sdf, line 7222>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U344 of module XNOR2XL <./CNC_SYN.sdf, line 7225>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U344 of module XNOR2XL <./CNC_SYN.sdf, line 7226>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U343 of module XNOR2XL <./CNC_SYN.sdf, line 7237>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U343 of module XNOR2XL <./CNC_SYN.sdf, line 7238>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U343 of module XNOR2XL <./CNC_SYN.sdf, line 7241>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U343 of module XNOR2XL <./CNC_SYN.sdf, line 7242>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U342 of module XNOR2XL <./CNC_SYN.sdf, line 7253>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U342 of module XNOR2XL <./CNC_SYN.sdf, line 7254>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U342 of module XNOR2XL <./CNC_SYN.sdf, line 7257>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U342 of module XNOR2XL <./CNC_SYN.sdf, line 7258>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U341 of module XNOR2XL <./CNC_SYN.sdf, line 7269>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U341 of module XNOR2XL <./CNC_SYN.sdf, line 7270>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U341 of module XNOR2XL <./CNC_SYN.sdf, line 7273>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U341 of module XNOR2XL <./CNC_SYN.sdf, line 7274>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U340 of module XNOR2XL <./CNC_SYN.sdf, line 7285>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U340 of module XNOR2XL <./CNC_SYN.sdf, line 7286>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U340 of module XNOR2XL <./CNC_SYN.sdf, line 7289>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U340 of module XNOR2XL <./CNC_SYN.sdf, line 7290>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U339 of module XNOR2XL <./CNC_SYN.sdf, line 7301>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U339 of module XNOR2XL <./CNC_SYN.sdf, line 7302>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U339 of module XNOR2XL <./CNC_SYN.sdf, line 7305>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U339 of module XNOR2XL <./CNC_SYN.sdf, line 7306>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U337 of module XNOR2XL <./CNC_SYN.sdf, line 7327>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U337 of module XNOR2XL <./CNC_SYN.sdf, line 7328>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U337 of module XNOR2XL <./CNC_SYN.sdf, line 7331>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U337 of module XNOR2XL <./CNC_SYN.sdf, line 7332>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U336 of module XNOR2XL <./CNC_SYN.sdf, line 7343>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U336 of module XNOR2XL <./CNC_SYN.sdf, line 7344>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U336 of module XNOR2XL <./CNC_SYN.sdf, line 7347>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U336 of module XNOR2XL <./CNC_SYN.sdf, line 7348>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U335 of module ADDFX1 <./CNC_SYN.sdf, line 7368>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U335 of module ADDFX1 <./CNC_SYN.sdf, line 7369>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U335 of module ADDFX1 <./CNC_SYN.sdf, line 7374>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U335 of module ADDFX1 <./CNC_SYN.sdf, line 7375>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.u_CNC.U335 of module ADDFX1 <./CNC_SYN.sdf, line 7378>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.u_CNC.U335 of module ADDFX1 <./CNC_SYN.sdf, line 7379>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U334 of module ADDFX1 <./CNC_SYN.sdf, line 7399>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U334 of module ADDFX1 <./CNC_SYN.sdf, line 7400>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U334 of module ADDFX1 <./CNC_SYN.sdf, line 7405>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U334 of module ADDFX1 <./CNC_SYN.sdf, line 7406>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.u_CNC.U334 of module ADDFX1 <./CNC_SYN.sdf, line 7409>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.u_CNC.U334 of module ADDFX1 <./CNC_SYN.sdf, line 7410>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U333 of module ADDFX1 <./CNC_SYN.sdf, line 7430>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U333 of module ADDFX1 <./CNC_SYN.sdf, line 7431>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U333 of module ADDFX1 <./CNC_SYN.sdf, line 7436>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U333 of module ADDFX1 <./CNC_SYN.sdf, line 7437>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.u_CNC.U333 of module ADDFX1 <./CNC_SYN.sdf, line 7440>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.u_CNC.U333 of module ADDFX1 <./CNC_SYN.sdf, line 7441>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge S0) Y) of instance TESTBED.u_CNC.U307 of module MX2X1 <./CNC_SYN.sdf, line 7718>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) Y) of instance TESTBED.u_CNC.U307 of module MX2X1 <./CNC_SYN.sdf, line 7719>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U305 of module XNOR2XL <./CNC_SYN.sdf, line 7740>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U305 of module XNOR2XL <./CNC_SYN.sdf, line 7741>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U305 of module XNOR2XL <./CNC_SYN.sdf, line 7744>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U305 of module XNOR2XL <./CNC_SYN.sdf, line 7745>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.U304 of module ADDFX1 <./CNC_SYN.sdf, line 7765>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.U304 of module ADDFX1 <./CNC_SYN.sdf, line 7766>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.U304 of module ADDFX1 <./CNC_SYN.sdf, line 7771>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.U304 of module ADDFX1 <./CNC_SYN.sdf, line 7772>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge CI) S) of instance TESTBED.u_CNC.U304 of module ADDFX1 <./CNC_SYN.sdf, line 7775>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge CI) S) of instance TESTBED.u_CNC.U304 of module ADDFX1 <./CNC_SYN.sdf, line 7776>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance TESTBED.u_CNC.U300 of module XOR2XL <./CNC_SYN.sdf, line 7815>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance TESTBED.u_CNC.U300 of module XOR2XL <./CNC_SYN.sdf, line 7816>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance TESTBED.u_CNC.U300 of module XOR2XL <./CNC_SYN.sdf, line 7819>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance TESTBED.u_CNC.U300 of module XOR2XL <./CNC_SYN.sdf, line 7820>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8135>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8136>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8139>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8140>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8143>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8144>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8147>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8148>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8151>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8152>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8162>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8163>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8166>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8167>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8170>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U151 of module CMPR42X1 <./CNC_SYN.sdf, line 8171>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U156 of module CMPR42X1 <./CNC_SYN.sdf, line 8184>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U156 of module CMPR42X1 <./CNC_SYN.sdf, line 8185>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U156 of module CMPR42X1 <./CNC_SYN.sdf, line 8188>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U156 of module CMPR42X1 <./CNC_SYN.sdf, line 8189>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U156 of module CMPR42X1 <./CNC_SYN.sdf, line 8192>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U156 of module CMPR42X1 <./CNC_SYN.sdf, line 8193>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U156 of module CMPR42X1 <./CNC_SYN.sdf, line 8196>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U156 of module CMPR42X1 <./CNC_SYN.sdf, line 8197>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U156 of module CMPR42X1 <./CNC_SYN.sdf, line 8200>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U156 of module CMPR42X1 <./CNC_SYN.sdf, line 8201>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U156 of module CMPR42X1 <./CNC_SYN.sdf, line 8211>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U156 of module CMPR42X1 <./CNC_SYN.sdf, line 8212>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U156 of module CMPR42X1 <./CNC_SYN.sdf, line 8215>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U156 of module CMPR42X1 <./CNC_SYN.sdf, line 8216>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U156 of module CMPR42X1 <./CNC_SYN.sdf, line 8219>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U156 of module CMPR42X1 <./CNC_SYN.sdf, line 8220>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8233>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8234>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8237>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8238>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8241>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8242>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8245>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8246>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8249>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8250>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8260>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8261>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8264>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8265>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8268>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U159 of module CMPR42X1 <./CNC_SYN.sdf, line 8269>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8282>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8283>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8286>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8287>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8290>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8291>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8294>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8295>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8298>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8299>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8309>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8310>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8313>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8314>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8317>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U163 of module CMPR42X1 <./CNC_SYN.sdf, line 8318>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8331>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8332>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8335>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8336>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8339>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8340>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8343>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8344>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8347>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8348>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8358>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8359>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8362>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8363>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8366>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U166 of module CMPR42X1 <./CNC_SYN.sdf, line 8367>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8380>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8381>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8384>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8385>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8388>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8389>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8392>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8393>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8396>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8397>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8407>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8408>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8411>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8412>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8415>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U168 of module CMPR42X1 <./CNC_SYN.sdf, line 8416>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8429>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8430>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8433>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8434>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8437>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8438>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8441>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge D) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8442>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8445>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge ICI) S) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8446>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8456>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8457>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8460>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8461>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8464>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge C) CO) of instance TESTBED.u_CNC.DP_OP_63J1_122_404_U170 of module CMPR42X1 <./CNC_SYN.sdf, line 8465>.
 	Annotation completed with 0 Errors and 458 Warnings
-	SDF statistics: No. of Pathdelays = 1941  Annotated = 100.00% -- No. of Tchecks = 438  Annotated = 100.00% 
+	SDF statistics: No. of Pathdelays = 1946  Annotated = 100.00% -- No. of Tchecks = 438  Annotated = 100.00% 
 				        Total 	   Annotated	  Percentage
-		 Path Delays	        1941	        1941	      100.00
+		 Path Delays	        1946	        1946	      100.00
 		      $width	         146	         146	      100.00
 		  $setuphold	         292	         292	      100.00
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		umc18_neg.ADDFX1:v <0x6be000bd>
+		umc18_neg.ADDFX1:v <0x7a7efe1a>
 			streams:   0, words:     0
-		umc18_neg.ADDFXL:v <0x7873af4c>
+		umc18_neg.ADDFXL:v <0x70cf96b5>
 			streams:   0, words:     0
-		umc18_neg.ADDHXL:v <0x004972b7>
+		umc18_neg.ADDHXL:v <0x2f9a9a3a>
 			streams:   0, words:     0
-		umc18_neg.CMPR42X1:v <0x2d85e644>
+		umc18_neg.CMPR42X1:v <0x05b3d187>
 			streams:   0, words:     0
-		umc18_neg.DFFTRX1:v <0x3fc531a5>
+		umc18_neg.DFFTRX1:v <0x3120c204>
 			streams:   0, words:     0
-		umc18_neg.DFFTRX2:v <0x199bae87>
+		umc18_neg.DFFTRX4:v <0x777881d6>
 			streams:   0, words:     0
-		umc18_neg.DFFTRX4:v <0x552690c3>
+		umc18_neg.MX2X1:v <0x71a9d920>
 			streams:   0, words:     0
-		umc18_neg.MX2X1:v <0x07ef82a7>
+		umc18_neg.MX2X2:v <0x78e70ffc>
 			streams:   0, words:     0
-		umc18_neg.MX2X2:v <0x04865264>
+		umc18_neg.MXI2XL:v <0x04388511>
 			streams:   0, words:     0
-		umc18_neg.MX2XL:v <0x3bf8253c>
+		umc18_neg.XNOR2X1:v <0x116ede1b>
 			streams:   0, words:     0
-		umc18_neg.MXI2XL:v <0x13afc964>
+		umc18_neg.XNOR2X2:v <0x210117df>
 			streams:   0, words:     0
-		umc18_neg.XNOR2X1:v <0x0d1245d5>
+		umc18_neg.XNOR2XL:v <0x2e91b591>
 			streams:   0, words:     0
-		umc18_neg.XNOR2X2:v <0x4955b059>
+		umc18_neg.XOR2X1:v <0x4b9dda04>
 			streams:   0, words:     0
-		umc18_neg.XNOR2XL:v <0x5c20ab47>
+		umc18_neg.XOR2XL:v <0x7462b18e>
 			streams:   0, words:     0
-		umc18_neg.XOR2X1:v <0x732548b7>
-			streams:   0, words:     0
-		umc18_neg.XOR2XL:v <0x2217a625>
-			streams:   0, words:     0
-		worklib.PATTERN:v <0x6e672fbc>
-			streams:  10, words: 24662
-		worklib.TESTBED:v <0x54eabc17>
-			streams:   1, words:   670
+		worklib.PATTERN:v <0x1eba6e2e>
+			streams:  10, words: 28344
+		worklib.TESTBED:v <0x6847893b>
+			streams:   1, words:   712
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                    Instances  Unique
-		Modules:                  618      49
+		Modules:                  623      44
 		UDPs:                      82       2
-		Primitives:              1406       8
-		Timing outputs:           720      24
-		Registers:                 96      27
-		Scalar wires:            1240       -
+		Primitives:              1411       8
+		Timing outputs:           725      24
+		Registers:                 96      26
+		Scalar wires:            1248       -
 		Expanded wires:            10       2
 		Always blocks:              1       1
 		Initial blocks:             5       5
-		Timing checks:            730     223
-		Interconnect:            1597       -
+		Timing checks:            730     222
+		Interconnect:            1602       -
 		Delayed tcheck signals:   219      75
-		Simulation timescale:     1ps
+		Simulation timescale:     1fs
 	Writing initial simulation snapshot: worklib.TESTBED:v
 Loading snapshot worklib.TESTBED:v .................... Done
 *Verdi* Loading libsscore_ius152.so
-ncsim> source /RAID2/EDA/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
 ncsim> run
-FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux, 05/26/2019
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
 (C) 1996 - 2019 by Synopsys, Inc.
 *Verdi* : Create FSDB file 'CNC_SYN.fsdb'
 *Verdi* : Begin traversing the scopes, layer (0).
@@ -1925,4 +1913,4 @@ FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux, 05/26/2019
 Simulation complete via $finish(1) at time 63876 NS + 0
 ./PATTERN.v:210     $finish;
 ncsim> exit
-TOOL:	irun	15.20-s084: Exiting on Mar 06, 2023 at 18:39:26 CST  (total: 00:00:02)
+TOOL:	irun(64)	15.20-s084: Exiting on Apr 09, 2023 at 01:51:10 CST  (total: 00:00:03)

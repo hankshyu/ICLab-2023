@@ -1,0 +1,9 @@
+rm -rf INCA_libs nWaveLog
+rm -rf *.fsdb
+rm -rf *.log
+rm -rf *~
+rm -rf ./Netlist/*.*
+rm -rf ./Report/*.*
+rm -rf dwsvf*
+rm -rf alib*
+rm -rf default.svf

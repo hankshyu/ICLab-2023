@@ -1,9 +1,14 @@
-irun: 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	irun	15.20-s084: Started on Mar 06, 2023 at 18:37:06 CST
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on Apr 09, 2023 at 01:45:49 CST
 irun
 	TESTBED.v
 	-define RTL
+	-define FUNC
 	-debug
+	-incdir /usr/synthesis/dw/sim_ver/
+	-notimingchecks
+	-loadpli1 debpli:novas_pli_boot
+ncvlog: *W,NOTIND: unable to access -INCDIR /usr/synthesis/dw/sim_ver/ (No such file or directory).
 file: TESTBED.v
 	module worklib.PATTERN:v
 		errors: 0, warnings: 0
@@ -11,18 +16,20 @@ file: TESTBED.v
 		errors: 0, warnings: 0
 	module worklib.TESTBED:v
 		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
 	Top level design units:
 		TESTBED
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.CNC:v <0x19db698d>
-			streams:  21, words:  9480
-		worklib.PATTERN:v <0x0752ef4d>
-			streams:  10, words: 23890
-		worklib.TESTBED:v <0x65511edd>
-			streams:   1, words:   588
+		worklib.CNC:v <0x47ddc8b5>
+			streams:  21, words: 11295
+		worklib.PATTERN:v <0x71de5a24>
+			streams:  10, words: 27493
+		worklib.TESTBED:v <0x1366847c>
+			streams:   1, words:   613
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -38,9 +45,9 @@ file: TESTBED.v
 	Writing initial simulation snapshot: worklib.TESTBED:v
 Loading snapshot worklib.TESTBED:v .................... Done
 *Verdi* Loading libsscore_ius152.so
-ncsim> source /RAID2/EDA/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
 ncsim> run
-FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux, 05/26/2019
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
 (C) 1996 - 2019 by Synopsys, Inc.
 *Verdi* : Create FSDB file 'CNC.fsdb'
 *Verdi* : Begin traversing the scopes, layer (0).
@@ -1052,4 +1059,4 @@ FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux, 05/26/2019
 Simulation complete via $finish(1) at time 63876 NS + 0
 ./PATTERN.v:210     $finish;
 ncsim> exit
-TOOL:	irun	15.20-s084: Exiting on Mar 06, 2023 at 18:37:07 CST  (total: 00:00:01)
+TOOL:	irun(64)	15.20-s084: Exiting on Apr 09, 2023 at 01:45:50 CST  (total: 00:00:01)

@@ -26,7 +26,7 @@ set CYCLE 6.0
 #  Read RTL Code
 #======================================================
 
-read_sverilog { QUEEN.v}
+read_sverilog $DESIGN.v
 current_design QUEEN
 
 #======================================================

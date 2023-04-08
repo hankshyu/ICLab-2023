@@ -17,7 +17,7 @@ set target_library {slow.db}
 
 #======================================================
 #  Global Parameters
-#======================================================
+j======================================================
 set DESIGN "CNC"
 set hdlin_ff_always_sync_set_reset true
 set CLK_period 6
@@ -25,7 +25,7 @@ set CLK_period 6
 #======================================================
 #  Read RTL Code
 #======================================================
-read_sverilog {$DESIGN\.v}
+read_sverilog $DESIGN.v
 current_design $DESIGN
 
 #======================================================
