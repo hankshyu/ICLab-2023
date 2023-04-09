@@ -2,8 +2,8 @@
 ****************************************
 Report : area
 Design : VIP
-Version: R-2020.09
-Date   : Wed Mar 15 22:45:25 2023
+Version: T-2022.03
+Date   : Mon Apr 10 01:14:14 2023
 ****************************************
 
 Library(s) Used:
@@ -11,20 +11,20 @@ Library(s) Used:
     slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
 
 Number of ports:                          100
-Number of nets:                          3856
-Number of cells:                         3484
-Number of combinational cells:           3319
-Number of sequential cells:               165
+Number of nets:                          4384
+Number of cells:                         4021
+Number of combinational cells:           3688
+Number of sequential cells:               333
 Number of macros/black boxes:               0
-Number of buf/inv:                        470
-Number of references:                      90
+Number of buf/inv:                        515
+Number of references:                      98
 
-Combinational area:              72139.637967
-Buf/Inv area:                     4849.891362
-Noncombinational area:           11938.449631
+Combinational area:              78073.935640
+Buf/Inv area:                     5378.788980
+Noncombinational area:           23813.697731
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                 84078.087598
+Total cell area:                101887.633371
 Total area:                 undefined
 1

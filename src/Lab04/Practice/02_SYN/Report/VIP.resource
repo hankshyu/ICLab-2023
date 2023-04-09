@@ -2,27 +2,29 @@
 ****************************************
 Report : resources
 Design : VIP
-Version: R-2020.09
-Date   : Wed Mar 15 22:45:25 2023
+Version: T-2022.03
+Date   : Mon Apr 10 01:14:14 2023
 ****************************************
 
 
 Resource Report for this hierarchy in file
-        /RAID2/COURSE/iclab/iclab105/Desktop/Lab04/Practice/01_RTL/VIP.v
+        /RAID2/COURSE/iclab/iclab105/oldarchive/Lab04/Practice/01_RTL/VIP.v
 =============================================================================
 | Cell           | Module         | Parameters | Contained Operations       |
 =============================================================================
-| add_x_2        | DW01_inc       | width=3    | add_61 (VIP.v:61)          |
-| mult1          | DW_fp_mult     | sig_width=23 | mult1 (VIP.v:50)         |
+| add_x_5        | DW01_inc       | width=10   | add_149 (VIP.v:149)        |
+| M0             | DW_fp_mult     | sig_width=23 | M0 (VIP.v:57)            |
 |                |                | exp_width=8 |                           |
 |                |                | ieee_compliance=0 |                     |
-| add1           | DW_fp_add      | sig_width=23 | add1 (VIP.v:56)          |
+| A0             | DW_fp_add      | sig_width=23 | A0 (VIP.v:58)            |
 |                |                | exp_width=8 |                           |
 |                |                | ieee_compliance=0 |                     |
+| gt_x_10        | DW_cmp         | width=10   | gt_117 (VIP.v:117)         |
+|                |                |            | gt_130 (VIP.v:130)         |
 =============================================================================
 
 
-Resource Report for Ungrouped Hierarchy add1
+Resource Report for Ungrouped Hierarchy A0
 =============================================================================
 | Cell           | Module         | Parameters | Contained Operations       |
 =============================================================================
@@ -32,31 +34,31 @@ Resource Report for Ungrouped Hierarchy add1
 =============================================================================
 
 
-Resource Report for Ungrouped Hierarchy mult1 in file ./DW_fp_mult__rtl.v.e
+Resource Report for Ungrouped Hierarchy M0 in file ./DW_fp_mult__rtl.v.e
 =============================================================================
 | Cell           | Module         | Parameters | Contained Operations       |
 =============================================================================
-| add_x_2        | DW01_inc       | width=8    | add_333                    |
-| lte_x_3        | DW_cmp         | width=10   | lte_344                    |
-| gte_x_5        | DW_cmp         | width=9    | gte_354                    |
-| gte_x_7        | DW_cmp         | width=9    | gte_356                    |
-| add_x_14       | DW01_add       | width=7    | add_445_4                  |
-| mult_x_15      | DW_mult_uns    | a_width=24 | mult_452                   |
+| add_x_2        | DW01_inc       | width=8    | add_366                    |
+| lte_x_3        | DW_cmp         | width=10   | lte_374                    |
+| gte_x_5        | DW_cmp         | width=9    | gte_384                    |
+| gte_x_7        | DW_cmp         | width=9    | gte_386                    |
+| add_x_12       | DW01_add       | width=7    | add_471_4                  |
+| mult_x_13      | DW_mult_uns    | a_width=24 | mult_477                   |
 |                |                | b_width=24 |                            |
-| eq_x_16        | DW_cmp         | width=10   | eq_453                     |
-| lt_x_19        | DW_cmp         | width=8    | lt_474                     |
-| lt_x_21        | DW_cmp         | width=8    | lt_479                     |
-| add_x_22       | DW01_add       | width=24   | add_484                    |
+| eq_x_14        | DW_cmp         | width=10   | eq_478                     |
+| lt_x_17        | DW_cmp         | width=8    | lt_492                     |
+| lt_x_19        | DW_cmp         | width=8    | lt_497                     |
+| add_x_20       | DW01_add       | width=24   | add_501                    |
 | U1             | DW_lzd         | a_width=24 | U1                         |
 | U2             | DW_lzd         | a_width=24 | U2                         |
 | U3             | DW_lzd         | a_width=24 | U3                         |
 | U4             | DW_lzd         | a_width=24 | U4                         |
-| sub_x_35       | DW01_sub       | width=9    | add_330_4 sub_330_3        |
-| add_x_36       | DW01_add       | width=10   | add_330_4 sub_330_3        |
+| sub_x_33       | DW01_sub       | width=9    | add_363 sub_363            |
+| add_x_34       | DW01_add       | width=10   | add_363 sub_363            |
 =============================================================================
 
 
-Resource Report for Ungrouped Hierarchy *cell*13937/U1 in file
+Resource Report for Ungrouped Hierarchy *cell*14892/U1 in file
         ./DW_norm_rtl.vhd.e
 =============================================================================
 | Cell           | Module         | Parameters | Contained Operations       |
@@ -66,20 +68,19 @@ Resource Report for Ungrouped Hierarchy *cell*13937/U1 in file
 =============================================================================
 
 
-Resource Report for Ungrouped Hierarchy add1/U1 in file
-        ./DW_fp_addsub__str.v.e
+Resource Report for Ungrouped Hierarchy A0/U1 in file ./DW_fp_addsub__str.v.e
 =============================================================================
 | Cell           | Module         | Parameters | Contained Operations       |
 =============================================================================
-| lt_x_1         | DW_cmp         | width=31   | lt_210                     |
-| ashr_5         | DW_rightsh     | A_width=26 | srl_269_lsb_trim           |
+| lt_x_1         | DW_cmp         | width=31   | lt_223                     |
+| ashr_5         | DW_rightsh     | A_width=26 | srl_283_lsb_trim           |
 |                |                | SH_width=8 |                            |
-| ash_6          | DW_leftsh      | A_width=26 | sll_271                    |
+| ash_6          | DW_leftsh      | A_width=26 | sll_285                    |
 |                |                | SH_width=8 |                            |
-| ash_8          | DW_leftsh      | A_width=27 | sll_322                    |
+| ash_8          | DW_leftsh      | A_width=27 | sll_337                    |
 |                |                | SH_width=6 |                            |
-| add_x_9        | DW01_add       | width=5    | add_324                    |
-| add_x_16       | DW01_inc       | width=23   | add_372                    |
+| add_x_9        | DW01_add       | width=5    | add_339                    |
+| add_x_16       | DW01_inc       | width=23   | add_398                    |
 | U2             | DW_lzd         | a_width=28 | U2                         |
 | U1             | DW_norm        | a_width=27 | U1                         |
 |                |                | srch_wind=3 |                           |
@@ -97,7 +98,7 @@ Datapath Report for DP_OP_65_133_7885
 ==============================================================================
 | Cell                 | Contained Operations                                |
 ==============================================================================
-| DP_OP_65_133_7885    | sub_263 sub_add_265 add_265_ni                      |
+| DP_OP_65_133_7885    | sub_277 sub_add_279 add_279_ni                      |
 ==============================================================================
 
 ==============================================================================
@@ -115,7 +116,7 @@ Datapath Report for DP_OP_66_134_3163
 ==============================================================================
 | Cell                 | Contained Operations                                |
 ==============================================================================
-| DP_OP_66_134_3163    | add_280 add_280_2                                   |
+| DP_OP_66_134_3163    | add_294 add_294_2                                   |
 ==============================================================================
 
 ==============================================================================
@@ -132,7 +133,7 @@ Datapath Report for DP_OP_67_135_9752
 ==============================================================================
 | Cell                 | Contained Operations                                |
 ==============================================================================
-| DP_OP_67_135_9752    | add_376 sub_377                                     |
+| DP_OP_67_135_9752    | add_402 sub_403                                     |
 ==============================================================================
 
 ==============================================================================
@@ -146,21 +147,21 @@ Datapath Report for DP_OP_67_135_9752
 ==============================================================================
 
 
-Resource Report for Ungrouped Hierarchy mult1/U3
+Resource Report for Ungrouped Hierarchy M0/U3
 =============================================================================
 | Cell           | Module         | Parameters | Contained Operations       |
 =============================================================================
 =============================================================================
 
 
-Resource Report for Ungrouped Hierarchy add1/U1/U2
+Resource Report for Ungrouped Hierarchy A0/U1/U2
 =============================================================================
 | Cell           | Module         | Parameters | Contained Operations       |
 =============================================================================
 =============================================================================
 
 
-Resource Report for Ungrouped Hierarchy mult1/U4
+Resource Report for Ungrouped Hierarchy M0/U4
 =============================================================================
 | Cell           | Module         | Parameters | Contained Operations       |
 =============================================================================
@@ -172,25 +173,26 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_x_2            | DW01_inc         | apparch (area)     |                |
-| mult1              | DW_fp_mult       | rtl                |                |
-| add1               | DW_fp_add        | rtl                |                |
+| add_x_5            | DW01_inc         | apparch (area)     |                |
+| M0                 | DW_fp_mult       | rtl                |                |
+| A0                 | DW_fp_add        | rtl                |                |
+| gt_x_10            | DW_cmp           | apparch (area)     |                |
 | U1                 | DW_fp_addsub     | str                |                |
 | add_x_2            | DW01_inc         | apparch (area)     |                |
 | lte_x_3            | DW_cmp           | apparch (area)     |                |
 | gte_x_5            | DW_cmp           | apparch (area)     |                |
 | gte_x_7            | DW_cmp           | apparch (area)     |                |
-| add_x_14           | DW01_add         | apparch (area)     |                |
-| mult_x_15          | DW_mult_uns      | pparch (area,speed)                 |
+| add_x_12           | DW01_add         | apparch (area)     |                |
+| mult_x_13          | DW_mult_uns      | pparch (area,speed)                 |
 |                    |                  | mult_arch: benc_radix4              |
-| eq_x_16            | DW_cmp           | apparch (area)     |                |
+| eq_x_14            | DW_cmp           | apparch (area)     |                |
+| lt_x_17            | DW_cmp           | apparch (area)     |                |
 | lt_x_19            | DW_cmp           | apparch (area)     |                |
-| lt_x_21            | DW_cmp           | apparch (area)     |                |
-| add_x_22           | DW01_add         | pparch (area,speed)                 |
+| add_x_20           | DW01_add         | pparch (area,speed)                 |
 | U3                 | DW_lzd           | rtl                |                |
 | U4                 | DW_lzd           | rtl                |                |
-| sub_x_35           | DW01_sub         | apparch (area)     |                |
-| add_x_36           | DW01_add         | apparch (area)     |                |
+| sub_x_33           | DW01_sub         | apparch (area)     |                |
+| add_x_34           | DW01_add         | apparch (area)     |                |
 | U2                 | DW01_ash         | astr (area)        |                |
 | lt_x_1             | DW_cmp           | pparch (area,speed)                 |
 | ashr_5             | DW_rightsh       | astr (area)        |                |

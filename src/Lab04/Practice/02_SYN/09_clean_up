@@ -1,0 +1,6 @@
+rm -rf Netlist/*
+rm -rf Report/*
+rm -f  *.log
+rm -f  DEADJOE
+rm -f  *~ default*
+rm -rf alib*
