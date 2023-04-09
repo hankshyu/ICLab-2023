@@ -1,0 +1,8 @@
+rm -rf *.fsdb
+rm -rf INCA_libs
+rm -rf ncverilog*
+rm -rf *~
+rm -rf nWaveLog
+rm -rf *.rc
+rm -rf irun*
+rm -rf nova*

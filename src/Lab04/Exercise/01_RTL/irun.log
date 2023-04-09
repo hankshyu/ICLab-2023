@@ -1,16 +1,16 @@
-irun: 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	irun	15.20-s084: Started on Mar 20, 2023 at 18:42:08 CST
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on Apr 10, 2023 at 01:28:13 CST
 irun
 	TESTBED.v
 	-define RTL
+	-define FUNC
 	-debug
+	-incdir /usr/synthesis/dw/sim_ver/
 	-notimingchecks
 	-loadpli1 debpli:novas_pli_boot
 	-y /RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/
 	+libext+.v
-Recompiling... reason: file './NN.v' is newer than expected.
-	expected: Mon Mar 20 09:38:47 2023
-	actual:   Mon Mar 20 11:34:51 2023
+ncvlog: *W,NOTIND: unable to access -INCDIR /usr/synthesis/dw/sim_ver/ (No such file or directory).
 file: TESTBED.v
 	module worklib.DW_fp_mac:v
 		errors: 0, warnings: 0
@@ -22,46 +22,52 @@ file: TESTBED.v
 		errors: 0, warnings: 0
 module DW_fp_mac (a, b, c, rnd, z, status);
                |
-ncvlog: *W,RECOME (/usr/synthesis/dw/sim_ver/DW_fp_mac.v,60|15): recompiling design unit worklib.DW_fp_mac:v.
-	First compiled from line 60 of /usr/synthesis/dw/sim_ver/DW_fp_mac.v.
-(`include file: /usr/synthesis/dw/sim_ver/DW_fp_mac.v line 60, `include file: PATTERN.v line 30, file: TESTBED.v line 2)
+ncvlog: *W,RECOME (/RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_mac.v,69|15): recompiling design unit worklib.DW_fp_mac:v.
+	First compiled from line 69 of /RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_mac.v.
+(`include file: /RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_mac.v line 69, `include file: PATTERN.v line 28, file: TESTBED.v line 2)
 	module worklib.DW_fp_mac:v
 		errors: 0, warnings: 1
 module DW_fp_recip (a, rnd, z, status);
                  |
-ncvlog: *W,RECOME (/usr/synthesis/dw/sim_ver/DW_fp_recip.v,71|17): recompiling design unit worklib.DW_fp_recip:v.
-	First compiled from line 71 of /usr/synthesis/dw/sim_ver/DW_fp_recip.v.
-(`include file: /usr/synthesis/dw/sim_ver/DW_fp_recip.v line 71, `include file: PATTERN.v line 31, file: TESTBED.v line 2)
+ncvlog: *W,RECOME (/RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_recip.v,75|17): recompiling design unit worklib.DW_fp_recip:v.
+	First compiled from line 75 of /RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_recip.v.
+(`include file: /RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_recip.v line 75, `include file: PATTERN.v line 29, file: TESTBED.v line 2)
 	module worklib.DW_fp_recip:v
 		errors: 0, warnings: 1
 module DW_fp_exp (a, z, status);
                |
-ncvlog: *W,RECOME (/usr/synthesis/dw/sim_ver/DW_fp_exp.v,64|15): recompiling design unit worklib.DW_fp_exp:v.
-	First compiled from line 64 of /usr/synthesis/dw/sim_ver/DW_fp_exp.v.
-(`include file: /usr/synthesis/dw/sim_ver/DW_fp_exp.v line 64, `include file: PATTERN.v line 32, file: TESTBED.v line 2)
+ncvlog: *W,RECOME (/RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_exp.v,72|15): recompiling design unit worklib.DW_fp_exp:v.
+	First compiled from line 72 of /RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_exp.v.
+(`include file: /RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_exp.v line 72, `include file: PATTERN.v line 30, file: TESTBED.v line 2)
 	module worklib.DW_fp_exp:v
 		errors: 0, warnings: 1
 	module worklib.PATTERN:v
 		errors: 0, warnings: 0
+	module worklib.Multi_float:v
+		errors: 0, warnings: 0
+	module worklib.ReLu:v
+		errors: 0, warnings: 0
+	module worklib.Sigmoid:v
+		errors: 0, warnings: 0
 module DW_fp_mac (a, b, c, rnd, z, status);
                |
-ncvlog: *W,RECOME (/usr/synthesis/dw/sim_ver/DW_fp_mac.v,60|15): recompiling design unit worklib.DW_fp_mac:v.
-	First compiled from line 60 of /usr/synthesis/dw/sim_ver/DW_fp_mac.v.
-(`include file: /usr/synthesis/dw/sim_ver/DW_fp_mac.v line 60, `include file: ./NN.v line 2, file: TESTBED.v line 4)
+ncvlog: *W,RECOME (/RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_mac.v,69|15): recompiling design unit worklib.DW_fp_mac:v.
+	First compiled from line 69 of /RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_mac.v.
+(`include file: /RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_mac.v line 69, `include file: ./NN.v line 2, file: TESTBED.v line 4)
 	module worklib.DW_fp_mac:v
 		errors: 0, warnings: 1
 module DW_fp_recip (a, rnd, z, status);
                  |
-ncvlog: *W,RECOME (/usr/synthesis/dw/sim_ver/DW_fp_recip.v,71|17): recompiling design unit worklib.DW_fp_recip:v.
-	First compiled from line 71 of /usr/synthesis/dw/sim_ver/DW_fp_recip.v.
-(`include file: /usr/synthesis/dw/sim_ver/DW_fp_recip.v line 71, `include file: ./NN.v line 3, file: TESTBED.v line 4)
+ncvlog: *W,RECOME (/RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_recip.v,75|17): recompiling design unit worklib.DW_fp_recip:v.
+	First compiled from line 75 of /RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_recip.v.
+(`include file: /RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_recip.v line 75, `include file: ./NN.v line 3, file: TESTBED.v line 4)
 	module worklib.DW_fp_recip:v
 		errors: 0, warnings: 1
 module DW_fp_exp (a, z, status);
                |
-ncvlog: *W,RECOME (/usr/synthesis/dw/sim_ver/DW_fp_exp.v,64|15): recompiling design unit worklib.DW_fp_exp:v.
-	First compiled from line 64 of /usr/synthesis/dw/sim_ver/DW_fp_exp.v.
-(`include file: /usr/synthesis/dw/sim_ver/DW_fp_exp.v line 64, `include file: ./NN.v line 4, file: TESTBED.v line 4)
+ncvlog: *W,RECOME (/RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_exp.v,72|15): recompiling design unit worklib.DW_fp_exp:v.
+	First compiled from line 72 of /RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_exp.v.
+(`include file: /RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_exp.v line 72, `include file: ./NN.v line 4, file: TESTBED.v line 4)
 	module worklib.DW_fp_exp:v
 		errors: 0, warnings: 1
 module NN(
@@ -71,29 +77,62 @@ ncvlog: *W,RECOME (./NN.v,7|8): recompiling design unit worklib.NN:v.
 (`include file: ./NN.v line 7, file: TESTBED.v line 4)
 	module worklib.NN:v
 		errors: 0, warnings: 1
-ncelab: *W,LIBLDFL: Failed to load dynamic library debpli:
-	debpli.so: cannot open shared object file: No such file or directory or file is not valid ELFCLASS32 library..
+file: /RAID2/cad/synopsys/synthesis/cur/dw/sim_ver//DW_fp_dp2.v
+	module sim_ver.DW_fp_dp2:v
+		errors: 0, warnings: 0
+file: /RAID2/cad/synopsys/synthesis/cur/dw/sim_ver//DW_fp_div.v
+	module sim_ver.DW_fp_div:v
+		errors: 0, warnings: 0
+file: /RAID2/cad/synopsys/synthesis/cur/dw/sim_ver//DW_exp2.v
+	module sim_ver.DW_exp2:v
+		errors: 0, warnings: 0
+file: /RAID2/cad/synopsys/synthesis/cur/dw/sim_ver//DW_fp_addsub.v
+	module sim_ver.DW_fp_addsub:v
+		errors: 0, warnings: 0
+file: /RAID2/cad/synopsys/synthesis/cur/dw/sim_ver//DW_fp_sub.v
+	module sim_ver.DW_fp_sub:v
+		errors: 0, warnings: 0
+file: /RAID2/cad/synopsys/synthesis/cur/dw/sim_ver//DW_fp_mult.v
+	module sim_ver.DW_fp_mult:v
+		errors: 0, warnings: 0
+file: /RAID2/cad/synopsys/synthesis/cur/dw/sim_ver//DW_fp_cmp.v
+	module sim_ver.DW_fp_cmp:v
+		errors: 0, warnings: 0
+file: /RAID2/cad/synopsys/synthesis/cur/dw/sim_ver//DW_fp_ifp_conv.v
+	module sim_ver.DW_fp_ifp_conv:v
+		errors: 0, warnings: 0
+file: /RAID2/cad/synopsys/synthesis/cur/dw/sim_ver//DW_ifp_mult.v
+	module sim_ver.DW_ifp_mult:v
+		errors: 0, warnings: 0
+file: /RAID2/cad/synopsys/synthesis/cur/dw/sim_ver//DW_ifp_addsub.v
+	module sim_ver.DW_ifp_addsub:v
+		errors: 0, warnings: 0
+file: /RAID2/cad/synopsys/synthesis/cur/dw/sim_ver//DW_ifp_fp_conv.v
+	module sim_ver.DW_ifp_fp_conv:v
+		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
 		Caching library 'sim_ver' ....... Done
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
     Err_S0 (.a(out_check), .b(out), .z(error_diff), .rnd(3'd0));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,539|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,537|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_sub.v,61): status
 
     Err_M0 (.a(error_lim_pos), .b(out_check), .z(up_bound), .rnd(3'd0));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,544|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,542|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_mult.v,88): status
 
     Err_M1 (.a(error_lim_neg), .b(out_check), .z(low_bound), .rnd(3'd0));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,549|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,547|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_mult.v,88): status
 
     Err_C0 (.a(error_diff), .b(up_bound), .agtb(up_flag), .zctr(1'd0));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,554|9): 7 output ports were not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,552|9): 7 output ports were not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_cmp.v,75): aeqb
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_cmp.v,75): altb
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_cmp.v,75): unordered
@@ -104,7 +143,7 @@ ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_cmp.v,75): status1
 
     Err_C1 (.a(error_diff), .b(low_bound), .agtb(low_flag), .zctr(1'd0));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,559|9): 7 output ports were not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,557|9): 7 output ports were not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_cmp.v,75): aeqb
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_cmp.v,75): altb
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_cmp.v,75): unordered
@@ -114,203 +153,225 @@ ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_cmp.v,75): status0
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_cmp.v,75): status1
 
 	Top level design units:
-		DW_fp_dp3
 		TESTBED
         M0 (.a(a0), .b(b0), .rnd(3'd0), .z(pixel0));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,1047|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,1045|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_mult.v,88): status
 
         M1 (.a(a1), .b(b1), .rnd(3'd0), .z(pixel1));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,1051|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,1049|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_mult.v,88): status
 
         M2 (.a(a2), .b(b2), .rnd(3'd0), .z(pixel2));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,1055|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,1053|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_mult.v,88): status
 
         M3 (.a(a3), .b(b0), .rnd(3'd0), .z(pixel3));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,1059|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,1057|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_mult.v,88): status
 
         M4 (.a(a4), .b(b1), .rnd(3'd0), .z(pixel4));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,1063|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,1061|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_mult.v,88): status
 
         M5 (.a(a5), .b(b2), .rnd(3'd0), .z(pixel5));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,1067|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,1065|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_mult.v,88): status
 
         M6 (.a(a6), .b(b0), .rnd(3'd0), .z(pixel6));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,1071|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,1069|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_mult.v,88): status
 
         M7 (.a(a7), .b(b1), .rnd(3'd0), .z(pixel7));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,1075|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,1073|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_mult.v,88): status
 
         M8 (.a(a8), .b(b2), .rnd(3'd0), .z(pixel8));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,1079|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,1077|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_mult.v,88): status
 
         A0 (.a(pixel0), .b(pixel1), .op(1'd0), .rnd(3'd0), .z(add0));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,1085|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,1083|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_addsub.v,86): status
 
         A1 (.a(add0), .b(pixel2), .op(1'd0), .rnd(3'd0), .z(c0));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,1088|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,1086|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_addsub.v,86): status
 
         A2 (.a(pixel3), .b(pixel4), .op(1'd0), .rnd(3'd0), .z(add1));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,1091|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,1089|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_addsub.v,86): status
 
         A3 (.a(add1), .b(pixel5), .op(1'd0), .rnd(3'd0), .z(c1));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,1094|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,1092|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_addsub.v,86): status
 
         A4 (.a(pixel6), .b(pixel7), .op(1'd0), .rnd(3'd0), .z(add2));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,1097|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,1095|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_addsub.v,86): status
 
         A5 (.a(add2), .b(pixel8), .op(1'd0), .rnd(3'd0), .z(c2));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,1100|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,1098|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_addsub.v,86): status
 
             A0 (.a(out_u0), .b(out_w0), .op(1'd0), .rnd(3'd0), .z(out_uw0));
              |
-ncelab: *W,CUVWSP (./PATTERN.v,484|13): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,482|13): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_addsub.v,86): status
 
             A1 (.a(out_u1), .b(out_w1), .op(1'd0), .rnd(3'd0), .z(out_uw1));
              |
-ncelab: *W,CUVWSP (./PATTERN.v,486|13): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,484|13): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_addsub.v,86): status
 
             A2 (.a(out_u2), .b(out_w2), .op(1'd0), .rnd(3'd0), .z(out_uw2));
              |
-ncelab: *W,CUVWSP (./PATTERN.v,488|13): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,486|13): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_addsub.v,86): status
 
         M0 (.a(in), .b(float_0_1), .rnd(3'd0), .z(neg_val));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,1117|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,1115|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_mult.v,88): status
 
         M0 (.a(in), .b(float_gain2), .rnd(3'd0), .z(x_neg));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,1139|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,1137|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_mult.v,88): status
 
         E0 (.a(x_neg), .z(exp));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,1143|9): 1 output port was not connected:
-ncelab: (/usr/synthesis/dw/sim_ver/DW_fp_exp.v,64): status
+ncelab: *W,CUVWSP (./PATTERN.v,1141|9): 1 output port was not connected:
+ncelab: (/RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_exp.v,72): status
 
         A0 (.a(float_gain1), .b(exp), .op(1'd0), .rnd(3'd0), .z(deno));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,1147|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,1145|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_addsub.v,86): status
 
         D0 (.a(float_gain1), .b(deno), .rnd(3'd0), .z(out));
          |
-ncelab: *W,CUVWSP (./PATTERN.v,1151|9): 1 output port was not connected:
+ncelab: *W,CUVWSP (./PATTERN.v,1149|9): 1 output port was not connected:
 ncelab: (/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/DW_fp_div.v,86): status
 
 	Building instance overlay tables: 
     $display("Original : %-b , %-b , %-b", x[inst_sig_width+inst_exp_width], x[inst_sig_width+:inst_exp_width], x[0+:inst_sig_width]);
                                         |
-ncelab: *W,IGNFMT (./PATTERN.v,172|40): Illegal width specifier in format ignored (%-b).
+ncelab: *W,IGNFMT (./PATTERN.v,170|40): Illegal width specifier in format ignored (%-b).
     $display("Original : %-b , %-b , %-b", x[inst_sig_width+inst_exp_width], x[inst_sig_width+:inst_exp_width], x[0+:inst_sig_width]);
                                         |
-ncelab: *W,IGNFMT (./PATTERN.v,172|40): Illegal width specifier in format ignored (%-b).
+ncelab: *W,IGNFMT (./PATTERN.v,170|40): Illegal width specifier in format ignored (%-b).
     $display("Original : %-b , %-b , %-b", x[inst_sig_width+inst_exp_width], x[inst_sig_width+:inst_exp_width], x[0+:inst_sig_width]);
                                         |
-ncelab: *W,IGNFMT (./PATTERN.v,172|40): Illegal width specifier in format ignored (%-b).
+ncelab: *W,IGNFMT (./PATTERN.v,170|40): Illegal width specifier in format ignored (%-b).
             $fwrite(file_out, "%-1h ", U_in[j][k]);
                                     |
-ncelab: *W,IGNFMT (./PATTERN.v,215|36): Illegal width specifier in format ignored (%-1h).
+ncelab: *W,IGNFMT (./PATTERN.v,213|36): Illegal width specifier in format ignored (%-1h).
             $fwrite(file_out, "%-1h ", W_in[j][k]);
                                     |
-ncelab: *W,IGNFMT (./PATTERN.v,223|36): Illegal width specifier in format ignored (%-1h).
+ncelab: *W,IGNFMT (./PATTERN.v,221|36): Illegal width specifier in format ignored (%-1h).
             $fwrite(file_out, "%-1h ", V_in[j][k]);
                                     |
-ncelab: *W,IGNFMT (./PATTERN.v,231|36): Illegal width specifier in format ignored (%-1h).
+ncelab: *W,IGNFMT (./PATTERN.v,229|36): Illegal width specifier in format ignored (%-1h).
             $fwrite(file_out, "%-1h ", X_in[i][k]);
                                     |
-ncelab: *W,IGNFMT (./PATTERN.v,241|36): Illegal width specifier in format ignored (%-1h).
+ncelab: *W,IGNFMT (./PATTERN.v,239|36): Illegal width specifier in format ignored (%-1h).
         $fwrite(file_out, "%-1h ", H_in[k]);
                                 |
-ncelab: *W,IGNFMT (./PATTERN.v,248|32): Illegal width specifier in format ignored (%-1h).
+ncelab: *W,IGNFMT (./PATTERN.v,246|32): Illegal width specifier in format ignored (%-1h).
             $fwrite(file_out, "%-1h ", U_gold[i][k]);
                                     |
-ncelab: *W,IGNFMT (./PATTERN.v,260|36): Illegal width specifier in format ignored (%-1h).
+ncelab: *W,IGNFMT (./PATTERN.v,258|36): Illegal width specifier in format ignored (%-1h).
             $fwrite(file_out, "%-1h ", W_gold[i][k]);
                                     |
-ncelab: *W,IGNFMT (./PATTERN.v,269|36): Illegal width specifier in format ignored (%-1h).
+ncelab: *W,IGNFMT (./PATTERN.v,267|36): Illegal width specifier in format ignored (%-1h).
             $fwrite(file_out, "%-1h ", U_W_gold[i][k]);
                                     |
-ncelab: *W,IGNFMT (./PATTERN.v,278|36): Illegal width specifier in format ignored (%-1h).
+ncelab: *W,IGNFMT (./PATTERN.v,276|36): Illegal width specifier in format ignored (%-1h).
             $fwrite(file_out, "%-1h ", H_gold[i][k]);
                                     |
-ncelab: *W,IGNFMT (./PATTERN.v,287|36): Illegal width specifier in format ignored (%-1h).
+ncelab: *W,IGNFMT (./PATTERN.v,285|36): Illegal width specifier in format ignored (%-1h).
             $fwrite(file_out, "%-1h ", V_gold[i][k]);
                                     |
-ncelab: *W,IGNFMT (./PATTERN.v,296|36): Illegal width specifier in format ignored (%-1h).
+ncelab: *W,IGNFMT (./PATTERN.v,294|36): Illegal width specifier in format ignored (%-1h).
             $fwrite(file_out, "%-1h ", Y_gold[i][k]);
                                     |
-ncelab: *W,IGNFMT (./PATTERN.v,305|36): Illegal width specifier in format ignored (%-1h).
+ncelab: *W,IGNFMT (./PATTERN.v,303|36): Illegal width specifier in format ignored (%-1h).
 .................... Done
 	Generating native compiled code:
-		worklib.DW_fp_exp:v <0x109d4c13>
-			streams:   9, words: 14136
-		worklib.DW_fp_exp:v <0x76cca3a5>
-			streams:   9, words: 13351
-		worklib.DW_fp_mac:v <0x6ee3a892>
-			streams:   3, words:  1166
-		worklib.DW_fp_recip:v <0x001e637a>
-			streams:   6, words: 14473
-		worklib.NN:v <0x18f7771c>
-			streams: 131, words: 60093
-		worklib.PATTERN:v <0x5710d364>
-			streams:  72, words: 155756
+		sim_ver.DW_exp2:v <0x35d928ae>
+			streams:  24, words: 2420710
+		sim_ver.DW_exp2:v <0x4bbebfb6>
+			streams:  24, words: 2422451
+		sim_ver.DW_fp_addsub:v <0x4986016a>
+			streams:   6, words: 17364
+		sim_ver.DW_fp_cmp:v <0x44195098>
+			streams:  10, words: 12854
+		sim_ver.DW_fp_div:v <0x2d21ec5a>
+			streams:   6, words: 25087
+		sim_ver.DW_fp_div:v <0x4548c330>
+			streams:   6, words: 26529
+		sim_ver.DW_fp_dp2:v <0x4fc14d34>
+			streams:   5, words: 31277
+		sim_ver.DW_fp_mult:v <0x76500a3d>
+			streams:   6, words: 21108
+		sim_ver.DW_fp_sub:v <0x63c4f294>
+			streams:   4, words:  1337
+		worklib.DW_fp_exp:v <0x4cc9a695>
+			streams:   9, words: 16006
+		worklib.DW_fp_exp:v <0x79c42282>
+			streams:   9, words: 16928
+		worklib.DW_fp_mac:v <0x13799228>
+			streams:   3, words:  1369
+		worklib.DW_fp_recip:v <0x3a8d320a>
+			streams:   6, words: 17294
+		worklib.Multi_float:v <0x478ab3a6>
+			streams:   2, words:  2090
+		worklib.NN:v <0x78860009>
+			streams: 131, words: 68867
+		worklib.PATTERN:v <0x38a71714>
+			streams:  72, words: 180224
+		worklib.ReLu:v <0x5eaef817>
+			streams:   3, words:   553
+		worklib.Sigmoid:v <0x5b868147>
+			streams:   3, words:   759
+		worklib.TESTBED:v <0x5697d4d5>
+			streams:   1, words:   613
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                   Instances  Unique
-		Modules:                 255      21
-		Registers:             11017     810
-		Scalar wires:            139       -
-		Vectored wires:         1055       -
-		Always blocks:           340      53
-		Initial blocks:          414      23
-		Cont. assignments:       696      84
-		Pseudo assignments:      165      53
+		Modules:                 242      20
+		Registers:             10579     692
+		Scalar wires:            137       -
+		Vectored wires:         1033       -
+		Always blocks:           327      52
+		Initial blocks:          401      22
+		Cont. assignments:       682      82
+		Pseudo assignments:      164      52
 		Simulation timescale:    1ps
-	Writing initial simulation snapshot: worklib.DW_fp_dp3:v
-Loading snapshot worklib.DW_fp_dp3:v .................... Done
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
 *Verdi* Loading libsscore_ius152.so
-ncsim: *W,LIBLDFL: Failed to load dynamic library debpli:
-	debpli.so: cannot open shared object file: No such file or directory or file is not valid ELFCLASS32 library..
-ncsim> source /RAID2/EDA/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
 ncsim> run
-FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux, 05/26/2019
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
 (C) 1996 - 2019 by Synopsys, Inc.
-*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
 *Verdi* : Create FSDB file 'NN.fsdb'
 *Verdi* : Begin traversing the scopes, layer (0).
 *Verdi* : Enable +mda dumping.
@@ -394,6 +455,6 @@ Congratulation!!! [1;0m
 PASS This Lab........Maybe [1;0m                          
 Total Latency : 4760      [1;0m                                
 Simulation complete via $finish(1) at time 94097 NS + 0
-./PATTERN.v:1020     $finish;
+./PATTERN.v:1018     $finish;
 ncsim> exit
-TOOL:	irun	15.20-s084: Exiting on Mar 20, 2023 at 18:42:13 CST  (total: 00:00:05)
+TOOL:	irun(64)	15.20-s084: Exiting on Apr 10, 2023 at 01:28:22 CST  (total: 00:00:09)

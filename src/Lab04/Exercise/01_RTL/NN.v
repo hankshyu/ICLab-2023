@@ -1,7 +1,7 @@
 //synopsys translate_off
-`include "/usr/synthesis/dw/sim_ver/DW_fp_mac.v"
-`include "/usr/synthesis/dw/sim_ver/DW_fp_recip.v"
-`include "/usr/synthesis/dw/sim_ver/DW_fp_exp.v"
+`include "/RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_mac.v"
+`include "/RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_recip.v"
+`include "/RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_exp.v"
 //synopsys translate_on
 
 module NN(

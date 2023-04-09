@@ -1,0 +1,7 @@
+rm -rf ncverilog.log
+rm -rf INCA*
+rm -rf *fsdb
+rm -rf *.sdf.X
+rm -rf waveform.*
+rm -f *~ *.rc
+rm -rf *.log

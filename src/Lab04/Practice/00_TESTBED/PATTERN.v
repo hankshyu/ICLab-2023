@@ -11,9 +11,9 @@
 
 
 //synopsys translate_off
-`include "/usr/synthesis/dw/sim_ver/DW_fp_add.v"
-`include "/usr/synthesis/dw/sim_ver/DW_fp_addsub.v"
-`include "/usr/synthesis/dw/sim_ver/DW_fp_mult.v"
+`include "/RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_add.v"
+`include "/RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_addsub.v"
+`include "/RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW_fp_mult.v"
 //synopsys translate_on
 
 
