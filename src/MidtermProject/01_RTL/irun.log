@@ -1,0 +1,233 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on Apr 14, 2023 at 00:08:13 CST
+irun
+	TESTBED.v
+	-define RTL
+	-define FUNC
+	-debug
+	-f file_list.f
+		../04_MEM/RA1SH_5.v
+		../04_MEM/RA1SH_8.v
+	-incdir /usr/synthesis/dw/sim_ver/
+	-notimingchecks
+	-loadpli1 debpli:novas_pli_boot
+Recompiling... reason: file '../00_TESTBED/pseudo_DRAM.v' is newer than expected.
+	expected: Fri Apr 14 00:07:52 2023
+	actual:   Fri Apr 14 00:08:07 2023
+ncvlog: *W,NOTIND: unable to access -INCDIR /usr/synthesis/dw/sim_ver/ (No such file or directory).
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		TESTBED
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  6       6
+		Primitives:              52       2
+		Timing outputs:          13       1
+		Registers:              220     220
+		Scalar wires:            61       -
+		Expanded wires:          44       6
+		Vectored wires:          46       -
+		Always blocks:           27      27
+		Initial blocks:          12      12
+		Cont. assignments:       37      63
+		Pseudo assignments:       6       6
+		Timing checks:          146       -
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+SVSEED default: 1
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'GLCM.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+[0;34mPASS PATTERN NO.   1,[m [0;32mexecution cycle : 2595[m
+[0;34mPASS PATTERN NO.   2,[m [0;32mexecution cycle : 2503[m
+[0;34mPASS PATTERN NO.   3,[m [0;32mexecution cycle : 2503[m
+[0;34mPASS PATTERN NO.   4,[m [0;32mexecution cycle : 2429[m
+[0;34mPASS PATTERN NO.   5,[m [0;32mexecution cycle : 2383[m
+[0;34mPASS PATTERN NO.   6,[m [0;32mexecution cycle : 2606[m
+[0;34mPASS PATTERN NO.   7,[m [0;32mexecution cycle : 2227[m
+[0;34mPASS PATTERN NO.   8,[m [0;32mexecution cycle : 2841[m
+[0;34mPASS PATTERN NO.   9,[m [0;32mexecution cycle : 2451[m
+[0;34mPASS PATTERN NO.  10,[m [0;32mexecution cycle : 2854[m
+[0;34mPASS PATTERN NO.  11,[m [0;32mexecution cycle : 2387[m
+[0;34mPASS PATTERN NO.  12,[m [0;32mexecution cycle : 2496[m
+[0;34mPASS PATTERN NO.  13,[m [0;32mexecution cycle : 2412[m
+[0;34mPASS PATTERN NO.  14,[m [0;32mexecution cycle : 2474[m
+[0;34mPASS PATTERN NO.  15,[m [0;32mexecution cycle : 2363[m
+[0;34mPASS PATTERN NO.  16,[m [0;32mexecution cycle : 2622[m
+[0;34mPASS PATTERN NO.  17,[m [0;32mexecution cycle : 2815[m
+[0;34mPASS PATTERN NO.  18,[m [0;32mexecution cycle : 2515[m
+[0;34mPASS PATTERN NO.  19,[m [0;32mexecution cycle : 2476[m
+[0;34mPASS PATTERN NO.  20,[m [0;32mexecution cycle : 2717[m
+[0;34mPASS PATTERN NO.  21,[m [0;32mexecution cycle : 2480[m
+[0;34mPASS PATTERN NO.  22,[m [0;32mexecution cycle : 2839[m
+[0;34mPASS PATTERN NO.  23,[m [0;32mexecution cycle : 2419[m
+[0;34mPASS PATTERN NO.  24,[m [0;32mexecution cycle : 2363[m
+[0;34mPASS PATTERN NO.  25,[m [0;32mexecution cycle : 2321[m
+[0;34mPASS PATTERN NO.  26,[m [0;32mexecution cycle : 2171[m
+[0;34mPASS PATTERN NO.  27,[m [0;32mexecution cycle : 2296[m
+[0;34mPASS PATTERN NO.  28,[m [0;32mexecution cycle : 2451[m
+[0;34mPASS PATTERN NO.  29,[m [0;32mexecution cycle : 2610[m
+[0;34mPASS PATTERN NO.  30,[m [0;32mexecution cycle : 2685[m
+[0;34mPASS PATTERN NO.  31,[m [0;32mexecution cycle : 2559[m
+[0;34mPASS PATTERN NO.  32,[m [0;32mexecution cycle : 2634[m
+[0;34mPASS PATTERN NO.  33,[m [0;32mexecution cycle : 2215[m
+[0;34mPASS PATTERN NO.  34,[m [0;32mexecution cycle : 2323[m
+[0;34mPASS PATTERN NO.  35,[m [0;32mexecution cycle : 2526[m
+[0;34mPASS PATTERN NO.  36,[m [0;32mexecution cycle : 2746[m
+[0;34mPASS PATTERN NO.  37,[m [0;32mexecution cycle : 2304[m
+[0;34mPASS PATTERN NO.  38,[m [0;32mexecution cycle : 2391[m
+[0;34mPASS PATTERN NO.  39,[m [0;32mexecution cycle : 2620[m
+[0;34mPASS PATTERN NO.  40,[m [0;32mexecution cycle : 2263[m
+[0;34mPASS PATTERN NO.  41,[m [0;32mexecution cycle : 2394[m
+[0;34mPASS PATTERN NO.  42,[m [0;32mexecution cycle : 2611[m
+[0;34mPASS PATTERN NO.  43,[m [0;32mexecution cycle : 2579[m
+[0;34mPASS PATTERN NO.  44,[m [0;32mexecution cycle : 2555[m
+[0;34mPASS PATTERN NO.  45,[m [0;32mexecution cycle : 2579[m
+[0;34mPASS PATTERN NO.  46,[m [0;32mexecution cycle : 2410[m
+[0;34mPASS PATTERN NO.  47,[m [0;32mexecution cycle : 2485[m
+[0;34mPASS PATTERN NO.  48,[m [0;32mexecution cycle : 2768[m
+[0;34mPASS PATTERN NO.  49,[m [0;32mexecution cycle : 2490[m
+[0;34mPASS PATTERN NO.  50,[m [0;32mexecution cycle : 2563[m
+[0;34mPASS PATTERN NO.  51,[m [0;32mexecution cycle : 2451[m
+[0;34mPASS PATTERN NO.  52,[m [0;32mexecution cycle : 2739[m
+[0;34mPASS PATTERN NO.  53,[m [0;32mexecution cycle : 2582[m
+[0;34mPASS PATTERN NO.  54,[m [0;32mexecution cycle : 2323[m
+[0;34mPASS PATTERN NO.  55,[m [0;32mexecution cycle : 2646[m
+[0;34mPASS PATTERN NO.  56,[m [0;32mexecution cycle : 2311[m
+[0;34mPASS PATTERN NO.  57,[m [0;32mexecution cycle : 2346[m
+[0;34mPASS PATTERN NO.  58,[m [0;32mexecution cycle : 2692[m
+[0;34mPASS PATTERN NO.  59,[m [0;32mexecution cycle : 2298[m
+[0;34mPASS PATTERN NO.  60,[m [0;32mexecution cycle : 2380[m
+[0;34mPASS PATTERN NO.  61,[m [0;32mexecution cycle : 2818[m
+[0;34mPASS PATTERN NO.  62,[m [0;32mexecution cycle : 2354[m
+[0;34mPASS PATTERN NO.  63,[m [0;32mexecution cycle : 2763[m
+[0;34mPASS PATTERN NO.  64,[m [0;32mexecution cycle : 2227[m
+[0;34mPASS PATTERN NO.  65,[m [0;32mexecution cycle : 2323[m
+[0;34mPASS PATTERN NO.  66,[m [0;32mexecution cycle : 2387[m
+[0;34mPASS PATTERN NO.  67,[m [0;32mexecution cycle : 2409[m
+[0;34mPASS PATTERN NO.  68,[m [0;32mexecution cycle : 2518[m
+[0;34mPASS PATTERN NO.  69,[m [0;32mexecution cycle : 2183[m
+[0;34mPASS PATTERN NO.  70,[m [0;32mexecution cycle : 2327[m
+[0;34mPASS PATTERN NO.  71,[m [0;32mexecution cycle : 2786[m
+[0;34mPASS PATTERN NO.  72,[m [0;32mexecution cycle : 2703[m
+[0;34mPASS PATTERN NO.  73,[m [0;32mexecution cycle : 2387[m
+[0;34mPASS PATTERN NO.  74,[m [0;32mexecution cycle : 2651[m
+[0;34mPASS PATTERN NO.  75,[m [0;32mexecution cycle : 2836[m
+[0;34mPASS PATTERN NO.  76,[m [0;32mexecution cycle : 2704[m
+[0;34mPASS PATTERN NO.  77,[m [0;32mexecution cycle : 2696[m
+[0;34mPASS PATTERN NO.  78,[m [0;32mexecution cycle : 2410[m
+[0;34mPASS PATTERN NO.  79,[m [0;32mexecution cycle : 2472[m
+[0;34mPASS PATTERN NO.  80,[m [0;32mexecution cycle : 2419[m
+[0;34mPASS PATTERN NO.  81,[m [0;32mexecution cycle : 2487[m
+[0;34mPASS PATTERN NO.  82,[m [0;32mexecution cycle : 2785[m
+[0;34mPASS PATTERN NO.  83,[m [0;32mexecution cycle : 2664[m
+[0;34mPASS PATTERN NO.  84,[m [0;32mexecution cycle : 2451[m
+[0;34mPASS PATTERN NO.  85,[m [0;32mexecution cycle : 2732[m
+[0;34mPASS PATTERN NO.  86,[m [0;32mexecution cycle : 2327[m
+[0;34mPASS PATTERN NO.  87,[m [0;32mexecution cycle : 2589[m
+[0;34mPASS PATTERN NO.  88,[m [0;32mexecution cycle : 2396[m
+[0;34mPASS PATTERN NO.  89,[m [0;32mexecution cycle : 2263[m
+[0;34mPASS PATTERN NO.  90,[m [0;32mexecution cycle : 2646[m
+[0;34mPASS PATTERN NO.  91,[m [0;32mexecution cycle : 2627[m
+[0;34mPASS PATTERN NO.  92,[m [0;32mexecution cycle : 2690[m
+[0;34mPASS PATTERN NO.  93,[m [0;32mexecution cycle : 2483[m
+[0;34mPASS PATTERN NO.  94,[m [0;32mexecution cycle : 2715[m
+[0;34mPASS PATTERN NO.  95,[m [0;32mexecution cycle : 2377[m
+[0;34mPASS PATTERN NO.  96,[m [0;32mexecution cycle : 2438[m
+[0;34mPASS PATTERN NO.  97,[m [0;32mexecution cycle : 2469[m
+[0;34mPASS PATTERN NO.  98,[m [0;32mexecution cycle : 2605[m
+[0;34mPASS PATTERN NO.  99,[m [0;32mexecution cycle : 2544[m
+[0;34mPASS PATTERN NO. 100,[m [0;32mexecution cycle : 2439[m
+[0;34mPASS PATTERN NO. 101,[m [0;32mexecution cycle : 2252[m
+[0;34mPASS PATTERN NO. 102,[m [0;32mexecution cycle : 2570[m
+[0;34mPASS PATTERN NO. 103,[m [0;32mexecution cycle : 2419[m
+[0;34mPASS PATTERN NO. 104,[m [0;32mexecution cycle : 2355[m
+[0;34mPASS PATTERN NO. 105,[m [0;32mexecution cycle : 2842[m
+[0;34mPASS PATTERN NO. 106,[m [0;32mexecution cycle : 2291[m
+[0;34mPASS PATTERN NO. 107,[m [0;32mexecution cycle : 2547[m
+[0;34mPASS PATTERN NO. 108,[m [0;32mexecution cycle : 2328[m
+[0;34mPASS PATTERN NO. 109,[m [0;32mexecution cycle : 2446[m
+[0;34mPASS PATTERN NO. 110,[m [0;32mexecution cycle : 2486[m
+[0;34mPASS PATTERN NO. 111,[m [0;32mexecution cycle : 2515[m
+[0;34mPASS PATTERN NO. 112,[m [0;32mexecution cycle : 2816[m
+[0;34mPASS PATTERN NO. 113,[m [0;32mexecution cycle : 2534[m
+[0;34mPASS PATTERN NO. 114,[m [0;32mexecution cycle : 2444[m
+[0;34mPASS PATTERN NO. 115,[m [0;32mexecution cycle : 2375[m
+[0;34mPASS PATTERN NO. 116,[m [0;32mexecution cycle : 2555[m
+[0;34mPASS PATTERN NO. 117,[m [0;32mexecution cycle : 2323[m
+[0;34mPASS PATTERN NO. 118,[m [0;32mexecution cycle : 2419[m
+[0;34mPASS PATTERN NO. 119,[m [0;32mexecution cycle : 2519[m
+[0;34mPASS PATTERN NO. 120,[m [0;32mexecution cycle : 2930[m
+[0;34mPASS PATTERN NO. 121,[m [0;32mexecution cycle : 2547[m
+[0;34mPASS PATTERN NO. 122,[m [0;32mexecution cycle : 2436[m
+[0;34mPASS PATTERN NO. 123,[m [0;32mexecution cycle : 2644[m
+[0;34mPASS PATTERN NO. 124,[m [0;32mexecution cycle : 2593[m
+[0;34mPASS PATTERN NO. 125,[m [0;32mexecution cycle : 2327[m
+[0;34mPASS PATTERN NO. 126,[m [0;32mexecution cycle : 2396[m
+[0;34mPASS PATTERN NO. 127,[m [0;32mexecution cycle : 2300[m
+[0;34mPASS PATTERN NO. 128,[m [0;32mexecution cycle : 2281[m
+[0;34mPASS PATTERN NO. 129,[m [0;32mexecution cycle : 2211[m
+[0;34mPASS PATTERN NO. 130,[m [0;32mexecution cycle : 2522[m
+[0;34mPASS PATTERN NO. 131,[m [0;32mexecution cycle : 2364[m
+[0;34mPASS PATTERN NO. 132,[m [0;32mexecution cycle : 2394[m
+[0;34mPASS PATTERN NO. 133,[m [0;32mexecution cycle : 2631[m
+[0;34mPASS PATTERN NO. 134,[m [0;32mexecution cycle : 2797[m
+[0;34mPASS PATTERN NO. 135,[m [0;32mexecution cycle : 2259[m
+[0;34mPASS PATTERN NO. 136,[m [0;32mexecution cycle : 2643[m
+[0;34mPASS PATTERN NO. 137,[m [0;32mexecution cycle : 2613[m
+[0;34mPASS PATTERN NO. 138,[m [0;32mexecution cycle : 2717[m
+[0;34mPASS PATTERN NO. 139,[m [0;32mexecution cycle : 2705[m
+[0;34mPASS PATTERN NO. 140,[m [0;32mexecution cycle : 2705[m
+[0;34mPASS PATTERN NO. 141,[m [0;32mexecution cycle : 2515[m
+[0;34mPASS PATTERN NO. 142,[m [0;32mexecution cycle : 2667[m
+[0;34mPASS PATTERN NO. 143,[m [0;32mexecution cycle : 2407[m
+[0;34mPASS PATTERN NO. 144,[m [0;32mexecution cycle : 2414[m
+[0;34mPASS PATTERN NO. 145,[m [0;32mexecution cycle : 2636[m
+[0;34mPASS PATTERN NO. 146,[m [0;32mexecution cycle : 2348[m
+[0;34mPASS PATTERN NO. 147,[m [0;32mexecution cycle : 2338[m
+[0;34mPASS PATTERN NO. 148,[m [0;32mexecution cycle : 2227[m
+[0;34mPASS PATTERN NO. 149,[m [0;32mexecution cycle : 2569[m
+[0;34mPASS PATTERN NO. 150,[m [0;32mexecution cycle : 2387[m
+[0;34mPASS PATTERN NO. 151,[m [0;32mexecution cycle : 2235[m
+[0;34mPASS PATTERN NO. 152,[m [0;32mexecution cycle : 2539[m
+[0;34mPASS PATTERN NO. 153,[m [0;32mexecution cycle : 2246[m
+[0;34mPASS PATTERN NO. 154,[m [0;32mexecution cycle : 2424[m
+[0;34mPASS PATTERN NO. 155,[m [0;32mexecution cycle : 2259[m
+[0;34mPASS PATTERN NO. 156,[m [0;32mexecution cycle : 2303[m
+[0;34mPASS PATTERN NO. 157,[m [0;32mexecution cycle : 2215[m
+[0;34mPASS PATTERN NO. 158,[m [0;32mexecution cycle : 2370[m
+[0;34mPASS PATTERN NO. 159,[m [0;32mexecution cycle : 2438[m
+[0;34mPASS PATTERN NO. 160,[m [0;32mexecution cycle : 2698[m
+[0;34mPASS PATTERN NO. 161,[m [0;32mexecution cycle : 2395[m
+[0;34mPASS PATTERN NO. 162,[m [0;32mexecution cycle : 2777[m
+[0;34mPASS PATTERN NO. 163,[m [0;32mexecution cycle : 2407[m
+[0;34mPASS PATTERN NO. 164,[m [0;32mexecution cycle : 2263[m
+[0;34mPASS PATTERN NO. 165,[m [0;32mexecution cycle : 2480[m
+[0;34mPASS PATTERN NO. 166,[m [0;32mexecution cycle : 2419[m
+[0;34mPASS PATTERN NO. 167,[m [0;32mexecution cycle : 2391[m
+[0;34mPASS PATTERN NO. 168,[m [0;32mexecution cycle : 2483[m
+[0;34mPASS PATTERN NO. 169,[m [0;32mexecution cycle : 2579[m
+[0;34mPASS PATTERN NO. 170,[m [0;32mexecution cycle : 2566[m
+--------------------------------------------------------------------
+          ~(￣▽￣)~(＿△＿)~(￣▽￣)~(＿△＿)~(￣▽￣)~              
+                         Congratulations!                           
+          You have passed all patterns for Midterm Project !!       
+--------------------------------------------------------------------
+Simulation complete via $finish(1) at time 5901742500 PS + 0
+./PATTERN.v:652     $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on Apr 14, 2023 at 00:08:18 CST  (total: 00:00:05)

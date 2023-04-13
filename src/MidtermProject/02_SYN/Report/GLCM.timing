@@ -1,0 +1,54 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : GLCM
+Version: T-2022.03
+Date   : Fri Apr 14 00:06:38 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: sc_cs_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sc_cs_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sc_cs_reg[2]/CK (DFFRHQX2)               0.00       0.00 r
+  sc_cs_reg[2]/Q (DFFRHQX2)                0.40       0.40 r
+  U1380/Y (NAND3BX1)                       0.26       0.66 f
+  U1381/Y (NAND2X4)                        0.25       0.92 r
+  U1382/Y (NAND2X4)                        0.09       1.01 f
+  U1383/Y (INVX1)                          0.14       1.15 r
+  U912/Y (NAND2X2)                         0.19       1.34 f
+  U1305/Y (OAI211X1)                       0.67       2.01 r
+  U1005/Y (NOR2BX2)                        0.22       2.23 r
+  U691/Y (NAND2X1)                         0.09       2.33 f
+  U688/Y (INVX1)                           0.08       2.41 r
+  U1287/Y (OAI211XL)                       0.14       2.54 f
+  sc_cs_reg[0]/D (DFFRHQX4)                0.00       2.54 f
+  data arrival time                                   2.54
+
+  clock clk (rise edge)                    2.90       2.90
+  clock network delay (ideal)              0.00       2.90
+  sc_cs_reg[0]/CK (DFFRHQX4)               0.00       2.90 r
+  library setup time                      -0.35       2.55
+  data required time                                  2.55
+  -----------------------------------------------------------
+  data required time                                  2.55
+  data arrival time                                  -2.54
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
