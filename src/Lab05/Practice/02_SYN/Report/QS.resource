@@ -2,13 +2,13 @@
 ****************************************
 Report : resources
 Design : QS
-Version: R-2020.09
-Date   : Thu Mar 23 01:18:15 2023
+Version: T-2022.03
+Date   : Wed Apr 19 01:44:46 2023
 ****************************************
 
 
 Resource Report for this hierarchy in file
-        /RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Practice/01_RTL/QS.v
+        /RAID2/COURSE/iclab/iclab105/oldarchive/Lab05/Practice/01_RTL/QS.v
 =============================================================================
 | Cell           | Module         | Parameters | Contained Operations       |
 =============================================================================

@@ -1,0 +1,731 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on Apr 19, 2023 at 01:57:31 CST
+irun
+	TESTBED.v
+	-define RTL
+	-debug
+	-v ../04_MEM/RA1SH_1.v
+	../04_MEM/RA1SH_16.v
+	-notimingchecks
+	-loadpli1 debpli:novas_pli_boot
+	-y /RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/
+	+libext+.v
+file: TESTBED.v
+	module worklib.DW02_prod_sum1:v
+		errors: 0, warnings: 0
+file: ../04_MEM/RA1SH_1.v
+	module RA1SH_1.RA1SH_1:v
+		errors: 0, warnings: 0
+ncvlog: *W,LIBNOU: Library "/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/" given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+		Caching library 'RA1SH_1' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		TESTBED
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		RA1SH_1.RA1SH_1:v <0x2f537329>
+			streams:  15, words:  9834
+		worklib.DW02_prod_sum1:v <0x11aeebca>
+			streams:   2, words:  5408
+		worklib.MMT:v <0x0a1c4f5d>
+			streams:  86, words: 64716
+		worklib.PATTERN:v <0x26b0ada4>
+			streams:  14, words: 81552
+		worklib.RA1SH_16:v <0x52545bbc>
+			streams:  14, words:  9797
+		worklib.RA1SH_16:v <0x6f640a3d>
+			streams:  14, words:  9797
+		worklib.TESTBED:v <0x5141fdee>
+			streams:   1, words:   765
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  7       6
+		Primitives:             116       2
+		Timing outputs:          36       1
+		Registers:              249     194
+		Scalar wires:            60       -
+		Expanded wires:         104       9
+		Vectored wires:          12       -
+		Always blocks:           34      32
+		Initial blocks:           6       6
+		Cont. assignments:        5      13
+		Pseudo assignments:      13      13
+		Timing checks:          305       -
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'MMT.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.   1,[m [0;32mexecution cycles : 51752[m
+matrix size:          16         16
+[0;34m Latency detail: [ [m4356, 8452, 4356, 4356, 4356, 4356, 4356, 4356, 8452, 4356 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.   2,[m [0;32mexecution cycles : 6824[m
+matrix size:           8          8
+[0;34m Latency detail: [ [m1092, 1092, 580, 580, 580, 580, 580, 580, 580, 580 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.   3,[m [0;32mexecution cycles : 6312[m
+matrix size:           8          8
+[0;34m Latency detail: [ [m580, 580, 580, 580, 580, 580, 580, 580, 580, 1092 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.   4,[m [0;32mexecution cycles : 968[m
+matrix size:           4          4
+[0;34m Latency detail: [ [m 84,  84,  84, 148, 148,  84,  84,  84,  84,  84 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.   5,[m [0;32mexecution cycles : 55848[m
+matrix size:          16         16
+[0;34m Latency detail: [ [m8452, 4356, 4356, 4356, 4356, 4356, 4356, 8452, 8452, 4356 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.   6,[m [0;32mexecution cycles : 1032[m
+matrix size:           4          4
+[0;34m Latency detail: [ [m 84,  84, 148,  84, 148, 148,  84,  84,  84,  84 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.   7,[m [0;32mexecution cycles : 904[m
+matrix size:           4          4
+[0;34m Latency detail: [ [m 84,  84, 148,  84,  84,  84,  84,  84,  84,  84 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.   8,[m [0;32mexecution cycles : 968[m
+matrix size:           4          4
+[0;34m Latency detail: [ [m 84,  84, 148,  84,  84,  84,  84,  84, 148,  84 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.   9,[m [0;32mexecution cycles : 1096[m
+matrix size:           4          4
+[0;34m Latency detail: [ [m 84,  84, 148,  84,  84, 148, 148,  84, 148,  84 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  10,[m [0;32mexecution cycles : 5800[m
+matrix size:           8          8
+[0;34m Latency detail: [ [m580, 580, 580, 580, 580, 580, 580, 580, 580, 580 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  11,[m [0;32mexecution cycles : 176[m
+matrix size:           2          2
+[0;34m Latency detail: [ [m 16,  16,  16,  24,  16,  24,  16,  16,  16,  16 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  12,[m [0;32mexecution cycles : 43560[m
+matrix size:          16         16
+[0;34m Latency detail: [ [m4356, 4356, 4356, 4356, 4356, 4356, 4356, 4356, 4356, 4356 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  13,[m [0;32mexecution cycles : 51752[m
+matrix size:          16         16
+[0;34m Latency detail: [ [m4356, 4356, 4356, 8452, 4356, 8452, 4356, 4356, 4356, 4356 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  14,[m [0;32mexecution cycles : 1032[m
+matrix size:           4          4
+[0;34m Latency detail: [ [m 84,  84,  84,  84,  84, 148,  84,  84, 148, 148 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  15,[m [0;32mexecution cycles : 7336[m
+matrix size:           8          8
+[0;34m Latency detail: [ [m1092, 580, 580, 580, 580, 580, 580, 580, 1092, 1092 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  16,[m [0;32mexecution cycles : 6312[m
+matrix size:           8          8
+[0;34m Latency detail: [ [m580, 580, 580, 580, 580, 580, 1092, 580, 580, 580 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  17,[m [0;32mexecution cycles : 51752[m
+matrix size:          16         16
+[0;34m Latency detail: [ [m4356, 4356, 4356, 4356, 8452, 4356, 8452, 4356, 4356, 4356 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  18,[m [0;32mexecution cycles : 176[m
+matrix size:           2          2
+[0;34m Latency detail: [ [m 16,  16,  16,  16,  16,  24,  16,  16,  24,  16 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  19,[m [0;32mexecution cycles : 55848[m
+matrix size:          16         16
+[0;34m Latency detail: [ [m4356, 4356, 4356, 4356, 8452, 8452, 4356, 4356, 4356, 8452 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  20,[m [0;32mexecution cycles : 968[m
+matrix size:           4          4
+[0;34m Latency detail: [ [m 84,  84,  84, 148,  84,  84,  84,  84, 148,  84 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  21,[m [0;32mexecution cycles : 168[m
+matrix size:           2          2
+[0;34m Latency detail: [ [m 16,  24,  16,  16,  16,  16,  16,  16,  16,  16 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  22,[m [0;32mexecution cycles : 840[m
+matrix size:           4          4
+[0;34m Latency detail: [ [m 84,  84,  84,  84,  84,  84,  84,  84,  84,  84 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  23,[m [0;32mexecution cycles : 200[m
+matrix size:           2          2
+[0;34m Latency detail: [ [m 16,  16,  24,  16,  16,  24,  16,  24,  24,  24 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  24,[m [0;32mexecution cycles : 160[m
+matrix size:           2          2
+[0;34m Latency detail: [ [m 16,  16,  16,  16,  16,  16,  16,  16,  16,  16 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  25,[m [0;32mexecution cycles : 6824[m
+matrix size:           8          8
+[0;34m Latency detail: [ [m580, 580, 1092, 580, 580, 580, 1092, 580, 580, 580 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  26,[m [0;32mexecution cycles : 6824[m
+matrix size:           8          8
+[0;34m Latency detail: [ [m580, 1092, 580, 580, 580, 580, 1092, 580, 580, 580 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  27,[m [0;32mexecution cycles : 8872[m
+matrix size:           8          8
+[0;34m Latency detail: [ [m1092, 580, 1092, 1092, 580, 1092, 1092, 580, 580, 1092 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  28,[m [0;32mexecution cycles : 59944[m
+matrix size:          16         16
+[0;34m Latency detail: [ [m4356, 4356, 4356, 8452, 4356, 8452, 4356, 4356, 8452, 8452 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  29,[m [0;32mexecution cycles : 176[m
+matrix size:           2          2
+[0;34m Latency detail: [ [m 16,  16,  24,  16,  16,  24,  16,  16,  16,  16 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  30,[m [0;32mexecution cycles : 168[m
+matrix size:           2          2
+[0;34m Latency detail: [ [m 16,  16,  16,  16,  24,  16,  16,  16,  16,  16 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  31,[m [0;32mexecution cycles : 176[m
+matrix size:           2          2
+[0;34m Latency detail: [ [m 16,  24,  16,  16,  16,  24,  16,  16,  16,  16 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  32,[m [0;32mexecution cycles : 184[m
+matrix size:           2          2
+[0;34m Latency detail: [ [m 16,  24,  16,  16,  16,  24,  16,  24,  16,  16 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  33,[m [0;32mexecution cycles : 904[m
+matrix size:           4          4
+[0;34m Latency detail: [ [m 84,  84,  84,  84, 148,  84,  84,  84,  84,  84 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  34,[m [0;32mexecution cycles : 840[m
+matrix size:           4          4
+[0;34m Latency detail: [ [m 84,  84,  84,  84,  84,  84,  84,  84,  84,  84 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  35,[m [0;32mexecution cycles : 1032[m
+matrix size:           4          4
+[0;34m Latency detail: [ [m148,  84,  84,  84,  84,  84, 148,  84,  84, 148 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  36,[m [0;32mexecution cycles : 7336[m
+matrix size:           8          8
+[0;34m Latency detail: [ [m580, 580, 580, 580, 580, 1092, 1092, 1092, 580, 580 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  37,[m [0;32mexecution cycles : 7336[m
+matrix size:           8          8
+[0;34m Latency detail: [ [m580, 1092, 1092, 580, 580, 1092, 580, 580, 580, 580 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  38,[m [0;32mexecution cycles : 968[m
+matrix size:           4          4
+[0;34m Latency detail: [ [m 84, 148,  84,  84,  84, 148,  84,  84,  84,  84 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  39,[m [0;32mexecution cycles : 1032[m
+matrix size:           4          4
+[0;34m Latency detail: [ [m148,  84, 148,  84,  84, 148,  84,  84,  84,  84 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  40,[m [0;32mexecution cycles : 176[m
+matrix size:           2          2
+[0;34m Latency detail: [ [m 24,  16,  16,  16,  16,  16,  16,  16,  16,  24 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  41,[m [0;32mexecution cycles : 7336[m
+matrix size:           8          8
+[0;34m Latency detail: [ [m1092, 1092, 580, 580, 580, 580, 580, 580, 580, 1092 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  42,[m [0;32mexecution cycles : 7848[m
+matrix size:           8          8
+[0;34m Latency detail: [ [m580, 1092, 580, 580, 580, 1092, 580, 1092, 1092, 580 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  43,[m [0;32mexecution cycles : 7848[m
+matrix size:           8          8
+[0;34m Latency detail: [ [m1092, 580, 580, 580, 580, 1092, 1092, 1092, 580, 580 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  44,[m [0;32mexecution cycles : 51752[m
+matrix size:          16         16
+[0;34m Latency detail: [ [m4356, 4356, 4356, 4356, 4356, 4356, 4356, 4356, 8452, 8452 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  45,[m [0;32mexecution cycles : 6824[m
+matrix size:           8          8
+[0;34m Latency detail: [ [m580, 580, 1092, 580, 580, 580, 580, 1092, 580, 580 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  46,[m [0;32mexecution cycles : 184[m
+matrix size:           2          2
+[0;34m Latency detail: [ [m 16,  16,  16,  24,  16,  16,  16,  24,  24,  16 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  47,[m [0;32mexecution cycles : 184[m
+matrix size:           2          2
+[0;34m Latency detail: [ [m 24,  16,  16,  24,  16,  24,  16,  16,  16,  16 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  48,[m [0;32mexecution cycles : 51752[m
+matrix size:          16         16
+[0;34m Latency detail: [ [m4356, 4356, 4356, 4356, 4356, 4356, 8452, 4356, 8452, 4356 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  49,[m [0;32mexecution cycles : 55848[m
+matrix size:          16         16
+[0;34m Latency detail: [ [m4356, 4356, 8452, 8452, 4356, 4356, 4356, 8452, 4356, 4356 [0;34m ] [m
+Pass quest           0
+Pass quest           1
+Pass quest           2
+Pass quest           3
+Pass quest           4
+Pass quest           5
+Pass quest           6
+Pass quest           7
+Pass quest           8
+Pass quest           9
+[0;34mPASS PATTERN NO.  50,[m [0;32mexecution cycles : 59944[m
+matrix size:          16         16
+[0;34m Latency detail: [ [m8452, 8452, 8452, 4356, 8452, 4356, 4356, 4356, 4356, 4356 [0;34m ] [m
+--------------------------------------------------------------------
+          ~(￣▽￣)~(＿△＿)~(￣▽￣)~(＿△＿)~(￣▽￣)~           			 
+                         Congratulations!                           
+                  You have passed all patterns for Lab05!!                    
+--------------------------------------------------------------------
+Simulation complete via $finish(1) at time 5093820050 PS + 0
+./PATTERN.v:431     $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on Apr 19, 2023 at 01:57:48 CST  (total: 00:00:17)

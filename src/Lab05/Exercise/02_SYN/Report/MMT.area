@@ -1,32 +1,33 @@
+Warning: Design 'MMT' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
  
 ****************************************
 Report : area
 Design : MMT
-Version: R-2020.09
-Date   : Mon Mar 27 03:25:54 2023
+Version: T-2022.03
+Date   : Wed Apr 19 02:01:24 2023
 ****************************************
 
 Library(s) Used:
 
     slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
-    USERLIB (File: /RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/04_MEM/RA1SH_1.db)
-    USERLIB (File: /RAID2/COURSE/iclab/iclab105/Desktop/Lab05/Exercise/04_MEM/RA1SH_16.db)
 
-Number of ports:                          169
-Number of nets:                          2179
-Number of cells:                         1911
-Number of combinational cells:           1701
-Number of sequential cells:               204
-Number of macros/black boxes:               3
-Number of buf/inv:                        483
-Number of references:                      95
+Number of ports:                           72
+Number of nets:                          1230
+Number of cells:                         1127
+Number of combinational cells:            916
+Number of sequential cells:               208
+Number of macros/black boxes:               0
+Number of buf/inv:                        240
+Number of references:                      44
 
-Combinational area:              38183.745705
-Buf/Inv area:                     5305.608162
-Noncombinational area:           14666.097786
-Macro/Black Box area:           730969.093750
+Combinational area:              15061.939472
+Buf/Inv area:                     2441.577684
+Noncombinational area:           14253.624130
+Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                783818.937241
+Total cell area:                 29315.563602
 Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
 1

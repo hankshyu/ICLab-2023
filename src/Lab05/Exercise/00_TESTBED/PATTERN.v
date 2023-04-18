@@ -10,7 +10,7 @@
 `endif
 
 //synopsys translate_off
-`include "/usr/synthesis/dw/sim_ver/DW02_prod_sum1.v"
+`include "/RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/DW02_prod_sum1.v"
 //synopsys translate_on
 
 module PATTERN(

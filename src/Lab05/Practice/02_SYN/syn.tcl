@@ -34,7 +34,7 @@ set CYCLE 5.0
 #set hdlin_auto_save_templates TRUE
 
 
-read_sverilog {$DESIGN\.v}
+read_sverilog $DESIGN.v
 current_design $DESIGN
 
 #======================================================

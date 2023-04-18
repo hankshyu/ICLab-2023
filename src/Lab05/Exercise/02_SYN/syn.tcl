@@ -15,7 +15,7 @@ set search_path {./../01_RTL \
                  /usr/synthesis/dw/ }
 
 set synthetic_library {dw_foundation.sldb}
-set link_library {* dw_foundation.sldb standard.sldb slow.db RA1SH_1.db RA1SH_16.db}  
+set link_library {* dw_foundation.sldb standard.sldb slow.db RA1SH_1.db RA1SH_16.db}  #include your memory.db
 set target_library {slow.db}
 
 #report_lib slow
@@ -35,7 +35,7 @@ set CYCLE 6.1
 #set hdlin_auto_save_templates TRUE
 
 
-read_sverilog {$DESIGN\.v}
+read_sverilog $DESIGN.v
 current_design $DESIGN
 
 #======================================================

@@ -1,5 +1,5 @@
-irun: 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	irun	15.20-s084: Started on Mar 23, 2023 at 01:18:38 CST
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on Apr 19, 2023 at 01:49:18 CST
 irun
 	-timescale 1ns/1fs
 	-override_precision
@@ -11,20 +11,74 @@ irun
 	../04_MEM/RA1SH.v
 	-incdir /usr/synthesis/dw/sim_ver/
 	-nontcglitch
-Recompiling... reason: file './QS_SYN.sdf' is newer than expected.
-	expected: Thu Mar 23 01:40:46 2023
-	actual:   Thu Mar 23 01:43:22 2023
+	-loadpli1 debpli:novas_pli_boot
+	-y /RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/
+	+libext+.v
+ncvlog: *W,NOTIND: unable to access -INCDIR /usr/synthesis/dw/sim_ver/ (No such file or directory).
 file: TESTBED.v
+	module worklib.PATTERN:v
+		errors: 0, warnings: 0
 	module worklib.QS:v
 		errors: 0, warnings: 0
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+file: ../04_MEM/RA1SH.v
+	module worklib.RA1SH:v
+		errors: 0, warnings: 0
 file: /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v
+	module umc18_neg.AND2XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.AOI211XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.AOI21XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.AOI221XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.AOI22XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.AOI2BB1XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.AOI31XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.DFFRX1:v
+		errors: 0, warnings: 0
+	module umc18_neg.DFFRHQXL:v
+		errors: 0, warnings: 0
+	module umc18_neg.INVXL:v
+		errors: 0, warnings: 0
 	module umc18_neg.MX2XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.MXI2XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.NAND2XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.NOR2X1:v
+		errors: 0, warnings: 0
+	module umc18_neg.NOR2XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.NOR3BXL:v
+		errors: 0, warnings: 0
+	module umc18_neg.OAI211XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.OAI21XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.OAI22XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.OAI2BB1XL:v
 		errors: 0, warnings: 0
 	module umc18_neg.OAI2BB2XL:v
 		errors: 0, warnings: 0
-ncvlog: *W,SPDUSD: Include directory /usr/synthesis/dw/sim_ver/ given but not used.
+	module umc18_neg.OAI32XL:v
+		errors: 0, warnings: 0
+	module umc18_neg.OR2XL:v
+		errors: 0, warnings: 0
+	primitive umc18_neg.udp_mux2:v
+		errors: 0, warnings: 0
+	primitive umc18_neg.udp_dff:v
+		errors: 0, warnings: 0
+ncvlog: *W,LIBNOU: Library "/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/" given but not used.
 	Total errors/warnings found outside modules and primitives:
-		errors: 0, warnings: 1
+		errors: 0, warnings: 2
 		Caching library 'umc18_neg' ....... Done
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
@@ -86,8 +140,6 @@ ncelab: (/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v,7742): QN
 	Top level design units:
 		TESTBED
 	Reading SDF file from location "QS_SYN.sdf"
-	Compiled SDF file "QS_SYN.sdf.X" older than source SDF file "QS_SYN.sdf".
-	Recompiling.
 	Writing compiled SDF file to "QS_SYN.sdf.X".
 	Annotating SDF timing data:
 		Compiled SDF file:     QS_SYN.sdf.X
@@ -112,12 +164,22 @@ ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) 
 		  $setuphold	         112	         110	       98.21
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		umc18_neg.DFFRX1:v <0x149635ec>
+		umc18_neg.DFFRHQXL:v <0x011aaf36>
 			streams:   0, words:     0
-		umc18_neg.MX2XL:v <0x356ea5ca>
+		umc18_neg.DFFRX1:v <0x62848b30>
 			streams:   0, words:     0
-		worklib.QS:v <0x55496d3e>
-			streams:   1, words:   174
+		umc18_neg.MX2XL:v <0x452993db>
+			streams:   0, words:     0
+		umc18_neg.MXI2XL:v <0x321c79e4>
+			streams:   0, words:     0
+		worklib.PATTERN:v <0x1ffc7efc>
+			streams:  11, words: 28971
+		worklib.QS:v <0x74444399>
+			streams:   1, words:   219
+		worklib.RA1SH:v <0x1f261146>
+			streams:  14, words:  9436
+		worklib.TESTBED:v <0x01c01a6b>
+			streams:   1, words:   864
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -141,11 +203,10 @@ ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge S0) 
 Loading snapshot worklib.TESTBED:v .................... Done
 SVSEED default: 1
 *Verdi* Loading libsscore_ius152.so
-ncsim> source /RAID2/EDA/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
 ncsim> run
-FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux, 05/26/2019
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
 (C) 1996 - 2019 by Synopsys, Inc.
-*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
 *Verdi* : Create FSDB file 'QS_SYN.fsdb'
 *Verdi* : Begin traversing the scopes, layer (0).
 *Verdi* : Enable +mda dumping.
@@ -1160,4 +1221,4 @@ FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux, 05/26/2019
 Simulation complete via $finish(1) at time 96260 NS + 0
 ./PATTERN.v:164 $finish;
 ncsim> exit
-TOOL:	irun	15.20-s084: Exiting on Mar 23, 2023 at 01:18:39 CST  (total: 00:00:01)
+TOOL:	irun(64)	15.20-s084: Exiting on Apr 19, 2023 at 01:49:20 CST  (total: 00:00:02)

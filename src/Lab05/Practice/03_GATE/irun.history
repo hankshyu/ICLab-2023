@@ -1,2 +1,0 @@
-s1(23Mar2023:01:16:59):  irun -timescale 1ns/1fs -override_precision -sdf_precision 1fs TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v ../04_MEM/RA1SH.v -incdir /usr/synthesis/dw/sim_ver/ -nontcglitch 
-s2(23Mar2023:01:18:38):  irun -timescale 1ns/1fs -override_precision -sdf_precision 1fs TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v ../04_MEM/RA1SH.v -incdir /usr/synthesis/dw/sim_ver/ -nontcglitch 

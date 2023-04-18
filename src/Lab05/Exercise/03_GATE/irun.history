@@ -1,1 +1,0 @@
-s1(27Mar2023:03:27:19):  irun -timescale 1ns/1fs -override_precision -sdf_precision 1fs TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v -f file_list.f -nontcglitch -loadpli1 debpli:novas_pli_boot 
