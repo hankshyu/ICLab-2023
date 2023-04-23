@@ -1,0 +1,9 @@
+rm -rf *.log?
+rm -rf *.log
+rm -rf *.fsdb
+rm -rf *.out
+rm -rf nWaveLog
+rm -rf fsdb2vcdLog
+rm -rf vfastLog
+rm -rf *.rc
+rm -rf Report/*

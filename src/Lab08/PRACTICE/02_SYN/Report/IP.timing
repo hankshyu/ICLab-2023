@@ -1,0 +1,59 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'IP' contains 3 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : IP
+Version: T-2022.03
+Date   : Fri Apr 21 00:35:42 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: mode_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: GATED_mean/latch_or_sleep_reg
+            (positive level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  mode_reg[1]/CK (DFFRHQX1)                               0.00 #     0.00 r
+  mode_reg[1]/Q (DFFRHQX1)                                0.54       0.54 r
+  U15453/Y (INVX2)                                        0.11       0.66 f
+  U15456/Y (NAND3X1)                                      0.13       0.79 r
+  GATED_mean/SLEEP_CTRL (GATED_OR)                        0.00       0.79 r
+  GATED_mean/latch_or_sleep_reg/D (TLATRX1)               0.00       0.79 r
+  data arrival time                                                  0.79
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  GATED_mean/latch_or_sleep_reg/G (TLATRX1)               0.00       0.00 r
+  time borrowed from endpoint                             0.79       0.79
+  data required time                                                 0.79
+  --------------------------------------------------------------------------
+  data required time                                                 0.79
+  data arrival time                                                 -0.79
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                                10.00   
+  library setup time                                     -0.10   
+  --------------------------------------------------------------
+  max time borrow                                         9.90   
+  actual time borrow                                      0.79   
+  --------------------------------------------------------------
+
+
+1

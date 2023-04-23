@@ -1,0 +1,12 @@
+
+  Linking design 'IP'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  IP                          /RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.db
+  dw_foundation.sldb (library) /usr/cad/synopsys/synthesis/2022.03/libraries/syn/dw_foundation.sldb
+  slow (library)              /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db
+
+Information: Building the design 'GATED_OR'. (HDL-193)
+Warning: Cannot find the design 'GATED_OR' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'GATED_OR' in 'IP'. (LINK-5)
+0

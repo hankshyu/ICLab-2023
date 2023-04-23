@@ -1,0 +1,905 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version T-2022.03 for linux64 - Feb 22, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+#  Set Libraries
+#======================================================
+set search_path {./../01_RTL \
+                   ~iclabta01/umc018/Synthesis/ \
+                   /usr/synthesis/libraries/syn/ \
+                }
+./../01_RTL  ~iclabta01/umc018/Synthesis/  /usr/synthesis/libraries/syn/  
+set synthetic_library {dw_foundation.sldb}
+dw_foundation.sldb
+set link_library {* dw_foundation.sldb standard.sldb slow.db }
+* dw_foundation.sldb standard.sldb slow.db 
+set target_library {slow.db}
+slow.db
+#======================================================
+#  Global Parameters
+#======================================================
+set DESIGN "SNN"
+SNN
+set CLK_period 15.0
+15.0
+#======================================================
+#  Read RTL Code
+#======================================================
+set hdlin_auto_save_templates TRUE
+TRUE
+read_sverilog {SNN_wocg.v}
+Loading db file '/RAID2/cad/synopsys/synthesis/2022.03/libraries/syn/dw_foundation.sldb'
+Loading db file '/RAID2/cad/synopsys/synthesis/2022.03/libraries/syn/standard.sldb'
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+Loading db file '/RAID2/cad/synopsys/synthesis/2022.03/libraries/syn/gtech.db'
+  Loading link library 'slow'
+  Loading link library 'gtech'
+Loading sverilog file '/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v
+Warning:  /RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v:327: signed to unsigned assignment occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v:329: Statement unreachable (Branch condition impossible to meet).  (VER-61)
+
+Statistics for case statements in always block at line 113 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           114            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 126 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           129            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 144 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           145            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 149 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           150            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 188 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           189            |    auto/auto     |
+|           191            |    auto/auto     |
+|           283            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 323 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           324            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 352 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           353            |     no/auto      |
+|           355            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 374 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           377            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 390 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           395            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 405 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           407            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 443 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           450            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 461 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           468            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 493 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           494            |    auto/auto     |
+|           505            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 532 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           535            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine SNN line 109 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       cs_reg        | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 126 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       cnt_reg       | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 144 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    imgshreg_reg     | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 149 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    imgshreg_reg     | Flip-flop |  112  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 159 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    kernelreg_reg    | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 164 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    kernelreg_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 172 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    weightreg_reg    | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 177 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    weightreg_reg    | Flip-flop |  24   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 352 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  conv1_result_reg   | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 366 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   quant_conv1_reg   | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 374 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    pool_cnt_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 390 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    maxpool_r_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    maxpool_l_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 427 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   pooled_arr_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 443 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  flatten_arr1_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 461 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  flatten_arr2_reg   | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 532 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     L1_sum_reg      | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 544 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| out_data_buffer_reg | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    out_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN.db:SNN'
+Loaded 1 design.
+Current design is 'SNN'.
+SNN
+current_design $DESIGN
+Current design is 'SNN'.
+{SNN}
+link > Report/$DESIGN\.link
+#======================================================
+#  Global Setting
+#======================================================
+#======================================================
+#  Set Design Constraints
+#======================================================
+create_clock -name "clk" -period $CLK_period clk 
+1
+set_input_delay  [ expr $CLK_period*0.5 ] -clock clk [all_inputs]
+1
+set_output_delay [ expr $CLK_period*0.5 ] -clock clk [all_outputs]
+1
+set_input_delay 0 -clock clk clk
+1
+set_input_delay 0 -clock clk rst_n
+1
+set_load 0.05 [all_outputs]
+1
+set_max_delay $CLK_period -from [all_inputs] -to [all_outputs]
+1
+set_dont_use slow/JKFF*
+1
+#set hdlin_ff_always_sync_set_reset true
+#report_clock -skew clk
+#======================================================
+#  Optimization
+#======================================================
+check_design > Report/$DESIGN\.check
+uniquify
+1
+set_fix_multiple_port_nets -all -buffer_constants
+1
+current_design $DESIGN
+Current design is 'SNN'.
+{SNN}
+compile
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | S-2021.06-DWBB_202106.0 |     *     |
+| Licensed DW Building Blocks        | S-2021.06-DWBB_202106.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 1219                                   |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 375                                    |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch cells                              | 259                                    |
+| Number of Dont Touch nets                               | 0                                      |
+| Number of size only cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+
+Information: There are 12 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'SNN'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'SNN_DW01_add_0'
+  Processing 'SNN_DW01_add_1'
+  Mapping 'SNN_DW_cmp_0'
+  Mapping 'SNN_DW_cmp_1'
+  Processing 'SNN_DW01_sub_0'
+  Mapping 'SNN_DW_cmp_2'
+  Allocating blocks in 'DW_div_uns_a_width20_b_width12'
+  Allocating blocks in 'DW_div_a_width20_b_width12_tc_mode0_rem_mode1'
+  Processing 'SNN_DW_div_uns_0'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'SNN_DW01_add_2'
+  Mapping 'SNN_DW01_add_3'
+  Mapping 'SNN_DW01_add_4'
+  Mapping 'SNN_DW01_add_5'
+  Mapping 'SNN_DW01_add_6'
+  Mapping 'SNN_DW01_add_7'
+  Mapping 'SNN_DW01_add_8'
+  Mapping 'SNN_DW01_add_9'
+  Mapping 'SNN_DW01_add_10'
+  Mapping 'SNN_DW01_add_11'
+  Mapping 'SNN_DW01_add_12'
+  Mapping 'SNN_DW01_add_13'
+  Mapping 'SNN_DW01_add_14'
+  Mapping 'SNN_DW01_add_15'
+  Mapping 'SNN_DW01_add_16'
+  Mapping 'SNN_DW_cmp_3'
+  Mapping 'SNN_DW_cmp_4'
+  Mapping 'SNN_DW_cmp_5'
+  Mapping 'SNN_DW_cmp_6'
+  Mapping 'SNN_DW_cmp_7'
+  Processing 'SNN_DW01_inc_0_DW01_inc_1'
+  Building model 'DW01_add_width17' (rpl)
+  Processing 'DW01_add_width17'
+  Building model 'DW01_add_width18' (rpl)
+  Processing 'DW01_add_width18'
+  Building model 'DW01_add_width20' (rpl)
+  Processing 'DW01_add_width20'
+  Building model 'DW01_add_width19' (rpl)
+  Processing 'DW01_add_width19'
+  Building model 'DW01_add_width10' (rpl)
+  Processing 'DW01_add_width10'
+  Processing 'SNN_DW01_add_17_DW01_add_2'
+  Mapping 'SNN_DW_mult_uns_0'
+  Mapping 'SNN_DW_mult_uns_1'
+  Processing 'SNN_DW01_add_18_DW01_add_3'
+  Processing 'SNN_DW01_add_19_DW01_add_4'
+  Processing 'SNN_DW01_add_20_DW01_add_5'
+  Processing 'SNN_DW01_add_21_DW01_add_6'
+  Processing 'SNN_DW01_add_22_DW01_add_7'
+  Processing 'SNN_DW01_add_23_DW01_add_8'
+  Processing 'SNN_DW01_add_24_DW01_add_9'
+  Mapping 'SNN_DW_mult_uns_2'
+  Mapping 'SNN_DW_mult_uns_3'
+  Mapping 'SNN_DW_mult_uns_4'
+  Mapping 'SNN_DW_mult_uns_5'
+  Mapping 'SNN_DW_mult_uns_6'
+  Mapping 'SNN_DW_mult_uns_7'
+  Mapping 'SNN_DW_mult_uns_8'
+  Processing 'SNN_DW01_add_25_DW01_add_10'
+  Mapping 'SNN_DW_mult_uns_9'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'SNN'. (DDB-72)
+  Allocating blocks in 'DW_div_uns_a_width20_b_width12'
+  Allocating blocks in 'DW_div_a_width20_b_width12_tc_mode0_rem_mode1'
+  Allocating blocks in 'DW_div_uns_a_width20_b_width12'
+  Allocating blocks in 'DW_div_a_width20_b_width12_tc_mode0_rem_mode1'
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:22  232897.9     11.69     191.5       0.0                          
+    0:00:22  232897.9     11.69     191.5       0.0                          
+    0:00:30  233646.3      3.02      25.9       0.0                          
+    0:00:30  233433.4      3.17      28.7       0.0                          
+    0:00:30  233433.4      3.17      28.7       0.0                          
+    0:00:30  233463.4      3.03      26.7       0.0                          
+    0:00:30  233463.4      3.03      26.7       0.0                          
+    0:00:31  155505.9      4.52      52.0       0.0                          
+    0:00:32  154833.9      4.29      47.3       0.0                          
+    0:00:32  154577.8      3.29      29.8       0.0                          
+    0:00:32  154444.8      3.17      27.5       0.0                          
+    0:00:32  154541.2      2.70      21.5       0.0                          
+    0:00:33  154644.3      2.69      21.2       0.0                          
+    0:00:33  154537.9      2.67      21.2       0.0                          
+    0:00:33  154544.5      2.57      19.7       0.0                          
+    0:00:33  154564.5      2.54      19.7       0.0                          
+    0:00:33  154561.2      2.48      18.8       0.0                          
+    0:00:33  154561.2      2.48      18.8       0.0                          
+    0:00:33  154561.2      2.48      18.8       0.0                          
+    0:00:33  154561.2      2.48      18.8       0.0                          
+    0:00:33  154561.2      2.48      18.8       0.0                          
+    0:00:33  154561.2      2.48      18.8       0.0                          
+    0:00:33  154561.2      2.48      18.8       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:33  154561.2      2.48      18.8       0.0                          
+    0:00:34  155299.6      1.63      11.8       0.0 flatten_arr1_reg[3][0]/D 
+    0:00:35  155569.1      1.47      10.6       0.0 flatten_arr1_reg[3][0]/D 
+    0:00:35  155585.7      1.40      10.0       0.0 flatten_arr1_reg[3][0]/D 
+    0:00:35  155582.4      1.38       9.8       0.0 flatten_arr1_reg[3][0]/D 
+    0:00:35  155525.8      1.36       9.5       0.0 flatten_arr1_reg[3][0]/D 
+    0:00:36  155678.8      1.20       8.2       0.0 flatten_arr1_reg[3][0]/D 
+    0:00:36  155728.7      1.16       7.8       0.0 flatten_arr1_reg[3][0]/D 
+    0:00:37  155821.9      1.11       7.4       0.0 flatten_arr1_reg[3][0]/D 
+    0:00:37  155818.6      1.06       6.9       0.0 flatten_arr1_reg[3][0]/D 
+    0:00:37  155988.2      1.01       6.4       0.0 flatten_arr1_reg[3][0]/D 
+    0:00:37  156081.3      0.93       5.7       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:38  156114.6      0.90       5.5       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:38  156234.4      0.89       5.3       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:38  156177.8      0.80       4.5       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:38  156217.7      0.75       4.0       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:38  156314.2      0.71       3.7       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:39  156354.1      0.69       3.5       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:39  156407.3      0.65       3.2       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:39  156467.2      0.64       3.1       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:40  156527.1      0.61       2.9       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:40  156557.0      0.57       2.5       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:40  156726.7      0.54       2.3       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:40  156776.6      0.51       2.1       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:41  156806.5      0.49       2.0       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:41  156813.2      0.48       2.0       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:41  156936.2      0.43       1.7       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:42  156806.5      0.39       1.4       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:42  156819.8      0.37       1.3       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:42  156823.1      0.36       1.2       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:42  156886.3      0.34       1.1       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:42  156869.7      0.34       1.1       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:42  156903.0      0.31       1.0       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:43  156946.2      0.29       0.9       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:43  156949.5      0.25       0.7       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:43  156989.5      0.24       0.6       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:43  157009.4      0.23       0.6       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:43  157026.0      0.22       0.6       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:43  157012.7      0.22       0.6       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:43  157016.1      0.21       0.5       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:44  157059.3      0.20       0.5       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:44  157122.5      0.19       0.5       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:44  157135.8      0.19       0.5       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:44  157199.0      0.18       0.5       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:44  157152.4      0.17       0.4       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:44  157212.3      0.16       0.4       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:44  157278.8      0.16       0.4       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:45  157362.0      0.15       0.4       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:45  157531.7      0.12       0.3       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:45  157558.3      0.09       0.2       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:45  157668.0      0.09       0.2       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:45  157664.7      0.06       0.1       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:46  157618.1      0.06       0.1       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:46  157631.4      0.05       0.1       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:46  157754.5      0.05       0.1       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:46  157804.4      0.04       0.1       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:46  157801.1      0.04       0.1       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:46  157867.6      0.01       0.0       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:47  157894.2      0.00       0.0       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:47  157894.2      0.00       0.0       0.0                          
+    0:00:47  156583.6      0.00       0.0      59.5                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:47  156583.6      0.00       0.0      59.5                          
+    0:00:47  156600.3      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:47  156600.3      0.00       0.0       0.0                          
+    0:00:47  156600.3      0.00       0.0       0.0                          
+    0:00:47  154897.1      0.16       0.4       0.0                          
+    0:00:47  154308.4      0.12       0.3       0.0                          
+    0:00:47  154175.3      0.13       0.3       0.0                          
+    0:00:47  154085.5      0.13       0.3       0.0                          
+    0:00:47  154045.6      0.13       0.3       0.0                          
+    0:00:47  154045.6      0.13       0.3       0.0                          
+    0:00:48  154291.7      0.00       0.0       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:48  154351.6      0.00       0.0       0.0                          
+    0:00:48  152162.8      0.57       2.3       0.0                          
+    0:00:48  151434.4      0.56       2.4       0.0                          
+    0:00:48  151105.0      0.56       2.4       0.0                          
+    0:00:48  151091.7      0.55       2.3       0.0                          
+    0:00:48  151091.7      0.55       2.3       0.0                          
+    0:00:48  151091.7      0.55       2.3       0.0                          
+    0:00:48  151091.7      0.55       2.3       0.0                          
+    0:00:48  151091.7      0.55       2.3       0.0                          
+    0:00:49  151411.1      0.29       0.9       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:49  151567.4      0.24       0.6       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:49  151670.5      0.19       0.5       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:50  151777.0      0.15       0.4       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:50  151806.9      0.14       0.3       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:51  151853.5      0.13       0.3       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:51  151860.1      0.11       0.3       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:51  151873.4      0.11       0.2       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:52  151926.7      0.11       0.2       0.0 flatten_arr2_reg[3][0]/D 
+    0:00:52  152242.7      0.00       0.0       0.0                          
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+#======================================================
+#  Output Reports 
+#======================================================
+report_timing >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_resource >  Report/$DESIGN\.resource
+#======================================================
+#  Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/02_SYN/Netlist/SNN_SYN.v'.
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/02_SYN/Netlist/SNN_SYN.sdf'. (WT-3)
+1
+write_sdc Netlist/$DESIGN\_SYN.sdc
+1
+#======================================================
+#  Finish and Quit
+#======================================================
+report_area
+ 
+****************************************
+Report : area
+Design : SNN
+Version: T-2022.03
+Date   : Sun Apr 23 01:30:57 2023
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
+
+Number of ports:                         3237
+Number of nets:                          9414
+Number of cells:                         6249
+Number of combinational cells:           5777
+Number of sequential cells:               375
+Number of macros/black boxes:               0
+Number of buf/inv:                       1199
+Number of references:                     206
+
+Combinational area:             126256.840783
+Buf/Inv area:                    13152.585977
+Noncombinational area:           25985.837009
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                152242.677793
+Total area:                 undefined
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : SNN
+Version: T-2022.03
+Date   : Sun Apr 23 01:30:57 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: cnt_reg_6_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: flatten_arr2_reg_3__0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  cnt_reg_6_/CK (DFFRHQX4)                                0.00       0.00 r
+  cnt_reg_6_/Q (DFFRHQX4)                                 0.23       0.23 f
+  U1599/Y (OR2X4)                                         0.23       0.46 f
+  U1655/Y (OR2X2)                                         0.23       0.69 f
+  U1564/Y (NAND2X1)                                       0.08       0.77 r
+  U1565/Y (INVX1)                                         0.07       0.84 f
+  U1559/Y (NAND2X2)                                       0.09       0.93 r
+  U1769/Y (OAI221X2)                                      0.18       1.10 f
+  U1722/Y (CLKINVX8)                                      0.13       1.23 r
+  div_82_u_div_u_add_B3/A[1] (SNN_DW01_add_127)           0.00       1.23 r
+  div_82_u_div_u_add_B3/U48/Y (XNOR2X4)                   0.28       1.51 r
+  div_82_u_div_u_add_B3/SUM[1] (SNN_DW01_add_127)         0.00       1.51 r
+  div_82_u_div_u_add_PartRem_6_3/B[1] (SNN_DW01_add_31)
+                                                          0.00       1.51 r
+  div_82_u_div_u_add_PartRem_6_3/U101/Y (OR2X4)           0.13       1.64 r
+  div_82_u_div_u_add_PartRem_6_3/U108/Y (OAI2BB1X4)       0.19       1.83 r
+  div_82_u_div_u_add_PartRem_6_3/U106/Y (NAND4X4)         0.15       1.98 f
+  div_82_u_div_u_add_PartRem_6_3/U107/Y (NOR2X4)          0.13       2.10 r
+  div_82_u_div_u_add_PartRem_6_3/CO (SNN_DW01_add_31)     0.00       2.10 r
+  U1236/Y (INVX4)                                         0.06       2.17 f
+  U1561/Y (MX2X2)                                         0.20       2.37 f
+  U1571/Y (OAI2BB1X2)                                     0.10       2.46 r
+  U1731/Y (AOI32X2)                                       0.12       2.58 f
+  U1918/Y (INVX4)                                         0.17       2.75 r
+  div_82_u_div_u_add_PartRem_5_4/A[5] (SNN_DW01_add_198)
+                                                          0.00       2.75 r
+  div_82_u_div_u_add_PartRem_5_4/U88/Y (NOR2X4)           0.09       2.85 f
+  div_82_u_div_u_add_PartRem_5_4/U59/Y (OAI21X2)          0.20       3.04 r
+  div_82_u_div_u_add_PartRem_5_4/U84/Y (AOI21X4)          0.09       3.13 f
+  div_82_u_div_u_add_PartRem_5_4/U89/Y (NOR2X4)           0.17       3.30 r
+  div_82_u_div_u_add_PartRem_5_4/CO (SNN_DW01_add_198)
+                                                          0.00       3.30 r
+  U1265/Y (INVX4)                                         0.07       3.37 f
+  U2538/Y (AOI33X1)                                       0.35       3.72 r
+  U2443/Y (OAI2BB1X2)                                     0.12       3.85 f
+  U2570/Y (AOI32X4)                                       0.61       4.45 r
+  div_82_u_div_u_add_PartRem_4_4/A[3] (SNN_DW01_add_186)
+                                                          0.00       4.45 r
+  div_82_u_div_u_add_PartRem_4_4/U118/Y (NOR2X2)          0.11       4.56 f
+  div_82_u_div_u_add_PartRem_4_4/U123/Y (OAI21X4)         0.26       4.82 r
+  div_82_u_div_u_add_PartRem_4_4/U124/Y (AOI21X4)         0.13       4.95 f
+  div_82_u_div_u_add_PartRem_4_4/U3/Y (OAI21X4)           0.24       5.19 r
+  div_82_u_div_u_add_PartRem_4_4/CO (SNN_DW01_add_186)
+                                                          0.00       5.19 r
+  U2431/Y (INVX4)                                         0.09       5.27 f
+  U2572/Y (AOI33X4)                                       0.58       5.86 r
+  U2573/Y (NAND2X4)                                       0.08       5.94 f
+  U2564/Y (INVX8)                                         0.11       6.05 r
+  U1342/Y (MX2X2)                                         0.30       6.35 r
+  U1453/Y (INVX4)                                         0.10       6.45 f
+  div_82_u_div_u_add_PartRem_3_4/A[9] (SNN_DW01_add_130)
+                                                          0.00       6.45 f
+  div_82_u_div_u_add_PartRem_3_4/U124/Y (NOR2X2)          0.18       6.63 r
+  div_82_u_div_u_add_PartRem_3_4/U101/Y (OAI21X1)         0.14       6.77 f
+  div_82_u_div_u_add_PartRem_3_4/U99/Y (AOI21X2)          0.19       6.97 r
+  div_82_u_div_u_add_PartRem_3_4/U127/Y (OAI21X4)         0.11       7.08 f
+  div_82_u_div_u_add_PartRem_3_4/U150/Y (OAI2BB1X4)       0.22       7.30 f
+  div_82_u_div_u_add_PartRem_3_4/CO (SNN_DW01_add_130)
+                                                          0.00       7.30 f
+  U1776/Y (CLKINVX4)                                      0.08       7.38 r
+  U2577/Y (OR2X4)                                         0.16       7.54 r
+  U1178/Y (INVX4)                                         0.09       7.63 f
+  U1191/Y (AND2X1)                                        0.24       7.87 f
+  U1192/Y (NOR3X1)                                        0.17       8.05 r
+  U1515/Y (INVXL)                                         0.07       8.11 f
+  U1711/Y (AOI222X4)                                      0.64       8.76 r
+  U1766/Y (OAI221X4)                                      0.40       9.15 f
+  div_82_u_div_u_add_PartRem_2_6/A[14] (SNN_DW01_add_118)
+                                                          0.00       9.15 f
+  div_82_u_div_u_add_PartRem_2_6/U10/Y (NOR2X2)           0.11       9.27 r
+  div_82_u_div_u_add_PartRem_2_6/U166/Y (NOR2X1)          0.11       9.38 f
+  div_82_u_div_u_add_PartRem_2_6/U128/Y (AOI21X2)         0.20       9.58 r
+  div_82_u_div_u_add_PartRem_2_6/U123/Y (INVX3)           0.09       9.67 f
+  div_82_u_div_u_add_PartRem_2_6/CO (SNN_DW01_add_118)
+                                                          0.00       9.67 f
+  U1575/Y (INVX3)                                         0.10       9.77 r
+  U1860/Y (NOR2X4)                                        0.09       9.86 f
+  U2578/Y (OR2X4)                                         0.21      10.07 f
+  U1787/Y (OAI33X2)                                       0.30      10.36 r
+  U1432/Y (INVX3)                                         0.08      10.44 f
+  U1433/Y (CLKINVX2)                                      0.09      10.53 r
+  U1164/Y (INVX3)                                         0.08      10.60 f
+  U1208/Y (INVX1)                                         0.10      10.70 r
+  U1206/Y (NAND2X2)                                       0.07      10.77 f
+  U1207/Y (NAND2X2)                                       0.09      10.86 r
+  U1303/Y (INVX3)                                         0.07      10.93 f
+  U1302/Y (CLKINVX3)                                      0.11      11.04 r
+  div_82_u_div_u_add_PartRem_1_3/A[8] (SNN_DW01_add_120)
+                                                          0.00      11.04 r
+  div_82_u_div_u_add_PartRem_1_3/U122/Y (NOR2X1)          0.08      11.12 f
+  div_82_u_div_u_add_PartRem_1_3/U141/Y (NOR2X1)          0.23      11.35 r
+  div_82_u_div_u_add_PartRem_1_3/U140/Y (NAND2X1)         0.12      11.48 f
+  div_82_u_div_u_add_PartRem_1_3/U156/Y (OAI21X2)         0.24      11.72 r
+  div_82_u_div_u_add_PartRem_1_3/U124/Y (AOI21X2)         0.12      11.84 f
+  div_82_u_div_u_add_PartRem_1_3/U129/Y (INVX2)           0.09      11.93 r
+  div_82_u_div_u_add_PartRem_1_3/CO (SNN_DW01_add_120)
+                                                          0.00      11.93 r
+  U1692/Y (CLKINVX2)                                      0.05      11.98 f
+  U1245/Y (OR2X1)                                         0.29      12.27 f
+  U1717/Y (OR2X4)                                         0.25      12.52 f
+  U1445/Y (CLKINVX4)                                      0.09      12.61 r
+  U1525/Y (AND2X2)                                        0.21      12.82 r
+  U1526/Y (NOR3X4)                                        0.09      12.91 f
+  U1528/Y (NAND2X4)                                       0.15      13.06 r
+  div_82_u_div_u_add_PartRem_0_4/A[3] (SNN_DW01_add_78)
+                                                          0.00      13.06 r
+  div_82_u_div_u_add_PartRem_0_4/U122/Y (NOR2X1)          0.08      13.14 f
+  div_82_u_div_u_add_PartRem_0_4/U133/Y (OAI21X1)         0.25      13.39 r
+  div_82_u_div_u_add_PartRem_0_4/U76/Y (AOI21X1)          0.12      13.51 f
+  div_82_u_div_u_add_PartRem_0_4/U131/Y (OAI21X1)         0.18      13.69 r
+  div_82_u_div_u_add_PartRem_0_4/U124/Y (OAI2BB1X4)       0.25      13.94 r
+  div_82_u_div_u_add_PartRem_0_4/CO (SNN_DW01_add_78)     0.00      13.94 r
+  U1159/Y (MX2X2)                                         0.32      14.26 r
+  U1158/Y (MX4X2)                                         0.24      14.50 f
+  U1743/Y (MX2XL)                                         0.31      14.81 f
+  flatten_arr2_reg_3__0_/D (DFFRXL)                       0.00      14.81 f
+  data arrival time                                                 14.81
+
+  clock clk (rise edge)                                  15.00      15.00
+  clock network delay (ideal)                             0.00      15.00
+  flatten_arr2_reg_3__0_/CK (DFFRXL)                      0.00      15.00 r
+  library setup time                                     -0.18      14.82
+  data required time                                                14.82
+  --------------------------------------------------------------------------
+  data required time                                                14.82
+  data arrival time                                                -14.81
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1
+exit
+
+Memory usage for this session 225 Mbytes.
+Memory usage for this session including child processes 225 Mbytes.
+CPU usage for this session 54 seconds ( 0.01 hours ).
+Elapsed time for this session 58 seconds ( 0.02 hours ).
+
+Thank you...

@@ -1,0 +1,766 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version T-2022.03 for linux64 - Feb 22, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+#  Set Libraries
+#======================================================
+set search_path {./../01_RTL \
+                   ~iclabta01/umc018/Synthesis/ \
+                   /usr/synthesis/libraries/syn/ \
+                }
+./../01_RTL  ~iclabta01/umc018/Synthesis/  /usr/synthesis/libraries/syn/  
+set synthetic_library {dw_foundation.sldb}
+dw_foundation.sldb
+set link_library {* dw_foundation.sldb standard.sldb slow.db }
+* dw_foundation.sldb standard.sldb slow.db 
+set target_library {slow.db}
+slow.db
+#======================================================
+#  Global Parameters
+#======================================================
+set DESIGN "IP"
+IP
+set CLK_period 20.0
+20.0
+#======================================================
+#  Read RTL Code
+#======================================================
+set hdlin_auto_save_templates TRUE
+TRUE
+read_sverilog $DESIGN.v
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/standard.sldb'
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/gtech.db'
+  Loading link library 'slow'
+  Loading link library 'gtech'
+Loading sverilog file '/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v
+Warning:  /RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v:262: unsigned to signed assignment occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v:311: signed to unsigned conversion occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v:347: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 92 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            95            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 133 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           134            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 215 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           218            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 229 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           232            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 243 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           246            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 258 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           261            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 272 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           275            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 286 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           289            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 324 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           327            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 306 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           309            |    auto/auto     |
+|           310            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine IP line 128 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   curr_state_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine IP line 150 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mode_reg       | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine IP line 158 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       cnt_reg       | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine IP line 202 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       img_reg       | Flip-flop |  504  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine IP line 194 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       img_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine IP line 215 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    img_shar_reg     | Flip-flop |  432  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine IP line 229 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    img_mean_reg     | Flip-flop |  288  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine IP line 243 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    img_midp_reg     | Flip-flop |  288  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine IP line 258 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    img_shar_reg     | Flip-flop |  768  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine IP line 272 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    img_mean_reg     | Flip-flop |  512  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine IP line 286 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    img_midp_reg     | Flip-flop |  512  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine IP line 324 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       out_reg       | Flip-flop |  756  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine IP line 306 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       out_reg       | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/01_RTL/IP.db:IP'
+Loaded 1 design.
+Current design is 'IP'.
+IP
+current_design $DESIGN
+Current design is 'IP'.
+{IP}
+link > Report/$DESIGN\.link
+#======================================================
+#  Global Setting
+#======================================================
+set clock_gating_module_name "GATED_OR"
+GATED_OR
+#======================================================
+#  Set Design Constraints
+#======================================================
+create_clock -name "clk" -period $CLK_period clk 
+Warning: Design 'IP' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_input_delay  [ expr $CLK_period*0.5 ] -clock clk [all_inputs]
+Warning: Design 'IP' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_output_delay [ expr $CLK_period*0.5 ] -clock clk [all_outputs]
+Warning: Design 'IP' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_input_delay 0 -clock clk clk
+Warning: Design 'IP' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_input_delay 0 -clock clk rst_n
+Warning: Design 'IP' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_input_delay 0 -clock clk cg_en
+Warning: Design 'IP' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_load 0.05 [all_outputs]
+1
+set_max_delay $CLK_period -from [all_inputs] -to [all_outputs]
+Warning: Design 'IP' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_dont_use slow/JKFF*
+1
+#======================================================
+#  Optimization
+#======================================================
+check_design > Report/$DESIGN\.check
+uniquify
+Warning: Design 'IP' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_fix_multiple_port_nets -all -buffer_constants
+1
+read_verilog ./Netlist/$clock_gating_module_name\_SYN.v
+Loading verilog file '/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/02_SYN/Netlist/GATED_OR_SYN.v'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Performing 'read' command.
+Compiling source file /RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/02_SYN/Netlist/GATED_OR_SYN.v
+Reading with netlist reader (equivalent to -netlist option).
+Verilog netlist reader completed successfully.
+Current design is now '/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/02_SYN/Netlist/GATED_OR.db:GATED_OR'
+Loaded 1 design.
+Current design is 'GATED_OR'.
+GATED_OR
+current_design $DESIGN
+Current design is 'IP'.
+{IP}
+set_dont_touch $clock_gating_module_name
+1
+# replace_clock_gates
+compile
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | S-2021.06-DWBB_202106.0 |     *     |
+| Licensed DW Building Blocks        | S-2021.06-DWBB_202106.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 12269                                  |
+| Number of User Hierarchies                              | 3                                      |
+| Sequential Cell Count                                   | 4094                                   |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch cells                              | 4091                                   |
+| Number of Dont Touch nets                               | 17                                     |
+| Number of size only cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+
+Information: There are 4 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'IP'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'IP_DW01_add_0'
+  Allocating blocks in 'DW_div_uns_a_width12_b_width4'
+  Allocating blocks in 'DW_div_a_width12_b_width4_tc_mode0_rem_mode1'
+  Processing 'IP_DW_div_uns_0'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'IP_DW_cmp_0'
+  Mapping 'IP_DW_cmp_1'
+  Mapping 'IP_DW_cmp_2'
+  Mapping 'IP_DW_cmp_3'
+  Mapping 'IP_DW_cmp_4'
+  Mapping 'IP_DW_cmp_5'
+  Mapping 'IP_DW_cmp_6'
+  Mapping 'IP_DW_cmp_7'
+  Processing 'IP_DW01_inc_0'
+  Mapping 'IP_DW_cmp_8'
+  Mapping 'IP_DW_cmp_9'
+  Mapping 'IP_DW_cmp_10'
+  Mapping 'IP_DW_cmp_11'
+  Building model 'DW01_add_width9' (rpl)
+  Processing 'DW01_add_width9'
+  Building model 'DW01_add_width10' (rpl)
+  Processing 'DW01_add_width10'
+  Building model 'DW01_add_width11' (rpl)
+  Processing 'DW01_add_width11'
+  Building model 'DW01_add_width12' (rpl)
+  Processing 'DW01_add_width12'
+  Building model 'DW01_sub_width12' (rpl)
+  Processing 'DW01_sub_width12'
+  Processing 'IP_DW01_add_1'
+  Processing 'IP_DW01_add_2'
+  Processing 'IP_DW01_add_3'
+  Processing 'IP_DW01_add_4'
+  Processing 'IP_DW01_add_5'
+  Processing 'IP_DW01_add_6'
+  Processing 'IP_DW01_add_7'
+  Processing 'IP_DW01_add_8'
+  Processing 'IP_DW01_sub_0'
+  Processing 'IP_DW01_add_9'
+  Processing 'IP_DW01_add_10'
+  Processing 'IP_DW01_add_11'
+  Mapping 'IP_DW_mult_uns_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'IP'. (DDB-72)
+  Selecting implementations
+  Allocating blocks in 'DW_div_uns_a_width12_b_width4'
+  Building model 'DW01_MUX'
+  Building model 'DW01_mmux_width2'
+  Building model 'DW01_mmux_width3'
+  Building model 'DW01_mmux_width4'
+  Building model 'DW01_mmux_width5'
+  Allocating blocks in 'DW_div_a_width12_b_width4_tc_mode0_rem_mode1'
+  Building model 'DW_div_a_width12_b_width4_tc_mode0_rem_mode1' (cla)
+  Building model 'DW_div_uns_a_width12_b_width4' (cla)
+  Allocating blocks in 'DW_div_uns_a_width12_b_width4'
+  Building model 'DW_div_a_width12_b_width4_tc_mode0_rem_mode1' (rpl)
+  Structuring 'IP_DW_div_uns_1'
+  Mapping 'IP_DW_div_uns_1'
+  Building model 'DW_div_uns_a_width12_b_width4' (rpl)
+  Structuring 'IP_DW_div_uns_2'
+  Mapping 'IP_DW_div_uns_2'
+  Allocating blocks in 'DW_div_uns_a_width12_b_width4'
+  Allocating blocks in 'DW_div_a_width12_b_width4_tc_mode0_rem_mode1'
+  Building model 'DW_div_a_width12_b_width4_tc_mode0_rem_mode1' (cla2)
+  Structuring 'IP_DW_div_uns_3'
+  Mapping 'IP_DW_div_uns_3'
+  Building model 'DW_div_uns_a_width12_b_width4' (cla2)
+  Allocating blocks in 'DW_div_uns_a_width12_b_width4'
+  Allocating blocks in 'DW_div_a_width12_b_width4_tc_mode0_rem_mode1'
+  Building model 'DW_div_a_width12_b_width4_tc_mode0_rem_mode1' (cla3)
+  Structuring 'IP_DW_div_uns_4'
+  Mapping 'IP_DW_div_uns_4'
+  Building model 'DW_div_uns_a_width12_b_width4' (cla3)
+  Allocating blocks in 'DW_div_uns_a_width12_b_width4'
+  Allocating blocks in 'DW_div_a_width12_b_width4_tc_mode0_rem_mode1'
+  Building model 'DW01_add_width28' (rpl)
+  Building model 'DW01_sub_width4' (rpl)
+  Building model 'DW01_NAND2'
+  Building model 'DW01_NOT'
+  Building model 'DW_div_a_width12_b_width4_tc_mode0_rem_mode1' (mlt)
+  Allocating blocks in 'DW_div_a_width12_b_width4_tc_mode0_rem_mode1'
+  Structuring 'IP_DW_div_uns_5'
+  Mapping 'IP_DW_div_uns_5'
+  Allocating blocks in 'DW_div_uns_a_width12_b_width4'
+  Allocating blocks in 'DW_div_a_width12_b_width4_tc_mode0_rem_mode1'
+  Building model 'DW_div_uns_a_width12_b_width4' (mlt)
+  Structuring 'IP_DW_div_uns_6'
+  Mapping 'IP_DW_div_uns_6'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:23 1129951.5      0.00       0.0       0.0                          
+    0:00:23 1129951.5      0.00       0.0       0.0                          
+    0:00:23 1129951.5      0.00       0.0       0.0                          
+    0:00:23 1129951.5      0.00       0.0       0.0                          
+    0:00:23 1129951.5      0.00       0.0       0.0                          
+    0:00:29  556510.1      0.00       0.0       0.0                          
+    0:00:29  556510.1      0.00       0.0       0.0                          
+    0:00:30  556510.1      0.00       0.0       0.0                          
+    0:00:30  556510.1      0.00       0.0       0.0                          
+    0:00:30  556510.1      0.00       0.0       0.0                          
+    0:00:30  556510.1      0.00       0.0       0.0                          
+    0:00:30  556510.1      0.00       0.0       0.0                          
+    0:00:30  556510.1      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:30  556510.1      0.00       0.0       0.0                          
+    0:00:30  556510.1      0.00       0.0       0.0                          
+    0:00:30  556510.1      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:30  556510.1      0.00       0.0       0.0                          
+    0:00:30  556510.1      0.00       0.0       0.0                          
+    0:00:32  555781.6      0.00       0.0       0.0                          
+    0:00:34  555458.9      0.00       0.0       0.0                          
+    0:00:36  555349.1      0.00       0.0       0.0                          
+    0:00:38  555239.4      0.00       0.0       0.0                          
+    0:00:39  555129.6      0.00       0.0       0.0                          
+    0:00:41  555019.8      0.00       0.0       0.0                          
+    0:00:43  554920.0      0.00       0.0       0.0                          
+    0:00:45  554820.2      0.00       0.0       0.0                          
+    0:00:47  554710.5      0.00       0.0       0.0                          
+    0:00:48  554620.7      0.00       0.0       0.0                          
+    0:00:50  554530.8      0.00       0.0       0.0                          
+    0:00:52  554441.0      0.00       0.0       0.0                          
+    0:00:54  554351.2      0.00       0.0       0.0                          
+    0:00:56  554261.4      0.00       0.0       0.0                          
+    0:00:58  554171.6      0.00       0.0       0.0                          
+    0:00:59  554081.8      0.00       0.0       0.0                          
+    0:00:59  554081.8      0.00       0.0       0.0                          
+    0:00:59  554081.8      0.00       0.0       0.0                          
+    0:00:59  554081.8      0.00       0.0       0.0                          
+    0:00:59  554081.8      0.00       0.0       0.0                          
+    0:01:00  554081.8      0.00       0.0       0.0                          
+    0:01:00  554081.8      0.00       0.0       0.0                          
+    0:01:00  554081.8      0.00       0.0       0.0                          
+    0:01:00  554081.8      0.00       0.0       0.0                          
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'IP' contains 3 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'GATED_shar/CLOCK_GATED': 1200 load(s), 1 driver(s)
+     Net 'GATED_midp/CLOCK': 1297 load(s), 1 driver(s)
+     Net 'GATED_midp/RST_N': 4094 load(s), 1 driver(s)
+1
+#======================================================
+#  Output Reports 
+#======================================================
+report_timing >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_resource >  Report/$DESIGN\.resource
+#======================================================
+#  Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/02_SYN/Netlist/IP_SYN.v'.
+1
+set_annotated_delay 0 -cell -to [get_pins -filter "pin_direction == out" -of_objects [get_cells "GATED_*/U*" -filter "ref_name==OR2X1"]]
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+1
+set_annotated_delay 0 -cell -to [get_pins -filter "pin_direction == out" -of_objects [get_cells "GATED_*/latch*" -filter "ref_name==TLATRX1"]]
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_shar/latch_or_sleep_reg/RN' and 'GATED_shar/latch_or_sleep_reg/Q'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_shar/latch_or_sleep_reg/RN' and 'GATED_shar/latch_or_sleep_reg/QN'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_mean/latch_or_sleep_reg/RN' and 'GATED_mean/latch_or_sleep_reg/Q'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_mean/latch_or_sleep_reg/RN' and 'GATED_mean/latch_or_sleep_reg/QN'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_midp/latch_or_sleep_reg/RN' and 'GATED_midp/latch_or_sleep_reg/Q'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_midp/latch_or_sleep_reg/RN' and 'GATED_midp/latch_or_sleep_reg/QN'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_shar/latch_or_sleep_reg/RN' and 'GATED_shar/latch_or_sleep_reg/Q'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_shar/latch_or_sleep_reg/RN' and 'GATED_shar/latch_or_sleep_reg/QN'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_mean/latch_or_sleep_reg/RN' and 'GATED_mean/latch_or_sleep_reg/Q'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_mean/latch_or_sleep_reg/RN' and 'GATED_mean/latch_or_sleep_reg/QN'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_midp/latch_or_sleep_reg/RN' and 'GATED_midp/latch_or_sleep_reg/Q'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_midp/latch_or_sleep_reg/RN' and 'GATED_midp/latch_or_sleep_reg/QN'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_shar/latch_or_sleep_reg/RN' and 'GATED_shar/latch_or_sleep_reg/Q'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_shar/latch_or_sleep_reg/RN' and 'GATED_shar/latch_or_sleep_reg/QN'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_mean/latch_or_sleep_reg/RN' and 'GATED_mean/latch_or_sleep_reg/Q'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_mean/latch_or_sleep_reg/RN' and 'GATED_mean/latch_or_sleep_reg/QN'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_midp/latch_or_sleep_reg/RN' and 'GATED_midp/latch_or_sleep_reg/Q'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_midp/latch_or_sleep_reg/RN' and 'GATED_midp/latch_or_sleep_reg/QN'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_shar/latch_or_sleep_reg/RN' and 'GATED_shar/latch_or_sleep_reg/Q'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_shar/latch_or_sleep_reg/RN' and 'GATED_shar/latch_or_sleep_reg/QN'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_mean/latch_or_sleep_reg/RN' and 'GATED_mean/latch_or_sleep_reg/Q'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_mean/latch_or_sleep_reg/RN' and 'GATED_mean/latch_or_sleep_reg/QN'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_midp/latch_or_sleep_reg/RN' and 'GATED_midp/latch_or_sleep_reg/Q'. (OPT-815)
+Warning: There is no 'combinational' timing arc between pins
+	'GATED_midp/latch_or_sleep_reg/RN' and 'GATED_midp/latch_or_sleep_reg/QN'. (OPT-815)
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/RAID2/COURSE/iclab/iclab105/Lab08/PRACTICE/02_SYN/Netlist/IP_SYN.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+Warning: Design 'IP' contains 3 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+1
+write_sdc Netlist/$DESIGN\_SYN.sdc
+1
+#======================================================
+#  Finish and Quit
+#======================================================
+report_area
+ 
+****************************************
+Report : area
+Design : IP
+Version: T-2022.03
+Date   : Fri Apr 21 00:35:43 2023
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
+
+Number of ports:                          392
+Number of nets:                         19710
+Number of cells:                        19275
+Number of combinational cells:          15151
+Number of sequential cells:              4094
+Number of macros/black boxes:               0
+Number of buf/inv:                       7072
+Number of references:                      46
+
+Combinational area:             266181.858470
+Buf/Inv area:                    70632.780166
+Noncombinational area:          287899.923046
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                554081.781516
+Total area:                 undefined
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : IP
+Version: T-2022.03
+Date   : Fri Apr 21 00:35:43 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: mode_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: GATED_mean/latch_or_sleep_reg
+            (positive level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  mode_reg_1_/CK (DFFRHQX1)                               0.00 #     0.00 r
+  mode_reg_1_/Q (DFFRHQX1)                                0.54       0.54 r
+  U15453/Y (INVX2)                                        0.11       0.66 f
+  U15456/Y (NAND3X1)                                      0.13       0.79 r
+  GATED_mean/SLEEP_CTRL (GATED_OR)                        0.00       0.79 r
+  GATED_mean/latch_or_sleep_reg/D (TLATRX1)               0.00       0.79 r
+  data arrival time                                                  0.79
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  GATED_mean/latch_or_sleep_reg/G (TLATRX1)               0.00       0.00 r
+  time borrowed from endpoint                             0.79       0.79
+  data required time                                                 0.79
+  --------------------------------------------------------------------------
+  data required time                                                 0.79
+  data arrival time                                                 -0.79
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                                10.00   
+  library setup time                                     -0.10   
+  --------------------------------------------------------------
+  max time borrow                                         9.90   
+  actual time borrow                                      0.79   
+  --------------------------------------------------------------
+
+
+1
+exit
+
+Memory usage for this session 437 Mbytes.
+Memory usage for this session including child processes 437 Mbytes.
+CPU usage for this session 65 seconds ( 0.02 hours ).
+Elapsed time for this session 69 seconds ( 0.02 hours ).
+
+Thank you...

@@ -1,0 +1,156 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : SNN
+Version: T-2022.03
+Date   : Sun Apr 23 01:30:57 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: cnt_reg[6] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: flatten_arr2_reg[3][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  cnt_reg[6]/CK (DFFRHQX4)                                0.00       0.00 r
+  cnt_reg[6]/Q (DFFRHQX4)                                 0.23       0.23 f
+  U1599/Y (OR2X4)                                         0.23       0.46 f
+  U1655/Y (OR2X2)                                         0.23       0.69 f
+  U1564/Y (NAND2X1)                                       0.08       0.77 r
+  U1565/Y (INVX1)                                         0.07       0.84 f
+  U1559/Y (NAND2X2)                                       0.09       0.93 r
+  U1769/Y (OAI221X2)                                      0.18       1.10 f
+  U1722/Y (CLKINVX8)                                      0.13       1.23 r
+  div_82/u_div/u_add_B3/A[1] (SNN_DW01_add_127)           0.00       1.23 r
+  div_82/u_div/u_add_B3/U48/Y (XNOR2X4)                   0.28       1.51 r
+  div_82/u_div/u_add_B3/SUM[1] (SNN_DW01_add_127)         0.00       1.51 r
+  div_82/u_div/u_add_PartRem_6_3/B[1] (SNN_DW01_add_31)
+                                                          0.00       1.51 r
+  div_82/u_div/u_add_PartRem_6_3/U101/Y (OR2X4)           0.13       1.64 r
+  div_82/u_div/u_add_PartRem_6_3/U108/Y (OAI2BB1X4)       0.19       1.83 r
+  div_82/u_div/u_add_PartRem_6_3/U106/Y (NAND4X4)         0.15       1.98 f
+  div_82/u_div/u_add_PartRem_6_3/U107/Y (NOR2X4)          0.13       2.10 r
+  div_82/u_div/u_add_PartRem_6_3/CO (SNN_DW01_add_31)     0.00       2.10 r
+  U1236/Y (INVX4)                                         0.06       2.17 f
+  U1561/Y (MX2X2)                                         0.20       2.37 f
+  U1571/Y (OAI2BB1X2)                                     0.10       2.46 r
+  U1731/Y (AOI32X2)                                       0.12       2.58 f
+  U1918/Y (INVX4)                                         0.17       2.75 r
+  div_82/u_div/u_add_PartRem_5_4/A[5] (SNN_DW01_add_198)
+                                                          0.00       2.75 r
+  div_82/u_div/u_add_PartRem_5_4/U88/Y (NOR2X4)           0.09       2.85 f
+  div_82/u_div/u_add_PartRem_5_4/U59/Y (OAI21X2)          0.20       3.04 r
+  div_82/u_div/u_add_PartRem_5_4/U84/Y (AOI21X4)          0.09       3.13 f
+  div_82/u_div/u_add_PartRem_5_4/U89/Y (NOR2X4)           0.17       3.30 r
+  div_82/u_div/u_add_PartRem_5_4/CO (SNN_DW01_add_198)
+                                                          0.00       3.30 r
+  U1265/Y (INVX4)                                         0.07       3.37 f
+  U2538/Y (AOI33X1)                                       0.35       3.72 r
+  U2443/Y (OAI2BB1X2)                                     0.12       3.85 f
+  U2570/Y (AOI32X4)                                       0.61       4.45 r
+  div_82/u_div/u_add_PartRem_4_4/A[3] (SNN_DW01_add_186)
+                                                          0.00       4.45 r
+  div_82/u_div/u_add_PartRem_4_4/U118/Y (NOR2X2)          0.11       4.56 f
+  div_82/u_div/u_add_PartRem_4_4/U123/Y (OAI21X4)         0.26       4.82 r
+  div_82/u_div/u_add_PartRem_4_4/U124/Y (AOI21X4)         0.13       4.95 f
+  div_82/u_div/u_add_PartRem_4_4/U3/Y (OAI21X4)           0.24       5.19 r
+  div_82/u_div/u_add_PartRem_4_4/CO (SNN_DW01_add_186)
+                                                          0.00       5.19 r
+  U2431/Y (INVX4)                                         0.09       5.27 f
+  U2572/Y (AOI33X4)                                       0.58       5.86 r
+  U2573/Y (NAND2X4)                                       0.08       5.94 f
+  U2564/Y (INVX8)                                         0.11       6.05 r
+  U1342/Y (MX2X2)                                         0.30       6.35 r
+  U1453/Y (INVX4)                                         0.10       6.45 f
+  div_82/u_div/u_add_PartRem_3_4/A[9] (SNN_DW01_add_130)
+                                                          0.00       6.45 f
+  div_82/u_div/u_add_PartRem_3_4/U124/Y (NOR2X2)          0.18       6.63 r
+  div_82/u_div/u_add_PartRem_3_4/U101/Y (OAI21X1)         0.14       6.77 f
+  div_82/u_div/u_add_PartRem_3_4/U99/Y (AOI21X2)          0.19       6.97 r
+  div_82/u_div/u_add_PartRem_3_4/U127/Y (OAI21X4)         0.11       7.08 f
+  div_82/u_div/u_add_PartRem_3_4/U150/Y (OAI2BB1X4)       0.22       7.30 f
+  div_82/u_div/u_add_PartRem_3_4/CO (SNN_DW01_add_130)
+                                                          0.00       7.30 f
+  U1776/Y (CLKINVX4)                                      0.08       7.38 r
+  U2577/Y (OR2X4)                                         0.16       7.54 r
+  U1178/Y (INVX4)                                         0.09       7.63 f
+  U1191/Y (AND2X1)                                        0.24       7.87 f
+  U1192/Y (NOR3X1)                                        0.17       8.05 r
+  U1515/Y (INVXL)                                         0.07       8.11 f
+  U1711/Y (AOI222X4)                                      0.64       8.76 r
+  U1766/Y (OAI221X4)                                      0.40       9.15 f
+  div_82/u_div/u_add_PartRem_2_6/A[14] (SNN_DW01_add_118)
+                                                          0.00       9.15 f
+  div_82/u_div/u_add_PartRem_2_6/U10/Y (NOR2X2)           0.11       9.27 r
+  div_82/u_div/u_add_PartRem_2_6/U166/Y (NOR2X1)          0.11       9.38 f
+  div_82/u_div/u_add_PartRem_2_6/U128/Y (AOI21X2)         0.20       9.58 r
+  div_82/u_div/u_add_PartRem_2_6/U123/Y (INVX3)           0.09       9.67 f
+  div_82/u_div/u_add_PartRem_2_6/CO (SNN_DW01_add_118)
+                                                          0.00       9.67 f
+  U1575/Y (INVX3)                                         0.10       9.77 r
+  U1860/Y (NOR2X4)                                        0.09       9.86 f
+  U2578/Y (OR2X4)                                         0.21      10.07 f
+  U1787/Y (OAI33X2)                                       0.30      10.36 r
+  U1432/Y (INVX3)                                         0.08      10.44 f
+  U1433/Y (CLKINVX2)                                      0.09      10.53 r
+  U1164/Y (INVX3)                                         0.08      10.60 f
+  U1208/Y (INVX1)                                         0.10      10.70 r
+  U1206/Y (NAND2X2)                                       0.07      10.77 f
+  U1207/Y (NAND2X2)                                       0.09      10.86 r
+  U1303/Y (INVX3)                                         0.07      10.93 f
+  U1302/Y (CLKINVX3)                                      0.11      11.04 r
+  div_82/u_div/u_add_PartRem_1_3/A[8] (SNN_DW01_add_120)
+                                                          0.00      11.04 r
+  div_82/u_div/u_add_PartRem_1_3/U122/Y (NOR2X1)          0.08      11.12 f
+  div_82/u_div/u_add_PartRem_1_3/U141/Y (NOR2X1)          0.23      11.35 r
+  div_82/u_div/u_add_PartRem_1_3/U140/Y (NAND2X1)         0.12      11.48 f
+  div_82/u_div/u_add_PartRem_1_3/U156/Y (OAI21X2)         0.24      11.72 r
+  div_82/u_div/u_add_PartRem_1_3/U124/Y (AOI21X2)         0.12      11.84 f
+  div_82/u_div/u_add_PartRem_1_3/U129/Y (INVX2)           0.09      11.93 r
+  div_82/u_div/u_add_PartRem_1_3/CO (SNN_DW01_add_120)
+                                                          0.00      11.93 r
+  U1692/Y (CLKINVX2)                                      0.05      11.98 f
+  U1245/Y (OR2X1)                                         0.29      12.27 f
+  U1717/Y (OR2X4)                                         0.25      12.52 f
+  U1445/Y (CLKINVX4)                                      0.09      12.61 r
+  U1525/Y (AND2X2)                                        0.21      12.82 r
+  U1526/Y (NOR3X4)                                        0.09      12.91 f
+  U1528/Y (NAND2X4)                                       0.15      13.06 r
+  div_82/u_div/u_add_PartRem_0_4/A[3] (SNN_DW01_add_78)
+                                                          0.00      13.06 r
+  div_82/u_div/u_add_PartRem_0_4/U122/Y (NOR2X1)          0.08      13.14 f
+  div_82/u_div/u_add_PartRem_0_4/U133/Y (OAI21X1)         0.25      13.39 r
+  div_82/u_div/u_add_PartRem_0_4/U76/Y (AOI21X1)          0.12      13.51 f
+  div_82/u_div/u_add_PartRem_0_4/U131/Y (OAI21X1)         0.18      13.69 r
+  div_82/u_div/u_add_PartRem_0_4/U124/Y (OAI2BB1X4)       0.25      13.94 r
+  div_82/u_div/u_add_PartRem_0_4/CO (SNN_DW01_add_78)     0.00      13.94 r
+  U1159/Y (MX2X2)                                         0.32      14.26 r
+  U1158/Y (MX4X2)                                         0.24      14.50 f
+  U1743/Y (MX2XL)                                         0.31      14.81 f
+  flatten_arr2_reg[3][0]/D (DFFRXL)                       0.00      14.81 f
+  data arrival time                                                 14.81
+
+  clock clk (rise edge)                                  15.00      15.00
+  clock network delay (ideal)                             0.00      15.00
+  flatten_arr2_reg[3][0]/CK (DFFRXL)                      0.00      15.00 r
+  library setup time                                     -0.18      14.82
+  data required time                                                14.82
+  --------------------------------------------------------------------------
+  data required time                                                14.82
+  data arrival time                                                -14.81
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1

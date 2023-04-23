@@ -1,0 +1,2 @@
+pt_shell -f ptpx.tcl | tee CORE_power.log
+

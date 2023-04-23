@@ -1,0 +1,9 @@
+
+  Linking design 'SNN'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  SNN                         /RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE_wocg/01_RTL/SNN.db
+  dw_foundation.sldb (library) /RAID2/cad/synopsys/synthesis/2022.03/libraries/syn/dw_foundation.sldb
+  slow (library)              /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db
+
+1

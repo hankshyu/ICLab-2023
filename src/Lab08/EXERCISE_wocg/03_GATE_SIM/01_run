@@ -1,0 +1,1 @@
+irun TESTBED.v -define GATE -debug -v ~iclabta01/umc018/Verilog/umc18_neg.v -loadpli1 debpli:novas_pli_boot
