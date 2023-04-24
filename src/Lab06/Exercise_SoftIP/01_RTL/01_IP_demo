@@ -1,6 +1,1 @@
-cat /etc/redhat-release  | tee version.log
-if   grep -i -q '8' 'version.log'; then
-    irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot | tee 01_IP_demo.log
-else
-    irun TESTBED.v -define RTL -debug | tee 01_IP_demo.log
-fi
+irun TESTBED.v -define RTL -debug -incdir /usr/synthesis/dw/sim_ver/ -notimingchecks -loadpli1 debpli:novas_pli_boot -y /RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/ +libext+.v | tee 01_IP_demo.log

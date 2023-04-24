@@ -2,8 +2,8 @@
 ****************************************
 Report : resources
 Design : EC_TOP
-Version: R-2020.09
-Date   : Mon Apr  3 10:32:27 2023
+Version: T-2022.03
+Date   : Mon Apr 24 10:52:08 2023
 ****************************************
 
 
@@ -339,7 +339,7 @@ Implementation Report
 | eq_x_62            | DW_cmp           | apparch (area)     |                |
 | eq_x_63            | DW_cmp           | apparch (area)     |                |
 | DP_OP_131J1_122_4235                  |                    |                |
-|                    | DP_OP_131J1_122_4235 | str (area,speed)                |
+|                    | DP_OP_131J1_122_4235 | str (area)     |                |
 | DP_OP_132J1_123_6322                  |                    |                |
 |                    | DP_OP_132J1_123_6322 | str (area)     |                |
 |                    |                  | mult_arch: and     |                |
