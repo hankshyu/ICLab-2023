@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : TRIANGLE
+Version: T-2022.03
+Date   : Tue May  9 01:36:24 2023
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
+
+Number of ports:                         2504
+Number of nets:                         11159
+Number of cells:                         8609
+Number of combinational cells:           7850
+Number of sequential cells:               658
+Number of macros/black boxes:               0
+Number of buf/inv:                       2157
+Number of references:                      55
+
+Combinational area:             131329.600753
+Buf/Inv area:                    21711.413572
+Noncombinational area:           44979.580994
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                176309.181746
+Total area:                 undefined
+1

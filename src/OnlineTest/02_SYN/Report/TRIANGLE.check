@@ -1,0 +1,57 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Tue May  9 01:35:22 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               8
+    Cells do not drive (LINT-1)                                     8
+
+Nets                                                               32
+    Unloaded nets (LINT-2)                                         32
+--------------------------------------------------------------------------------
+
+Warning: In design 'TRIANGLE', cell 'C2417' does not drive any nets. (LINT-1)
+Warning: In design 'TRIANGLE', cell 'C2429' does not drive any nets. (LINT-1)
+Warning: In design 'TRIANGLE', cell 'C2437' does not drive any nets. (LINT-1)
+Warning: In design 'TRIANGLE', cell 'C2440' does not drive any nets. (LINT-1)
+Warning: In design 'TRIANGLE', cell 'C2443' does not drive any nets. (LINT-1)
+Warning: In design 'TRIANGLE', cell 'C2496' does not drive any nets. (LINT-1)
+Warning: In design 'TRIANGLE', cell 'C2534' does not drive any nets. (LINT-1)
+Warning: In design 'TRIANGLE', cell 'C2555' does not drive any nets. (LINT-1)
+Warning: In design 'TRIANGLE', net 'div_dz' driven by pin 'U1/divide_by_0' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_rem[0]' driven by pin 'U1/remainder_0' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_rem[1]' driven by pin 'U1/remainder_1' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_rem[2]' driven by pin 'U1/remainder_2' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_rem[3]' driven by pin 'U1/remainder_3' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_rem[4]' driven by pin 'U1/remainder_4' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_rem[5]' driven by pin 'U1/remainder_5' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_rem[6]' driven by pin 'U1/remainder_6' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_rem[7]' driven by pin 'U1/remainder_7' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_rem[8]' driven by pin 'U1/remainder_8' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_rem[9]' driven by pin 'U1/remainder_9' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_rem[10]' driven by pin 'U1/remainder_10' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_rem[11]' driven by pin 'U1/remainder_11' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_rem[12]' driven by pin 'U1/remainder_12' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_rem[13]' driven by pin 'U1/remainder_13' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_rem[14]' driven by pin 'U1/remainder_14' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_rem[15]' driven by pin 'U1/remainder_15' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_rem[16]' driven by pin 'U1/remainder_16' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_quotient[16]' driven by pin 'U1/quotient_16' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_quotient[17]' driven by pin 'U1/quotient_17' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_quotient[18]' driven by pin 'U1/quotient_18' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_quotient[19]' driven by pin 'U1/quotient_19' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_quotient[20]' driven by pin 'U1/quotient_20' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_quotient[21]' driven by pin 'U1/quotient_21' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_quotient[22]' driven by pin 'U1/quotient_22' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_quotient[23]' driven by pin 'U1/quotient_23' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_quotient[24]' driven by pin 'U1/quotient_24' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_quotient[25]' driven by pin 'U1/quotient_25' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_quotient[26]' driven by pin 'U1/quotient_26' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_quotient[27]' driven by pin 'U1/quotient_27' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_quotient[28]' driven by pin 'U1/quotient_28' has no loads. (LINT-2)
+Warning: In design 'TRIANGLE', net 'div_quotient[29]' driven by pin 'U1/quotient_29' has no loads. (LINT-2)
+1
