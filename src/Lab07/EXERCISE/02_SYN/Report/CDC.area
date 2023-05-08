@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : CDC
+Version: T-2022.03
+Date   : Tue May  9 02:00:02 2023
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
+
+Number of ports:                           76
+Number of nets:                          1999
+Number of cells:                         1892
+Number of combinational cells:           1430
+Number of sequential cells:               458
+Number of macros/black boxes:               0
+Number of buf/inv:                        288
+Number of references:                     104
+
+Combinational area:              28164.628899
+Buf/Inv area:                     3382.948883
+Noncombinational area:           26857.353954
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 55021.982853
+Total area:                 undefined
+1

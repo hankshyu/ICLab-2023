@@ -1,0 +1,276 @@
+`ifdef RTL
+	`timescale 1ns/1ps
+	`define CYCLE_TIME_clk1 15.5
+	`define CYCLE_TIME_clk2 18.3
+`endif
+`ifdef GATE
+	`timescale 1ns/1ps
+	`define CYCLE_TIME_clk1 15.5
+	`define CYCLE_TIME_clk2 18.3
+`endif
+
+
+module PATTERN #(parameter DSIZE = 8,
+			   parameter ASIZE = 4)(
+	//Output Port
+	rst_n,
+	clk1,
+    clk2,
+	in_valid,
+	
+	doraemon_id,
+	size,
+	iq_score,
+	eq_score,
+	size_weight,
+	iq_weight,
+	eq_weight,
+
+    //Input Port
+    ready,
+	out_valid,
+	out
+	
+); 
+//================================================================
+//   INPUT AND OUTPUT DECLARATION                         
+//================================================================
+output reg	rst_n, clk1, clk2;
+
+//clk1 region
+output reg in_valid;
+output reg [4:0]doraemon_id;
+output reg [7:0]size, iq_score, eq_score;
+output reg [2:0]size_weight,iq_weight,eq_weight;
+input ready;
+
+//clk2 region
+input out_valid;
+input [7:0] out;
+
+//================================================================
+// parameters & integer
+//================================================================
+real	CYCLE_clk1 = `CYCLE_TIME_clk1;
+real	CYCLE_clk2 = `CYCLE_TIME_clk2;
+integer SEED = 17;
+integer PATNUM=1000;
+integer patcount;
+integer i, j, k;
+integer lat,total_latency;
+
+reg [5-1 : 0] d_id [0 : 4];
+reg [8-1 : 0] d_size [0 : 4];
+reg [8-1 : 0] d_iq [0 : 4];
+reg [8-1 : 0] d_eq [0 : 4];
+
+reg [3-1 : 0] size_w, iq_w, eq_w;
+
+
+reg [11-1 : 0] wtdscore1 [0 : 4];
+reg [11-1 : 0] wtdscore2 [0 : 4];
+reg [11-1 : 0] wtdscore3 [0 : 4];
+
+reg [13-1 : 0] dts [0 : 4];//dora total score
+
+reg [3-1 : 0] gold_doornum;
+reg [5-1 : 0] gold_doraid;
+
+//================================================================
+// clock
+//================================================================
+initial	clk1 = 0;
+always	#(15/2.0) clk1 = ~clk1;
+initial	clk2 = 0;
+always	#(20/2.0) clk2 = ~clk2;
+
+//================================================================
+// initial
+//================================================================
+
+initial begin
+
+	for(k = 0; k < 5; k = k+1)begin
+		d_id[k] = 0;
+		d_size[k] = 0;
+		d_iq[k] = 0;
+		d_eq[k] = 0;
+
+		wtdscore1[k] = 0;
+		wtdscore2[k] = 0;
+		wtdscore3[k] = 0;
+
+		dts[k] = 0;
+	end
+	size_w = 0;
+	iq_w = 0;
+	eq_w = 0;
+	gold_doornum = 0;
+	gold_doraid = 0;
+	patcount = 0;
+
+
+
+    rst_n = 1;    
+    
+	in_valid = 1'b0; 
+	doraemon_id = 'bx; 
+	{size, iq_score, eq_score} = 'bx;
+	{size_weight, iq_weight, eq_weight} = 'bx;
+
+
+	force clk1 = 0;
+	force clk2 = 0;
+	
+    total_latency = 0; 
+	reset_signal_task;
+	
+	startup_input_task;
+	compute_ans;
+	wait_OUT_VALID;
+	check_ans;
+	
+	for(patcount = 0; patcount < PATNUM; patcount = patcount+1) begin		
+		input_task;
+		compute_ans;
+		wait_OUT_VALID;
+		check_ans;
+	end
+	 
+	YOU_PASS_task;
+end
+
+task reset_signal_task; begin 
+    #(0.5);   rst_n=0;
+	
+	#(2.0);
+	if((out_valid !== 0) || (out !== 0) || (ready !== 0)) begin
+		$display ("--------------------------------------------------------------------------------");
+		$display ("                       ICLAB 07 FAIL !!                              ");
+		$display ("         Output signal should be 0 after initial RESET at %t         ",$time);
+		$display ("--------------------------------------------------------------------------------");
+
+		#(200);
+		$finish;
+	end
+	#(10);   rst_n = 1;
+	#(3);   
+	release clk1;
+	release clk2;
+end endtask
+
+
+task startup_input_task; begin
+	repeat(3) @(negedge clk1);
+	{d_id[2], d_size[2], d_iq[2], d_eq[2]} = {5'd19, 8'd115, 8'd141, 8'd185};
+	{d_id[0], d_size[0], d_iq[0], d_eq[0]} = { 5'd0, 8'd169, 8'd113,  8'd63};
+	{d_id[1], d_size[1], d_iq[1], d_eq[1]} = {5'd28,  8'd90,  8'd78, 8'd145};
+	{d_id[4], d_size[4], d_iq[4], d_eq[4]} = {5'd15, 8'd113, 8'd147, 8'd189};
+	{d_id[3], d_size[3], d_iq[3], d_eq[3]} = { 5'd3, 8'd196, 8'd113,  8'd53};
+
+	{size_w, iq_w, eq_w} = {3'd3, 3'd6, 3'd4};
+
+	for(i = 0; i <= 4; i = i+1)begin
+		@(negedge clk1);
+		in_valid = 1'b1;
+		doraemon_id = d_id[i];
+		size = d_size[i];
+		iq_score = d_iq[i];
+		eq_score = d_eq[i];
+	end
+	size_weight = size_w;
+	iq_weight = iq_w;
+	eq_weight = eq_w;
+	
+	@(negedge clk1);
+	in_valid = 1'b0;
+
+	doraemon_id = 'dx;
+	size = 'dx;
+	iq_score = 'dx;
+	eq_score = 'dx;
+	size_weight = 'dx;
+	iq_weight = 'dx;
+	eq_weight = 'dx;
+end endtask
+
+task input_task; begin
+	
+end endtask
+
+task compute_ans; begin
+	for(k = 0; k < 5; k = k+1)begin
+		wtdscore1[k] = d_size[k] * size_w;
+		wtdscore2[k] = d_iq[k] * iq_w;
+		wtdscore3[k] = d_eq[k] * eq_w;
+		dts[k] = wtdscore1[k] +  wtdscore2[k] +  wtdscore3[k];
+	end
+
+	if((dts[0] >= dts[1]) && (dts[0] >= dts[2]) && (dts[0] >= dts[3]) && (dts[0] >= dts[4]))begin
+		gold_doornum = 3'd0;
+		gold_doraid = d_id[0];
+	end else if((dts[1] >= dts[2]) && (dts[1] >= dts[3]) && (dts[1] >= dts[4]))begin
+		gold_doornum = 3'd1;
+		gold_doraid = d_id[1];
+	end else if((dts[2] >= dts[3]) && (dts[2] >= dts[4]))begin
+		gold_doornum = 3'd2;
+		gold_doraid = d_id[2];
+	end else if(dts[3] >= dts[4])begin
+		gold_doornum = 3'd3;
+		gold_doraid = d_id[3];
+	end else begin
+		gold_doornum = 3'd4;
+		gold_doraid = d_id[4];
+	end
+	
+end endtask
+
+
+task wait_OUT_VALID; begin
+  lat = -1;
+  while(out_valid !== 1) begin
+	lat = lat + 1;
+	if(lat == 15) begin//wait limit
+		$display ("--------------------------------------------------------------------------------");
+		$display ("                       ICLAB 07 FAIL !!                              ");
+		$display ("         The execution latency are over 15 cycles                    ");
+		$display ("--------------------------------------------------------------------------------");
+		repeat(2)@(negedge clk2);
+		$finish;
+	end
+	@(negedge clk2);
+  end
+  total_latency = total_latency + lat;
+end endtask
+
+
+
+task check_ans; begin
+	if((out[2 : 0] !== gold_doornum) || (out[4 : 0] !== gold_doraid)) 
+    begin
+		$display ("--------------------------------------------------------------------");
+		$display ("                     PATTERN #%d  FAILED!!!                         ",patcount);
+		$display ("--------------------------------------------------------------------");
+		$display ("Ans: Doornum, ID = (%02d, %03d), My Answer = (%02d, %03d))",	out[2 : 0], out[4:0], gold_doornum, gold_doraid);	
+		$display ("--------------------------------------------------------------------");
+		repeat(2) @(negedge clk2);		
+		$finish;
+    end
+	$display("\033[0;34mPASS PATTERN NO.%4d,\033[m \033[0;32mexecution cycle : %3d\033[m",patcount ,lat+1);
+end endtask
+
+
+task YOU_PASS_task; begin
+	$display ("--------------------------------------------------------------------------------");
+    $display ("                Congratulations >< !!               ");
+    $display ("         You have passed all patterns!         \n");
+    $display ("         		Latency Report:               ");
+    $display ("         Cycle latency: %8d, Clock period: %5.3f   ",total_latency, CYCLE_clk1);
+    $display ("         		Total latency: %f         ",total_latency*CYCLE_clk1);
+	$display ("--------------------------------------------------------------------------------");    
+    
+    #(200);
+    $finish;
+end endtask
+
+endmodule 

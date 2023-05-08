@@ -1,0 +1,83 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : CDC
+Version: T-2022.03
+Date   : Tue May  9 02:00:02 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: dora_eq_reg[0][5]
+              (rising edge-triggered flip-flop clocked by clk1)
+  Endpoint: m1_out_reg[9]
+            (rising edge-triggered flip-flop clocked by clk1)
+  Path Group: clk1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk1 (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dora_eq_reg[0][5]/CK (DFFHQX2)           0.00       0.00 r
+  dora_eq_reg[0][5]/Q (DFFHQX2)            0.35       0.35 r
+  U1978/Y (AND2X2)                         0.23       0.58 r
+  U1979/Y (INVX2)                          0.06       0.64 f
+  U1063/Y (OAI21X2)                        0.17       0.81 r
+  U1994/S (ADDFHX4)                        0.53       1.34 f
+  U2011/S (ADDFHX4)                        0.40       1.75 f
+  U1910/Y (XOR2X4)                         0.26       2.01 f
+  U1909/Y (NOR2X4)                         0.16       2.17 r
+  U1905/Y (NOR2X4)                         0.07       2.24 f
+  U1904/Y (NAND2X4)                        0.08       2.32 r
+  U1926/Y (NAND2X4)                        0.10       2.42 f
+  U1924/Y (AOI21X1)                        0.17       2.59 r
+  U2094/Y (XOR2X1)                         0.24       2.84 f
+  m1_out_reg[9]/D (DFFHQX4)                0.00       2.84 f
+  data arrival time                                   2.84
+
+  clock clk1 (rise edge)                   3.20       3.20
+  clock network delay (ideal)              0.00       3.20
+  m1_out_reg[9]/CK (DFFHQX4)               0.00       3.20 r
+  library setup time                      -0.36       2.84
+  data required time                                  2.84
+  -----------------------------------------------------------
+  data required time                                  2.84
+  data arrival time                                  -2.84
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: out_valid_reg
+              (rising edge-triggered flip-flop clocked by clk2)
+  Endpoint: out_valid (output port clocked by clk2)
+  Path Group: clk2
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk2 (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  out_valid_reg/CK (DFFRHQXL)              0.00       0.00 r
+  out_valid_reg/Q (DFFRHQXL)               0.86       0.86 r
+  U2108/Y (BUFX20)                         6.57       7.43 r
+  out_valid (out)                          0.00       7.43 r
+  data arrival time                                   7.43
+
+  clock clk2 (rise edge)                  18.40      18.40
+  clock network delay (ideal)              0.00      18.40
+  output external delay                   -9.20       9.20
+  data required time                                  9.20
+  -----------------------------------------------------------
+  data required time                                  9.20
+  data arrival time                                  -7.43
+  -----------------------------------------------------------
+  slack (MET)                                         1.77
+
+
+1

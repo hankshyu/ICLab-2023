@@ -1,0 +1,29 @@
+Warning: Dont_touch on net 'clk2' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'clk1' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Tue May  9 01:58:56 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               5
+    Cells do not drive (LINT-1)                                     5
+
+Nets                                                                1
+    Unloaded nets (LINT-2)                                          1
+--------------------------------------------------------------------------------
+
+Warning: In design 'CDC', cell 'C1785' does not drive any nets. (LINT-1)
+Warning: In design 'CDC', cell 'C1786' does not drive any nets. (LINT-1)
+Warning: In design 'CDC', cell 'C1792' does not drive any nets. (LINT-1)
+Warning: In design 'CDC', cell 'C1793' does not drive any nets. (LINT-1)
+Warning: In design 'CDC', cell 'C1801' does not drive any nets. (LINT-1)
+Warning: In design 'CDC', net 'af_wfull' driven by pin 'afifo/wfull' has no loads. (LINT-2)
+1

@@ -1,0 +1,71 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : CDC
+Version: T-2022.03
+Date   : Tue May  9 02:00:02 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: afifo/sync_r2w_m0/wq1_rptr_reg[0]
+              (rising edge-triggered flip-flop clocked by clk1)
+  Endpoint: afifo/sync_r2w_m0/wq2_rptr_reg[0]
+            (rising edge-triggered flip-flop clocked by clk1)
+  Path Group: clk1
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  afifo/sync_r2w_m0/wq1_rptr_reg[0]/CK (DFFRHQX1)         0.00       0.00 r
+  afifo/sync_r2w_m0/wq1_rptr_reg[0]/Q (DFFRHQX1)          0.28       0.28 f
+  afifo/sync_r2w_m0/wq2_rptr_reg[0]/D (DFFRHQX1)          0.00       0.28 f
+  data arrival time                                                  0.28
+
+  clock clk1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  afifo/sync_r2w_m0/wq2_rptr_reg[0]/CK (DFFRHQX1)         0.00       0.00 r
+  library hold time                                      -0.05      -0.05
+  data required time                                                -0.05
+  --------------------------------------------------------------------------
+  data required time                                                -0.05
+  data arrival time                                                 -0.28
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+  Startpoint: afifo/sync_w2r_m0/rq1_wptr_reg[0]
+              (rising edge-triggered flip-flop clocked by clk2)
+  Endpoint: afifo/sync_w2r_m0/rq2_wptr_reg[0]
+            (rising edge-triggered flip-flop clocked by clk2)
+  Path Group: clk2
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk2 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  afifo/sync_w2r_m0/rq1_wptr_reg[0]/CK (DFFRHQX1)         0.00       0.00 r
+  afifo/sync_w2r_m0/rq1_wptr_reg[0]/Q (DFFRHQX1)          0.28       0.28 f
+  afifo/sync_w2r_m0/rq2_wptr_reg[0]/D (DFFRHQX1)          0.00       0.28 f
+  data arrival time                                                  0.28
+
+  clock clk2 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  afifo/sync_w2r_m0/rq2_wptr_reg[0]/CK (DFFRHQX1)         0.00       0.00 r
+  library hold time                                      -0.05      -0.05
+  data required time                                                -0.05
+  --------------------------------------------------------------------------
+  data required time                                                -0.05
+  data arrival time                                                 -0.28
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+1

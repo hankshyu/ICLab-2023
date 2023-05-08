@@ -1,0 +1,15 @@
+rm -rf INCA_libs nWaveLog
+rm -rf *.fsdb
+rm -rf *.log*
+rm -rf *~
+rm -rf ./Netlist/*.*
+rm -rf ./Report/*.*
+rm -rf dwsvf*
+rm -rf alib*
+rm -rf default.svf
+rm -rf CONV-ver*
+rm -rf CONV.mr
+rm -rf SYNCHRONIZER.mr
+rm -rf SYN_XOR.mr
+rm -rf synchronizer-verilog*
+rm -rf syn_XOR-verilog*

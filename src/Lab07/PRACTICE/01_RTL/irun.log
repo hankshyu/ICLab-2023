@@ -1,0 +1,186 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on May 09, 2023 at 01:43:12 CST
+irun
+	TESTBED.v
+	-define RTL
+	-define FUNC
+	-debug
+	-incdir /usr/synthesis/dw/sim_ver/
+	-notimingchecks
+	-loadpli1 debpli:novas_pli_boot
+Recompiling... reason: file './TESTBED.v' is newer than expected.
+	expected: Fri Apr 14 23:34:56 2023
+	actual:   Sat Apr 15 00:12:18 2023
+ncvlog: *W,NOTIND: unable to access -INCDIR /usr/synthesis/dw/sim_ver/ (No such file or directory).
+file: TESTBED.v
+	module worklib.synchronizer:v
+		errors: 0, warnings: 0
+module synchronizer(D, Q, clk, rst_n);
+                  |
+ncvlog: *W,RECOME (./synchronizer.v,2|18): recompiling design unit worklib.synchronizer:v.
+	First compiled from line 2 of synchronizer.v.
+(`include file: ./synchronizer.v line 2, `include file: syn_XOR.v line 1, `include file: CONV.v line 2, `include file: PATTERN.v line 3, file: TESTBED.v line 2)
+	module worklib.synchronizer:v
+		errors: 0, warnings: 1
+	module worklib.syn_XOR:v
+		errors: 0, warnings: 0
+module synchronizer(D, Q, clk, rst_n);
+                  |
+ncvlog: *W,RECOME (./synchronizer.v,2|18): recompiling design unit worklib.synchronizer:v.
+	First compiled from line 2 of synchronizer.v.
+(`include file: ./synchronizer.v line 2, `include file: ./CONV.v line 1, file: TESTBED.v line 5)
+	module worklib.synchronizer:v
+		errors: 0, warnings: 1
+module synchronizer(D, Q, clk, rst_n);
+                  |
+ncvlog: *W,RECOME (./synchronizer.v,2|18): recompiling design unit worklib.synchronizer:v.
+	First compiled from line 2 of synchronizer.v.
+(`include file: ./synchronizer.v line 2, `include file: ./syn_XOR.v line 1, `include file: ./CONV.v line 2, file: TESTBED.v line 5)
+	module worklib.synchronizer:v
+		errors: 0, warnings: 1
+module syn_XOR (IN,OUT,TX_CLK,RX_CLK,RST_N);
+             |
+ncvlog: *W,RECOME (./syn_XOR.v,2|13): recompiling design unit worklib.syn_XOR:v.
+	First compiled from line 2 of syn_XOR.v.
+(`include file: ./syn_XOR.v line 2, `include file: ./CONV.v line 2, file: TESTBED.v line 5)
+module CONV(
+          |
+ncvlog: *W,RECOME (./CONV.v,3|10): recompiling design unit worklib.CONV:v.
+	First compiled from line 3 of CONV.v.
+(`include file: ./CONV.v line 3, file: TESTBED.v line 5)
+module synchronizer(D, Q, clk, rst_n);
+                  |
+ncvlog: *W,RECOME (./synchronizer.v,2|18): recompiling design unit worklib.synchronizer:v.
+	First compiled from line 2 of synchronizer.v.
+(`include file: ./synchronizer.v line 2, `include file: ./syn_XOR.v line 1, file: TESTBED.v line 6)
+	module worklib.synchronizer:v
+		errors: 0, warnings: 1
+module syn_XOR (IN,OUT,TX_CLK,RX_CLK,RST_N);
+             |
+ncvlog: *W,RECOME (./syn_XOR.v,2|13): recompiling design unit worklib.syn_XOR:v.
+	First compiled from line 2 of syn_XOR.v.
+(`include file: ./syn_XOR.v line 2, file: TESTBED.v line 6)
+	module worklib.syn_XOR:v
+		errors: 0, warnings: 1
+module synchronizer(D, Q, clk, rst_n);
+                  |
+ncvlog: *W,RECOME (./synchronizer.v,2|18): recompiling design unit worklib.synchronizer:v.
+	First compiled from line 2 of synchronizer.v.
+(`include file: ./synchronizer.v line 2, file: TESTBED.v line 7)
+	module worklib.synchronizer:v
+		errors: 0, warnings: 1
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		TESTBED
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.syn_XOR:v <0x012f3ea2>
+			streams:   5, words:  1041
+		worklib.synchronizer:v <0x1da5df03>
+			streams:   3, words:   704
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 5       5
+		Primitives:              2       1
+		Registers:              37      37
+		Scalar wires:            9       -
+		Vectored wires:         10       -
+		Always blocks:          14      14
+		Initial blocks:          7       7
+		Cont. assignments:       7       8
+		Pseudo assignments:      1       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'CONV.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8OOOOOOO8@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@O               .o8@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8:.                   .o@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@o                         :O@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                           .o8@@@@@@@
+@@@@@@@@@@@@@@@@@@888888@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@88888888OOO88@@@@@@@@@@                             :@@@@@@@
+@@@@@@@@@@@@8o:.          .o8@@@@@@@@@@@@@@@@@@@88Oo:.                      .:ooo                              o@@@@@@
+@@@@@@@@@@8                  .8@@@@@@@@@@@@8O:.           ..::::::ooo:.                                        .8@@@@@
+@@@@@@@O.                      8@@@@@8O:.        .:O88@@@@@@@@@@@@@@@@@@@@@@@88Oo.                             :8@@@@@
+@@@@@@o                        :8@@8.      .:o8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@OO:                         o@@@@@@
+@@@@@8                          :o.     .O8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@88@@8o.                      8@@@@@@
+@@@@:                               o8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8:          :OO.                  o@@@@@8@
+@@@o.                             :O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.              OO:              :8@@@@@@@@
+@@8.                           O8@@@@@@@@@@O:.    .oO@@@@@@@@@@@@@@@@@@@@@@@.                o88          O@@@@@@@@@@@
+@@O.                         :O@@@@@@@@@@:           o@@@@@@@@@@@@@@@@@@@@@@.                 .88o.     oO@@@@@@@@@@@@
+@@O.                       :8@@@@@@@@@@8:            .O@@@@@@@@@@@@@@@@@@@@@o                  .@@8O:   o8@@@@@8@@@@@@
+@@@:                      8@@@@@@@@@@O.               :8@@@@@@@@@@@@@@@@@@@@8o                  O@@@@.    8@@@@@@@@@8@
+@@@@o                    :@@@@@@@@@@o                 :8@@@@@@@@@@@@@@@@@@@@@@o                 O@@@@O:   .O@@@@@@@@@@
+@@@@@@.                .O@@@@@@@@@@8                  O@@@@@@@@@@@@@@@@@@@@@@@@@O             .O@@@@@@@@o   :@@@@@@@@@
+@@@@@@@O:.           .O@@@@@@@@@@@@o                 .8@@@@@@@@@@@@888O8@@@@@@@@@o.         .o8@@@@@@@@@@o   o8@@@@@@@
+@@@@@@@@@@8.         o@@@@@@@@@@@@@:                 o@@@@@@@O:.         :O@@@@@@@@Oo.   .:8@@@@@@@@@@@@@8     @@@@@@@
+@@@@@@@@@@@@@@@@:    8@@@@@@@@@@@@@8               :8@@@@8:              .O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@     @@@@@@
+@@@@@@@@@@@@@@@@    :@@@@@@@@@@@@@@@O.             8@@@@@8:              o@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8@@@    @@@@@@
+@@@@@@@@@@@@@@@O   :@@@@@@@@@@@@@@@@@@@8O:....:O8@@@@@@@@@@@o          O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8@@@@    @@@@@
+@@@@@@@@@@@@@@8:  :O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Oo.    .o8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    @@@@
+@@@@@@@@@@@@@8:   o@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8  :@@@@@@@@@@@@@@@@@@@@@@@8Ooo[0;40;31m:::::[0;40;37moOO8@@8OOo   o@@@
+@@@@@@@@@@@@@O   O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8. .8@@8o:O@@@@@@@@@@@@@8O[0;40;31m:::::::::::::::[0;40;37mO@@@O   :@@@
+@@@@@@@@@@@@@O   O@@@@@@@@@@@@@@@@@@88888@@@@@@@@@@@@@@@@@@O:oO8@8.  .:    o@@@@@@@@@@@@O[0;40;31m::::::::::::::::::[0;40;37mo8@O   :8@@
+@@@@@@@@@@@@@O   O@@@@@@@@@@@@@[1;40;31mO[0;40;31m:::::::::::::[0;40;37mo8@@@@@@@@@@@@8.              :@@@@@@@@@@8o[0;40;31m::::::::::::::::::::[0;40;37mo8@:   .@@
+@@@@@@@@@@@@O.  .8@@@@@@@@@@8Oo[0;40;31m.:::::::::::::::[0;40;37moO@@@@@@@@@@8:              .@@@@@@@@@@O[0;40;31m::::::::::::::::::::::[0;40;37mo8O    @@
+@@@@@@@@@@@@o   O@@@@@@@@@@8o[0;40;31m::::::::::::::::::::[0;40;37mo8@@@@@@@@@O              .@@@@@@@@@@O[0;40;31m::::::::::::::::::::::[0;40;37mo8O    @@
+@@@@@@@@@@@@O.  :8@@@@@@@@o[0;40;31m::::::::::::::::::::::::[0;40;37m8@@@@@@@@@              :@@@@@@@@@@8o[0;40;31m:::::::::::::::::::::[0;40;37mO@o    @@
+@@@@@@@@@@@@8:  :8@@@@@@@8[0;40;31m:::::::::::::::::::::::::[0;40;37m8@@@@@@@@@              O@@@@@@@@@@@O[0;40;31m::::::::::::::::::::[0;40;37mo8@:   :@@
+@@@@@@@@@@@@@O   O@@@@@@8O[0;40;31m:::::::::::::::::::::::::[0;40;37mo8@@@@@@@@O           .8@@@@@@@@@@@@@8o[0;40;31m::::::::::::::::[0;40;37mo8@@@   .O@@
+@@@@@@@@@@@@@O   O8@@@@@8O[0;40;31m:::::::::::::::::::::::::[0;40;37mo8@@@@@@@@@8:       .O@@@@@@@@@@@@@@@@@O[0;40;31m::::::::::::::[0;40;37mo@@@@8   .8@@
+@@@@@@@@@@@@@O   O@@@@@@@O[0;40;31m::::::::::::::::::::::::.[0;40;37mO8@@@@8OOooo:.     :@@@@@@@@@@@@@@@@@@@@8OOo[0;40;31m::::::[0;40;37mooO8@@@@@o   :@@@
+@@@@@@@@@@@@@8.  o8@@@@@@@[0;40;31m:::::::::::::::::::::::::[0;40;37m8@8O.                  .:O8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8o   o@@@@
+@@@@@@@@@@@@@8:  .O@@@@@@@O[0;40;31m:::::::::::::::::::::::[0;40;37mo@O.    .:oOOOo::.           .:OO8@@@@@@@@@@@@@@@@@@@@@@@@O.  :8@@@@
+@@@@@@@@@@@@@@8.  :8@@@@@@@8o[0;40;31m:::::::::::::::::::[0;40;37mO8@O    8@@@@@@@@@@@@@@@@@8O..         :oO8@@@@@@@@@@@@@@@8o.  .8@@@@@
+@@@@@@@@@@@@@@@O   :8@@@@@@@@8O[0;40;31m:::::::::::::::[0;40;37mO8@@@:   .@@@@@@@@@@@@@@@@@@@@@@88Oo:.       .:O8@@@@@@@@@@@.    O@@@@@@
+@@@@@@@@@@@@@@@8    O@@@@@@@@@@8Oo[0;40;31m::::::::[0;40;37mooO8@@@@@O.   O@@@@@@@@@@@@@@@@@@@@@@@@@@@@8:.      .o@@@@@@@@@o    O@@@@@@@
+@@@@@@@@@@@@@@@@o    8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8:    :O8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@o.    :O@@@8o.  .o@@@@@@@@@
+@@@@@@@@@@@@@@@@@:    :8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8:      ...:oO8@@@@@@@@@@@@@@@@@@@@@@@@@O:   .O8.    .O@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@O:    :@@@@@@@@@@@@@@@@@@@@@@@@@@@O.   [0;40;33m...[0;40;37m          O@@@@@@@@@@@@@@@@@@@@@@@O       .O8@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@:    :O@@@@@@@@@@@@@@@@@@@@@@@@@O   [0;40;33m:O888Ooo:..[0;40;37m    :8@@@@@@@@@@@@@@@@@@@@O:     :O@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@8o     .O8@@@@@@@@@@@@@@@@@@@@@O:  [0;40;33m.o8888888888O.[0;40;37m  .O@@@@@@@@@@@OO888@8O:.    :O@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@O        o8@@@@@@@@@@@@@@@@@@@o   [0;40;33m:88888888888o[0;40;37m   o8@@@@@@@:              o8@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@:          .:88@@@@@@@@@@@@@8:   [0;40;33mo8888O88888O.[0;40;37m  .8@@@@@@@O    [1;40;33m..[0;40;37m     .::O@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@O.                  .:o          [0;40;33m8888[0;40;37m@@@@[0;40;33m888o.[0;40;37m  o8@@@@@8o   [0;40;33mo88o.[0;40;37m   @@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@o        .OOo:.                 [0;40;33mO88[0;40;37m@@@@@[0;40;33m888o.[0;40;37m  :8@@@@@o   [0;40;33m:O88.[0;40;37m   .@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@8o         :@@@@@O:             [0;40;33m.O8[0;40;37m@@@@[0;40;33m8888O:[0;40;37m   .O88O:   [0;40;33m.O88O[0;40;37m    O@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@:                             [0;40;33m.o8[0;40;37m@@@@[0;40;33m[0;40;33m888888O:[0;40;37m         [0;40;33m.888O:[0;40;37m   o8@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@8o                            [0;40;33m.O[0;40;37m@@@@[0;40;33m888888888Oo:...ooO8888:   [0;40;37m:8@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8o                         [0;40;33mo8[0;40;37m@@@@[0;40;33m888888888888888888888O.[0;40;37m  :8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@o.                      [0;40;33m.8[0;40;37m@@@@[0;40;33m888888888888888888888O:[0;40;37m   o@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@O:.                 [0;40;33m.o8[0;40;37m@@@@@[0;40;33m88888888888888888888Oo[0;40;37m   :8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8OOo::::::.   [0;40;33mo888[0;40;37m@@@@@[0;40;33m88888888888888888888o.[0;40;37m   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8:   [0;40;33mo888[0;40;37m@@@@@[0;40;33m88888888888888888888.[0;40;37m   .@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8:   [0;40;33mo888[0;40;37m@@@@@[0;40;33m88888888888888888888O[0;40;37m   .O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@O.   [0;40;33mO8888[0;40;37m@@@[0;40;33m88888888888888888888O.[0;40;37m   O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@o    [0;40;33m8888888888888888888888888888o[0;40;37m   o8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.    [0;40;33m. ..:oOO8888888888888888888o.[0;40;37m  .8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@O.           [0;40;33m..:oO8888888888888O.[0;40;37m  .O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8OO.             [0;40;33m.oOO88O.[0;40;37m   O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@88:..          [0;40;33m...[0;40;37m    8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@88Ooo:.          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8OoOO@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+----------------------------------------------------------------------------------------------------------------------
+                                                  Congratulations!                						            
+                                           You have passed all patterns!          						            
+                                           Your total latency =       19092 ns         						            
+----------------------------------------------------------------------------------------------------------------------
+Simulation complete via $finish(1) at time 156976200 PS + 0
+./PATTERN.v:258 $finish;	
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on May 09, 2023 at 01:43:13 CST  (total: 00:00:01)

@@ -1,0 +1,2 @@
+rm -rf Lab07* *.txt
+rm -rf *.tar 

@@ -1,0 +1,1163 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version T-2022.03 for linux64 - Feb 22, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+#  Set Libraries
+#======================================================
+set search_path {./../01_RTL \
+				 ./ \
+				 ~iclabta01/umc018/Synthesis/ \
+				 /usr/synthesis/libraries/syn/ \
+				 /usr/synthesis/dw/}
+./../01_RTL  ./  ~iclabta01/umc018/Synthesis/  /usr/synthesis/libraries/syn/  /usr/synthesis/dw/
+set synthetic_library {dw_foundation.sldb}
+dw_foundation.sldb
+set link_library {* dw_foundation.sldb standard.sldb slow.db}
+* dw_foundation.sldb standard.sldb slow.db
+set target_library {slow.db}
+slow.db
+#======================================================
+#  Global Parameters
+#======================================================
+set DESIGN "CDC"
+CDC
+set CYCLE1 3.2
+3.2
+set CYCLE2 18.4
+18.4
+set C1_DLY  [expr 0.5*$CYCLE1]
+1.6
+set C2_DLY [expr 0.5*$CYCLE2]
+9.2
+#======================================================
+#  Read RTL Code
+#======================================================
+set hdlin_auto_save_templates TRUE
+TRUE
+read_sverilog $DESIGN.v
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/standard.sldb'
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/gtech.db'
+  Loading link library 'slow'
+  Loading link library 'gtech'
+Loading sverilog file '/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v
+Opening include file ./../01_RTL/AFIFO.v
+Opening include file ./../01_RTL/sync_r2w.v
+Opening include file ./../01_RTL/sync_w2r.v
+Opening include file ./../01_RTL/fifomem.v
+Opening include file ./../01_RTL/rptr_empty.v
+Opening include file ./../01_RTL/wptr_full.v
+
+Inferred memory devices in process
+	in routine sync_r2w line 19 in file
+		'./../01_RTL/sync_r2w.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    wq2_rptr_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    wq1_rptr_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sync_w2r line 19 in file
+		'./../01_RTL/sync_w2r.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rq2_wptr_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    rq1_wptr_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine fifomem line 27 in file
+		'./../01_RTL/fifomem.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|    fifomem/25    |   16   |    8    |      4       |
+======================================================
+
+Inferred memory devices in process
+	in routine rptr_empty line 24 in file
+		'./../01_RTL/rptr_empty.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      rbin_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      rptr_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine rptr_empty line 40 in file
+		'./../01_RTL/rptr_empty.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rempty_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine wptr_full line 23 in file
+		'./../01_RTL/wptr_full.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      wbin_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      wptr_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine wptr_full line 39 in file
+		'./../01_RTL/wptr_full.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      wfull_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 130 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           131            |    auto/auto     |
+|           147            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 161 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           164            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 274 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           275            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 309 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           314            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 366 in file
+	'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           369            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine CDC line 126 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CDC line 161 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       cnt_reg       | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CDC line 181 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   stopmachine_reg   | Flip-flop |  13   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CDC line 189 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     dora_eq_reg     | Flip-flop |  40   |  Y  | N  | N  | N  | N  | N  | N  |
+|     dora_id_reg     | Flip-flop |  25   |  Y  | N  | N  | N  | N  | N  | N  |
+|    dora_size_reg    | Flip-flop |  40   |  Y  | N  | N  | N  | N  | N  | N  |
+|     dora_iq_reg     | Flip-flop |  40   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CDC line 247 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      w_eq_reg       | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|     w_size_reg      | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|      w_iq_reg       | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CDC line 257 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   dora_score2_reg   | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CDC line 262 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   dora_score3_reg   | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CDC line 269 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     m1_out_reg      | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CDC line 274 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     cmp1_op_reg     | Flip-flop |  26   |  Y  | N  | N  | N  | N  | N  | N  |
+|     cmp2_op_reg     | Flip-flop |  26   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CDC line 300 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cmp_rst1_reg     | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|    cmp_rst2_reg     | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CDC line 309 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    ans1_door_reg    | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    ans1_door_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CDC line 334 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    ans1_idx_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CDC line 345 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     af_winc_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CDC line 357 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     af_rinc_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CDC line 366 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      ready_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CDC line 379 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    out_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CDC line 386 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/CDC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       out_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/sync_r2w.db:sync_r2w'
+Loaded 7 designs.
+Current design is 'sync_r2w'.
+sync_r2w sync_w2r fifomem rptr_empty wptr_full AFIFO CDC
+current_design $DESIGN
+Current design is 'CDC'.
+{CDC}
+#======================================================
+#  Global Setting
+#======================================================
+set_wire_load_mode top
+1
+set sync_r2w_name "sync_r2w"
+sync_r2w
+set sync_w2r_name "sync_w2r"
+sync_w2r
+#======================================================
+#  Set Design Constraints
+#======================================================
+set_dont_use slow/JKFF*
+Information: Building the design 'AFIFO' instantiated from design 'CDC' with
+	the parameters "DSIZE=8,ASIZE=4". (HDL-193)
+Presto compilation completed successfully. (AFIFO_DSIZE8_ASIZE4)
+Information: Building the design 'fifomem' instantiated from design 'AFIFO_DSIZE8_ASIZE4' with
+	the parameters "8,4". (HDL-193)
+
+Inferred memory devices in process
+	in routine fifomem_DSIZE8_ASIZE4 line 27 in file
+		'./../01_RTL/fifomem.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+==============================================================
+|     block name/line      | Inputs | Outputs | # sel inputs |
+==============================================================
+| fifomem_DSIZE8_ASIZE4/25 |   16   |    8    |      4       |
+==============================================================
+Presto compilation completed successfully. (fifomem_DSIZE8_ASIZE4)
+Information: Building the design 'rptr_empty' instantiated from design 'AFIFO_DSIZE8_ASIZE4' with
+	the parameters "4". (HDL-193)
+
+Inferred memory devices in process
+	in routine rptr_empty_ASIZE4 line 24 in file
+		'./../01_RTL/rptr_empty.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      rbin_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      rptr_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine rptr_empty_ASIZE4 line 40 in file
+		'./../01_RTL/rptr_empty.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rempty_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (rptr_empty_ASIZE4)
+Information: Building the design 'wptr_full' instantiated from design 'AFIFO_DSIZE8_ASIZE4' with
+	the parameters "4". (HDL-193)
+
+Inferred memory devices in process
+	in routine wptr_full_ASIZE4 line 23 in file
+		'./../01_RTL/wptr_full.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      wbin_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      wptr_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine wptr_full_ASIZE4 line 39 in file
+		'./../01_RTL/wptr_full.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      wfull_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (wptr_full_ASIZE4)
+1
+create_clock -name "clk1" -period $CYCLE1 clk1
+1
+create_clock -name "clk2" -period $CYCLE2 clk2 
+1
+read_sdc $DESIGN\.sdc
+
+Reading SDC version 2.1...
+1
+set_dont_touch [all_clocks]
+1
+set_ideal_network       [all_clocks]
+1
+set_input_delay [expr 0.5*$CYCLE1] -clock clk1 [all_inputs]
+1
+set_output_delay [expr 0.5*$CYCLE1] -clock clk1 [get_ports ready]
+1
+set_output_delay [expr 0.5*$CYCLE2] -clock clk2 [get_ports out]
+1
+set_output_delay [expr 0.5*$CYCLE2] -clock clk2 [get_ports out_valid]
+1
+set_input_delay 0 -clock clk1 clk1
+1
+set_input_delay 0 -clock clk2 clk2
+1
+set_input_delay 0 -clock clk1 rst_n 
+1
+set_input_delay 0 -clock clk2 rst_n
+1
+# modified accordng to announcement on 04/15 03:55
+set_load 0.05 [get_ports ready]
+1
+set_load 20 [get_ports out]
+1
+set_load 20 [get_ports out_valid]
+1
+#======================================================
+#  Optimization  
+#======================================================
+uniquify
+Warning: Dont_touch on net 'clk2' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'clk1' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+1
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants
+1
+read_sverilog sync_r2w.v
+Loading sverilog file '/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/sync_r2w.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/sync_r2w.v
+
+Inferred memory devices in process
+	in routine sync_r2w line 19 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/sync_r2w.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    wq2_rptr_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    wq1_rptr_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/sync_r2w.db:sync_r2w'
+Warning: Overwriting design file '/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/sync_r2w.db'. (DDB-24)
+Loaded 1 design.
+Current design is 'sync_r2w'.
+sync_r2w
+compile
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | S-2021.06-DWBB_202106.0 |     *     |
+| Licensed DW Building Blocks        | S-2021.06-DWBB_202106.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 11                                     |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 10                                     |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 1                                      |
+| Number of VT class                                      | 0                                      |
+| Number of Clocks                                        | 0                                      |
+| Number of Dont Touch cells                              | 0                                      |
+| Number of Dont Touch nets                               | 0                                      |
+| Number of size only cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'sync_r2w'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'sync_r2w' has no optimization constraints set. (OPT-108)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01    1064.4      0.00       0.0       0.0                          
+    0:00:01    1064.4      0.00       0.0       0.0                          
+    0:00:01    1064.4      0.00       0.0       0.0                          
+    0:00:01    1064.4      0.00       0.0       0.0                          
+    0:00:01    1064.4      0.00       0.0       0.0                          
+    0:00:01    1064.4      0.00       0.0       0.0                          
+    0:00:01    1064.4      0.00       0.0       0.0                          
+    0:00:01     698.5      0.00       0.0       0.0                          
+    0:00:01     698.5      0.00       0.0       0.0                          
+    0:00:01     698.5      0.00       0.0       0.0                          
+    0:00:01     698.5      0.00       0.0       0.0                          
+    0:00:01     698.5      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     698.5      0.00       0.0       0.0                          
+    0:00:01     698.5      0.00       0.0       0.0                          
+    0:00:01     698.5      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     698.5      0.00       0.0       0.0                          
+    0:00:01     698.5      0.00       0.0       0.0                          
+    0:00:01     698.5      0.00       0.0       0.0                          
+    0:00:01     698.5      0.00       0.0       0.0                          
+    0:00:01     698.5      0.00       0.0       0.0                          
+    0:00:01     698.5      0.00       0.0       0.0                          
+    0:00:01     698.5      0.00       0.0       0.0                          
+    0:00:01     698.5      0.00       0.0       0.0                          
+    0:00:01     698.5      0.00       0.0       0.0                          
+    0:00:01     698.5      0.00       0.0       0.0                          
+    0:00:01     698.5      0.00       0.0       0.0                          
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+set_dont_touch sync_r2w
+1
+read_sverilog sync_w2r.v
+Loading sverilog file '/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/sync_w2r.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/sync_w2r.v
+
+Inferred memory devices in process
+	in routine sync_w2r line 19 in file
+		'/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/sync_w2r.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rq2_wptr_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    rq1_wptr_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/sync_w2r.db:sync_w2r'
+Warning: Overwriting design file '/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/01_RTL/sync_w2r.db'. (DDB-24)
+Loaded 1 design.
+Current design is 'sync_w2r'.
+sync_w2r
+compile
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 11                                     |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 10                                     |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 1                                      |
+| Number of VT class                                      | 0                                      |
+| Number of Clocks                                        | 0                                      |
+| Number of Dont Touch cells                              | 0                                      |
+| Number of Dont Touch nets                               | 0                                      |
+| Number of size only cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'sync_w2r'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'sync_w2r' has no optimization constraints set. (OPT-108)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00    1064.4      0.00       0.0       0.0                          
+    0:00:00    1064.4      0.00       0.0       0.0                          
+    0:00:00    1064.4      0.00       0.0       0.0                          
+    0:00:00    1064.4      0.00       0.0       0.0                          
+    0:00:00    1064.4      0.00       0.0       0.0                          
+    0:00:00    1064.4      0.00       0.0       0.0                          
+    0:00:00    1064.4      0.00       0.0       0.0                          
+    0:00:00     698.5      0.00       0.0       0.0                          
+    0:00:00     698.5      0.00       0.0       0.0                          
+    0:00:00     698.5      0.00       0.0       0.0                          
+    0:00:00     698.5      0.00       0.0       0.0                          
+    0:00:00     698.5      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     698.5      0.00       0.0       0.0                          
+    0:00:00     698.5      0.00       0.0       0.0                          
+    0:00:00     698.5      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     698.5      0.00       0.0       0.0                          
+    0:00:00     698.5      0.00       0.0       0.0                          
+    0:00:00     698.5      0.00       0.0       0.0                          
+    0:00:00     698.5      0.00       0.0       0.0                          
+    0:00:00     698.5      0.00       0.0       0.0                          
+    0:00:00     698.5      0.00       0.0       0.0                          
+    0:00:00     698.5      0.00       0.0       0.0                          
+    0:00:00     698.5      0.00       0.0       0.0                          
+    0:00:00     698.5      0.00       0.0       0.0                          
+    0:00:00     698.5      0.00       0.0       0.0                          
+    0:00:00     698.5      0.00       0.0       0.0                          
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+set_dont_touch sync_w2r
+1
+current_design $DESIGN
+Current design is 'CDC'.
+{CDC}
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Analyzing: "/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db"
+Library analysis succeeded.
+Warning: Dont_touch on net 'clk2' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'clk1' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler WLM                                                               |
+| Comand line  | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 950                                    |
+| Number of User Hierarchies                              | 6                                      |
+| Sequential Cell Count                                   | 460                                    |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 3                                      |
+| Number of VT class                                      | 0                                      |
+| Number of Clocks                                        | 2                                      |
+| Number of Dont Touch cells                              | 142                                    |
+| Number of Dont Touch nets                               | 41                                     |
+| Number of size only cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 6 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'CDC'
+
+Warning: Dont_touch on net 'clk2' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'clk1' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+Loaded alib file './alib-52/slow.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy afifo before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy afifo/fifomem_m0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy afifo/rptr_empty_m0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy afifo/wptr_full_m0 before Pass 1 (OPT-776)
+Information: Ungrouping 4 of 7 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'CDC'
+Information: Added key list 'DesignWare' to design 'CDC'. (DDB-72)
+Information: In design 'CDC', the register 'afifo/wptr_full_m0/wbin_reg[4]' is removed because it is merged to 'afifo/wptr_full_m0/wptr_reg[4]'. (OPT-1215)
+Information: In design 'CDC', the register 'afifo/rptr_empty_m0/rbin_reg[4]' is removed because it is merged to 'afifo/rptr_empty_m0/rptr_reg[4]'. (OPT-1215)
+ Implement Synthetic for 'CDC'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1' in the library 'slow' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:04   80452.3      0.17       4.4   83029.8                           10994662.0000
+    0:00:05   80229.4      0.28       9.5   83029.8                           10969851.0000
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:05   80289.3      0.28       9.5   83029.8                           10983750.0000
+    0:00:05   80279.3      0.28       9.9   83029.8                           10982980.0000
+
+  Beginning Global Optimizations
+  ------------------------------
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:05   60104.7      0.25      16.7   83029.8                           6842454.0000
+    0:00:07   62589.5      0.04       1.0   83029.8                           7253271.0000
+    0:00:07   62589.5      0.04       1.0   83029.8                           7253271.0000
+    0:00:07   62486.4      0.04       1.3   83029.8                           7225760.5000
+    0:00:08   62483.1      0.04       1.3   83029.8                           7225639.5000
+    0:00:08   62483.1      0.04       1.3   83029.8                           7225639.5000
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:08   61934.2      0.04       1.0   83029.8                           7116905.0000
+    0:00:08   61917.6      0.04       1.0   83029.8                           7113940.0000
+    0:00:08   61917.6      0.04       1.0   83029.8                           7113940.0000
+    0:00:08   60004.9      0.05       0.6   83029.8                           6614244.0000
+    0:00:08   60004.9      0.05       0.6   83029.8                           6614244.0000
+    0:00:09   60650.3      0.03       0.1   83029.8                           6722468.5000
+    0:00:10   60650.3      0.03       0.1   83029.8                           6722468.5000
+    0:00:10   60623.6      0.01       0.0   83029.8                           6717742.0000
+    0:00:10   60623.6      0.01       0.0   83029.8                           6717742.0000
+    0:00:10   60663.6      0.01       0.0   83029.8                           6726933.0000
+    0:00:10   60663.6      0.01       0.0   83029.8                           6726933.0000
+    0:00:10   60783.3      0.00       0.0   83029.8                           6746332.5000
+    0:00:10   60783.3      0.00       0.0   83029.8                           6746332.5000
+    0:00:10   60783.3      0.00       0.0   83029.8                           6746332.5000
+    0:00:10   60783.3      0.00       0.0   83029.8                           6746332.5000
+    0:00:10   60783.3      0.00       0.0   83029.8                           6746332.5000
+    0:00:10   60783.3      0.00       0.0   83029.8                           6746332.5000
+    0:00:10   60783.3      0.00       0.0   83029.8                           6746332.5000
+    0:00:10   60783.3      0.00       0.0   83029.8                           6746332.5000
+    0:00:10   60783.3      0.00       0.0   83029.8                           6746332.5000
+    0:00:10   60783.3      0.00       0.0   83029.8                           6746332.5000
+    0:00:10   60783.3      0.00       0.0   83029.8                           6746332.5000
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:10   60783.3      0.00       0.0   83029.8                           6746332.5000
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:00:10   60823.2      0.00       0.0   83027.2                           6754734.0000
+    0:00:10   60823.2      0.00       0.0   83027.2                           6754734.0000
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:10   60823.2      0.00       0.0   83027.2                           6754734.0000
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+    0:00:11   56811.6      0.00       0.0   83027.2                           5587018.0000
+    0:00:11   56811.6      0.00       0.0   83027.2                           5587018.0000
+    0:00:11   56811.6      0.00       0.0   83027.2                           5587018.0000
+    0:00:11   56399.1      0.00       0.0   83027.2                           5483986.5000
+    0:00:11   56399.1      0.00       0.0   83027.2                           5483986.5000
+    0:00:11   56399.1      0.00       0.0   83027.2                           5483986.5000
+    0:00:11   56399.1      0.00       0.0   83027.2                           5483986.5000
+    0:00:11   56399.1      0.00       0.0   83027.2                           5483986.5000
+    0:00:11   56399.1      0.00       0.0   83027.2                           5483986.5000
+    0:00:11   56399.1      0.00       0.0   83027.2                           5483986.5000
+    0:00:11   56399.1      0.00       0.0   83027.2                           5483986.5000
+    0:00:11   56399.1      0.00       0.0   83027.2                           5483986.5000
+    0:00:11   56399.1      0.00       0.0   83027.2                           5483986.5000
+    0:00:11   56399.1      0.00       0.0   83027.2                           5483986.5000
+    0:00:11   56399.1      0.00       0.0   83027.2                           5483986.5000
+    0:00:11   56399.1      0.00       0.0   83027.2                           5483986.5000
+    0:00:11   56399.1      0.00       0.0   83027.2                           5483986.5000
+    0:00:11   56399.1      0.00       0.0   83027.2                           5483986.5000
+    0:00:11   56399.1      0.00       0.0   83027.2                           5483986.5000
+    0:00:11   56399.1      0.00       0.0   83027.2                           5483986.5000
+    0:00:11   56399.1      0.00       0.0   83027.2                           5483986.5000
+    0:00:11   56399.1      0.00       0.0   83027.2                           5483986.5000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:11   56399.1      0.00       0.0   83027.2                           5483986.5000
+    0:00:11   56019.9      0.00       0.0   83027.2                           5476190.0000
+    0:00:11   56019.9      0.00       0.0   83027.2                           5476190.0000
+    0:00:11   56019.9      0.00       0.0   83027.2                           5476190.0000
+    0:00:11   55999.9      0.00       0.0   83027.2                           5463505.0000
+    0:00:11   55880.2      0.00       0.0   83027.2                           5419952.5000
+    0:00:11   55880.2      0.00       0.0   83027.2                           5419952.5000
+    0:00:11   55880.2      0.00       0.0   83027.2                           5419952.5000
+    0:00:11   55880.2      0.00       0.0   83027.2                           5419952.5000
+    0:00:11   55880.2      0.00       0.0   83027.2                           5419952.5000
+    0:00:11   55880.2      0.00       0.0   83027.2                           5419952.5000
+    0:00:12   55022.0      0.00       0.0   83027.2                           5285733.5000
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#======================================================
+#  Output Reports 
+#======================================================
+report_timing >  Report/$DESIGN\.timing
+report_timing -delay_type min  >  Report/$DESIGN\.timing_hold
+report_area >  Report/$DESIGN\.area
+report_resource >  Report/$DESIGN\.resource
+#======================================================
+#  Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/02_SYN/Netlist/CDC_SYN.v'.
+1
+write_sdc Netlist/$DESIGN\_SYN.sdc
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/RAID2/COURSE/iclab/iclab105/Lab07/EXERCISE/02_SYN/Netlist/CDC_SYN.sdf'. (WT-3)
+1
+report_area
+ 
+****************************************
+Report : area
+Design : CDC
+Version: T-2022.03
+Date   : Tue May  9 02:00:02 2023
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
+
+Number of ports:                           76
+Number of nets:                          1999
+Number of cells:                         1892
+Number of combinational cells:           1430
+Number of sequential cells:               458
+Number of macros/black boxes:               0
+Number of buf/inv:                        288
+Number of references:                     104
+
+Combinational area:              28164.628899
+Buf/Inv area:                     3382.948883
+Noncombinational area:           26857.353954
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 55021.982853
+Total area:                 undefined
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : CDC
+Version: T-2022.03
+Date   : Tue May  9 02:00:02 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: dora_eq_reg_0__5_
+              (rising edge-triggered flip-flop clocked by clk1)
+  Endpoint: m1_out_reg_9_
+            (rising edge-triggered flip-flop clocked by clk1)
+  Path Group: clk1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk1 (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dora_eq_reg_0__5_/CK (DFFHQX2)           0.00       0.00 r
+  dora_eq_reg_0__5_/Q (DFFHQX2)            0.35       0.35 r
+  U1978/Y (AND2X2)                         0.23       0.58 r
+  U1979/Y (INVX2)                          0.06       0.64 f
+  U1063/Y (OAI21X2)                        0.17       0.81 r
+  U1994/S (ADDFHX4)                        0.53       1.34 f
+  U2011/S (ADDFHX4)                        0.40       1.75 f
+  U1910/Y (XOR2X4)                         0.26       2.01 f
+  U1909/Y (NOR2X4)                         0.16       2.17 r
+  U1905/Y (NOR2X4)                         0.07       2.24 f
+  U1904/Y (NAND2X4)                        0.08       2.32 r
+  U1926/Y (NAND2X4)                        0.10       2.42 f
+  U1924/Y (AOI21X1)                        0.17       2.59 r
+  U2094/Y (XOR2X1)                         0.24       2.84 f
+  m1_out_reg_9_/D (DFFHQX4)                0.00       2.84 f
+  data arrival time                                   2.84
+
+  clock clk1 (rise edge)                   3.20       3.20
+  clock network delay (ideal)              0.00       3.20
+  m1_out_reg_9_/CK (DFFHQX4)               0.00       3.20 r
+  library setup time                      -0.36       2.84
+  data required time                                  2.84
+  -----------------------------------------------------------
+  data required time                                  2.84
+  data arrival time                                  -2.84
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: out_valid_reg
+              (rising edge-triggered flip-flop clocked by clk2)
+  Endpoint: out_valid (output port clocked by clk2)
+  Path Group: clk2
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk2 (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  out_valid_reg/CK (DFFRHQXL)              0.00       0.00 r
+  out_valid_reg/Q (DFFRHQXL)               0.86       0.86 r
+  U2108/Y (BUFX20)                         6.57       7.43 r
+  out_valid (out)                          0.00       7.43 r
+  data arrival time                                   7.43
+
+  clock clk2 (rise edge)                  18.40      18.40
+  clock network delay (ideal)              0.00      18.40
+  output external delay                   -9.20       9.20
+  data required time                                  9.20
+  -----------------------------------------------------------
+  data required time                                  9.20
+  data arrival time                                  -7.43
+  -----------------------------------------------------------
+  slack (MET)                                         1.77
+
+
+1
+#======================================================
+#  Finish and Quit
+#======================================================
+exit
+
+Memory usage for this session 199 Mbytes.
+Memory usage for this session including child processes 199 Mbytes.
+CPU usage for this session 65 seconds ( 0.02 hours ).
+Elapsed time for this session 70 seconds ( 0.02 hours ).
+
+Thank you...

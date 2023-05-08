@@ -1,0 +1,93 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on May 09, 2023 at 01:58:03 CST
+irun
+	TESTBED.v
+	-define RTL
+	-debug
+	-notimingchecks
+	-loadpli1 debpli:novas_pli_boot
+file: TESTBED.v
+		errors: 0, warnings: 0
+	module worklib.sync_r2w:v
+		errors: 0, warnings: 0
+	module worklib.sync_w2r:v
+		errors: 0, warnings: 0
+	module worklib.fifomem:v
+		errors: 0, warnings: 0
+	module worklib.rptr_empty:v
+		errors: 0, warnings: 0
+	module worklib.wptr_full:v
+		errors: 0, warnings: 0
+	module worklib.AFIFO:v
+		errors: 0, warnings: 0
+	module worklib.CDC:v
+		errors: 0, warnings: 0
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		TESTBED
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.CDC:v <0x36793d17>
+			streams:  65, words: 30155
+			streams:  24, words: 73442
+		worklib.TESTBED:v <0x3e32571d>
+			streams:   1, words:   613
+		worklib.fifomem:v <0x5c5d3306>
+			streams:   3, words:  1168
+		worklib.rptr_empty:v <0x51c4ae36>
+			streams:   9, words:  2112
+		worklib.sync_r2w:v <0x41417322>
+			streams:   3, words:   839
+		worklib.sync_w2r:v <0x7b17e188>
+			streams:   3, words:   839
+		worklib.wptr_full:v <0x687b238e>
+			streams:   9, words:  2142
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 9       9
+		Registers:              83      83
+		Scalar wires:           16       -
+		Vectored wires:         23       -
+		Always blocks:          31      31
+		Initial blocks:          7       7
+		Cont. assignments:      17      17
+		Pseudo assignments:      2       2
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+SVSEED default: 1
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'CDC.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+
+
+
+
+        ----------------------------               
+        --                        --       |__||  
+        --  Congratulations !!    --      / O.O  | 
+        --                        --    /_____   | 
+        --  [0;32mSimulation PASS!![m     --   /^ ^ ^ \  |
+        --                        --  |^ ^ ^ ^ |w| 
+        ----------------------------   \m___m__|_|
+
+
+--------------------------------------------------------------------
+                         Congratulations!                           
+                  You have passed all patterns!                     
+                  Total latency :       13929 cycles                     
+--------------------------------------------------------------------
+Simulation complete via $finish(1) at time 257084800 PS + 0
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on May 09, 2023 at 01:58:05 CST  (total: 00:00:02)
