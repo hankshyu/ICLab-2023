@@ -281,7 +281,7 @@ int main(){
     //fill up dat file
     while (addr <= ADDR_END){
         dat << "@" << hex << addr << endl;
-        dat << "FF 9F"<<endl; // j 0x1000
+        dat << "00 90"<<endl; // j 0x1000
         addr += 2;
     }
     
