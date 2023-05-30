@@ -185,16 +185,22 @@ reg[10*8:1] gray_txtpf   = "\033[1;37m";
 reg[10*8:1] white_txtpf  = "\033[1;38m";
 
 ////////////////////////////////////////////////
-// Integer & PARAM declaraton
+// PARAM declaraton (change here if not developer)
 ////////////////////////////////////////////////
-parameter PRINT_CAL = 1;
+parameter SEED 	= 17;
+parameter PRINT_CAL = 1; // Turn this to 1 for detailed info, 0 for GATE-sim, POST-sim...
+
+////////////////////////////////////////////////
+// Integer declaraton
+////////////////////////////////////////////////
 integer data_file_ptr, instr_file_ptr; //file control
 
 integer i, j, k, idx, jdx, kdx, ddx;
 real	CYCLE = `CYCLE_TIME;
 
-integer SEED 	= 17;
-integer PATNUM 	= 75; // one PATNUNM includes 10 instructions
+
+parameter DEV_PATTERN = 0; // Turn on developer mode
+integer PATNUM 	= 265; // one PATNUNM includes 10 instructions
 integer patcount;
 integer instr10_count;
 integer lat,total_latency, pat_latency;
@@ -394,17 +400,21 @@ initial begin
 				end
 				@(negedge clk);
 			end
-			checkans_regfile;
+			if(DEV_PATTERN == 0) checkans_regfile;
 			lat_array[instr10_count] = lat;
 			pat_latency = pat_latency + lat;
 		end
-		checkans_dram;
+		if(DEV_PATTERN == 0) checkans_dram;
 		
-		$display("%0sPASS PATTERN #%4d, [%4d, %4d, %4d, %4d, %4d, %4d, %4d, %4d, %4d, %4d] %5d%0s",yellow_txtpf,patcount,
-		lat_array[0], lat_array[1], lat_array[2], lat_array[3], lat_array[4],
-		lat_array[5], lat_array[6], lat_array[7], lat_array[8], lat_array[9], pat_latency,reset_color);
-		total_latency = total_latency + pat_latency;
-		$display("");
+		if(PRINT_CAL == 1)begin
+			$display("%0sPASS PATTERN #%4d, [%4d, %4d, %4d, %4d, %4d, %4d, %4d, %4d, %4d, %4d] %5d%0s",yellow_txtpf,patcount,
+			lat_array[0], lat_array[1], lat_array[2], lat_array[3], lat_array[4],
+			lat_array[5], lat_array[6], lat_array[7], lat_array[8], lat_array[9], pat_latency,reset_color);
+			$display("");
+		end else begin
+			$display("%0sPASS PATTERN #%4d%0s\t%0sAVERAGE CYCLES %10.3f%0s",green_txtpf, patcount, reset_color, cyan_txtpf,pat_latency/10.0,reset_color);
+		end
+			total_latency = total_latency + pat_latency;
 	end
 	
 	# (20);
@@ -496,34 +506,35 @@ task reset_signal_task; begin
 		$display("*****************************************************************");
 		$finish;
     end
-	if((awid_s_inf!==0)||(awaddr_s_inf!==0)||(awsize_s_inf!==0)||(awburst_s_inf!==0)||(awlen_s_inf!==0)||(awvalid_s_inf!==0))begin
+	
+	if((awaddr_s_inf!==0)||(awsize_s_inf!==3'b001)||(awburst_s_inf!==2'b01)||(awlen_s_inf!==0)||(awvalid_s_inf!==0))begin
 		$display("**********************************************************************************");
 		$display("*                                    %0sCPU_FAIL%0s                                    *",red_txtpf,reset_color);
-		$display("*   AXI Output signal group: %0sWrite Address%0s  should be 0 after initial RESET      *",cyan_txtpf,reset_color);
+		$display("*   AXI Output signal group: %0sWrite Address%0s fails to RESET                        *",cyan_txtpf,reset_color);
 		$display("**********************************************************************************");
 		$finish;
 	end else if((wdata_s_inf!==0)||(wlast_s_inf!==0)||(wvalid_s_inf!==0))begin
 		$display("**********************************************************************************");
 		$display("*                       %0sCPU_FAIL%0s                                        *",red_txtpf,reset_color);
-		$display("*   AXI Output signal group: %0sWrite Data%0s  should be 0 after initial RESET      *",cyan_txtpf,reset_color);
+		$display("*   AXI Output signal group: %0sWrite Data%0s fails to RESET                  *",cyan_txtpf,reset_color);
 		$display("**********************************************************************************");
 		$finish;
 	end else if(bready_s_inf !== 0)begin
 		$display("**********************************************************************************");
 		$display("*                       %0sCPU_FAIL%0s                                *",red_txtpf,reset_color);
-		$display("*   AXI Output signal group: %0sWrite Respnse%0s  should be 0 after initial RESET      *",cyan_txtpf,reset_color);
+		$display("*   AXI Output signal group: %0sWrite Respnse%0s fails to RESET       *",cyan_txtpf,reset_color);
 		$display("**********************************************************************************");
 		$finish;
-	end else if((arid_s_inf!==0)||(araddr_s_inf!==0)||(arlen_s_inf!==0)||(arsize_s_inf!==0)||(arburst_s_inf!==0)||(arvalid_s_inf!==0))begin
+	end else if((arid_s_inf!==0)||(araddr_s_inf!==0)||(arlen_s_inf!==0)||(arsize_s_inf!==3'b001)||(arburst_s_inf!==2'b01)||(arvalid_s_inf!==0))begin
 		$display("**********************************************************************************");
 		$display("*                       %0sCPU_FAIL%0s                                *",red_txtpf,reset_color);
-		$display("*   AXI Output signal group: %0sRead Address%0s  should be 0 after initial RESET      *",cyan_txtpf,reset_color);
+		$display("*   AXI Output signal group: %0sRead Address%0s fails to RESET        *",cyan_txtpf,reset_color);
 		$display("**********************************************************************************");
 		$finish;
-	end else if((rid_s_inf!==0)||(rdata_s_inf!==0)||(rresp_s_inf!==0)||(rlast_s_inf!==0)||(rvalid_s_inf!==0))begin
+	end else if((rdata_s_inf!==0)||(rresp_s_inf!==2'b00)||(rlast_s_inf!==0)||(rvalid_s_inf!==0))begin
 		$display("**********************************************************************************");
 		$display("*                       %0sCPU_FAIL%0s                                *",red_txtpf,reset_color);
-		$display("*   AXI Output signal group: %0sRead Data%0s  should be 0 after initial RESET      *",cyan_txtpf,reset_color);
+		$display("*   AXI Output signal group: %0sRead Data%0s fails to RESET           *",cyan_txtpf,reset_color);
 		$display("**********************************************************************************");
 		$finish;
 	end
@@ -703,13 +714,17 @@ task execute_instructon;begin
 						$finish;
 				end
 				if(gregfile[rs] == gregfile[rt])begin
-					$display("%0s[PC-%04x]%0s %0sbeq\tr%d%0s(%d) %0sr%d%0s(%d) %0s%d%0s(PC: %04x(@%04x) -> %04x(@%04x))",purple_txtpf,pc,reset_color,cyan_txtpf,rs,reset_color,old_rs,
-					cyan_txtpf,rt,reset_color,old_rt,cyan_txtpf,immediate,reset_color,
-					pc, pc*2+16'h1000, ($signed(pc)+1+immediate), ($signed(pc)+1+immediate)*2+4096);
+					if(PRINT_CAL)begin
+						$display("%0s[PC-%04x]%0s %0sbeq\tr%d%0s(%d) %0sr%d%0s(%d) %0s%d%0s(PC: %04x(@%04x) -> %04x(@%04x))",purple_txtpf,pc,reset_color,cyan_txtpf,rs,reset_color,old_rs,
+						cyan_txtpf,rt,reset_color,old_rt,cyan_txtpf,immediate,reset_color,
+						pc, pc*2+16'h1000, ($signed(pc)+1+immediate), ($signed(pc)+1+immediate)*2+4096);
+					end
 					pc = ($signed(pc)+1+immediate);
 				end else begin
-					$display("%0s[PC-%04x]%0s %0sbeq\tr%d%0s(%d) %0sr%d%0s(%d) %0s%d%0s(PC <- PC+1)",purple_txtpf,pc,reset_color,cyan_txtpf,rs,reset_color,old_rs,
-					cyan_txtpf,rt,reset_color,old_rt,cyan_txtpf,immediate,reset_color);
+					if(PRINT_CAL)begin
+						$display("%0s[PC-%04x]%0s %0sbeq\tr%d%0s(%d) %0sr%d%0s(%d) %0s%d%0s(PC <- PC+1)",purple_txtpf,pc,reset_color,cyan_txtpf,rs,reset_color,old_rs,
+						cyan_txtpf,rt,reset_color,old_rt,cyan_txtpf,immediate,reset_color);
+					end
 					pc = pc+1;
 				end
 				
@@ -740,13 +755,14 @@ task execute_instructon;begin
 				$finish;
 			end
 		end
-
-		$display("%0s[PC-%04x]%0s %0sj\t@%04x(%x)%0s",purple_txtpf,pc,reset_color, cyan_txtpf,address, (address-16'h1000)/2, reset_color);
-
+		if(PRINT_CAL)begin
+			$display("%0s[PC-%04x]%0s %0sj\t@%04x(%x)%0s",purple_txtpf,pc,reset_color, cyan_txtpf,address, (address-16'h1000)/2, reset_color);
+		end
 		pc = (address-16'h1000)/2;
 
 	end else begin // parsed incorrect istruction!
 		$display("%0s[ERROR]%0s Incorrect instruction @ print_instr!!",red_txtpf, reset_color);
+		# (2);
 		$finish;
 	end
 	if(PRINT_CAL) regfile_snapshot;
@@ -1085,4 +1101,3 @@ end endtask
 
 
 endmodule
-
