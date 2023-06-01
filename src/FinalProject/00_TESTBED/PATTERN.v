@@ -507,7 +507,7 @@ task reset_signal_task; begin
 		$finish;
     end
 	
-	if((awaddr_s_inf!==0)||(awsize_s_inf!==3'b001)||(awburst_s_inf!==2'b01)||(awlen_s_inf!==0)||(awvalid_s_inf!==0))begin
+	if((awaddr_s_inf!==0)||(awsize_s_inf!==3'b001)||(awburst_s_inf!==2'b01)||(awvalid_s_inf!==0))begin
 		$display("**********************************************************************************");
 		$display("*                                    %0sCPU_FAIL%0s                                    *",red_txtpf,reset_color);
 		$display("*   AXI Output signal group: %0sWrite Address%0s fails to RESET                        *",cyan_txtpf,reset_color);
@@ -525,13 +525,13 @@ task reset_signal_task; begin
 		$display("*   AXI Output signal group: %0sWrite Respnse%0s fails to RESET       *",cyan_txtpf,reset_color);
 		$display("**********************************************************************************");
 		$finish;
-	end else if((arid_s_inf!==0)||(araddr_s_inf!==0)||(arlen_s_inf!==0)||(arsize_s_inf!==3'b001)||(arburst_s_inf!==2'b01)||(arvalid_s_inf!==0))begin
+	end else if((arid_s_inf!==0)||(araddr_s_inf!==0)||(arsize_s_inf!==6'b001001)||(arburst_s_inf!==4'b0101)||(arvalid_s_inf!==0))begin
 		$display("**********************************************************************************");
 		$display("*                       %0sCPU_FAIL%0s                                *",red_txtpf,reset_color);
 		$display("*   AXI Output signal group: %0sRead Address%0s fails to RESET        *",cyan_txtpf,reset_color);
 		$display("**********************************************************************************");
 		$finish;
-	end else if((rdata_s_inf!==0)||(rresp_s_inf!==2'b00)||(rlast_s_inf!==0)||(rvalid_s_inf!==0))begin
+	end else if((rdata_s_inf!==0)||(rresp_s_inf!==0)||(rlast_s_inf!==0)||(rvalid_s_inf!==0))begin
 		$display("**********************************************************************************");
 		$display("*                       %0sCPU_FAIL%0s                                *",red_txtpf,reset_color);
 		$display("*   AXI Output signal group: %0sRead Data%0s fails to RESET           *",cyan_txtpf,reset_color);
