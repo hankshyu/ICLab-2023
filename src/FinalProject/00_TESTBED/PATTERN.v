@@ -403,6 +403,7 @@ initial begin
 			if(DEV_PATTERN == 0) checkans_regfile;
 			lat_array[instr10_count] = lat;
 			pat_latency = pat_latency + lat;
+			if(instr10_count < 9) @(negedge clk); // added to solve bug
 		end
 		if(DEV_PATTERN == 0) checkans_dram;
 		
@@ -414,7 +415,9 @@ initial begin
 		end else begin
 			$display("%0sPASS PATTERN #%4d%0s\t%0sAVERAGE CYCLES %10.3f%0s",green_txtpf, patcount, reset_color, cyan_txtpf,pat_latency/10.0,reset_color);
 		end
-			total_latency = total_latency + pat_latency;
+		total_latency = total_latency + pat_latency;
+		@(negedge clk); // added to solve bug
+
 	end
 	
 	# (20);
