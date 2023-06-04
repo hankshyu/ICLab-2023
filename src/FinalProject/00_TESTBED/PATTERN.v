@@ -16,6 +16,8 @@
 //  05/27/2023 - Infrastructure finish, execute instrucitons ok.
 //  05/27/2023 - Register file access ok.
 //  05/28/2023 - Answer verify feature complete.
+//  06/03/2023 - Fix negedge clock bug
+//  06/04/2023 - Add CPI calculating feature
 //   
 //////////////////////////////////////////////////////////////////////////////////
 //  License information:
@@ -62,9 +64,9 @@
 
 
 `ifdef RTL
-`define CYCLE_TIME 20.0
+`define CYCLE_TIME 4.5
 `elsif GATE
-`define CYCLE_TIME 20.0
+`define CYCLE_TIME 4.5
 `elsif CHIP
 `define CYCLE_TIME 20.0
 `elsif POST
@@ -386,7 +388,7 @@ initial begin
 		instr10_count = 0;
 
 		for(instr10_count = 0; instr10_count < 10; instr10_count = instr10_count + 1)begin
-			lat = -1;
+			lat = 0;
 			execute_instructon;
 			while(IO_stall !== 0) begin
 				lat = lat + 1;
@@ -1094,8 +1096,12 @@ task YOU_PASS_task; begin
     $display ("			               %0sCongratulations >< !!%0s",green_txtpf, reset_color);
     $display ("			           You have %0spassed%0s all patterns!         \n",green_txtpf, reset_color);
     $display ("			Latency Report:");
-    $display ("			Cycle latency: %8d, Clock period: %5.3f   ",total_latency, CYCLE);
-    $display ("			Total latency: %f         ",total_latency*CYCLE);
+    $display ("			Clock period : %14.1f", CYCLE);
+    $display ("			Cycle latency: %12d",total_latency);
+    $display ("			Total latency: %14.1f",total_latency*CYCLE);
+	$display ("");
+    $display ("%0s			CPI          : %17.4f%0s",cyan_txtpf,(total_latency)/(PATNUM*10.0),reset_color);
+    $display ("			LPI          : %17.4f",(total_latency*CYCLE)/(PATNUM*10.0));
 	$display ("--------------------------------------------------------------------------------");    
     
     #(200);
