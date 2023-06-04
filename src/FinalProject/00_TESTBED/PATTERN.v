@@ -64,9 +64,9 @@
 
 
 `ifdef RTL
-`define CYCLE_TIME 4.5
+`define CYCLE_TIME 20.0
 `elsif GATE
-`define CYCLE_TIME 4.5
+`define CYCLE_TIME 20.0
 `elsif CHIP
 `define CYCLE_TIME 20.0
 `elsif POST
