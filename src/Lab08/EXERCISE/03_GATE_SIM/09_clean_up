@@ -1,0 +1,8 @@
+rm -rf INCA_libs nWaveLog
+rm -rf *.fsdb
+rm -rf ncverilog.log ncverilog.key
+rm -rf novas*
+rm -rf *.log
+rm -rf *~
+rm -rf *.rc
+rm -rf *.sdf.X

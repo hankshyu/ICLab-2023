@@ -1,0 +1,11 @@
+rm -rf alib-52
+rm -rf *.log?
+rm -rf *.log
+rm -rf *~
+rm -rf default.svf
+rm -rf *.pvl
+rm -rf *.syn
+rm -rf *.mr
+rm -rf Netlist/SNN_SYN.*
+rm -rf Report/*
+rm -rf ~/synopsys_*

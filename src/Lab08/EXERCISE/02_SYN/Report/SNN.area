@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : SNN
+Version: T-2022.03
+Date   : Sun Apr 23 20:51:34 2023
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
+
+Number of ports:                           79
+Number of nets:                          4366
+Number of cells:                         3709
+Number of combinational cells:           3192
+Number of sequential cells:               507
+Number of macros/black boxes:               0
+Number of buf/inv:                        531
+Number of references:                      76
+
+Combinational area:              75752.108962
+Buf/Inv area:                     5308.934592
+Noncombinational area:           35233.229111
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                110985.338073
+Total area:                 undefined
+1

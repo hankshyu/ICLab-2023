@@ -1,0 +1,12 @@
+rm -rf Netlist/*
+rm -rf Report/*
+rm -rf syn.log
+rm -rf command.log
+rm -rf usertype.pvk
+rm -rf *.syn
+rm -rf *.mr
+rm -rf *.pvl
+rm -rf default.svf
+rm -rf alib-52
+rm -rf syn_OS.log
+rm -rf syn_bridge.log

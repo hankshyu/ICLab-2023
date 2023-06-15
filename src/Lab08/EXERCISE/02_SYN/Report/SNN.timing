@@ -1,0 +1,112 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : SNN
+Version: T-2022.03
+Date   : Sun Apr 23 20:51:34 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: cs_reg[1] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: flatten_arr1_reg[3][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  cs_reg[1]/CK (DFFRX1)                    0.00       0.00 r
+  cs_reg[1]/Q (DFFRX1)                     0.81       0.81 r
+  U3240/Y (NAND2BX1)                       0.16       0.97 f
+  U2270/Y (NOR2X1)                         0.22       1.19 r
+  U1613/Y (OR2X2)                          0.27       1.46 r
+  U3248/Y (INVX4)                          0.18       1.63 f
+  U1517/Y (NOR2XL)                         0.24       1.87 r
+  U2714/Y (NAND2XL)                        0.16       2.04 f
+  U2236/Y (NOR2X1)                         0.19       2.23 r
+  U2793/Y (NAND2X1)                        0.13       2.36 f
+  U2022/Y (NOR2X1)                         0.23       2.59 r
+  U2358/Y (OAI21X1)                        0.13       2.71 f
+  U1587/Y (BUFX2)                          0.25       2.97 f
+  U2495/Y (XOR2XL)                         0.39       3.35 r
+  U1578/Y (INVX1)                          0.11       3.47 f
+  U1576/Y (NAND2XL)                        0.19       3.66 r
+  U1792/Y (NOR2X1)                         0.14       3.80 f
+  U3274/Y (NAND4XL)                        0.12       3.92 r
+  U2282/Y (OAI2BB1X2)                      0.24       4.16 r
+  U3281/Y (NAND3X2)                        0.24       4.40 f
+  U1779/Y (OAI21X1)                        0.27       4.67 r
+  U1524/Y (NAND2X1)                        0.34       5.01 f
+  U1762/Y (INVXL)                          0.16       5.17 r
+  U1760/Y (NAND2XL)                        0.09       5.26 f
+  U1753/Y (NAND3X1)                        0.25       5.50 r
+  U2355/Y (NAND2XL)                        0.19       5.70 f
+  U3321/Y (NAND2XL)                        0.19       5.89 r
+  U1739/Y (NAND3X1)                        0.14       6.03 f
+  U1735/Y (OR2X1)                          0.32       6.35 f
+  U3322/Y (AOI2BB1X2)                      0.32       6.68 f
+  U3323/Y (MXI2X2)                         0.26       6.94 f
+  U1537/Y (NOR2XL)                         0.69       7.62 r
+  U3339/Y (AOI21XL)                        0.16       7.78 f
+  U2296/Y (AOI2BB1XL)                      0.35       8.13 f
+  U3352/Y (INVX1)                          0.19       8.32 r
+  U1558/Y (NAND2XL)                        0.14       8.46 f
+  U3353/Y (NAND2XL)                        0.26       8.72 r
+  U3355/Y (NAND3XL)                        0.14       8.86 f
+  U1706/Y (OAI21X1)                        0.21       9.07 r
+  U3369/Y (NAND2XL)                        0.11       9.17 f
+  U1553/Y (NAND2X1)                        0.15       9.32 r
+  U1698/Y (AOI21X1)                        0.13       9.45 f
+  U1693/Y (NAND2X1)                        0.20       9.65 r
+  U1550/Y (INVX1)                          0.14       9.79 f
+  U3217/Y (NAND2X1)                        0.27      10.07 r
+  U3384/Y (OAI21XL)                        0.13      10.19 f
+  U3385/Y (NAND2XL)                        0.15      10.34 r
+  U1675/Y (NAND3X1)                        0.20      10.54 f
+  U1673/Y (NOR2X1)                         0.26      10.80 r
+  U2740/Y (OAI21X1)                        0.18      10.98 f
+  U1662/Y (NAND3XL)                        0.15      11.14 r
+  U1657/Y (OAI21X1)                        0.19      11.33 f
+  U3431/Y (NAND2XL)                        0.13      11.46 r
+  U1653/Y (NAND2XL)                        0.12      11.58 f
+  U3433/Y (NAND2XL)                        0.12      11.70 r
+  U2425/Y (NAND2X1)                        0.09      11.79 f
+  U2448/Y (INVXL)                          0.10      11.89 r
+  U2446/Y (OAI21X1)                        0.18      12.07 f
+  U1649/Y (NAND2X1)                        0.36      12.43 r
+  U1644/Y (AOI2BB1XL)                      0.26      12.69 r
+  U1429/Y (NOR2X1)                         0.08      12.77 f
+  U2383/Y (AOI211X1)                       0.31      13.08 r
+  U1633/Y (INVXL)                          0.09      13.17 f
+  U3452/Y (NOR2X1)                         0.15      13.32 r
+  U1628/Y (NOR2X1)                         0.07      13.39 f
+  U3487/Y (OAI211XL)                       0.25      13.64 r
+  U3488/Y (AOI211XL)                       0.16      13.80 f
+  U3489/Y (AOI211XL)                       0.23      14.04 r
+  U3490/Y (NOR2X1)                         0.11      14.15 f
+  U1622/Y (AOI211X1)                       0.26      14.41 r
+  U2956/Y (OAI222XL)                       0.27      14.68 f
+  flatten_arr1_reg[3][0]/D (DFFRHQXL)      0.00      14.68 f
+  data arrival time                                  14.68
+
+  clock clk (rise edge)                   15.00      15.00
+  clock network delay (ideal)              0.00      15.00
+  flatten_arr1_reg[3][0]/CK (DFFRHQXL)     0.00      15.00 r
+  library setup time                      -0.32      14.68
+  data required time                                 14.68
+  -----------------------------------------------------------
+  data required time                                 14.68
+  data arrival time                                 -14.68
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+1

@@ -1,0 +1,2 @@
+s1(24May2023:20:20:32):  irun TESTBED.sv -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot +incdir+/usr/synthesis/dw/sim_ver 
+s2(24May2023:20:21:47):  irun TESTBED.sv -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot +incdir+/usr/synthesis/dw/sim_ver 

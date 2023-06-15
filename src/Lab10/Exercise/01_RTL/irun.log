@@ -1,0 +1,90 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on May 08, 2023 at 11:56:50 CST
+irun
+	TESTBED.sv
+	-define RTL
+	-debug
+	-notimingchecks
+	-loadpli1 debpli:novas_pli_boot
+Recompiling... reason: file './PATTERN.sv' is newer than expected.
+	expected: Mon May  8 11:56:37 2023
+	actual:   Mon May  8 11:56:50 2023
+file: TESTBED.sv
+	module worklib.pseudo_DRAM:sv
+		errors: 0, warnings: 0
+program automatic PATTERN(input clk, INF.PATTERN inf);
+                |
+ncvlog: *W,DFAUTO (PATTERN.sv,4|16): Default automatic lifetime will not be applied outside tasks and functions.
+(`include file: PATTERN.sv line 4, file: TESTBED.sv line 23)
+	program worklib.PATTERN:sv
+		errors: 0, warnings: 1
+module pseudo_DRAM(input clk, INF.DRAM inf);
+                 |
+ncvlog: *W,RECOME (./../00_TESTBED/pseudo_DRAM.sv,23|17): recompiling design unit worklib.pseudo_DRAM:sv.
+	First compiled from line 23 of ../00_TESTBED/pseudo_DRAM.sv.
+(`include file: ./../00_TESTBED/pseudo_DRAM.sv line 23, file: TESTBED.sv line 26)
+	module worklib.pseudo_DRAM:sv
+		errors: 0, warnings: 1
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		usertype
+		$unit_0x08175a18
+		TESTBED
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+ncelab: *W,MEMODR (./TESTBED.sv): warning within protected source code.
+		shop_info_1.level<=inf.C_data_r[21:20];
+		                                 |
+ncelab: *W,ENUMERR (./OS.sv,187|35): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+		user_info_1.shop_history.item_ID <= {inf.C_data_r[55:54]};
+		                                    |
+ncelab: *W,ENUMERR (./OS.sv,192|38): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.PATTERN:sv <0x2f10a439>
+			streams: 100, words: 252223
+		worklib.pseudo_DRAM:sv <0x74cef1e1>
+			streams:   5, words: 19689
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                     Instances  Unique
+		Modules:                     5       5
+		Interfaces:                  1       1
+		Programs:                    1       1
+		Verilog packages:            1       1
+		Registers:                 339     374
+		Scalar wires:               10       -
+		Vectored wires:              3       -
+		Named events:               34      34
+		Always blocks:             135     135
+		Initial blocks:             57      57
+		Cont. assignments:           8       8
+		Pseudo assignments:          1       1
+		Assertions:                 42      42
+		Covergroup Instances:        0       6
+		Compilation units:           1       1
+		SV Class declarations:       6       6
+		SV Class specializations:    6       6
+		Simulation timescale:      1ps
+	Writing initial simulation snapshot: worklib.TESTBED:sv
+Loading snapshot worklib.TESTBED:sv .................... Done
+SVSEED default: 1
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'OSB.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the SVA assertions, layer (0).
+*Verdi* : End of traversing the SVA assertions.
+Simulation complete via $finish(1) at time 430260 NS + 3
+./PATTERN.sv:1429     $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on May 08, 2023 at 11:56:52 CST  (total: 00:00:02)

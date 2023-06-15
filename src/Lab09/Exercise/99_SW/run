@@ -1,0 +1,3 @@
+gcc mkdram.c -o mkdram.out
+./mkdram.out > DRAM_data.txt
+rm ./mkdram.out

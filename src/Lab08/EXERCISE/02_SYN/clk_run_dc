@@ -1,0 +1,1 @@
+/RAID2/cad/synopsys/synthesis/2022.03/bin/dc_shell-t -f clk_syn.tcl | tee syn.log

@@ -1,0 +1,6 @@
+s1(03May2023:10:47:57):  irun TESTBED.sv -define GATE -debug -loadpli1 debpli:novas_pli_boot -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 
+s2(03May2023:10:48:21):  irun TESTBED.sv -define GATE -debug -loadpli1 debpli:novas_pli_boot -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 
+s3(03May2023:10:59:30):  irun TESTBED.sv -define GATE -debug -loadpli1 debpli:novas_pli_boot -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 
+s4(03May2023:10:59:58):  irun TESTBED.sv -define GATE -debug -loadpli1 debpli:novas_pli_boot -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 
+s5(03May2023:11:13:18):  irun TESTBED.sv -define GATE -debug -loadpli1 debpli:novas_pli_boot -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 
+s6(03May2023:11:13:38):  irun TESTBED.sv -define GATE -debug -loadpli1 debpli:novas_pli_boot -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 

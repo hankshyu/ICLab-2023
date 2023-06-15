@@ -1,0 +1,40 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : GATED_OR
+Version: T-2022.03
+Date   : Sun Apr 23 20:49:47 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: CLOCK (input port)
+  Endpoint: CLOCK_GATED
+            (output port)
+  Path Group: default
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  CLOCK (in)                               0.00       0.00 f
+  U4/Y (OR2X1)                             0.45       0.45 f
+  CLOCK_GATED (out)                        0.00       0.45 f
+  data arrival time                                   0.45
+
+  max_delay                               15.00      15.00
+  output external delay                    0.00      15.00
+  data required time                                 15.00
+  -----------------------------------------------------------
+  data required time                                 15.00
+  data arrival time                                  -0.45
+  -----------------------------------------------------------
+  slack (MET)                                        14.55
+
+
+1

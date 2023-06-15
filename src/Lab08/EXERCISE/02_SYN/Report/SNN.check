@@ -1,0 +1,36 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Sun Apr 23 20:50:06 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                              22
+    Cells do not drive (LINT-1)                                    22
+--------------------------------------------------------------------------------
+
+Warning: In design 'SNN', cell 'C5557' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C5558' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C5559' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C5560' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C5587' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C5601' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C5615' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C5645' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C5672' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C5703' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_142' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_144' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C6100' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C6104' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C6263' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C6324' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C6357' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C6380' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C6385' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C6390' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C6436' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C6463' does not drive any nets. (LINT-1)
+1

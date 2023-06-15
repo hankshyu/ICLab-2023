@@ -1,0 +1,59 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Wed May  3 11:11:16 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                              45
+    Cells do not drive (LINT-1)                                    45
+--------------------------------------------------------------------------------
+
+Warning: In design 'OS', cell 'B_204' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'B_205' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'B_206' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'B_207' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'B_208' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'B_209' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25471' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25478' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25485' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'B_211' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'B_212' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25513' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25636' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25776' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25777' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25778' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25786' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25789' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25792' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25809' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25810' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25811' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25851' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25852' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25853' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25856' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25868' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25869' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25870' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25914' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25921' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25928' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25939' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C25999' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C26000' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C26001' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C26002' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C26003' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C26031' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C26035' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C26043' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C26047' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C26055' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C26228' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C26234' does not drive any nets. (LINT-1)
+1

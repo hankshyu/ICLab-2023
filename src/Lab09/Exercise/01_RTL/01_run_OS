@@ -1,0 +1,1 @@
+irun TESTBED_OS.sv -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot

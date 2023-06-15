@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : bridge
+Version: T-2022.03
+Date   : Wed May  3 11:11:01 2023
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
+
+Number of ports:                          317
+Number of nets:                           639
+Number of cells:                          493
+Number of combinational cells:            337
+Number of sequential cells:               140
+Number of macros/black boxes:               0
+Number of buf/inv:                         28
+Number of references:                      20
+
+Combinational area:               4464.028864
+Buf/Inv area:                      302.702410
+Noncombinational area:            9776.289688
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 14240.318552
+Total area:                 undefined
+1

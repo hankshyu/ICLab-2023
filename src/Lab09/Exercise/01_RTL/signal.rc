@@ -1,0 +1,138 @@
+Magic 271485
+Revision Verdi_P-2019.06
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 175 84 2223 1241 291 428
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/RAID2/COURSE/iclab/iclab105/Lab09/Exercise/01_RTL/OSB.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 29678244.000000
+cursor 169866750.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+userMarker 225233712.435 M12 ID_GREEN5 long_dashed
+userMarker 168087456.363 M11 ID_GREEN5 long_dashed
+userMarker 293317862.267 M10 ID_GREEN5 long_dashed
+
+; visible top row signal index
+top 0
+; marker line index
+markerPos 43
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/RAID2/COURSE/iclab/iclab105/Lab09/Exercise/01_RTL/OSB.fsdb"
+addSignal -h 15 /TESTBED/inf/OS_inf/rst_n
+addSignal -h 15 /TESTBED/dut_p/clk
+addSignal -h 15 /TESTBED/inf/OS_inf/id_valid
+addSignal -h 15 -holdScope act_valid
+addSignal -h 15 -holdScope item_valid
+addSignal -h 15 -holdScope num_valid
+addSignal -h 15 -holdScope amnt_valid
+addSignal -expanded -h 15 -holdScope D
+addSignal -h 15 -UNSIGNED -UDEC -holdScope D.d_id[0][7:0]
+addSignal -h 15 -UNSIGNED -holdScope D.d_act[0][3:0]
+addSignal -h 15 -UNSIGNED -holdScope D.d_item[0][1:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope D.d_item_num[15:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope D.d_money[15:0]
+addGroup "G2"
+addSignal -h 15 -UNSIGNED /TESTBED/dut_p/cs[5:0]
+addSignal -h 15 -UNSIGNED -holdScope ns[5:0]
+addSignal -h 15 -UNSIGNED -holdScope last_state[5:0]
+addSignal -h 15 -holdScope cnt[6:0]
+addSignal -c ID_YELLOW6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope user_id_reg1[7:0]
+addSignal -c ID_PURPLE8 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope user_id_reg2[7:0]
+addSignal -c ID_YELLOW7 -ls solid -lw 1 -h 15 -holdScope usr1_dirty
+addSignal -c ID_YELLOW7 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope usr1_id[7:0]
+addSignal -c ID_YELLOW7 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope usr1_shop_info
+addSignal -c ID_YELLOW7 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope usr1_user_info
+addSignal -c ID_PURPLE8 -ls solid -lw 1 -h 15 -holdScope usr2_dirty
+addSignal -c ID_PURPLE8 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope usr2_id[7:0]
+addSignal -c ID_PURPLE8 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope usr2_shop_info
+addSignal -expanded -c ID_PURPLE8 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope usr2_user_info
+addSignal -h 15 -UNSIGNED -UDEC -holdScope usr2_user_info.money[15:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope usr2_user_info.shop_history
+addSignal -h 15 -holdScope bdelivery_fee[6:0]
+addSignal -h 15 -holdScope bexp_cal[12:0]
+addSignal -h 15 -holdScope bitmexp[5:0]
+addSignal -h 15 -UNSIGNED -holdScope bitmid_reg[1:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope bitmprice[8:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope bitnum_reg[15:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope dep_reg[15:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope deposit_add[16:0]
+addSignal -h 15 -holdScope deposit_cmp
+addSignal -h 15 -UNSIGNED -HEX -holdScope roll_cnt[9:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC -holdScope histable[255:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 -UNSIGNED -HEX -holdScope histable_valid[255:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 -UNSIGNED -HEX -holdScope histable_bs[255:0]
+addSignal -h 15 -holdScope started
+addSignal -h 15 -holdScope usr1_chache_w[63:0]
+addSignal -h 15 -holdScope usr2_chache_w[63:0]
+addGroup "G3"
+addSignal -h 15 /TESTBED/inf/OS_inf/complete
+addSignal -h 15 -UNSIGNED -holdScope err_msg[3:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope out_info[31:0]
+addSignal -h 15 -holdScope out_valid
+addGroup "G4"
+addSignal -h 15 /TESTBED/inf/OS_inf/C_addr[7:0]
+addSignal -h 15 -holdScope C_data_r[63:0]
+addSignal -h 15 -holdScope C_data_w[63:0]
+addSignal -h 15 -holdScope C_in_valid
+addSignal -h 15 -holdScope C_out_valid
+addSignal -h 15 -holdScope C_r_wb
+addGroup "G5"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/RAID2/COURSE/iclab/iclab105/Lab09/Exercise/01_RTL/OSB.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/$unit_0x08175a18"
+"/TESTBED"
+"/TESTBED/inf"
+
+SCOPE_LIST_BEGIN
+"/$unit_0x08175a18"
+"/TESTBED"
+"/usertype"
+"/TESTBED/dut_p"
+"/TESTBED/inf"
+"/TESTBED/inf/OS_inf"
+"/TESTBED/dram_r"
+"/TESTBED/dut_b"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+

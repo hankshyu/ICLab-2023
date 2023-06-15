@@ -1,0 +1,100 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on May 03, 2023 at 10:43:41 CST
+irun
+	TESTBED.sv
+	-define RTL
+	-debug
+	-notimingchecks
+	-loadpli1 debpli:novas_pli_boot
+Recompiling... reason: file './PATTERN.sv' is newer than expected.
+	expected: Wed May  3 10:43:04 2023
+	actual:   Wed May  3 10:43:40 2023
+file: TESTBED.sv
+	module worklib.pseudo_DRAM:sv
+		errors: 0, warnings: 0
+program automatic PATTERN(input clk, INF.PATTERN inf);
+                |
+ncvlog: *W,DFAUTO (PATTERN.sv,22|16): Default automatic lifetime will not be applied outside tasks and functions.
+(`include file: PATTERN.sv line 22, file: TESTBED.sv line 23)
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+module pseudo_DRAM(input clk, INF.DRAM inf);
+                 |
+ncvlog: *W,RECOME (./../00_TESTBED/pseudo_DRAM.sv,23|17): recompiling design unit worklib.pseudo_DRAM:sv.
+	First compiled from line 23 of ../00_TESTBED/pseudo_DRAM.sv.
+(`include file: ./../00_TESTBED/pseudo_DRAM.sv line 23, file: TESTBED.sv line 26)
+	module worklib.pseudo_DRAM:sv
+		errors: 0, warnings: 1
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		usertype
+		$unit_0x08175a18
+		TESTBED
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+ncelab: *W,MEMODR (./TESTBED.sv): warning within protected source code.
+ncelab: *W,ENUMERR (./TESTBED.sv): warning within protected source code.
+ncelab: *W,ENUMERR (./TESTBED.sv): warning within protected source code.
+ncelab: *W,ENUMERR (./TESTBED.sv): warning within protected source code.
+ncelab: *W,ENUMERR (./TESTBED.sv): warning within protected source code.
+ncelab: *W,MEMODR (./TESTBED.sv): warning within protected source code.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.pseudo_DRAM:sv <0x7d3b5158>
+			streams:   5, words: 19689
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                     Instances  Unique
+		Modules:                     4       4
+		Interfaces:                  1       1
+		Programs:                    3       3
+		Verilog packages:            1       1
+		Registers:                 162     173
+		Scalar wires:               11       -
+		Vectored wires:              3       -
+		Always blocks:              34      34
+		Initial blocks:             21      21
+		Cont. assignments:           8       8
+		Pseudo assignments:          1       1
+		Compilation units:           1       1
+		SV Class declarations:       9       9
+		SV Class specializations:    9       9
+		Simulation timescale:      1ps
+	Writing initial simulation snapshot: worklib.TESTBED:sv
+Loading snapshot worklib.TESTBED:sv .................... Done
+SVSEED default: 1
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'OSB.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the SVA assertions, layer (0).
+*Verdi* : End of traversing the SVA assertions.
+----------------------------------------------------------------------------------------------------------------------
+                                                  Congratulations!                						             
+                                           You have passed all patterns!          						             
+                                           Your total latency = 92418 cycles   						                 
+----------------------------------------------------------------------------------------------------------------------
+Simulation complete via $finish(1) at time 1010430 NS + 2
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on May 03, 2023 at 10:43:51 CST  (total: 00:00:10)

@@ -1,0 +1,1 @@
+irun TESTBED.sv -define RTL -debug -coverage U -covoverwrite  -notimingchecks -loadpli1 debpli:novas_pli_boot

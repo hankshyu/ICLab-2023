@@ -1,0 +1,47 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : bridge
+Version: T-2022.03
+Date   : Wed May  3 11:11:01 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: cs_reg[1] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: inf.W_DATA[1]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  cs_reg[1]/CK (DFFRHQXL)                  0.00       0.00 r
+  cs_reg[1]/Q (DFFRHQXL)                   0.59       0.59 f
+  U640/Y (CLKINVX2)                        0.14       0.73 r
+  U362/Y (NAND2XL)                         0.13       0.86 f
+  U322/Y (NOR2XL)                          0.24       1.10 r
+  U357/Y (BUFX8)                           0.30       1.41 r
+  U369/Y (AND2XL)                          0.67       2.07 r
+  inf.W_DATA[1] (out)                      0.00       2.07 r
+  data arrival time                                   2.07
+
+  clock clk (rise edge)                    4.20       4.20
+  clock network delay (ideal)              0.00       4.20
+  output external delay                   -2.10       2.10
+  data required time                                  2.10
+  -----------------------------------------------------------
+  data required time                                  2.10
+  data arrival time                                  -2.07
+  -----------------------------------------------------------
+  slack (MET)                                         0.03
+
+
+1

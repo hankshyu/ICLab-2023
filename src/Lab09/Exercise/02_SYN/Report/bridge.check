@@ -1,0 +1,51 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Wed May  3 11:10:56 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     35
+    Unconnected ports (LINT-28)                                     4
+    Shorted outputs (LINT-31)                                      15
+    Constant outputs (LINT-52)                                     16
+--------------------------------------------------------------------------------
+
+Warning: In design 'bridge', port 'inf.R_RESP[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'bridge', port 'inf.R_RESP[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'bridge', port 'inf.B_RESP[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'bridge', port 'inf.B_RESP[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[15]' is connected directly to output port 'inf.AW_ADDR[0]'. (LINT-31)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[15]' is connected directly to output port 'inf.AW_ADDR[1]'. (LINT-31)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[15]' is connected directly to output port 'inf.AW_ADDR[2]'. (LINT-31)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[15]' is connected directly to output port 'inf.AW_ADDR[11]'. (LINT-31)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[15]' is connected directly to output port 'inf.AW_ADDR[12]'. (LINT-31)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[15]' is connected directly to output port 'inf.AW_ADDR[13]'. (LINT-31)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[15]' is connected directly to output port 'inf.AW_ADDR[14]'. (LINT-31)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[15]' is connected directly to output port 'inf.AW_ADDR[15]'. (LINT-31)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[15]' is connected directly to output port 'inf.AR_ADDR[0]'. (LINT-31)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[15]' is connected directly to output port 'inf.AR_ADDR[1]'. (LINT-31)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[15]' is connected directly to output port 'inf.AR_ADDR[2]'. (LINT-31)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[15]' is connected directly to output port 'inf.AR_ADDR[11]'. (LINT-31)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[15]' is connected directly to output port 'inf.AR_ADDR[12]'. (LINT-31)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[15]' is connected directly to output port 'inf.AR_ADDR[13]'. (LINT-31)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[15]' is connected directly to output port 'inf.AR_ADDR[14]'. (LINT-31)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[15]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[14]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[13]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[12]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[11]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[2]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'bridge', output port 'inf.AR_ADDR[0]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'bridge', output port 'inf.AW_ADDR[15]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'bridge', output port 'inf.AW_ADDR[14]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'bridge', output port 'inf.AW_ADDR[13]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'bridge', output port 'inf.AW_ADDR[12]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'bridge', output port 'inf.AW_ADDR[11]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'bridge', output port 'inf.AW_ADDR[2]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'bridge', output port 'inf.AW_ADDR[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'bridge', output port 'inf.AW_ADDR[0]' is connected directly to 'logic 0'. (LINT-52)
+1

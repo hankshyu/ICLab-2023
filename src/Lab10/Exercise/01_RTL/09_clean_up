@@ -1,0 +1,10 @@
+rm -rf INCA_libs nWaveLog
+rm -rf *.fsdb
+rm -rf *.log
+rm -rf *~
+rm -rf *.key
+rm -rf *.conf
+rm -rf novas.rc
+rm -rf *.err
+rm -rf verdiLog
+rm -rf *.history

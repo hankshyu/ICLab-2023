@@ -1,0 +1,1 @@
+irun TESTBED.v -define RTL+NCG -debug -notimingchecks -loadpli1 debpli:novas_pli_boot

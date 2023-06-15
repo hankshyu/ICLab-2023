@@ -1,0 +1,9 @@
+
+  Linking design 'GATED_OR'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  GATED_OR                    /RAID2/COURSE/iclab/iclab105/Lab08/EXERCISE/01_RTL/GATED_OR.db
+  dw_foundation.sldb (library) /RAID2/cad/synopsys/synthesis/2022.03/libraries/syn/dw_foundation.sldb
+  slow (library)              /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db
+
+1

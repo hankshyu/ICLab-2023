@@ -1,0 +1,44 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on May 24, 2023 at 20:21:47 CST
+irun
+	TESTBED.sv
+	-define RTL
+	-debug
+	-notimingchecks
+	-loadpli1 debpli:novas_pli_boot
+	+incdir+/usr/synthesis/dw/sim_ver
+ncvlog: *W,NOTIND: unable to access -INCDIR /usr/synthesis/dw/sim_ver (No such file or directory).
+file: TESTBED.sv
+    );
+    |
+ncvlog: *W,MODNSG (INF.sv,42|4): Expected port declaration before right parenthesis.
+(`include file: INF.sv line 42, file: TESTBED.sv line 4)
+    );
+    |
+ncvlog: *W,MODNSG (INF.sv,49|4): Expected port declaration before right parenthesis.
+(`include file: INF.sv line 49, file: TESTBED.sv line 4)
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+`include "DW_div_pipe.v"
+                       |
+ncvlog: *E,COFILX (CM.sv,26|23): cannot open include file 'DW_div_pipe.v'.
+(`include file: CM.sv line 26, file: TESTBED.sv line 8)
+`include "DW_div.v"
+                  |
+ncvlog: *E,COFILX (CM.sv,27|18): cannot open include file 'DW_div.v'.
+(`include file: CM.sv line 27, file: TESTBED.sv line 8)
+state current_state , next_state;
+                  |
+ncvlog: *E,ILLPDL (CM.sv,34|18): Mixing of ansi & non-ansi style port declaration is not legal.
+(`include file: CM.sv line 34, file: TESTBED.sv line 8)
+	module worklib.CM:sv
+		errors: 1, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+irun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
+TOOL:	irun(64)	15.20-s084: Exiting on May 24, 2023 at 20:21:48 CST  (total: 00:00:01)
