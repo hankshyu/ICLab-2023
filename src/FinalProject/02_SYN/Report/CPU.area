@@ -1,0 +1,31 @@
+ 
+****************************************
+Report : area
+Design : CPU
+Version: T-2022.03
+Date   : Wed Jun  7 01:35:09 2023
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
+    USERLIB (File: /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/04_MEM/RA1SH1.db)
+
+Number of ports:                          230
+Number of nets:                          4470
+Number of cells:                         4325
+Number of combinational cells:           3621
+Number of sequential cells:               595
+Number of macros/black boxes:               2
+Number of buf/inv:                        575
+Number of references:                     112
+
+Combinational area:              58158.778349
+Buf/Inv area:                     5974.214601
+Noncombinational area:           41939.251572
+Macro/Black Box area:           104630.992188
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                204729.022108
+Total area:                 undefined
+1

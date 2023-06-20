@@ -1,0 +1,1197 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version T-2022.03 for linux64 - Feb 22, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+#  Set Libraries
+#======================================================
+set search_path {./../01_RTL \
+                   ./../04_MEM \
+                   ~iclabta01/umc018/Synthesis/ \
+                   /usr/synthesis/libraries/syn/ \
+                   /usr/synthesis/dw/ }
+./../01_RTL  ./../04_MEM  ~iclabta01/umc018/Synthesis/  /usr/synthesis/libraries/syn/  /usr/synthesis/dw/ 
+set synthetic_library {dw_foundation.sldb}
+dw_foundation.sldb
+set link_library {* dw_foundation.sldb standard.sldb slow.db RA1SH1.db}
+* dw_foundation.sldb standard.sldb slow.db RA1SH1.db
+set target_library {slow.db}
+slow.db
+#report_lib slow
+#======================================================
+#  Global Parameters
+#======================================================
+set DESIGN "CPU"
+CPU
+set CYCLE 5.0
+5.0
+#set IN_DLY [expr 0.5*$CLK_period]
+#set OUT_DLY [expr 0.5*$CLK_period]
+#======================================================
+#  Read RTL Code
+#======================================================
+#set hdlin_auto_save_templates TRUE
+read_sverilog $DESIGN.v
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/standard.sldb'
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+Loading db file '/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/04_MEM/RA1SH1.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/gtech.db'
+  Loading link library 'slow'
+  Loading link library 'USERLIB'
+  Loading link library 'gtech'
+Loading sverilog file '/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v
+Warning:  /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v:1180: Parameter keyword used in local parameter declaration. (VER-329)
+Warning:  /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v:319: signed to unsigned conversion occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v:587: unsigned to signed assignment occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v:656: unsigned to signed assignment occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v:684: unsigned to signed assignment occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v:720: signed to unsigned conversion occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v:749: signed to unsigned part selection occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v:755: signed to unsigned part selection occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v:757: signed to unsigned assignment occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v:776: unsigned to signed assignment occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v:860: signed to unsigned assignment occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v:861: signed to unsigned assignment occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v:862: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 268 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           269            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 288 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           289            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 477 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           478            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 502 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           505            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 530 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           533            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 601 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           602            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 783 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           804            |    auto/auto     |
+|           823            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 856 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           859            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine CPU line 473 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cpufe_cs_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CPU line 502 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      IF_PC_reg      | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CPU line 530 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   IM_invalid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CPU line 558 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  IF_DEC_instr_reg   | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    IF_DEC_PC_reg    | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CPU line 593 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cpube_cs_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CPU line 597 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cpube_ls_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CPU line 679 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| EXE_MEM_result_reg  | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CPU line 693 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+| EXE_MEM_storedata_reg | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+	in routine CPU line 701 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| EXE_MEM_target_reg  | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CPU line 713 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  EXE_MEM_PCnxt_reg  | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CPU line 727 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| EXE_MEM_instcode_reg | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+	in routine CPU line 737 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     DM_data_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   DM_invalid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    DM_flush_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     DM_idx_reg      | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     DM_wen_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CPU line 772 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  MEM_WB_memout_reg  | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CPU line 783 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    core_r15_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     core_r0_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     core_r1_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     core_r2_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     core_r3_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     core_r4_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     core_r5_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     core_r6_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     core_r7_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     core_r8_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     core_r9_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    core_r10_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    core_r11_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    core_r12_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    core_r13_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    core_r14_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CPU line 849 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     patcal_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|     patcal_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CPU line 856 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    IO_stall_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Warning:  /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v:1026: signed to unsigned assignment occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v:1074: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 945 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           946            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 975 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           976            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1013 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1016           |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 1028 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1029           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1045 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1050           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine Instruction_Memory line 941 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   instmem_cs_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Instruction_Memory line 971 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    icache_cs_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Instruction_Memory line 998 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    lookup_pc_reg    | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Instruction_Memory line 1005 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  icache_headpc_reg  | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Instruction_Memory line 1013 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| icache_ready_idx_reg | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+	in routine Instruction_Memory line 1045 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| i_arvalid_m_inf_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| i_araddr_m_inf_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Instruction_Memory line 1069 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| i_rready_m_inf_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v:1497: signed to unsigned assignment occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v:1508: signed to unsigned assignment occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v:1554: signed to unsigned assignment occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v:1570: signed to unsigned assignment occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v:1584: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 1224 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1225           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1265 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1268           |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 1284 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1288           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1301 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1305           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1318 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1321           |     no/auto      |
+|           1324           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1365 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1368           |     no/auto      |
+|           1374           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1415 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1417           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1430 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1431           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1438 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1439           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1451 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1459           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1475 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1481           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1521 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1522           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1578 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1582           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1596 in file
+	'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1597           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine Data_Memory line 1211 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   datamem_cs_reg    | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Data_Memory line 1215 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   datamem_js_reg    | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Data_Memory line 1265 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  dcache_dirty_reg   | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Data_Memory line 1284 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| writeback_type_reg  | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Data_Memory line 1301 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| writeback_headpc_reg | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+	in routine Data_Memory line 1318 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| writeback_count_reg | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Data_Memory line 1336 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  dcache_headpc_reg  | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Data_Memory line 1343 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  dmem_write_ok_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Data_Memory line 1351 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   lookup_data_reg   | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    lookup_pc_reg    | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   lookup_wen_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Data_Memory line 1365 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| dcache_ready_idx_reg | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+	in routine Data_Memory line 1400 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+| writeback_storeq2_reg | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+| writeback_storeq_reg  | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+	in routine Data_Memory line 1451 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| d_awvalid_m_inf_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| d_awaddr_m_inf_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  d_awlen_m_inf_reg  | Flip-flop |   7   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Data_Memory line 1475 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| d_wvalid_m_inf_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  d_wlast_m_inf_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Data_Memory line 1530 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| d_bready_m_inf_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Data_Memory line 1545 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| d_arvalid_m_inf_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| d_araddr_m_inf_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Data_Memory line 1565 in file
+		'/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| d_rready_m_inf_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.db:CPU'
+Loaded 3 designs.
+Current design is 'CPU'.
+CPU Instruction_Memory Data_Memory
+current_design $DESIGN
+Current design is 'CPU'.
+{CPU}
+#======================================================
+#  Global Setting
+#======================================================
+set_wire_load_mode top
+1
+#======================================================
+#  Set Design Constraints
+#======================================================
+#set_dont_touch core_register_reg[*]
+create_clock -name "clk" -period $CYCLE clk
+1
+#set_input_delay  [ expr $CYCLE*0.5 ] -clock clk [all_inputs]
+#set_output_delay [ expr $CYCLE*0.5 ] -clock clk [all_outputs]
+set_input_delay  0 -clock clk [all_inputs]
+1
+set_output_delay 0 -clock clk [all_outputs]
+1
+set_output_delay [ expr $CYCLE*0.5 ] -clock clk IO_stall
+1
+set_input_delay 0 -clock clk clk
+1
+set_input_delay 0 -clock clk rst_n
+1
+set_load 0.05 [all_outputs]
+1
+set_dont_use slow/JKFF*
+1
+#set hdlin_ff_always_sync_set_reset true
+#report_clock -skew clk
+#======================================================
+#  Optimization
+#======================================================
+uniquify
+1
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants
+1
+#set_fix_hold [all_clocks]
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | S-2021.06-DWBB_202106.0 |     *     |
+| Licensed DW Building Blocks        | S-2021.06-DWBB_202106.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler WLM                                                               |
+| Comand line  | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 2675                                   |
+| Number of User Hierarchies                              | 2                                      |
+| Sequential Cell Count                                   | 670                                    |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch cells                              | 685                                    |
+| Number of Dont Touch nets                               | 0                                      |
+| Number of size only cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 162 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'CPU'
+
+Loaded alib file './alib-52/slow.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy instruction_memory before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy data_memory before Pass 1 (OPT-776)
+Information: Ungrouping 2 of 3 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'CPU'
+Information: Added key list 'DesignWare' to design 'CPU'. (DDB-72)
+Information: The register 'data_memory/d_awaddr_m_inf_reg[31]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awaddr_m_inf_reg[30]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awaddr_m_inf_reg[29]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awaddr_m_inf_reg[28]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awaddr_m_inf_reg[27]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awaddr_m_inf_reg[26]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awaddr_m_inf_reg[25]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awaddr_m_inf_reg[24]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awaddr_m_inf_reg[23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awaddr_m_inf_reg[22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awaddr_m_inf_reg[21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awaddr_m_inf_reg[20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awaddr_m_inf_reg[19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awaddr_m_inf_reg[18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awaddr_m_inf_reg[17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awaddr_m_inf_reg[16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awaddr_m_inf_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awaddr_m_inf_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awaddr_m_inf_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awaddr_m_inf_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awlen_m_inf_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awlen_m_inf_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awlen_m_inf_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awlen_m_inf_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_awlen_m_inf_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_araddr_m_inf_reg[31]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_araddr_m_inf_reg[30]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_araddr_m_inf_reg[29]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_araddr_m_inf_reg[28]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_araddr_m_inf_reg[27]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_araddr_m_inf_reg[26]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_araddr_m_inf_reg[25]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_araddr_m_inf_reg[24]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_araddr_m_inf_reg[23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_araddr_m_inf_reg[22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_araddr_m_inf_reg[21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_araddr_m_inf_reg[20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_araddr_m_inf_reg[19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_araddr_m_inf_reg[18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_araddr_m_inf_reg[17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_araddr_m_inf_reg[16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_araddr_m_inf_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_araddr_m_inf_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_araddr_m_inf_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/d_araddr_m_inf_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/icache_cs_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/datamem_cs_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'data_memory/datamem_js_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/i_araddr_m_inf_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/i_araddr_m_inf_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/i_araddr_m_inf_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/i_araddr_m_inf_reg[16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/i_araddr_m_inf_reg[17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/i_araddr_m_inf_reg[18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/i_araddr_m_inf_reg[19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/i_araddr_m_inf_reg[20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/i_araddr_m_inf_reg[21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/i_araddr_m_inf_reg[22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/i_araddr_m_inf_reg[23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/i_araddr_m_inf_reg[24]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/i_araddr_m_inf_reg[25]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/i_araddr_m_inf_reg[26]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/i_araddr_m_inf_reg[27]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/i_araddr_m_inf_reg[28]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/i_araddr_m_inf_reg[29]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/i_araddr_m_inf_reg[30]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/i_araddr_m_inf_reg[31]' is a constant and will be removed. (OPT-1206)
+Information: The register 'instruction_memory/i_araddr_m_inf_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: In design 'CPU', the register 'data_memory/d_arvalid_m_inf_reg' is removed because it is merged to 'data_memory/d_araddr_m_inf_reg[12]'. (OPT-1215)
+Information: In design 'CPU', the register 'data_memory/d_awaddr_m_inf_reg[12]' is removed because it is merged to 'data_memory/d_awvalid_m_inf_reg'. (OPT-1215)
+Information: In design 'CPU', the register 'data_memory/datamem_js_reg[3]' is removed because it is merged to 'data_memory/datamem_js_reg[2]'. (OPT-1215)
+Information: In design 'CPU', the register 'data_memory/datamem_js_reg[0]' is removed because it is merged to 'data_memory/datamem_js_reg[2]'. (OPT-1215)
+Information: In design 'CPU', the register 'instruction_memory/i_arvalid_m_inf_reg' is removed because it is merged to 'instruction_memory/i_araddr_m_inf_reg[12]'. (OPT-1215)
+ Implement Synthetic for 'CPU'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1' in the library 'slow' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'CPU_RSOP_354'. (DDB-72)
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:08  289984.7      0.00       0.0       0.0                           25502876.0000
+    0:00:09  289126.4      0.02       0.0       0.0                           25372114.0000
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:09  289356.0      0.02       0.0       0.0                           25431382.0000
+    0:00:09  289339.3      0.02       0.0       0.0                           25428416.0000
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Mapping 'CPU_DW02_mult_2'
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:10  207603.0      0.46      10.2       0.0                           8807512.0000
+    0:00:11  209129.8      0.00       0.0       0.0                           9130698.0000
+    0:00:11  209129.8      0.00       0.0       0.0                           9130698.0000
+    0:00:11  209089.9      0.00       0.0       0.0                           9128005.0000
+    0:00:11  208760.6      0.00       0.0       0.0                           9085891.0000
+    0:00:12  207932.3      0.21       0.4       0.0                           8997275.0000
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:12  207054.2      0.17       1.1       0.0                           8827406.0000
+    0:00:12  206997.6      0.00       0.0       0.0                           8811728.0000
+    0:00:12  206997.6      0.00       0.0       0.0                           8811728.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:13  206156.0      0.00       0.0       0.0                           8451148.0000
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+    0:00:13  205158.1      0.00       0.0       0.0                           7662233.5000
+    0:00:13  205158.1      0.00       0.0       0.0                           7662233.5000
+    0:00:13  205158.1      0.00       0.0       0.0                           7662233.5000
+    0:00:14  204798.9      0.00       0.0       0.0                           7650345.5000
+    0:00:14  204798.9      0.00       0.0       0.0                           7650345.5000
+    0:00:14  204798.9      0.00       0.0       0.0                           7650345.5000
+    0:00:14  204798.9      0.00       0.0       0.0                           7650345.5000
+    0:00:14  204798.9      0.00       0.0       0.0                           7650345.5000
+    0:00:14  204798.9      0.00       0.0       0.0                           7650345.5000
+    0:00:14  204798.9      0.00       0.0       0.0                           7650345.5000
+    0:00:14  204798.9      0.00       0.0       0.0                           7650345.5000
+    0:00:14  204798.9      0.00       0.0       0.0                           7650345.5000
+    0:00:14  204798.9      0.00       0.0       0.0                           7650345.5000
+    0:00:14  204798.9      0.00       0.0       0.0                           7650345.5000
+    0:00:14  204798.9      0.00       0.0       0.0                           7650345.5000
+    0:00:14  204798.9      0.00       0.0       0.0                           7650345.5000
+    0:00:14  204798.9      0.00       0.0       0.0                           7650345.5000
+    0:00:14  204798.9      0.00       0.0       0.0                           7650345.5000
+    0:00:14  204798.9      0.00       0.0       0.0                           7650345.5000
+    0:00:14  204798.9      0.00       0.0       0.0                           7650345.5000
+    0:00:14  204798.9      0.00       0.0       0.0                           7650345.5000
+    0:00:14  204798.9      0.00       0.0       0.0                           7650345.5000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:14  205856.7      0.00       0.0       0.0                           7676575.0000
+    0:00:14  205131.5      0.00       0.0       0.0                           7686480.0000
+    0:00:14  205131.5      0.00       0.0       0.0                           7686480.0000
+    0:00:14  205131.5      0.00       0.0       0.0                           7686480.0000
+    0:00:14  205124.9      0.00       0.0       0.0                           7683040.5000
+    0:00:14  205251.3      0.00       0.0       0.0                           7652930.0000
+    0:00:14  205251.3      0.00       0.0       0.0                           7652930.0000
+    0:00:14  205251.3      0.00       0.0       0.0                           7652930.0000
+    0:00:14  205251.3      0.00       0.0       0.0                           7652930.0000
+    0:00:14  205251.3      0.00       0.0       0.0                           7652930.0000
+    0:00:14  205251.3      0.00       0.0       0.0                           7652930.0000
+    0:00:15  204729.0      0.00       0.0       0.0                           7615998.0000
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+Loading db file '/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/04_MEM/RA1SH1.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated black box outputs. (PWR-428)
+1
+#compile
+#======================================================
+#  Output Reports 
+#======================================================
+report_timing >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_resource >  Report/$DESIGN\.resource
+#======================================================
+#  Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/02_SYN/Netlist/CPU_SYN.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/02_SYN/Netlist/CPU_SYN.sdf'. (WT-3)
+1
+#======================================================
+#  Finish and Quit
+#======================================================
+report_area
+ 
+****************************************
+Report : area
+Design : CPU
+Version: T-2022.03
+Date   : Wed Jun  7 01:35:09 2023
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
+    USERLIB (File: /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/04_MEM/RA1SH1.db)
+
+Number of ports:                          230
+Number of nets:                          4470
+Number of cells:                         4325
+Number of combinational cells:           3621
+Number of sequential cells:               595
+Number of macros/black boxes:               2
+Number of buf/inv:                        575
+Number of references:                     112
+
+Combinational area:              58158.778349
+Buf/Inv area:                     5974.214601
+Noncombinational area:           41939.251572
+Macro/Black Box area:           104630.992188
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                204729.022108
+Total area:                 undefined
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : CPU
+Version: T-2022.03
+Date   : Wed Jun  7 01:35:09 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: IF_DEC_instr_reg_11_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EXE_MEM_result_reg_15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  IF_DEC_instr_reg_11_/CK (DFFRHQX4)       0.00       0.00 r
+  IF_DEC_instr_reg_11_/Q (DFFRHQX4)        0.23       0.23 f
+  U4010/Y (INVX3)                          0.13       0.36 r
+  U3839/Y (CLKINVX3)                       0.11       0.47 f
+  U4035/Y (NAND2X4)                        0.16       0.63 r
+  U2514/Y (NOR2X2)                         0.13       0.76 f
+  U2976/Y (OAI2BB1XL)                      0.25       1.01 f
+  U2975/Y (NOR2X1)                         0.14       1.14 r
+  U3064/Y (NAND4X1)                        0.23       1.37 f
+  U3871/Y (INVX2)                          0.34       1.71 r
+  U2026/Y (NAND2X2)                        0.27       1.98 f
+  U2528/Y (OAI22X1)                        0.29       2.27 r
+  U5342/CO (ADDFHX1)                       0.49       2.76 r
+  U2653/Y (INVXL)                          0.07       2.83 f
+  U2652/Y (NAND2BXL)                       0.11       2.93 r
+  U3023/Y (NAND2XL)                        0.08       3.01 f
+  U3022/Y (NAND2XL)                        0.10       3.11 r
+  U3860/S (ADDFHX1)                        0.42       3.53 r
+  U2120/S (ADDFHX2)                        0.35       3.88 r
+  U5494/Y (NOR2X2)                         0.07       3.95 f
+  U2772/Y (NOR2X1)                         0.09       4.05 r
+  U2102/Y (INVXL)                          0.07       4.12 f
+  U5505/Y (OAI21X1)                        0.19       4.31 r
+  U5533/Y (XNOR2X1)                        0.24       4.55 f
+  U5537/Y (OAI2BB1X2)                      0.17       4.72 f
+  EXE_MEM_result_reg_15_/D (DFFRHQXL)      0.00       4.72 f
+  data arrival time                                   4.72
+
+  clock clk (rise edge)                    5.00       5.00
+  clock network delay (ideal)              0.00       5.00
+  EXE_MEM_result_reg_15_/CK (DFFRHQXL)     0.00       5.00 r
+  library setup time                      -0.28       4.72
+  data required time                                  4.72
+  -----------------------------------------------------------
+  data required time                                  4.72
+  data arrival time                                  -4.72
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
+write_sdc CHIP.sdc
+1
+exit
+
+Memory usage for this session 204 Mbytes.
+Memory usage for this session including child processes 217 Mbytes.
+CPU usage for this session 18 seconds ( 0.01 hours ).
+Elapsed time for this session 22 seconds ( 0.01 hours ).
+
+Thank you...

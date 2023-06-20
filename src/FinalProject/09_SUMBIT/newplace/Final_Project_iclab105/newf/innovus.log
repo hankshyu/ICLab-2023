@@ -1,0 +1,67 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.15-s105_1, built Tue Jul 27 14:15:35 PDT 2021
+Options:	
+Date:		Wed Jun  7 02:26:10 2023
+Host:		ee28 (x86_64 w/Linux 3.10.0-1160.88.1.el7.x86_64) (64cores*256cpus*AMD EPYC 7713 64-Core Processor 512KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		invs	Innovus Implementation System	20.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (2063 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+[INFO] Loading Pegasus 21.21 fill procedures
+<CMD> win
+<CMD> encMessage warning 0
+Suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> encMessage info 0
+**ERROR: (IMPSYT-7338):	The specified design session directory '/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/09_SUMBIT/newplace/Final_Project_iclab105/CHIP.inn.dat' could not be located as specified. Check your file system, correct the location, and try restoring the design again.
+
+
+ERROR: 
+
+
+    while executing
+"error $catchMsg"
+    (procedure "restoreDesign" line 31)
+
+<CMD> encMessage warning 1
+<CMD> encMessage debug 0
+<CMD> encMessage info 1
+<CMD> is_common_ui_mode
+<CMD> restoreDesign /RAID2/COURSE/iclab/iclab105/Final_Project_5.0/09_SUMBIT/newplace/Final_Project_iclab105/CHIP.inn.dat CHIP
+% Begin load design ... (date=06/07 02:27:01, mem=696.9M)
+**ERROR: (IMPSYT-7338):	The specified design session directory '/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/09_SUMBIT/newplace/Final_Project_iclab105/CHIP.inn.dat' could not be located as specified. Check your file system, correct the location, and try restoring the design again.
+
+
+ERROR: 
+
+
+    while executing
+"error $catchMsg"
+    (procedure "restoreDesign" line 31)
+
+<CMD> encMessage warning 1
+<CMD> encMessage debug 0
+<CMD> encMessage info 1
+
+--------------------------------------------------------------------------------
+Exiting Innovus on Wed Jun  7 02:28:18 2023
+  Total CPU time:     0:00:18
+  Total real time:    0:02:11
+  Peak memory (main): 702.09MB
+
+
+*** Memory Usage v#1 (Current mem = 914.180M, initial mem = 284.375M) ***
+*** Message Summary: 0 warning(s), 2 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:18.1, real=0:02:08, mem=914.2M) ---

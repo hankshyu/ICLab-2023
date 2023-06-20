@@ -1,0 +1,1 @@
+irun -timescale 1ns/1fs -override_precision -sdf_precision 1fs TESTBED.v -define POST -define FUNC -define RUN -debug -f file_list.f -v ~iclabta01/umc018/Verilog/umc18_neg.v -v ~iclabta01/umc018/Verilog/umc18io3v5v.v -maxdelays -nontcglitch -loadpli1 debpli:novas_pli_boot

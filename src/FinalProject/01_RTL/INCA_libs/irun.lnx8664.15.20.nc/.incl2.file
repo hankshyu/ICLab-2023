@@ -1,0 +1,10 @@
+PATTERN.v
+/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/00_TESTBED/PATTERN.v
+../00_TESTBED/MEM_MAP_define.v
+/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/00_TESTBED/MEM_MAP_define.v
+../00_TESTBED/pseudo_DRAM_data.v
+/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/00_TESTBED/pseudo_DRAM_data.v
+../00_TESTBED/pseudo_DRAM_inst.v
+/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/00_TESTBED/pseudo_DRAM_inst.v
+CPU.v
+/RAID2/COURSE/iclab/iclab105/Final_Project_5.0/01_RTL/CPU.v

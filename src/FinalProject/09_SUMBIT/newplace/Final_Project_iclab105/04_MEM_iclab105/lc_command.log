@@ -1,0 +1,7 @@
+#@ # 
+#@ # Running lc_shell Version T-2022.03 for linux64 -- Feb 22, 2022
+#@ # Date:   Tue Jun  6 20:41:52 2023
+#@ # Run by: iclab105@ee29
+#@ 
+
+source -echo -verbose RA1SH1_lc.tcl

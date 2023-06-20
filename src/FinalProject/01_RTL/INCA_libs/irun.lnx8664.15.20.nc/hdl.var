@@ -1,0 +1,7 @@
+define NCSIMRC	( /usr/cad/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc, ~/.ncsimrc )
+include ./hdlrun.var
+define SNAPSHOT worklib.TESTBED:v
+DEFINE RUNMODEDEFAULT 1
+DEFINE LIB_MAP ( + => worklib )
+define ELAB_SNAPSHOT
+define SNAPSHOT worklib.TESTBED:v

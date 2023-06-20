@@ -1,0 +1,30 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-XLMODE
+./INCA_libs/irun.lnx8664.15.20.nc
+-RUNMODE
+TESTBED.v
+-DEFINE
+RUN
+-DEFINE
+RTL
+-DEFINE
+FUNC
+../04_MEM/RA1SH1.v
+-INCDIR
+/RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/
+-YDIR
+/RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/
+-LIBEXT
+.v
+-CDSLIB
+./INCA_libs/irun.lnx8664.15.20.nc/cdsrun.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.15.20.nc/hdlrun.var
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./INCA_libs/irun.lnx8664.15.20.nc/xllibs
+-ALLOWUNBOUND

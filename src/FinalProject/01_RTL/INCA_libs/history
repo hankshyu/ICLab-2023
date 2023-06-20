@@ -1,0 +1,5 @@
+//
+// File created by:  irun
+// Do not modify this file
+
+s1::(07Jun2023:01:34:03):( irun TESTBED.v -define RUN -define RTL -define FUNC -debug -f file_list.f -notimingchecks -loadpli1 debpli:novas_pli_boot -incdir /RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/ -y /RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/ +libext+.v )

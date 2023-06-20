@@ -1,0 +1,67 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : CPU
+Version: T-2022.03
+Date   : Wed Jun  7 01:35:09 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: IF_DEC_instr_reg[11]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EXE_MEM_result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  IF_DEC_instr_reg[11]/CK (DFFRHQX4)       0.00       0.00 r
+  IF_DEC_instr_reg[11]/Q (DFFRHQX4)        0.23       0.23 f
+  U4010/Y (INVX3)                          0.13       0.36 r
+  U3839/Y (CLKINVX3)                       0.11       0.47 f
+  U4035/Y (NAND2X4)                        0.16       0.63 r
+  U2514/Y (NOR2X2)                         0.13       0.76 f
+  U2976/Y (OAI2BB1XL)                      0.25       1.01 f
+  U2975/Y (NOR2X1)                         0.14       1.14 r
+  U3064/Y (NAND4X1)                        0.23       1.37 f
+  U3871/Y (INVX2)                          0.34       1.71 r
+  U2026/Y (NAND2X2)                        0.27       1.98 f
+  U2528/Y (OAI22X1)                        0.29       2.27 r
+  U5342/CO (ADDFHX1)                       0.49       2.76 r
+  U2653/Y (INVXL)                          0.07       2.83 f
+  U2652/Y (NAND2BXL)                       0.11       2.93 r
+  U3023/Y (NAND2XL)                        0.08       3.01 f
+  U3022/Y (NAND2XL)                        0.10       3.11 r
+  U3860/S (ADDFHX1)                        0.42       3.53 r
+  U2120/S (ADDFHX2)                        0.35       3.88 r
+  U5494/Y (NOR2X2)                         0.07       3.95 f
+  U2772/Y (NOR2X1)                         0.09       4.05 r
+  U2102/Y (INVXL)                          0.07       4.12 f
+  U5505/Y (OAI21X1)                        0.19       4.31 r
+  U5533/Y (XNOR2X1)                        0.24       4.55 f
+  U5537/Y (OAI2BB1X2)                      0.17       4.72 f
+  EXE_MEM_result_reg[15]/D (DFFRHQXL)      0.00       4.72 f
+  data arrival time                                   4.72
+
+  clock clk (rise edge)                    5.00       5.00
+  clock network delay (ideal)              0.00       5.00
+  EXE_MEM_result_reg[15]/CK (DFFRHQXL)     0.00       5.00 r
+  library setup time                      -0.28       4.72
+  data required time                                  4.72
+  -----------------------------------------------------------
+  data required time                                  4.72
+  data arrival time                                  -4.72
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1

@@ -1,0 +1,21 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
++libext+.v
+-ACCESS
++rw
+-NOTIMINGCHECKS
+-LOADPLI1
+debpli:novas_pli_boot
+-MESSAGES
+-XLMODE
+./INCA_libs/irun.lnx8664.15.20.nc
+-RUNMODE
+-CDSLIB
+./INCA_libs/irun.lnx8664.15.20.nc/cds.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.15.20.nc/hdl.var
+-WORK
+worklib
+-HASXLMODE

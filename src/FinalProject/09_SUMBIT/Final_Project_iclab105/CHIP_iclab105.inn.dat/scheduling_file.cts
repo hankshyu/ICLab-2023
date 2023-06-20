@@ -1,0 +1,16 @@
+MacroModel pin IF_DEC_instr_reg_5_/CK  84.30ps 84.30ps 84.30ps 84.30ps 0pf av_func_mode_max
+MacroModel pin IF_DEC_instr_reg_6_/CK  111.60ps 111.60ps 111.60ps 111.60ps 0pf av_func_mode_max
+MacroModel pin IF_DEC_instr_reg_10_/CK  95.20ps 95.20ps 95.20ps 95.20ps 0pf av_func_mode_max
+MacroModel pin IF_DEC_instr_reg_7_/CK  82.20ps 82.20ps 82.20ps 82.20ps 0pf av_func_mode_max
+MacroModel pin IF_DEC_instr_reg_8_/CK  80.70ps 80.70ps 80.70ps 80.70ps 0pf av_func_mode_max
+MacroModel pin IF_DEC_instr_reg_11_/CK  60.30ps 60.30ps 60.30ps 60.30ps 0pf av_func_mode_max
+MacroModel pin IF_DEC_instr_reg_12_/CK  50.40ps 50.40ps 50.40ps 50.40ps 0pf av_func_mode_max
+MacroModel pin IF_DEC_instr_reg_9_/CK  49.50ps 49.50ps 49.50ps 49.50ps 0pf av_func_mode_max
+MacroModel pin IF_DEC_instr_reg_5_/CK  84.30ps 84.30ps 84.30ps 84.30ps 0pf av_func_mode_max
+MacroModel pin IF_DEC_instr_reg_6_/CK  111.60ps 111.60ps 111.60ps 111.60ps 0pf av_func_mode_max
+MacroModel pin IF_DEC_instr_reg_10_/CK  123.20ps 123.20ps 123.20ps 123.20ps 0pf av_func_mode_max
+MacroModel pin IF_DEC_instr_reg_7_/CK  82.20ps 82.20ps 82.20ps 82.20ps 0pf av_func_mode_max
+MacroModel pin IF_DEC_instr_reg_8_/CK  80.70ps 80.70ps 80.70ps 80.70ps 0pf av_func_mode_max
+MacroModel pin IF_DEC_instr_reg_11_/CK  75.90ps 75.90ps 75.90ps 75.90ps 0pf av_func_mode_max
+MacroModel pin IF_DEC_instr_reg_12_/CK  50.40ps 50.40ps 50.40ps 50.40ps 0pf av_func_mode_max
+MacroModel pin IF_DEC_instr_reg_9_/CK  69.30ps 69.30ps 69.30ps 69.30ps 0pf av_func_mode_max
