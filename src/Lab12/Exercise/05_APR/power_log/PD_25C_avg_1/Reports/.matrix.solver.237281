@@ -1,0 +1,44 @@
+
+#================================================
+# Matrix Solver Manager run time performance profile:
+	Stamp Matrix (1): 0.0003 user, 0.0000 system, 0.0003 real seconds
+	Factorize Matrix (1): 0.0052 user, 0.0009 system, 0.0061 real seconds
+	Solve Matrix (1): 0.0001 user, 0.0001 system, 0.0002 real seconds
+		Direct Solve (1): 0.0000 user, 0.0000 system, 0.0000 real seconds
+
+# Matrix Solver Manager memory performance profile:
+	Before DC Factorization: 3215.5480 peak virtual, 3215.5440 current virtual, 574.1600 peak resident, 103.2880 current resident mbytes
+	After DC Factorization: 3215.5480 peak virtual, 3215.5440 current virtual, 574.1600 peak resident, 105.6920 current resident mbytes
+#================================================
+
+#================================================
+# CHIP_GND:0 performance profile:
+	Stamping Stimulus:       0.0000 user, 0.0000 system, 0.0000 real seconds
+	Stamping DC:             0.0001 user, 0.0000 system, 0.0001 real seconds
+	Stamping Transient:      0.0000 user, 0.0000 system, 0.0000 real seconds
+	Stamping Transient Step: 0.0000 user, 0.0000 system, 0.0000 real seconds
+	Stamping Matrix Change:  0.0000 user, 0.0000 system, 0.0000 real seconds
+		Resistor             (6014      ,	0.0962    M):  0.0001 user, 0.0000 system, 0.0001 real seconds
+		VSource              (112       ,	0.0027    M):  0.0000 user, 0.0000 system, 0.0000 real seconds
+		Node                 (4868      ,	0.0584    M):  0.0000 user, 0.0000 system, 0.0000 real seconds
+	Equation Solver:        tesla
+	Factorization Time:     0.0030 user, 0.0001 system, 0.0030 real seconds
+	Forward Solve Time:     0.0000 user, 0.0000 system, 0.0001 real seconds
+	Backward Solve Time:    0.0000 user, 0.0000 system, 0.0000 real seconds
+#================================================
+
+#================================================
+# CHIP_VDD:0 performance profile:
+	Stamping Stimulus:       0.0000 user, 0.0000 system, 0.0000 real seconds
+	Stamping DC:             0.0001 user, 0.0000 system, 0.0001 real seconds
+	Stamping Transient:      0.0000 user, 0.0000 system, 0.0000 real seconds
+	Stamping Transient Step: 0.0000 user, 0.0000 system, 0.0000 real seconds
+	Stamping Matrix Change:  0.0000 user, 0.0000 system, 0.0000 real seconds
+		Resistor             (6105      ,	0.0977    M):  0.0001 user, 0.0000 system, 0.0001 real seconds
+		VSource              (112       ,	0.0027    M):  0.0000 user, 0.0000 system, 0.0000 real seconds
+		Node                 (4961      ,	0.0595    M):  0.0000 user, 0.0000 system, 0.0000 real seconds
+	Equation Solver:        tesla
+	Factorization Time:     0.0021 user, 0.0008 system, 0.0029 real seconds
+	Forward Solve Time:     0.0000 user, 0.0000 system, 0.0000 real seconds
+	Backward Solve Time:    0.0000 user, 0.0000 system, 0.0000 real seconds
+#================================================

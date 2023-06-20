@@ -1,0 +1,931 @@
+- Cell: AND2X2 Tag: 
+ Temperature: 25
+* Cell: AND2X2 Pin: GND Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AND2X4 Tag: 
+ Temperature: 25
+* Cell: AND2X4 Pin: GND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AND2XL Tag: 
+ Temperature: 25
+* Cell: AND2XL Pin: GND Instantiation: 10 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AND3X2 Tag: 
+ Temperature: 25
+* Cell: AND3X2 Pin: GND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AND4X2 Tag: 
+ Temperature: 25
+* Cell: AND4X2 Pin: GND Instantiation: 14 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI211X1 Tag: 
+ Temperature: 25
+* Cell: AOI211X1 Pin: GND Instantiation: 10 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI211X2 Tag: 
+ Temperature: 25
+* Cell: AOI211X2 Pin: GND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI211XL Tag: 
+ Temperature: 25
+* Cell: AOI211XL Pin: GND Instantiation: 35 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI21X1 Tag: 
+ Temperature: 25
+* Cell: AOI21X1 Pin: GND Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI21XL Tag: 
+ Temperature: 25
+* Cell: AOI21XL Pin: GND Instantiation: 8 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI221XL Tag: 
+ Temperature: 25
+* Cell: AOI221XL Pin: GND Instantiation: 10 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI222X1 Tag: 
+ Temperature: 25
+* Cell: AOI222X1 Pin: GND Instantiation: 9 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI222X2 Tag: 
+ Temperature: 25
+* Cell: AOI222X2 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI222X4 Tag: 
+ Temperature: 25
+* Cell: AOI222X4 Pin: GND Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI222XL Tag: 
+ Temperature: 25
+* Cell: AOI222XL Pin: GND Instantiation: 38 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI22X1 Tag: 
+ Temperature: 25
+* Cell: AOI22X1 Pin: GND Instantiation: 7 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI22XL Tag: 
+ Temperature: 25
+* Cell: AOI22XL Pin: GND Instantiation: 253 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI2BB1X1 Tag: 
+ Temperature: 25
+* Cell: AOI2BB1X1 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI2BB1X2 Tag: 
+ Temperature: 25
+* Cell: AOI2BB1X2 Pin: GND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI2BB1XL Tag: 
+ Temperature: 25
+* Cell: AOI2BB1XL Pin: GND Instantiation: 20 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI2BB2XL Tag: 
+ Temperature: 25
+* Cell: AOI2BB2XL Pin: GND Instantiation: 48 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI31X1 Tag: 
+ Temperature: 25
+* Cell: AOI31X1 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI31X2 Tag: 
+ Temperature: 25
+* Cell: AOI31X2 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI31XL Tag: 
+ Temperature: 25
+* Cell: AOI31XL Pin: GND Instantiation: 6 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI32X4 Tag: 
+ Temperature: 25
+* Cell: AOI32X4 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: AOI32XL Tag: 
+ Temperature: 25
+* Cell: AOI32XL Pin: GND Instantiation: 9 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: BUFX2 Tag: 
+ Temperature: 25
+* Cell: BUFX2 Pin: GND Instantiation: 20 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: BUFX4 Tag: 
+ Temperature: 25
+* Cell: BUFX4 Pin: GND Instantiation: 8 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: BUFX8 Tag: 
+ Temperature: 25
+* Cell: BUFX8 Pin: GND Instantiation: 6 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: CLKBUFX12 Tag: 
+ Temperature: 25
+* Cell: CLKBUFX12 Pin: GND Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: CLKBUFX4 Tag: 
+ Temperature: 25
+* Cell: CLKBUFX4 Pin: GND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: CLKINVX1 Tag: 
+ Temperature: 25
+* Cell: CLKINVX1 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: CLKINVX2 Tag: 
+ Temperature: 25
+* Cell: CLKINVX2 Pin: GND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: CLKINVX4 Tag: 
+ Temperature: 25
+* Cell: CLKINVX4 Pin: GND Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: CLKINVXL Tag: 
+ Temperature: 25
+* Cell: CLKINVXL Pin: GND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: DFFHQX1 Tag: 
+ Temperature: 25
+* Cell: DFFHQX1 Pin: GND Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: DFFRHQX1 Tag: 
+ Temperature: 25
+* Cell: DFFRHQX1 Pin: GND Instantiation: 7 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: DFFRHQX2 Tag: 
+ Temperature: 25
+* Cell: DFFRHQX2 Pin: GND Instantiation: 7 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: DFFRHQXL Tag: 
+ Temperature: 25
+* Cell: DFFRHQXL Pin: GND Instantiation: 274 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: DFFRX1 Tag: 
+ Temperature: 25
+* Cell: DFFRX1 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: DFFSX1 Tag: 
+ Temperature: 25
+* Cell: DFFSX1 Pin: GND Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: DFFSX2 Tag: 
+ Temperature: 25
+* Cell: DFFSX2 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: INVX1 Tag: 
+ Temperature: 25
+* Cell: INVX1 Pin: GND Instantiation: 22 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: INVX2 Tag: 
+ Temperature: 25
+* Cell: INVX2 Pin: GND Instantiation: 87 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: INVX4 Tag: 
+ Temperature: 25
+* Cell: INVX4 Pin: GND Instantiation: 8 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: INVX8 Tag: 
+ Temperature: 25
+* Cell: INVX8 Pin: GND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: INVXL Tag: 
+ Temperature: 25
+* Cell: INVXL Pin: GND Instantiation: 186 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: MXI2XL Tag: 
+ Temperature: 25
+* Cell: MXI2XL Pin: GND Instantiation: 31 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NAND2BX1 Tag: 
+ Temperature: 25
+* Cell: NAND2BX1 Pin: GND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NAND2BX2 Tag: 
+ Temperature: 25
+* Cell: NAND2BX2 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NAND2BXL Tag: 
+ Temperature: 25
+* Cell: NAND2BXL Pin: GND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NAND2X1 Tag: 
+ Temperature: 25
+* Cell: NAND2X1 Pin: GND Instantiation: 33 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NAND2X2 Tag: 
+ Temperature: 25
+* Cell: NAND2X2 Pin: GND Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NAND2X4 Tag: 
+ Temperature: 25
+* Cell: NAND2X4 Pin: GND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NAND2XL Tag: 
+ Temperature: 25
+* Cell: NAND2XL Pin: GND Instantiation: 155 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NAND3BXL Tag: 
+ Temperature: 25
+* Cell: NAND3BXL Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NAND3X1 Tag: 
+ Temperature: 25
+* Cell: NAND3X1 Pin: GND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NAND3X2 Tag: 
+ Temperature: 25
+* Cell: NAND3X2 Pin: GND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NAND3XL Tag: 
+ Temperature: 25
+* Cell: NAND3XL Pin: GND Instantiation: 7 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NAND4BX2 Tag: 
+ Temperature: 25
+* Cell: NAND4BX2 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NAND4BXL Tag: 
+ Temperature: 25
+* Cell: NAND4BXL Pin: GND Instantiation: 6 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NAND4X1 Tag: 
+ Temperature: 25
+* Cell: NAND4X1 Pin: GND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NAND4XL Tag: 
+ Temperature: 25
+* Cell: NAND4XL Pin: GND Instantiation: 28 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NOR2BX1 Tag: 
+ Temperature: 25
+* Cell: NOR2BX1 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NOR2BX2 Tag: 
+ Temperature: 25
+* Cell: NOR2BX2 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NOR2BXL Tag: 
+ Temperature: 25
+* Cell: NOR2BXL Pin: GND Instantiation: 7 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NOR2X1 Tag: 
+ Temperature: 25
+* Cell: NOR2X1 Pin: GND Instantiation: 156 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NOR2X2 Tag: 
+ Temperature: 25
+* Cell: NOR2X2 Pin: GND Instantiation: 15 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NOR2X4 Tag: 
+ Temperature: 25
+* Cell: NOR2X4 Pin: GND Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NOR3X1 Tag: 
+ Temperature: 25
+* Cell: NOR3X1 Pin: GND Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NOR3XL Tag: 
+ Temperature: 25
+* Cell: NOR3XL Pin: GND Instantiation: 21 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NOR4BXL Tag: 
+ Temperature: 25
+* Cell: NOR4BXL Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NOR4X1 Tag: 
+ Temperature: 25
+* Cell: NOR4X1 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NOR4X2 Tag: 
+ Temperature: 25
+* Cell: NOR4X2 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: NOR4XL Tag: 
+ Temperature: 25
+* Cell: NOR4XL Pin: GND Instantiation: 11 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: OAI211X1 Tag: 
+ Temperature: 25
+* Cell: OAI211X1 Pin: GND Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: OAI211X2 Tag: 
+ Temperature: 25
+* Cell: OAI211X2 Pin: GND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: OAI211X4 Tag: 
+ Temperature: 25
+* Cell: OAI211X4 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: OAI211XL Tag: 
+ Temperature: 25
+* Cell: OAI211XL Pin: GND Instantiation: 49 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: OAI21X1 Tag: 
+ Temperature: 25
+* Cell: OAI21X1 Pin: GND Instantiation: 6 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: OAI21X2 Tag: 
+ Temperature: 25
+* Cell: OAI21X2 Pin: GND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: OAI21XL Tag: 
+ Temperature: 25
+* Cell: OAI21XL Pin: GND Instantiation: 69 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: OAI22X1 Tag: 
+ Temperature: 25
+* Cell: OAI22X1 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: OAI22XL Tag: 
+ Temperature: 25
+* Cell: OAI22XL Pin: GND Instantiation: 133 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: OAI2BB1X1 Tag: 
+ Temperature: 25
+* Cell: OAI2BB1X1 Pin: GND Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: OAI2BB1X2 Tag: 
+ Temperature: 25
+* Cell: OAI2BB1X2 Pin: GND Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: OAI2BB1XL Tag: 
+ Temperature: 25
+* Cell: OAI2BB1XL Pin: GND Instantiation: 31 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: OAI2BB2XL Tag: 
+ Temperature: 25
+* Cell: OAI2BB2XL Pin: GND Instantiation: 71 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: OAI31X1 Tag: 
+ Temperature: 25
+* Cell: OAI31X1 Pin: GND Instantiation: 11 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: OAI31X4 Tag: 
+ Temperature: 25
+* Cell: OAI31X4 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: OAI31XL Tag: 
+ Temperature: 25
+* Cell: OAI31XL Pin: GND Instantiation: 7 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: OAI32XL Tag: 
+ Temperature: 25
+* Cell: OAI32XL Pin: GND Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: OR2X1 Tag: 
+ Temperature: 25
+* Cell: OR2X1 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: OR2X2 Tag: 
+ Temperature: 25
+* Cell: OR2X2 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: OR2XL Tag: 
+ Temperature: 25
+* Cell: OR2XL Pin: GND Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: PVSSC Tag: 
+ Temperature: 25
+* Cell: PVSSC Pin: GND Instantiation: 8 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1              12              12               0               0              12               0
+        METAL_2              12              12               0               0              12               0
+        METAL_3              12              12               0               0              12               0
+        METAL_4               9               9               0               0               9               0
+        METAL_5               9               9               0               0               9               0
+        METAL_6               9               9               0               0               9               0
+          Total              63              63               0               0              63               0
+
+
+- Cell: XNOR2X1 Tag: 
+ Temperature: 25
+* Cell: XNOR2X1 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: XOR2X1 Tag: 
+ Temperature: 25
+* Cell: XOR2X1 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: XOR2X4 Tag: 
+ Temperature: 25
+* Cell: XOR2X4 Pin: GND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+- Cell: XOR2XL Tag: 
+ Temperature: 25
+* Cell: XOR2XL Pin: GND Instantiation: 13 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+        METAL_1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+
+
+
+Grid Statistics of Net GND:
+- NODE
+  Total node: 5284
+    Top Level grid node: 4804
+      Top level interface node: 2102
+    Missing interface node: 480
+    Cell internal node: 0
+- ELEM
+  Total element: 6014
+    Top Level grid element: 6014
+    Cell internal element: 0
+- INST
+  Instance logically connected: 2086
+    Tech: 0
+    StdCell: 2078
+    Macro:
+      Early: 8
+      IR: 0
+      EM: 0
+    Current Region:  0
+  Dropped instance due to missing/incomplete cell library: 0
+- TAP
+  Total tap: 2582
+
+

@@ -1,0 +1,7 @@
+set_global _allow_line_number_display_for_error_warn_messages "true"
+set_global _scale_capacitance_to_1ff "true"
+set_global _scale_time_to_100fs "true"
+set_global _scale_leakage_power_to_1pw "true"
+set_global _timing_combine_tlf_non_unate_arcs "true"
+set_global _timing_library_switch_on_undeclared_arcs_function "false"
+set_global _map_2007_03_low_power_to_2004_06 "true"

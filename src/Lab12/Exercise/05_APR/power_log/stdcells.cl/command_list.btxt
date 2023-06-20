@@ -1,0 +1,6 @@
+temperature -1
+extraction_tech_file /RAID2/COURSE/iclab/iclab105/Lab12/Exercise/05_APR/Library/rc/RCGen.tch
+spice_subckts_xyscaling 1000
+use_powergate_data_from_lib 0
+default_frequency 2e+08
+decap_frequency 1e+08

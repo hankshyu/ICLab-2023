@@ -1,0 +1,2 @@
+rm -rf *.v
+rm -rf *.db

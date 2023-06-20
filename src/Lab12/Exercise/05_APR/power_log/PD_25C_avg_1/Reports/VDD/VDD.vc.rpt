@@ -1,0 +1,128 @@
+Voltage source current:
+      Range  Source       Source        Location    Layer
+      Index  Current      Name          (um)
+      -----  --------     -------------------------------
+         2   -9.5923e-05A   VDDvsrc74   976.90, 624.53  METAL_1
+         2   -9.4857e-05A   VDDvsrc75   976.90, 633.03  METAL_1
+         2   -9.2082e-05A   VDDvsrc76   976.90, 641.53  METAL_1
+         2   -1.0296e-04A   VDDvsrc73   976.90, 658.53  METAL_1
+         1   -1.1826e-04A   VDDvsrc78   976.90, 667.07  METAL_1
+         2   -9.4791e-05A   VDDvsrc77   976.90, 650.03  METAL_1
+         2   -9.4813e-05A   VDDvsrc8   194.46, 667.07  METAL_1
+         3   -7.4185e-05A   VDDvsrc6   194.46, 641.53  METAL_1
+         3   -7.6472e-05A   VDDvsrc5   194.46, 633.03  METAL_1
+         3   -7.7516e-05A   VDDvsrc4   194.46, 624.53  METAL_1
+         3   -8.2689e-05A   VDDvsrc3   194.46, 658.53  METAL_1
+         3   -7.6206e-05A   VDDvsrc7   194.46, 650.03  METAL_1
+         4   -6.8168e-05A   VDDvsrc64   976.90, 486.71  METAL_1
+         4   -6.2839e-05A   VDDvsrc63   976.90, 478.17  METAL_1
+         4   -6.0019e-05A   VDDvsrc59   976.90, 444.17  METAL_1
+         5   -5.5889e-05A   VDDvsrc60   976.90, 452.67  METAL_1
+         5   -5.5200e-05A   VDDvsrc61   976.90, 461.17  METAL_1
+         5   -5.7532e-05A   VDDvsrc62   976.90, 469.67  METAL_1
+         5   -4.9916e-05A   VDDvsrc17   194.46, 444.17  METAL_1
+         5   -4.6629e-05A   VDDvsrc18   194.46, 452.67  METAL_1
+         5   -4.6119e-05A   VDDvsrc19   194.46, 461.17  METAL_1
+         5   -4.8117e-05A   VDDvsrc20   194.46, 469.67  METAL_1
+         5   -5.2447e-05A   VDDvsrc21   194.46, 478.17  METAL_1
+         5   -5.6777e-05A   VDDvsrc22   194.46, 486.71  METAL_1
+         4   -6.6547e-05A   VDDvsrc91   624.51, 976.90  METAL_2
+         4   -6.5770e-05A   VDDvsrc90   633.01, 976.90  METAL_2
+         4   -6.6169e-05A   VDDvsrc89   641.51, 976.90  METAL_2
+         4   -6.9367e-05A   VDDvsrc88   650.01, 976.90  METAL_2
+         3   -7.6184e-05A   VDDvsrc87   658.51, 976.90  METAL_2
+         3   -8.8440e-05A   VDDvsrc86   667.09, 976.90  METAL_2
+         7   -2.3315e-05A   VDDvsrc49   624.51, 194.46  METAL_2
+         7   -2.3115e-05A   VDDvsrc48   633.01, 194.46  METAL_2
+         7   -2.3404e-05A   VDDvsrc47   641.51, 194.46  METAL_2
+         7   -2.4669e-05A   VDDvsrc46   650.01, 194.46  METAL_2
+         7   -2.7289e-05A   VDDvsrc45   658.51, 194.46  METAL_2
+         6   -3.1797e-05A   VDDvsrc44   667.09, 194.46  METAL_2
+         3   -7.5584e-05A   VDDvsrc105   444.15, 976.90  METAL_2
+         4   -6.6791e-05A   VDDvsrc104   452.65, 976.90  METAL_2
+         4   -6.2417e-05A   VDDvsrc103   461.15, 976.90  METAL_2
+         4   -6.1107e-05A   VDDvsrc102   469.65, 976.90  METAL_2
+         4   -6.2106e-05A   VDDvsrc101   478.15, 976.90  METAL_2
+         4   -6.3816e-05A   VDDvsrc100   486.73, 976.90  METAL_2
+         7   -2.7689e-05A   VDDvsrc35   444.15, 194.46  METAL_2
+         7   -2.4314e-05A   VDDvsrc34   452.65, 194.46  METAL_2
+         7   -2.2560e-05A   VDDvsrc33   461.15, 194.46  METAL_2
+         7   -2.1960e-05A   VDDvsrc32   469.65, 194.46  METAL_2
+         7   -2.2160e-05A   VDDvsrc31   478.15, 194.46  METAL_2
+         7   -2.2582e-05A   VDDvsrc30   486.73, 194.46  METAL_2
+         8   -0.0000e+00A   VDDvsrc106   465.44, 977.34  METAL_1
+         8   -0.0000e+00A   VDDvsrc107   465.44, 1139.68  METAL_1
+         8   -0.0000e+00A   VDDvsrc108   465.44, 1139.68  METAL_2
+         8   -0.0000e+00A   VDDvsrc99   465.44, 977.34  METAL_3
+         8   -0.0000e+00A   VDDvsrc109   465.44, 1139.68  METAL_3
+         8   -0.0000e+00A   VDDvsrc110   465.44, 1139.68  METAL_4
+         8   -0.0000e+00A   VDDvsrc111   465.44, 1139.68  METAL_5
+         8   -0.0000e+00A   VDDvsrc112   465.44, 1139.68  METAL_6
+         8   -0.0000e+00A   VDDvsrc92   645.80, 977.34  METAL_1
+         8   -0.0000e+00A   VDDvsrc93   645.80, 1139.68  METAL_1
+         8   -0.0000e+00A   VDDvsrc94   645.80, 1139.68  METAL_2
+         8   -0.0000e+00A   VDDvsrc85   645.80, 977.34  METAL_3
+         8   -0.0000e+00A   VDDvsrc95   645.80, 1139.68  METAL_3
+         8   -0.0000e+00A   VDDvsrc96   645.80, 1139.68  METAL_4
+         8   -0.0000e+00A   VDDvsrc97   645.80, 1139.68  METAL_5
+         8   -0.0000e+00A   VDDvsrc98   645.80, 1139.68  METAL_6
+         8   -0.0000e+00A   VDDvsrc79   1139.68, 645.80  METAL_1
+         8   -0.0000e+00A   VDDvsrc72   977.34, 645.80  METAL_2
+         8   -0.0000e+00A   VDDvsrc80   1139.68, 645.80  METAL_2
+         8   -0.0000e+00A   VDDvsrc71   977.34, 645.80  METAL_3
+         8   -0.0000e+00A   VDDvsrc81   1139.68, 645.80  METAL_3
+         8   -0.0000e+00A   VDDvsrc82   1139.68, 645.80  METAL_4
+         8   -0.0000e+00A   VDDvsrc83   1139.68, 645.80  METAL_5
+         8   -0.0000e+00A   VDDvsrc84   1139.68, 645.80  METAL_6
+         8   -0.0000e+00A   VDDvsrc65   1139.68, 465.44  METAL_1
+         8   -0.0000e+00A   VDDvsrc58   977.34, 465.44  METAL_2
+         8   -0.0000e+00A   VDDvsrc66   1139.68, 465.44  METAL_2
+         8   -0.0000e+00A   VDDvsrc57   977.34, 465.44  METAL_3
+         8   -0.0000e+00A   VDDvsrc67   1139.68, 465.44  METAL_3
+         8   -0.0000e+00A   VDDvsrc68   1139.68, 465.44  METAL_4
+         8   -0.0000e+00A   VDDvsrc69   1139.68, 465.44  METAL_5
+         8   -0.0000e+00A   VDDvsrc70   1139.68, 465.44  METAL_6
+         8   -0.0000e+00A   VDDvsrc50   645.80, 194.02  METAL_1
+         8   -0.0000e+00A   VDDvsrc51   645.80, 31.68  METAL_1
+         8   -0.0000e+00A   VDDvsrc52   645.80, 31.68  METAL_2
+         8   -0.0000e+00A   VDDvsrc43   645.80, 194.02  METAL_3
+         8   -0.0000e+00A   VDDvsrc53   645.80, 31.68  METAL_3
+         8   -0.0000e+00A   VDDvsrc54   645.80, 31.68  METAL_4
+         8   -0.0000e+00A   VDDvsrc55   645.80, 31.68  METAL_5
+         8   -0.0000e+00A   VDDvsrc56   645.80, 31.68  METAL_6
+         8   -0.0000e+00A   VDDvsrc36   465.44, 194.02  METAL_1
+         8   -0.0000e+00A   VDDvsrc37   465.44, 31.68  METAL_1
+         8   -0.0000e+00A   VDDvsrc38   465.44, 31.68  METAL_2
+         8   -0.0000e+00A   VDDvsrc29   465.44, 194.02  METAL_3
+         8   -0.0000e+00A   VDDvsrc39   465.44, 31.68  METAL_3
+         8   -0.0000e+00A   VDDvsrc40   465.44, 31.68  METAL_4
+         8   -0.0000e+00A   VDDvsrc41   465.44, 31.68  METAL_5
+         8   -0.0000e+00A   VDDvsrc42   465.44, 31.68  METAL_6
+         8   -0.0000e+00A   VDDvsrc23   31.68, 465.44  METAL_1
+         8   -0.0000e+00A   VDDvsrc16   194.02, 465.44  METAL_2
+         8   -0.0000e+00A   VDDvsrc24   31.68, 465.44  METAL_2
+         8   -0.0000e+00A   VDDvsrc15   194.02, 465.44  METAL_3
+         8   -0.0000e+00A   VDDvsrc25   31.68, 465.44  METAL_3
+         8   -0.0000e+00A   VDDvsrc26   31.68, 465.44  METAL_4
+         8   -0.0000e+00A   VDDvsrc27   31.68, 465.44  METAL_5
+         8   -0.0000e+00A   VDDvsrc28   31.68, 465.44  METAL_6
+         8   -0.0000e+00A   VDDvsrc9   31.68, 645.80  METAL_1
+         8   -0.0000e+00A   VDDvsrc2   194.02, 645.80  METAL_2
+         8   -0.0000e+00A   VDDvsrc10   31.68, 645.80  METAL_2
+         8   -0.0000e+00A   VDDvsrc1   194.02, 645.80  METAL_3
+         8   -0.0000e+00A   VDDvsrc11   31.68, 645.80  METAL_3
+         8   -0.0000e+00A   VDDvsrc12   31.68, 645.80  METAL_4
+         8   -0.0000e+00A   VDDvsrc13   31.68, 645.80  METAL_5
+         8   -0.0000e+00A   VDDvsrc14   31.68, 645.80  METAL_6
+*
+* Data filtering results for voltage source current:
+  Minimum, Average, Maximum Voltage Source Current: -0.118mA, -25.532uA, 0.000A
+  Total Current: -2.860mA
+    Range 1(  -0.118mA  -    -0.103mA ):         1 (  0.89%)
+    Range 2(  -0.103mA  -   -88.696uA ):         6 (  5.36%)
+    Range 3( -88.696uA  -   -73.913uA ):         8 (  7.14%)
+    Range 4( -73.913uA  -   -59.130uA ):        12 ( 10.71%)
+    Range 5( -59.130uA  -   -44.348uA ):         9 (  8.04%)
+    Range 6( -44.348uA  -   -29.565uA ):         1 (  0.89%)
+    Range 7( -29.565uA  -   -14.783uA ):        11 (  9.82%)
+    Range 8( -14.783uA  -      0.000A ):        64 ( 57.14%)

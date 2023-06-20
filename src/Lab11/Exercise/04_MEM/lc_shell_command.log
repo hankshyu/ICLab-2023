@@ -1,0 +1,506 @@
+#@ # 
+#@ # Running lc_shell Version K-2015.06-SP3 for linux64 -- Oct 13, 2015
+#@ # Date:   Fri Dec 16 19:34:37 2022
+#@ # Run by: iclab117@linux08
+#@ 
+
+source /RAID2/EDA/synopsys/lc/cur/admin/setup//.synopsys_lc.setup
+#@ # -- Starting source /RAID2/EDA/synopsys/lc/cur/admin/setup//.synopsys_lc.setup
+
+#@ #
+#@ #
+#@ #		".synopsys_lc.setup" Initialization File for
+#@ #
+#@ #		    Lc_Shell and Library_compiler
+#@ #
+#@ #	The variables in this file define the behavior of many parts
+#@ #	of the Synopsys Synthesis Tools.  Upon installation, they should 
+#@ #	be reviewed and modified to fit your site's needs.  Each engineer
+#@ #	can have a .synopsys file in his/her home directory or current
+#@ #	directory to override variable settings in this file.  
+#@ #
+#@ 
+#@ # System variables
+#@ # system default value for sh_continue_on_error is "false"
+#@ set sh_continue_on_error         "true"
+#@ # system default value for sh_source_uses_search_path is "false"
+#@ set sh_source_uses_search_path   "true"
+#@ 
+#@ # Enable customer support banner on fatal
+#@ if { $sh_arch == "linux"    || $sh_arch == "amd64"    || $sh_arch == "linux64" ||      $sh_arch == "suse32"   || $sh_arch == "suse64"   ||      $sh_arch == "sparcOS5" || $sh_arch == "sparc64"  ||      $sh_arch == "x86sol32" || $sh_arch == "x86sol64" ||      $sh_arch == "rs6000"   || $sh_arch == "aix64" } {
+#@    setenv SYNOPSYS_TRACE ""
+#@ }
+#@ 
+#@ #
+#@ # Load the procedures which make up part of the user interface.
+#@ #
+#@ source $synopsys_root/auxx/syn/.lc_procs.tcl
+#@ # -- Starting source /RAID2/EDA/synopsys/lc/cur/auxx/syn/.lc_procs.tcl
+
+#@ ##############################################################################
+#@ #
+#@ #
+#@ # FILE:         auxx/syn/.lc_procs.tcl
+#@ #
+#@ # ABSTRACT:     These procedures are part of the lc_shell
+#@ #               user interface.
+#@ #               They are loaded by .synopsys_lc.setup.
+#@ #
+#@ ##############################################################################
+#@ #
+#@ #
+#@ 
+#@ ##############################################################################
+#@ #
+#@ #
+#@ #  PROCEDURE:  add_model
+#@ #
+#@ #  ABSTRACT:  dummy call
+#@ #
+#@ ##############################################################################
+#@ #
+#@ 
+#@ proc add_model { args } {
+#@   return [uplevel #0 $cmd]
+#@ }
+#@ 
+#@ ##############################################################################
+#@ #
+#@ #  PROCEDURE:   remove_design
+#@ #
+#@ #  ABSTRACT:    map remove_design to remove_lib
+#@ #
+#@ #  HISTORY :    2014/05/09, Junhan Yi, initial
+#@ #
+#@ ##############################################################################
+#@ 
+#@ proc remove_design { args } {
+#@   parse_proc_arguments -args $args ra
+#@ 
+#@   if {[info exists ra(-library)]} {
+#@     set cmd [format {remove_lib %s} $ra(-library)]
+#@   } elseif {[info exists ra(-all)]} {
+#@     set cmd {remove_lib -all}
+#@   } else {
+#@     set cmd [format {remove_lib [list %s]} $args]
+#@   }
+#@ 
+#@   return [uplevel #0 $cmd]
+#@ }
+#@ 
+#@ define_proc_attributes remove_design -hide_body     -info " alias of remove_lib "     -define_args {      {file_names "" file_names list {optional hidden}}    }
+#@ # -- End source /RAID2/EDA/synopsys/lc/cur/auxx/syn/.lc_procs.tcl
+
+#@ #for read_lib -html	
+#@ source ${synopsys_root}/auxx/lc/read_lib_html_msg_list.tcl
+#@ # -- Starting source /RAID2/EDA/synopsys/lc/cur/auxx/lc/read_lib_html_msg_list.tcl
+
+#@ ##############################################################################
+#@ # message ID and descriptions for read_lib -html
+#@ ##############################################################################
+#@ set read_lib_ccs_noise_msg {
+#@     LBDB-660
+#@     LBDB-706
+#@     LBDB-708
+#@     LBDB-709
+#@     LBDB-710
+#@     LBDB-711
+#@     LBDB-712
+#@     LBDB-713
+#@     LBDB-714
+#@     LBDB-715
+#@     LBDB-716
+#@     LBDB-717
+#@     LBDB-718
+#@     LBDB-733
+#@     LBDB-734
+#@     LBDB-784
+#@     LBDB-824
+#@     LBDB-825
+#@     LBDB-858
+#@     LBDB-898
+#@     LBDB-899
+#@     LBDB-908
+#@     LBDB-920
+#@     LBDB-935
+#@     LBDB-936
+#@     LBDB-937
+#@     LBDB-938
+#@     LBDB-939
+#@ }
+#@ # -- End source /RAID2/EDA/synopsys/lc/cur/auxx/lc/read_lib_html_msg_list.tcl
+
+#@ alias list_commands help
+#@ 
+#@ # Temporary fix for the LMC_HOME variable- set it to an empty string 
+#@ 
+#@ if { [catch {getenv LMC_HOME } __err ] != 0 } {
+#@   setenv LMC_HOME ""
+#@ }
+#@ 
+#@ #
+#@ #
+#@ #       Site-Specific Variables
+#@ #
+#@ #       These are the variables that are most commonly changed at a
+#@ #       specific site, either upon installation of the Synopsys software,
+#@ #       or by specific engineers in their local .synopsys_lc.setup files.
+#@ #
+#@ #
+#@ 
+#@ # from the System Variable Group 
+#@ set search_path [list . ${synopsys_root}/libraries/syn]
+#@ 
+#@ # do we need command_log_file ?
+#@ set command_log_file $sh_command_log_file
+#@ 
+#@ set view_command_log_file  "./view_command.log"
+#@ 
+#@ # from the View Variable group
+#@ if { $sh_arch == "hp700" } {
+#@    set text_print_command  "lp -d" 
+#@ } else {
+#@    set text_print_command  "lpr -Plw" 
+#@ }
+#@ 
+#@ 
+#@ #
+#@ #       System Variable Group:
+#@ #
+#@ #       These variables are system-wide variables.
+#@ #
+#@ 
+#@ set verbose_messages  "true"
+#@ set echo_include_commands  "true"
+#@ set suppress_errors  {}
+#@ 
+#@ # variables pertaining to VHDL library generation 
+#@ set vhdllib_timing_mesg   "true"
+#@ set vhdllib_timing_xgen   "false"
+#@ set vhdllib_timing_checks   "true"
+#@ set vhdllib_negative_constraint   "false"
+#@ set vhdllib_glitch_handle   "true"
+#@ set vhdllib_pulse_handle   "use_vhdllib_glitch_handle"
+#@ # /*set vhdllib_architecture   {FTBM, UDSM, FTSM, FTGS, VITAL} */
+#@ set vhdllib_architecture   {VITAL}
+#@ set vhdllib_tb_compare   0
+#@ set vhdllib_tb_x_eq_dontcare   FALSE
+#@ set vhdllib_logic_system   "ieee-1164"
+#@ set vhdllib_logical_name   ""
+#@ 
+#@ # variables pertaining to technology library processing 
+#@ set read_db_lib_warnings   FALSE
+#@ set read_translate_msff    TRUE
+#@ set libgen_max_differences   -1
+#@ 
+#@ set view_on_line_doc_cmd ${synopsys_root}/sold
+#@ 
+#@ # Aliases for backwards compatibility or other reasons 
+#@ #alias groupvar          group_variable
+#@ alias free		remove_lib
+#@ 
+#@ # set filename for logging input file 
+#@ set filename_log_file   "lc_filenames.log"  
+#@ # whether to delete the filename log after the normal exits 
+#@ set exit_delete_filename_log_file   "true"
+#@ 
+#@ #if { lc_shell_status == 0 } {
+#@ #  sh echo {Fatal: System .synopsys_lc.setup file not read properly. Please re-invoke.}
+#@ #  sh echo {Note that the init file .synopsy_lc.setup of lc_shell}
+#@ #  sh echo {is a subset of the dc_shell init file .synopsys_dc.setup.}
+#@ #  sh echo {If a non lc_shell command is encountered in the init file,}
+#@ #  sh echo {an error message will be issued and the processing might terminate.}
+#@ #  sh echo {Please refer to the Library Compiler reference manual for supported commands.}
+#@ #  quit
+#@ #}
+#@ proc get_legacy_lc_search_path { } {
+#@   set exec_path "invalid"
+#@   if {[info exists ::env(SYNOPSYS_SYN_ROOT)] &&  [file exists $::env(SYNOPSYS_SYN_ROOT)/$::sh_arch/syn/bin/common_shell_exec] } {
+#@     set exec_path $::env(SYNOPSYS_SYN_ROOT)/$::sh_arch/syn/bin/common_shell_exec
+#@   }
+#@   return $exec_path
+#@ }
+#@ 
+#@ proc get_legacy_lc_synopsys_root { } {
+#@   return [file dirname [file dirname [file dirname [file dirname $::legacy_lc_search_path] ] ] ] 
+#@ }
+#@ 
+#@ 
+#@ proc valias {v_orig v_alias} {
+#@    uplevel 1 "upvar 0 $v_orig $v_alias"
+#@ }
+#@ 
+#@ set legacy_lc_result_path "/tmp"
+#@ set legacy_lc_replay_tcl_file "common_shell_command.tcl"
+#@ set legacy_lc_search_path [get_legacy_lc_search_path]
+#@ valias lc_enable_legacy_library_compiler lc_enable_common_shell_lc
+#@ 
+#@ proc legacy_lc_lib2saif { args } {
+#@   common_shell_write_lib $args
+#@ }
+#@ 
+#@ proc add_pg_pin_to_lib { args } {
+#@   common_shell_add_pg_pin [concat "add_pg_pin_to_lib" $args]
+#@ }
+#@ 
+#@ proc add_pg_pin_to_db { args } {
+#@   common_shell_add_pg_pin [concat "add_pg_pin_to_db" $args]
+#@ }
+#@ 
+#@ proc run_legacy_lc_with_echo {tcl_file} {
+#@   set chan [open "|$::legacy_lc_search_path -shell lc_shell -r [get_legacy_lc_synopsys_root] -f $tcl_file" r]
+#@ # things to do: In debug mode, we want copy the whole output (beginning to end) 
+#@ # to a file
+#@   if {$::lc_keep_legacy_lc_temp_files} {
+#@       set log [open $::legacy_lc_result_path/$::legacy_lc_log_path/libra.log w]
+#@   }
+#@   set echo 0
+#@   set firstLine true
+#@   while {[gets $chan line] >= 0} {
+#@       if {$::lc_keep_legacy_lc_temp_files} { puts $log $line }
+#@       if {[string equal -length 7 $line "##@@@##"]} {
+#@ 	  set echo [expr ! $echo]
+#@ 	  continue;
+#@       }
+#@       if {$echo} { 
+#@         if { $firstLine } {
+#@           set firstLine false
+#@           continue;
+#@         } else { 
+#@           puts $line 
+#@         }
+#@       }
+#@   }
+#@   close $chan
+#@   if {$::lc_keep_legacy_lc_temp_files} {
+#@       close $log
+#@   }
+#@ }
+#@ 
+#@ proc common_shell_read_lib {args } {
+#@   if { [print_no_common_shell_found $::legacy_lc_search_path] } {
+#@     return 0
+#@   }
+#@   set_folder_var
+#@   set tcl_file "$::legacy_lc_result_path/$::legacy_lc_log_path/$::legacy_lc_replay_tcl_file"
+#@   set chan [open $tcl_file a]
+#@   export_tcl_var $chan 
+#@   gen_common_shell_read_lib_procedure $chan $args
+#@   close $chan
+#@   echo "Invoking common shell Library Compiler..."
+#@   run_legacy_lc_with_echo $tcl_file
+#@   libra_shell_read_dbs
+#@   common_shell_clean_up
+#@ }
+#@ 
+#@ proc common_shell_add_pg_pin {args } {
+#@   if { [print_no_common_shell_found $::legacy_lc_search_path] } {
+#@     return 0
+#@   }
+#@   # to use error message in synthesis root as the command is called under the hood
+#@   set synopsys ""
+#@   set synopsys_syn_root ""
+#@   if {[info exists ::env(SYNOPSYS)]} {
+#@     set synopsys $::env(SYNOPSYS)
+#@   }
+#@   if {[info exists ::env(SYNOPSYS_SYN_ROOT)]} {
+#@     set synopsys_syn_root $::env(SYNOPSYS_SYN_ROOT)
+#@   }
+#@   if {[string compare "$synopsys"  "$synopsys_syn_root"] && [string compare "$synopsys_syn_root" ""]} {
+#@     setenv SYNOPSYS  "$synopsys_syn_root"
+#@   }
+#@   set_folder_var
+#@   set tcl_file "$::legacy_lc_result_path/$::legacy_lc_log_path/$::legacy_lc_replay_tcl_file"
+#@   set chan [open $tcl_file a]
+#@   export_tcl_var $chan 
+#@   gen_common_shell_add_pg_pin_procedure $chan $args
+#@   close $chan
+#@   run_legacy_lc_with_echo $tcl_file
+#@   common_shell_clean_up
+#@   # restore SYNOPSYS enviroment after call synthesis
+#@   if {[string compare "$synopsys" ""]} {
+#@     setenv SYNOPSYS  "$synopsys"
+#@   } else {
+#@     unsetenv SYNOPSYS
+#@   }
+#@ }
+#@ 
+#@ proc common_shell_write_lib {args } {
+#@   if { [print_no_common_shell_found $::legacy_lc_search_path] } {
+#@     return 0
+#@   }
+#@   set_folder_var
+#@   set tcl_file $::legacy_lc_result_path/$::legacy_lc_log_path/$::legacy_lc_replay_tcl_file
+#@   set chan [open $tcl_file a]
+#@   export_tcl_var $chan 
+#@   libra_shell_write_db
+#@   gen_common_shell_write_lib_procedure $chan $args
+#@   close $chan
+#@   run_legacy_lc_with_echo $tcl_file
+#@   common_shell_clean_up
+#@ }
+#@ 
+#@ proc common_shell_update_lib {args } {
+#@   if { [print_no_common_shell_found $::legacy_lc_search_path] } {
+#@     return 0
+#@   }
+#@   set_folder_var
+#@   set tcl_file "$::legacy_lc_result_path/$::legacy_lc_log_path/$::legacy_lc_replay_tcl_file"
+#@   set chan [open $tcl_file a]
+#@   export_tcl_var $chan 
+#@   libra_shell_write_db   
+#@   gen_common_shell_write_lib_procedure $chan $args
+#@   close $chan
+#@   run_legacy_lc_with_echo $tcl_file  
+#@   libra_shell_read_dbs
+#@   common_shell_clean_up
+#@ }
+#@ 
+#@ # create the unique folder under tmp
+#@ proc set_folder_var { } {
+#@   set fileName [pid]
+#@   set ::legacy_lc_log_path [append fileName "_" [clock microseconds]] 
+#@   file delete -force $::legacy_lc_result_path/$::legacy_lc_log_path
+#@   file mkdir $::legacy_lc_result_path/$::legacy_lc_log_path  
+#@ }
+#@ 
+#@ # export all the vars
+#@ proc export_tcl_var { fileName } {
+#@   foreach var [info vars ::* ] {
+#@     if [array exists $var] {
+#@       continue;
+#@     }
+#@     puts $fileName "set $var \[list [set $var]\]"
+#@   }
+#@   
+#@   global lc_parameter_export_list
+#@   foreach var $lc_parameter_export_list {
+#@     global $var
+#@     puts $fileName "set $var \[list [set $var]\]"
+#@   }
+#@  
+#@   puts $fileName "set search_path \[lappend search_path \$synopsys_root/libraries/syn \$synopsys_root/libraries/syn \$synopsys_root/minpower/syn \$synopsys_root/dw/syn_ver \$synopsys_root/dw/sim_ver\]"
+#@ #  puts $fileName "set lc_enable_legacy_library_compiler TRUE"
+#@ }
+#@ 
+#@ # excuted by libra shell to read the dbs generated by common_shell
+#@ proc libra_shell_read_dbs { } {
+#@   set dbNames ""
+#@   foreach var [glob -nocomplain -directory $::legacy_lc_result_path/$::legacy_lc_log_path *.db] { 
+#@     append dbNames " " $var
+#@     read_db $var 
+#@   }
+#@   set ::lc_intermediate_db_files $dbNames
+#@ }
+#@ 
+#@ # display the log file genrated by common_shell in Libra and then remove the unique folder
+#@ proc common_shell_clean_up { } {
+#@   if { ! $::lc_keep_legacy_lc_temp_files } { 
+#@     file delete -force $::legacy_lc_result_path/$::legacy_lc_log_path 
+#@   }
+#@ }
+#@ 
+#@ # excuted by libra shell to write out the in-memory dbs
+#@ proc libra_shell_write_db { } {
+#@   foreach db $::lc_intermediate_db_files {
+#@     write_lib $db -o $::legacy_lc_result_path/$::legacy_lc_log_path/$db.db
+#@   }
+#@ }
+#@ 
+#@ proc gen_common_shell_read_lib_procedure { fileName args} {
+#@   puts $fileName "##@@@## gen_common_shell_read_lib"
+#@   puts $fileName "eval [lindex [lindex $args 0] 0]"
+#@   puts $fileName "##@@@##"
+#@   puts $fileName "set lc_write_view_db_file false"
+#@   puts $fileName "set librs \[get_libs\]"
+#@   puts $fileName "for {set i 0} {\$i < \[ sizeof \$librs \]} {incr i 1} {"
+#@   puts $fileName "  set lib \[index_collection \$librs \$i]"
+#@   puts $fileName "  redirect -var a \"query_object \$lib\" "
+#@   puts $fileName "  if \[regexp {{(\")?(gtech)(\")?}} \$a\] { "
+#@   puts $fileName "  } elseif \[regexp {{(\")?(standard.sldb)(\")?}} \$a] { "
+#@   puts $fileName "  } else {"
+#@   puts $fileName "    regexp {{(\")?(\[^\"\]*)(\")?}} \$a b c d e "
+#@   puts $fileName "    write_lib \$d -o \$legacy_lc_result_path/\$legacy_lc_log_path/\$d.db"
+#@   puts $fileName "  }"
+#@   puts $fileName "}"
+#@   puts $fileName "exit"
+#@ }
+#@ 
+#@ proc gen_common_shell_write_lib_procedure { fileName args } {
+#@   puts $fileName "foreach var \[glob -nocomplain -directory \$legacy_lc_result_path/\$legacy_lc_log_path *.db\] { read_db \$var }"
+#@   puts $fileName "set lc_write_view_db_file false"
+#@   puts $fileName "##@@@## gen_common_shell_write_lib"
+#@   puts $fileName "eval [lindex [lindex $args 0] 0]"
+#@   puts $fileName "##@@@##"
+#@   puts $fileName "exit"
+#@ }
+#@ 
+#@ proc gen_common_shell_add_pg_pin_procedure { fileName args } {
+#@   puts $fileName "##@@@## gen_common_shell_add_pg_pin"
+#@   puts $fileName "eval [lindex $args 0]"
+#@   puts $fileName "##@@@##"
+#@   puts $fileName "exit"
+#@ }
+#@ 
+#@ proc gen_is_none_tech_file {} {
+#@   sh touch $::nglc_result_path/$::nglc_log_path/is_non_tech_file
+#@ }
+#@ 
+#@ proc gen_is_symbol_file {} {
+#@   sh touch $::nglc_result_path/$::nglc_log_path/is_symbol_file
+#@ }
+#@ 
+#@ proc print_no_common_shell_found {arg} {
+#@   if {![file exists $arg] } {
+#@     echo "Error: No common shell Library Compiler found. (LCSH-2)"
+#@     return 1
+#@   }
+#@   return 0
+#@ }
+#@ 
+#@ proc set_host_options args {
+#@     global lc_cpu_allocation
+#@     if {[string compare [lindex $args 0] "-max_cores"]} {
+#@ 	puts "Must specify one of these options: -max_cores. (CMD-004)"
+#@ 	return
+#@     } elseif {[llength $args] != 2} {
+#@ 	puts "value not specified for option '-max_cores' (CMD-008)"
+#@ 	return
+#@     }
+#@     set val [lindex $args 1]
+#@     if {[string is integer $val] && ($val > 0) && ($val <= 16) } {
+#@ 	set lc_cpu_allocation [expr $val - 1]
+#@     } else {
+#@ 	puts "value $val for option '-max_cores' not in range (1-16). (CMD-019)"
+#@     }
+#@     return
+#@ }
+#@ 
+#@ proc remove_host_options {} {
+#@     global lc_cpu_allocation
+#@     set lc_cpu_allocation 0
+#@ }
+#@ 
+#@ proc report_host_options {} {
+#@      global lc_cpu_allocation
+#@      global sh_product_version
+#@      puts "****************************************
+#@ Report : host_options
+#@ Version: $sh_product_version
+#@ Data   : [date]
+#@ ****************************************
+#@ 
+#@ Max_cores: [expr $lc_cpu_allocation + 1]
+#@ "
+#@ }
+#@ 
+#@ # to call init_criteria() and pass lc/lc/check_library/logic_sig_digits.tcl
+#@ set_check_library_options
+#@ # -- End source /RAID2/EDA/synopsys/lc/cur/admin/setup//.synopsys_lc.setup
+
+source -echo -verbose RA2SH_lc.tcl
+#@ # -- Starting source RA2SH_lc.tcl
+
+#@ read_lib RA2SH_slow_syn.lib
+#@ write_lib -format db USERLIB -output RA2SH.db
+#@ exit

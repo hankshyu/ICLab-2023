@@ -1,0 +1,101 @@
+POWER NET REPORT 
+Generated Date: Fri May 26 21:20:10 2023
+Host Name: ee29
+
+
+==============================
+POWER NET 
+==============================
+Power Net: GND
+Voltage: 0.000
+Threshold: 0.100
+
+
+==============================
+POWER-GRID VIEW
+==============================
+Power-Grid Views Used: 100
+
+
+==============================
+POWER-GRID ATTRIBUTES
+==============================
+Total Resistor Elements: 6014
+    Please refer to ../GND/grid.gif for more details
+Top-level Resistor Elements:6014
+Cell Library Resistor Elements: 0
+Total Number of Current Taps: 2582
+    Please refer to ../GND/tc.gif for more details
+
+
+==============================
+IR DROP ANALYSIS
+==============================
+Layer based IR Drop Report: See Report
+Minimum, Average, Maximum IR drop: 0.000V 0.199mV 0.538mV
+    Please refer to ../GND/ir_linear.gif for more details
+Total Static Current Loaded: 0.0028596692300197901A
+Number of Violations: 0
+    Please refer to ../GND/ir_limit.gif for more details
+Minimum, Average, Maximum Vsrc Current: -0A, 2.5532760982319553e-05A, 8.5951709479559213e-05A
+
+
+==============================
+EFFECTIVE RESISTANCE ANALYSIS
+==============================
+Minimum, Average, Maximum Reff: NA, NA, NA
+
+
+==============================
+CURRENT DENSITY ANALYSIS
+==============================
+Minimum, Average, Maximum J/Jmax:
+Number of Violations: 0
+    Please refer to power_log/PD_25C_avg_1/Reports/GND/rj.gif for more details
+
+
+==============================
+POWER SWITCH ANALYSIS
+==============================
+PowerGate Current I/Idsat violations: 
+    Please refer to power_log/PD_25C_avg_1/Reports/GND/pi.gif for more details
+Minimum, Average, Maximum I/Idsat (pi): NA, NA, NA
+Minimum, Average, Maximum IRdrop Across PowerGate (pv): 0, 0, 0
+Power Switch ECO file for Soc Encounter: 
+
+
+==============================
+PACKAGE ANALYSIS
+==============================
+Voltage Drop Across Package (vu): NA, NA, NA
+
+
+==============================
+CAPACITANCE ANALYSIS
+==============================
+Decap Optimization method: area  
+Total Coupling Capacitance: NA
+    Please refer to ../GND/dd.gif for more details
+Grid Coupling Capacitance: NA
+Gate Coupling Capacitance (internal): NA
+Loading Coupling Capacitance: NA
+Capacitance Offered by Placed Decaps: NA
+Additional Capacitance Required: 0.000F
+    Please refer to ../GND/dr.gif for more details
+Total Feasible Capacitance: 0.000F
+Total Leakage Current of Placed Decaps: 0.000A
+Total Leakage Current of ECO Decaps: 0.000A
+What-if ECO File:   
+SoC Encounter ECO File: power_log/PD_25C_avg_1//GND/vs2fe_eco.tcl 
+
+
+==============================
+ADDITIONAL FILES
+==============================
+Instance Voltage File: power_log/PD_25C_avg_1/Reports/GND/GND.iv
+Dynamic IR drop Waveform File (dynamic): 
+Effective Instance Voltage File (dynamic): 
+
+Summary: power_log/PD_25C_avg_1//GND/results 
+
+

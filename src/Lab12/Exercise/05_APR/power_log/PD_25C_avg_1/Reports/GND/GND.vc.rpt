@@ -1,0 +1,128 @@
+Voltage source current:
+      Range  Source       Source        Location    Layer
+      Index  Current      Name          (um)
+      -----  --------     -------------------------------
+         1    7.7353e-05A   GNDvsrc76   976.90, 710.17  METAL_1
+         1    8.3952e-05A   GNDvsrc73   976.90, 684.55  METAL_1
+         1    8.1340e-05A   GNDvsrc74   976.90, 693.09  METAL_1
+         1    7.7674e-05A   GNDvsrc75   976.90, 701.63  METAL_1
+         1    7.9911e-05A   GNDvsrc77   976.90, 718.71  METAL_1
+         1    8.5952e-05A   GNDvsrc78   976.90, 727.29  METAL_1
+         2    7.0311e-05A   GNDvsrc5   194.46, 701.63  METAL_1
+         2    7.2874e-05A   GNDvsrc4   194.46, 693.09  METAL_1
+         2    7.4669e-05A   GNDvsrc3   194.46, 684.55  METAL_1
+         2    7.0878e-05A   GNDvsrc6   194.46, 710.17  METAL_1
+         2    7.4212e-05A   GNDvsrc7   194.46, 718.71  METAL_1
+         1    8.0961e-05A   GNDvsrc8   194.46, 727.29  METAL_1
+         1    8.1039e-05A   GNDvsrc64   976.90, 546.93  METAL_1
+         2    7.3665e-05A   GNDvsrc63   976.90, 538.35  METAL_1
+         2    6.9359e-05A   GNDvsrc62   976.90, 529.81  METAL_1
+         2    6.7826e-05A   GNDvsrc61   976.90, 521.27  METAL_1
+         2    7.3169e-05A   GNDvsrc60   976.90, 504.19  METAL_1
+         2    6.8964e-05A   GNDvsrc59   976.90, 512.73  METAL_1
+         2    7.1332e-05A   GNDvsrc22   194.46, 546.93  METAL_1
+         3    6.2784e-05A   GNDvsrc17   194.46, 512.73  METAL_1
+         2    6.7250e-05A   GNDvsrc18   194.46, 504.19  METAL_1
+         3    6.1168e-05A   GNDvsrc19   194.46, 521.27  METAL_1
+         3    6.1994e-05A   GNDvsrc20   194.46, 529.81  METAL_1
+         2    6.5323e-05A   GNDvsrc21   194.46, 538.35  METAL_1
+         3    5.7854e-05A   GNDvsrc91   684.53, 976.90  METAL_2
+         3    5.6026e-05A   GNDvsrc90   693.07, 976.90  METAL_2
+         3    5.5070e-05A   GNDvsrc89   701.61, 976.90  METAL_2
+         3    5.5805e-05A   GNDvsrc88   710.15, 976.90  METAL_2
+         3    5.8630e-05A   GNDvsrc87   718.69, 976.90  METAL_2
+         3    6.4236e-05A   GNDvsrc86   727.31, 976.90  METAL_2
+         6    2.6491e-05A   GNDvsrc49   684.53, 194.46  METAL_2
+         6    2.6111e-05A   GNDvsrc48   693.07, 194.46  METAL_2
+         6    2.6306e-05A   GNDvsrc47   701.61, 194.46  METAL_2
+         6    2.7443e-05A   GNDvsrc46   710.15, 194.46  METAL_2
+         6    2.9758e-05A   GNDvsrc45   718.69, 194.46  METAL_2
+         5    3.3690e-05A   GNDvsrc44   727.31, 194.46  METAL_2
+         1    7.5774e-05A   GNDvsrc105   504.17, 976.90  METAL_2
+         2    6.9113e-05A   GNDvsrc104   512.71, 976.90  METAL_2
+         2    6.5597e-05A   GNDvsrc103   521.25, 976.90  METAL_2
+         3    6.4436e-05A   GNDvsrc102   529.79, 976.90  METAL_2
+         2    6.5026e-05A   GNDvsrc101   538.33, 976.90  METAL_2
+         2    6.6905e-05A   GNDvsrc100   546.95, 976.90  METAL_2
+         5    3.5811e-05A   GNDvsrc35   504.17, 194.46  METAL_2
+         6    3.1739e-05A   GNDvsrc34   512.71, 194.46  METAL_2
+         6    2.9335e-05A   GNDvsrc33   521.25, 194.46  METAL_2
+         6    2.8164e-05A   GNDvsrc32   529.79, 194.46  METAL_2
+         6    2.7936e-05A   GNDvsrc31   538.33, 194.46  METAL_2
+         6    2.8455e-05A   GNDvsrc30   546.95, 194.46  METAL_2
+         8   -0.0000e+00A   GNDvsrc106   525.56, 977.34  METAL_1
+         8   -0.0000e+00A   GNDvsrc107   525.56, 1139.68  METAL_1
+         8   -0.0000e+00A   GNDvsrc108   525.56, 1139.68  METAL_2
+         8   -0.0000e+00A   GNDvsrc99   525.56, 977.34  METAL_3
+         8   -0.0000e+00A   GNDvsrc109   525.56, 1139.68  METAL_3
+         8   -0.0000e+00A   GNDvsrc110   525.56, 1139.68  METAL_4
+         8   -0.0000e+00A   GNDvsrc111   525.56, 1139.68  METAL_5
+         8   -0.0000e+00A   GNDvsrc112   525.56, 1139.68  METAL_6
+         8   -0.0000e+00A   GNDvsrc92   705.92, 977.34  METAL_1
+         8   -0.0000e+00A   GNDvsrc93   705.92, 1139.68  METAL_1
+         8   -0.0000e+00A   GNDvsrc94   705.92, 1139.68  METAL_2
+         8   -0.0000e+00A   GNDvsrc85   705.92, 977.34  METAL_3
+         8   -0.0000e+00A   GNDvsrc95   705.92, 1139.68  METAL_3
+         8   -0.0000e+00A   GNDvsrc96   705.92, 1139.68  METAL_4
+         8   -0.0000e+00A   GNDvsrc97   705.92, 1139.68  METAL_5
+         8   -0.0000e+00A   GNDvsrc98   705.92, 1139.68  METAL_6
+         8   -0.0000e+00A   GNDvsrc79   1139.68, 705.92  METAL_1
+         8   -0.0000e+00A   GNDvsrc72   977.34, 705.92  METAL_2
+         8   -0.0000e+00A   GNDvsrc80   1139.68, 705.92  METAL_2
+         8   -0.0000e+00A   GNDvsrc71   977.34, 705.92  METAL_3
+         8   -0.0000e+00A   GNDvsrc81   1139.68, 705.92  METAL_3
+         8   -0.0000e+00A   GNDvsrc82   1139.68, 705.92  METAL_4
+         8   -0.0000e+00A   GNDvsrc83   1139.68, 705.92  METAL_5
+         8   -0.0000e+00A   GNDvsrc84   1139.68, 705.92  METAL_6
+         8   -0.0000e+00A   GNDvsrc65   1139.68, 525.56  METAL_1
+         8   -0.0000e+00A   GNDvsrc58   977.34, 525.56  METAL_2
+         8   -0.0000e+00A   GNDvsrc66   1139.68, 525.56  METAL_2
+         8   -0.0000e+00A   GNDvsrc57   977.34, 525.56  METAL_3
+         8   -0.0000e+00A   GNDvsrc67   1139.68, 525.56  METAL_3
+         8   -0.0000e+00A   GNDvsrc68   1139.68, 525.56  METAL_4
+         8   -0.0000e+00A   GNDvsrc69   1139.68, 525.56  METAL_5
+         8   -0.0000e+00A   GNDvsrc70   1139.68, 525.56  METAL_6
+         8   -0.0000e+00A   GNDvsrc50   705.92, 194.02  METAL_1
+         8   -0.0000e+00A   GNDvsrc51   705.92, 31.68  METAL_1
+         8   -0.0000e+00A   GNDvsrc52   705.92, 31.68  METAL_2
+         8   -0.0000e+00A   GNDvsrc43   705.92, 194.02  METAL_3
+         8   -0.0000e+00A   GNDvsrc53   705.92, 31.68  METAL_3
+         8   -0.0000e+00A   GNDvsrc54   705.92, 31.68  METAL_4
+         8   -0.0000e+00A   GNDvsrc55   705.92, 31.68  METAL_5
+         8   -0.0000e+00A   GNDvsrc56   705.92, 31.68  METAL_6
+         8   -0.0000e+00A   GNDvsrc36   525.56, 194.02  METAL_1
+         8   -0.0000e+00A   GNDvsrc37   525.56, 31.68  METAL_1
+         8   -0.0000e+00A   GNDvsrc38   525.56, 31.68  METAL_2
+         8   -0.0000e+00A   GNDvsrc29   525.56, 194.02  METAL_3
+         8   -0.0000e+00A   GNDvsrc39   525.56, 31.68  METAL_3
+         8   -0.0000e+00A   GNDvsrc40   525.56, 31.68  METAL_4
+         8   -0.0000e+00A   GNDvsrc41   525.56, 31.68  METAL_5
+         8   -0.0000e+00A   GNDvsrc42   525.56, 31.68  METAL_6
+         8   -0.0000e+00A   GNDvsrc23   31.68, 525.56  METAL_1
+         8   -0.0000e+00A   GNDvsrc16   194.02, 525.56  METAL_2
+         8   -0.0000e+00A   GNDvsrc24   31.68, 525.56  METAL_2
+         8   -0.0000e+00A   GNDvsrc15   194.02, 525.56  METAL_3
+         8   -0.0000e+00A   GNDvsrc25   31.68, 525.56  METAL_3
+         8   -0.0000e+00A   GNDvsrc26   31.68, 525.56  METAL_4
+         8   -0.0000e+00A   GNDvsrc27   31.68, 525.56  METAL_5
+         8   -0.0000e+00A   GNDvsrc28   31.68, 525.56  METAL_6
+         8   -0.0000e+00A   GNDvsrc9   31.68, 705.92  METAL_1
+         8   -0.0000e+00A   GNDvsrc2   194.02, 705.92  METAL_2
+         8   -0.0000e+00A   GNDvsrc10   31.68, 705.92  METAL_2
+         8   -0.0000e+00A   GNDvsrc1   194.02, 705.92  METAL_3
+         8   -0.0000e+00A   GNDvsrc11   31.68, 705.92  METAL_3
+         8   -0.0000e+00A   GNDvsrc12   31.68, 705.92  METAL_4
+         8   -0.0000e+00A   GNDvsrc13   31.68, 705.92  METAL_5
+         8   -0.0000e+00A   GNDvsrc14   31.68, 705.92  METAL_6
+*
+* Data filtering results for voltage source current:
+  Minimum, Average, Maximum Voltage Source Current: 0.000A, 25.533uA, 85.952uA
+  Total Current: 2.860mA
+    Range 1(  75.208uA  -    85.960uA ):         9 (  8.04%)
+    Range 2(  64.464uA  -    75.208uA ):        17 ( 15.18%)
+    Range 3(  53.720uA  -    64.464uA ):        10 (  8.93%)
+    Range 4(  42.976uA  -    53.720uA ):         0 (  0.00%)
+    Range 5(  32.232uA  -    42.976uA ):         2 (  1.79%)
+    Range 6(  21.488uA  -    32.232uA ):        10 (  8.93%)
+    Range 7(  10.744uA  -    21.488uA ):         0 (  0.00%)
+    Range 8(    0.000A  -    10.744uA ):        64 ( 57.14%)

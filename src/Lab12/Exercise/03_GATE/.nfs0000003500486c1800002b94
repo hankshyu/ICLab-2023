@@ -1,0 +1,1 @@
+s1(26May2023:19:46:28):  irun -timescale 1ns/1fs -override_precision -sdf_precision 1fs TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v -nontcglitch 

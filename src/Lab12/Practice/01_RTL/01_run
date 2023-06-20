@@ -1,0 +1,1 @@
+irun TESTBED.v -define RTL -debug -v ../04_MEM/RA1SH.v -v ../04_MEM/RA1SH1.v -v ../04_MEM/RA1SH2.v -incdir /usr/synthesis/dw/sim_ver/ -notimingchecks

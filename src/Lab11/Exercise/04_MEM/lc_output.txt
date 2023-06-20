@@ -1,0 +1,52 @@
+ 
+                             Library Compiler (TM)
+                                 DesignWare (R)
+
+               Version T-2022.03 for linux64 - Feb 22, 2022 -SLE
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Initializing...
+read_lib RA2SH_slow_syn.lib
+Reading '/RAID2/COURSE/iclab/iclab117/Lab11/Exercise/04_MEM/RA2SH_slow_syn.lib' ...
+Information: Line 142, Voltage 'VDD' is used but not declared. A legacy value of '5' is assumed. (LBDB-319)
+Warning: Line 54, The 'default_leakage_power_density' attribute is not specified. Using 0.00. (LBDB-172)
+Warning: Line 54, The attribute 'slew_lower_threshold_pct_rise' is not specified. (LBDB-605)
+Warning: Line 54, The attribute 'slew_upper_threshold_pct_rise' is not specified. (LBDB-605)
+Warning: Line 54, The attribute 'slew_lower_threshold_pct_fall' is not specified. (LBDB-605)
+Warning: Line 54, The attribute 'slew_upper_threshold_pct_fall' is not specified. (LBDB-605)
+Warning: Line 54, The attribute 'input_threshold_pct_rise' is not specified. (LBDB-605)
+Warning: Line 54, The attribute 'output_threshold_pct_rise' is not specified. (LBDB-605)
+Warning: Line 54, The attribute 'input_threshold_pct_fall' is not specified. (LBDB-605)
+Warning: Line 54, The attribute 'output_threshold_pct_fall' is not specified. (LBDB-605)
+Warning: Line 54, The 'internal_power_calculation' attribute in char_config group is required for NLPM library. 
+        No default can be applied to this attribute. (LBDB-366)
+Warning: Line 140, The 'GENERAL' output_voltage group is not used by any output pin in the library. (LBDB-611)
+Warning: Line 146, The 'CMOS' input_voltage group is not used by any input pin in the library. (LBDB-611)
+Warning: Line 152, The 'TTL' input_voltage group is not used by any input pin in the library. (LBDB-611)
+Information: Line 195, Cell 'RA2SH', The cell 'RA2SH' contiains memory/memory_read/memory_write groups which are deprecated, use the is_memory_cell attribute instead. (LIBG-280)
+Technology library 'USERLIB' read successfully
+1
+write_lib -format db USERLIB -output RA2SH.db
+Wrote the 'USERLIB' library to '/RAID2/COURSE/iclab/iclab117/Lab11/Exercise/04_MEM/RA2SH.db' successfully
+1
+exit
+Maximum memory usage for this session: 108.96 MB
+CPU usage for this session:      0 seconds (  0.00 hours)
+Elapsed time for this session:      3 seconds (  0.00 hours)
+Thank you for using Library Compiler.
+

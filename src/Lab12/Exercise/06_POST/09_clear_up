@@ -1,0 +1,9 @@
+rm -rf INCA_libs
+rm -rf nWaveLog
+rm -rf *.fsdb
+rm -rf *.log
+rm -rf *~
+rm -rf nWaveLog
+rm -rf *.key
+rm -rf novas*
+rm -rf *.X

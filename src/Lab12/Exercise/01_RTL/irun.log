@@ -1,0 +1,19 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on May 10, 2023 at 20:32:59 CST
+irun
+	TESTBED.v
+	-define RTL
+	-debug
+file: TESTBED.v
+	module worklib.QUEEN:v
+		errors: 0, warnings: 0
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+PATTERN u_PATTERN(
+                |
+ncelab: *E,CUVMUR (./TESTBED.v,103|16): instance 'TESTBED.u_PATTERN' of design unit 'PATTERN' is unresolved in 'worklib.TESTBED:v'.
+irun: *E,ELBERR: Error during elaboration (status 1), exiting.
+TOOL:	irun(64)	15.20-s084: Exiting on May 10, 2023 at 20:32:59 CST  (total: 00:00:00)

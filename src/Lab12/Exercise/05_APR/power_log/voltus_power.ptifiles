@@ -1,0 +1,4 @@
+GND	power_log/static_GND.ptiavg
+VDD	power_log/static_VDD.ptiavg
+default_ground_rail	power_log/static_default_ground_rail.ptiavg
+default_power_rail	power_log/static_default_power_rail.ptiavg

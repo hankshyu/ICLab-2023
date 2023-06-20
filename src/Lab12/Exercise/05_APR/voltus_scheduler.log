@@ -1,0 +1,74 @@
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+*  Voltus Scheduler (RC extraction scheduler)
+*  Copyright 2013 Cadence Design Systems, Inc.
+*  Version: v20.15-s071_1 (07/27/2021 08:14:24)
+*  Excecutable: /usr/cad/cadence/INNOVUS/INNOVUS_20.15.000/tools.lnx86/ssvtools/bin/64bit/voltus_scheduler
+*  Command Line: -nt 1 -usecellid -reextract -session_file ./work/sfe.session -cmd ./work/voltus_scheduler.cmd 
+*  Run by iclab105 on Fri May 26 21:19:57 2023
+*  Hostname: ee29
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+Started Voltus Scheduler at 21:19:56 05/26/2023
+
+Extraction option setup as:
+setenv gray_data NONE
+setenv enable_cluster_overhang_via false
+setenv enable_dfm_mask_conflict_shape false
+Begin Preparing Data for Parasitic Extraction
+ * Begin Load cell library
+ * Ended Load cell library: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=16.14MB/6011.46MB/2232.64MB) TimeFromStart: 1.79s Mem: 15.91MB
+
+ * Begin Pre-parse DEF and build hierachy
+Number of cell instances that miss model definition from library (.cl): 7
+Please see ./work/missingLibModelCell.out for model names. Those cells will be ignored in analysis.
+ * Ended Pre-parse DEF and build hierachy: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=28.54MB/6021.47MB/2232.64MB) TimeFromStart: 2.11s Mem: 28.53MB
+
+ * Begin Flatten, partition and dump design
+ * Begin Create cell name DB
+ * Ended Create cell name DB: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=543.86MB/6791.89MB/2324.59MB) TimeFromStart: 2.18s Mem: 543.66MB
+
+ * Begin Write cell name DB
+ * Ended Write cell name DB: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=543.87MB/6791.89MB/2324.60MB) TimeFromStart: 2.19s Mem: 543.86MB
+
+ * Ended Flatten, partition and dump design: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=544.21MB/6791.89MB/2324.93MB) TimeFromStart: 2.57s Mem: 543.98MB
+
+Extracting following DFM effects:
+MetalFill        : n/a
+WEE Effects      : n/a
+Erosion Effects  : n/a
+T/B Enlargements : n/a
+R(w) Effects     : n/a
+R(w,s) Effects   : n/a
+R(sw,st) Effects : n/a
+TC(w) Effects    : n/a
+Some effects indicate n/a because of non-availability of relevant input data (or) requested to be off.
+Ended Preparing Data for Parasitic Extraction: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=20.58MB/6791.82MB/2324.93MB)
+
+Finished Voltus Scheduler at 21:19:58 05/26/2023 (cpu=0:00:00, real=0:00:02, peak mem=2324.93MB)
+Current Innovus resource usage: (total cpu=0:01:39, real=0:17:16, mem=1801.32MB)
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+*  Voltus Scheduler (RC extraction scheduler)
+*  Copyright 2013 Cadence Design Systems, Inc.
+*  Version: v20.15-s071_1 (07/27/2021 08:14:24)
+*  Excecutable: /usr/cad/cadence/INNOVUS/INNOVUS_20.15.000/tools.lnx86/ssvtools/bin/64bit/voltus_scheduler
+*  Command Line: -skip_prep -nt 1 -reextract -usecellid -session_file ./work/sfe.session -cmd ./work/voltus_scheduler.cmd -zx /usr/cad/cadence/INNOVUS/INNOVUS_20.15.000/tools.lnx86/ssvtools/bin/64bit/voltus_extractor 
+*  Run by iclab105 on Fri May 26 21:19:58 2023
+*  Hostname: ee29
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+Started Voltus Scheduler at 21:19:57 05/26/2023
+
+Extraction option setup as:
+setenv gray_data NONE
+setenv enable_cluster_overhang_via false
+setenv enable_dfm_mask_conflict_shape false
+Begin Parasitic Extraction
+Extracting Progress:
+    0% at 21:19:58 05/26/2023
+Extraction command for partition 0: /usr/cad/cadence/INNOVUS/INNOVUS_20.15.000/tools.lnx86/ssvtools/bin/64bit/voltus_extractor -vstorm -partition 0 -partition_bbox 0 -2147483648 11713600 2147483647 -sfedb ./work/SFEDB -cachedir /tmp/innovus_temp_232426_ee29_iclab105_uDwGX5/zx_tmp_ee29_237281/jYoJLe -cmd ./work/voltus_scheduler.cmd
+  100% at 21:20:04 05/26/2023
+Ended Parasitic Extraction: (cpu=0:00:01, real=0:00:05, mem(process/total/peak)=9.77MB/5998.40MB/2324.93MB)
+
+Finished Voltus Scheduler at 21:20:04 05/26/2023 (cpu=0:00:01, real=0:00:07, peak mem=1942.94MB)
+Current Innovus resource usage: (total cpu=0:01:39, real=0:17:22, mem=1790.64MB)

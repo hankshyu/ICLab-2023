@@ -1,0 +1,39 @@
+{
+    "net_name": "GND",
+    "smg": {
+        "config": {
+            "name": "GND",
+            "output_path": "power_log\/PD_25C_avg_1\/GND",
+            "nominal_voltage": "0"
+        },
+        "result": {
+            "DefInstData": {
+                "path": "power_log\/PD_25C_avg_1\/GND\/GND.defInstData",
+                "type": "proto::voltus.def_instdata_mgr.proto.DefInstDataManager"
+            },
+            "layerInfo": {
+                "path": "power_log\/PD_25C_avg_1\/GND\/layerInfo",
+                "type": "proto.voltus.layer_manager.LayerManager"
+            },
+            "pgdb": {
+                "path": "power_log\/PD_25C_avg_1\/GND"
+            },
+            "cellview": {
+                "path": "power_log\/PD_25C_avg_1\/GND\/GND.cellviews",
+                "type": "txt"
+            },
+            "pgv_table": {
+                "path": "power_log\/PD_25C_avg_1\/GND\/GND.pgv_table.rpt",
+                "type": "txt"
+            },
+            "grid_report": {
+                "path": "power_log\/PD_25C_avg_1\/GND\/GND.grid.report",
+                "type": "txt"
+            },
+            "missing_pgv": {
+                "path": "power_log\/PD_25C_avg_1\/GND\/GND.missingPGVData.protobuf",
+                "type": "protobuf.VOLTUS.SMGDATA.MissingPGV"
+            }
+        }
+    }
+}
