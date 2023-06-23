@@ -16,22 +16,22 @@
 
 #### 單元列表
 
-Week | Course Content
---------|:-----
-01| Introduction (Environment Setting)
-02| Verilog Combination Syntax
-03| Sequential Logic Design (1/2) + generate syntax
-04| Testbench Programming Syntax
-05| Sequential Logic Design (2/2)
-06| Memory & coding style & nLint
-07| Design Compiler + IP Design (DesignWare) with genvar
-09| Synthesis & Static Time Analysis + Cross Clock Domain
-10| Low power design
-11| SystemVerilog for design
-12| SystemVerilog for verification
-13| Formal Verification (Bonus)
-14| APR: From RTL to GDSII
-15| APR: IR-Drop Analysis
+Week | Course Content | Lab Unit | Pass Rate
+:--------|:-----| :----- | :----: 
+01| Introduction (Environment Setting)              | - | -
+02| Verilog Combination Syntax                      | Chinese Course | 92.45%
+03| Sequential Logic Design (1/2) + generate syntax | 12-Queen  | 73.58%
+04| Testbench Programming Syntax                    | Subway Surfes | 91.84%
+05| Sequential Logic Design (2/2)                   | Simple RNN | 91.84%
+06| Memory & coding style & nLint                   | Matrix Multiplication to find Tracd | 87.63%
+07| Design Compiler + IP Design (DesignWare) with genvar    | Elliptic Curve Group Operation | 88.86%
+09| Synthesis & Static Time Analysis + Cross Clock Domain   | CDC Doraemon tester  | 81.44
+10| Low power design                                | Siamese Neural Network | 86.46
+11| SystemVerilog for design                        | Online Shopping Platform Simulation | 75.79%
+12| SystemVerilog for verification                  | OS Coverage from Lab09 | 80.85%
+13| Formal Verification (Bonus)                     | Bonus Lab | -
+14| APR: From RTL to GDSII                          | Matrix Multiplication with Systolic Array | 95.29%
+15| APR: IR-Drop Analysis                           | Train Tour APRII | 97.65%
 
 想當然爾，只有上課認真在這堂課是遠遠不夠的。這堂課最有名的就是總共 12 次 Lab Exercise。從每個禮拜三公布題目開始，1de 的期限是下個禮拜一中午， 2de 則是到下禮拜三中午，所謂的通過是指通過**所有**的測試資料。也就是說如果你通過了1de就會有兩天的休息時間，否則就整個禮拜都在寫作業。lab 的成績計算方式通常是通過 demo 就有基本分 70 分，另外的分數是要和同學之間的設計做比較，分數按照名次依序遞減到 0，蠻殘酷的。2de 的話會打七折。這套計分系統的設計很大程度模擬了電路設計就業環境的假定: 必須在時間壓力下設計出功能正確的晶片才能夠快速搶佔市場，取得先機。並且通常是由贏者全拿的現象。
 
@@ -65,17 +65,21 @@ Week | Course Content
 驗證自己設計的RTL沒有功能上的錯誤就得要靠PATTERN 來測試。除了
 
 
-#### 2. 像要輕鬆一點請報團，想學到東西請自己完成
+#### 2. 像要輕鬆一點請報團，想學到東西盡量自己完成
 
 #### 3. 不要害怕問問題
 
 #### 4. 多參考網路資源，但避免抄襲
 
+網路上其實不乏
+
 #### 5. 參考 Best Code，了解自己的不足
+
+每次助教都會請上次Exercise表現最好的Best Code 講解自己的作法並公開程式碼給大家參考。我覺得可以善加利用這個機會，了解厲害的同學採用的架構設計為什麼能拿到比較好的分數。是不是有哪些技巧可以延伸使用到其他場景? 如果能慢慢學習其他人的優點，將其融入自己的設計中，就會越來越進步。我身邊有一個反面例子，有一位同學就是因為每次都只求通過就好，導致她到最後的Final Project都還不太清楚 shift register 的用處。這樣就會很可惜，也少學到很多東西。
 
 #### 6. Never Give up
 
-
+想想之前所花費的時光和努力，中途退出不是太可惜了? 就算有一兩次成績不理想，也請堅持下去。在學期結束時一切都會值得的! 
 
 
 ## 結語
