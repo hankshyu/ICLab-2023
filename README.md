@@ -25,6 +25,7 @@ Week | Course Content | Lab Unit | Pass Rate
 05| Sequential Logic Design (2/2)                   | Simple RNN | 91.84%
 06| Memory & coding style & nLint                   | Matrix Multiplication to find Tracd | 87.63%
 07| Design Compiler + IP Design (DesignWare) with genvar    | Elliptic Curve Group Operation | 88.86%
+08| Midterm Exam + Midterm Project                          | Midterm Project -  Gray-level co-occurrence matrix (GLCM)
 09| Synthesis & Static Time Analysis + Cross Clock Domain   | CDC Doraemon tester  | 81.44
 10| Low power design                                | Siamese Neural Network | 86.46
 11| SystemVerilog for design                        | Online Shopping Platform Simulation | 75.79%
@@ -32,6 +33,7 @@ Week | Course Content | Lab Unit | Pass Rate
 13| Formal Verification (Bonus)                     | Bonus Lab | -
 14| APR: From RTL to GDSII                          | Matrix Multiplication with Systolic Array | 95.29%
 15| APR: IR-Drop Analysis                           | Train Tour APRII | 97.65%
+16| Final Exam + Final Project                      | Final Project - Customized ISA Processor
 
 想當然爾，只有上課認真在這堂課是遠遠不夠的。這堂課最有名的就是總共 12 次 Lab Exercise。從每個禮拜三公布題目開始，1de 的期限是下個禮拜一中午， 2de 則是到下禮拜三中午，所謂的通過是指通過**所有**的測試資料。也就是說如果你通過了1de就會有兩天的休息時間，否則就整個禮拜都在寫作業。lab 的成績計算方式通常是通過 demo 就有基本分 70，另外的分數是要和其他同學設計做比較，分數按照名次依序遞減到 0，蠻殘酷的。2de 的話會打七折。這套計分系統的設計很大程度模擬了電路設計就業環境的假定: 必須在時間壓力下設計出功能正確的晶片才能夠快速搶佔市場，取得先機。並且通常是贏者全拿的現象。
 
