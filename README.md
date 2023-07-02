@@ -18,22 +18,64 @@
 
 Week | Course Content | Lab Unit | Pass Rate
 :--------|:-----| :----- | :----: 
-01| Introduction (Environment Setting)              | - | -
-02| Verilog Combination Syntax                      | Chinese Course | 92.45%
-03| Sequential Logic Design (1/2) + generate syntax | 12-Queen  | 73.58%
-04| Testbench Programming Syntax                    | Subway Surfes | 91.84%
-05| Sequential Logic Design (2/2)                   | Simple RNN | 91.84%
-06| Memory & coding style & nLint                   | Matrix Multiplication to find Tracd | 87.63%
-07| Design Compiler + IP Design (DesignWare) with genvar    | Elliptic Curve Group Operation | 88.86%
-08| Midterm Exam + Midterm Project                          | Midterm Project: Gray-level co-occurrence matrix (GLCM) | 87.63%
-09| Synthesis & Static Time Analysis + Cross Clock Domain   | CDC Doraemon tester  | 81.44%
-10| Low power design                                | Siamese Neural Network | 86.46%
-11| SystemVerilog for design                        | Online Shopping Platform Simulation | 75.79%
-12| SystemVerilog for verification                  | OS (from Lab09) Coverage  | 80.85%
-13| Formal Verification (Bonus)                     | Bonus Lab | -
-14| APR: From RTL to GDSII                          | Matrix Multiplication with Systolic Array | 95.29%
-15| APR: IR-Drop Analysis                           | Train Tour APRII | 97.65%
-16| Final Exam + Final Project                      | Final Project: Customized ISA Processor | 67.50%
+01| [Introduction (Environment Setting)][L00]                                               | -                                                         | -
+02| [Verilog Combination Syntax][L01]                                                       | [Chinese Course][s01]                                            | 92.45%
+03| [Sequential Logic Design (1/2) + generate syntax][L02]                                  | [12-Queen][s02]                                                  | 73.58%
+04| [Testbench Programming Syntax][L03]                                                     | [Subway Surfes][s03]                                             | 91.84%
+05| [Sequential Logic Design (2/2)][L04]                                                    | [Simple RNN][s04]                                                | 91.84%
+06| [Memory & coding style & nLint][L05]                                                    | [Matrix Multiplication to find Trace][s05]                       | 87.63%
+07| [Design Compiler + IP Design (DesignWare) with genvar][L06]                             | [Elliptic Curve Group Operation][s06]                            | 88.86%
+08| [Midterm Exam][midterm_exam] + [Online Test][OT] + [Midterm Project][midterm_pj]        | [Midterm Project: Gray-level co-occurrence matrix (GLCM)][src_midterm_pj]   | 87.63%
+09| [Synthesis & Static Time Analysis + Cross Clock Domain][L07]                            | [CDC Doraemon tester][s07]                                       | 81.44%
+10| [Low power design][L08]                                                                 | [Siamese Neural Network][s08]                                    | 86.46%
+11| [SystemVerilog for design][L09]                                                         | [Online Shopping Platform Simulation][s09]                       | 75.79%
+12| [SystemVerilog for verification][L10]                                                   | [OS (from Lab09) Coverage][s10]                                  | 80.85%
+13| [Formal Verification (Bonus)][L_bonus]                                                         | Bonus Lab                                                   | -
+14| [APR: From RTL to GDSII][L11]                                                           | [Matrix Multiplication with Systolic Array][s11]                 | 95.29%
+15| [APR: IR-Drop Analysis][L12]                                                            | [Train Tour APRII][s12]                                          | 97.65%
+16| [Final Exam][final_exam] + [Final Project][final_pj]                                    | [Final Project: Customized ISA Processor][src_final_pj]           | 67.50%
+
+
+[L00]:https://github.com/hankshyu/ICLab_2023/blob/main/lectures/Lec00%20Developmental%20Environment.pdf
+[L01]:https://github.com/hankshyu/ICLab_2023/blob/main/lectures/Lec01%20Verilog%20Combinational%20Circuits%20Design.pdf
+[L02]:https://github.com/hankshyu/ICLab_2023/blob/main/lectures/Lec02%20Sequential%20Circuit%201.pdf
+[L03]:https://github.com/hankshyu/ICLab_2023/blob/main/lectures/Lec03%20Testbench%20and%20Pattern.pdf
+[L04]:https://github.com/hankshyu/ICLab_2023/blob/main/lectures/Lec04%20Advanced%20Sequential%20Circuit%20Design.pdf
+[L05]:https://github.com/hankshyu/ICLab_2023/blob/main/lectures/Lec05%20Introduction%20to%20Macros%20and%20SRAM%20Lint.pdf
+[L06]:https://github.com/hankshyu/ICLab_2023/blob/main/lectures/Lec06%20Synthesis.pdf
+[L07]:https://github.com/hankshyu/ICLab_2023/blob/main/lectures/Lec07%20Static%20Timing%20Analysis.pdf
+[L08]:https://github.com/hankshyu/ICLab_2023/blob/main/lectures/Lec08%20Low%20Power%20Design.pdf
+[L09]:https://github.com/hankshyu/ICLab_2023/blob/main/lectures/Lec09%20SystemVerilog.pdf
+[L10]:https://github.com/hankshyu/ICLab_2023/blob/main/lectures/Lec10%20SystemVerilog%20Verification.pdf
+[L11]:https://github.com/hankshyu/ICLab_2023/blob/main/lectures/Lec11%20Cell%20Based%20APR%20Flow.pdf
+[L12]:https://github.com/hankshyu/ICLab_2023/blob/main/lectures/Lec12%20APR(1-2).pdf
+[L_bonus]:https://github.com/hankshyu/ICLab_2023/blob/main/lectures/Bonus%20Formal%20Verification.pdf
+
+[s01]:https://github.com/hankshyu/ICLab_2023/tree/main/src/Lab01
+[s02]:https://github.com/hankshyu/ICLab_2023/tree/main/src/Lab02
+[s03]:https://github.com/hankshyu/ICLab_2023/tree/main/src/Lab03
+[s04]:https://github.com/hankshyu/ICLab_2023/tree/main/src/Lab04
+[s05]:https://github.com/hankshyu/ICLab_2023/tree/main/src/Lab05
+[s06]:https://github.com/hankshyu/ICLab_2023/tree/main/src/Lab06
+[s07]:https://github.com/hankshyu/ICLab_2023/tree/main/src/Lab07
+[s08]:https://github.com/hankshyu/ICLab_2023/tree/main/src/Lab08
+[s09]:https://github.com/hankshyu/ICLab_2023/tree/main/src/Lab09
+[s10]:https://github.com/hankshyu/ICLab_2023/tree/main/src/Lab10/Exercise
+[s11]:https://github.com/hankshyu/ICLab_2023/tree/main/src/Lab11
+[s12]:https://github.com/hankshyu/ICLab_2023/tree/main/src/Lab12
+
+
+[midterm_pj]:https://github.com/hankshyu/ICLab_2023/tree/main/exams/midterm
+[src_midterm_pj]:https://github.com/hankshyu/ICLab_2023/tree/main/src/MidtermProject
+
+[final_pj]:https://github.com/hankshyu/ICLab_2023/tree/main/exams/final
+[src_final_pj]:https://github.com/hankshyu/ICLab_2023/tree/main/src/FinalProject
+
+
+[midterm_exam]:https://github.com/hankshyu/ICLab_2023/tree/main/exams/midterm
+[OT]:https://github.com/hankshyu/ICLab_2023/tree/main/src/OnlineTest
+[final_exam]:https://github.com/hankshyu/ICLab_2023/tree/main/exams/final
+
 
 想當然爾，只有上課認真在這堂課是遠遠不夠的。這堂課最有名的就是總共 12 次 Lab Exercise。從每個禮拜三公布題目開始，1de 的期限是下個禮拜一中午， 2de 則是到下禮拜三中午，所謂的通過是指通過**所有**的測試資料。也就是說如果你通過了1de就會有兩天的休息時間，否則就整個禮拜都在寫作業。lab 的成績計算方式通常是通過 demo 就有基本分 70，另外的分數是要和其他同學設計做比較，分數按照名次依序遞減到 0，蠻殘酷的。2de 的話會打七折。這套計分系統的設計很大程度模擬了電路設計就業環境的假定: 必須在時間壓力下設計出功能正確的晶片才能夠快速搶佔市場，取得先機。並且通常是贏者全拿的現象。
 
