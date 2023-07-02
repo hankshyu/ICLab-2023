@@ -19,20 +19,20 @@
 Week | Course Content | Lab Unit | Pass Rate
 :--------|:-----| :----- | :----: 
 01| [Introduction (Environment Setting)][L00]                                               | -                                                         | -
-02| [Verilog Combination Syntax][L01]                                                       | [Chinese Course][s01]                                            | 92.45%
-03| [Sequential Logic Design (1/2) + generate syntax][L02]                                  | [12-Queen][s02]                                                  | 73.58%
-04| [Testbench Programming Syntax][L03]                                                     | [Subway Surfes][s03]                                             | 91.84%
-05| [Sequential Logic Design (2/2)][L04]                                                    | [Simple RNN][s04]                                                | 91.84%
-06| [Memory & coding style & nLint][L05]                                                    | [Matrix Multiplication to find Trace][s05]                       | 87.63%
-07| [Design Compiler + IP Design (DesignWare) with genvar][L06]                             | [Elliptic Curve Group Operation][s06]                            | 88.86%
+02| [Verilog Combination Syntax][L01]                                                       | [Lab01: Chinese Course][s01]                                            | 92.45%
+03| [Sequential Logic Design (1/2) + generate syntax][L02]                                  | [Lab02: 12-Queen][s02]                                                  | 73.58%
+04| [Testbench Programming Syntax][L03]                                                     | [Lab03: Subway Surfes][s03]                                             | 91.84%
+05| [Sequential Logic Design (2/2)][L04]                                                    | [Lab04: Simple RNN][s04]                                                | 91.84%
+06| [Memory & coding style & nLint][L05]                                                    | [Lab05: Matrix Multiplication to find Trace][s05]                       | 87.63%
+07| [Design Compiler + IP Design (DesignWare) with genvar][L06]                             | [Lab06: Elliptic Curve Group Operation][s06]                            | 88.86%
 08| [Midterm Exam][midterm_exam] + [Online Test][OT] + [Midterm Project][midterm_pj]        | [Midterm Project: Gray-level co-occurrence matrix (GLCM)][src_midterm_pj]   | 87.63%
-09| [Synthesis & Static Time Analysis + Cross Clock Domain][L07]                            | [CDC Doraemon tester][s07]                                       | 81.44%
-10| [Low power design][L08]                                                                 | [Siamese Neural Network][s08]                                    | 86.46%
-11| [SystemVerilog for design][L09]                                                         | [Online Shopping Platform Simulation][s09]                       | 75.79%
-12| [SystemVerilog for verification][L10]                                                   | [OS (from Lab09) Coverage][s10]                                  | 80.85%
-13| [Formal Verification (Bonus)][L_bonus]                                                         | Bonus Lab                                                   | -
-14| [APR: From RTL to GDSII][L11]                                                           | [Matrix Multiplication with Systolic Array][s11]                 | 95.29%
-15| [APR: IR-Drop Analysis][L12]                                                            | [Train Tour APRII][s12]                                          | 97.65%
+09| [Synthesis & Static Time Analysis + Cross Clock Domain][L07]                            | [Lab07: CDC Doraemon tester][s07]                                       | 81.44%
+10| [Low power design][L08]                                                                 | [Lab08: Siamese Neural Network][s08]                                    | 86.46%
+11| [SystemVerilog for design][L09]                                                         | [Lab09: Online Shopping Platform Simulation][s09]                       | 75.79%
+12| [SystemVerilog for verification][L10]                                                   | [Lab10: OS (from Lab09) Coverage][s10]                                  | 80.85%
+13| [Formal Verification (Bonus)][L_bonus]                                                  | Bonus Lab                                                   | -
+14| [APR: From RTL to GDSII][L11]                                                           | [Lab11: Matrix Multiplication with Systolic Array][s11]                 | 95.29%
+15| [APR: IR-Drop Analysis][L12]                                                            | [Lab12: Train Tour APRII][s12]                                          | 97.65%
 16| [Final Exam][final_exam] + [Final Project][final_pj]                                    | [Final Project: Customized ISA Processor][src_final_pj]           | 67.50%
 
 
